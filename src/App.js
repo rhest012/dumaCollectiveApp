@@ -14,26 +14,14 @@ import Home from './features/pages/Home'
 import WhatWeDo from './features/pages/WhatWeDo';
 import Contact from './features/pages/Contact';
 import SingleService from './features/pages/SingleService';
-import Loader from './features/pages/Loader';
+import Loader from './features/components/Loader';
 import Footer from './components/Footer';
+import AnimatedRoutes from './features/components/AnimatedRoutes';
 
 function App() {
   return (
       <Router>
-        <Nav />
-        <CustomCursor />
-        <Routes>
-          <Route path="/"element = {<Home/>}/>
-          <Route path="/what-we-do"element = {<WhatWeDo/>}/>
-          <Route path="/loader"element = {<Loader/>}/>
-            <Route path="/what-we-do/:id" element = {<SingleService/>}/>
-          <Route path="/the-squad" element = {<Squad/>}/>
-          <Route path="/the-grind" element = {<TheGrind/>}/>
-            <Route path="/the-grind/jff" element = {<Jff/>}/>
-          <Route path="/the-buzz" element = {<NewsRoom/>}/>
-          <Route path="/get-in-touch" element= {<Contact/>}/>
-        </Routes>
-        <Footer/>
+       <AnimatedRoutes/>
       </Router>
       
   

@@ -33,8 +33,6 @@ const Home = () => {
       alignContent: "center"
     }
 
-    const data = useFetchFirebase('services');
-
   return (
     <>
       <HomeHeader/>
