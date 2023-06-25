@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url'assets/Duma-Africa.svg', auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Roc Grotesk Wide';
+  src: url('../assets/fonts/roc_grotesk_wide_bold-webfont.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../assets/fonts/avenir_next-webfont.woff') format('woff');
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.815rem;
+}
+
+h2 {
+  font-size: 3.05rem;
+}
+
+h3 {
+  font-size: 2.44rem;
+}
+
+h4 {
+  font-size: 1.56rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #1E174B;;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none; 
+  transition: width 1000ms, height 1000ms;
+}
+
+.cursor.large {
+  height: 70px;
+  width: 70px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #2C245B !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #2C245B !important;
+}
+
+.aka-text {
+  opacity: 0;
+  transition: all ease 0.7s;
+}
+
+.staff-container:hover .aka-text{
+  opacity: 1;
+}
+
+.underline-button {
+  color:#1E174B;
+  text-decoration: none;
+  position: relative;
+  box-sizing: border-box;
+
+}
+
+.underline-button::before {
+  content: '';
+  background-color: #1E174B;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all .3s ease-in-out
+}
+
+.underline-button:hover::before {
+  bottom: 0;
+  height: "100%";
+  color: #fff;
+}
+
+
+/* Menu  */
+.menu-item-container .menu-item__heading{
+  -webkit-text-stroke: 1.5px #1E174B;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: all 0.4s;
+}
+
+.menu-item__heading::before {
+  all: initial;
+  counter-increment: menu;
+}
+
+.menu-item-container:hover .menu-item__heading {
+  -webkit-text-stroke: none;
+  -webkit-text-fill-color: #1E174B;
+  background-color: transparent;
+}
+
+.menu-item__image {
+  pointer-events: none;
+  position: absolute;
+  height: 250px;
+  /* max-height: 400px; */
+  opacity: 0;
+  top: -80%;
+  left: 60%; 
+  z-index: 100;
+}
+
+.menu-item-container:hover .menu-item__image {
+  opacity: 1;
+  transition: all 0.4s;
+}
+

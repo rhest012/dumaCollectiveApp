@@ -1,0 +1,467 @@
+{
+    "staff": [
+        {
+            "department": "Public Relations", 
+            "aka" : "The Mavericks",
+            "quote" : "Work is love made visible",
+            "staffMembers" : [
+                {
+                    "name": "Azande",
+                    "image":  "Azande.jpg",
+                    "aka": "The O.G"
+
+                },
+                {
+                    "name": "Vusi",
+                    "image":  "Vusi.jpg",
+                    "aka": "Charlie"
+                },
+                {
+                    "name": "Siya",
+                    "image":  "Siya.jpg",
+                    "aka": "The Plug"
+                },
+                {
+                    "name": "Tumi",
+                    "image":  "Tumi.jpg",
+                    "aka": "The PR Mavern"
+                },
+                {
+                    "name": "Petunia",
+                    "image":  "Petunia.jpg",
+                    "aka": "Wordsmith"
+    
+                }
+            ]
+        },
+        {
+            "department": "Culture and Relationships",
+            "aka": "The Blessers",
+            "quote":"Whatever you need, we make it happen",
+            "staffMembers": [
+                {
+                    "name": "Raquel",
+                    "image": "Raquel.jpg",
+                    "aka": "Momager"
+                },
+                {
+                    "name": "Ntokozo",
+                    "image": "Ntokozo.jpg",
+                    "aka": "The Quarterback" 
+                },
+                {
+                    "name": "Lee-Ann",
+                    "image": "Lee-Ann.jpg",
+                    "aka": "Superstar"
+                },
+                {
+                    "name": "Oarabile",
+                    "image": "Oarabile.jpg",
+                    "aka": "Creative Engineer"
+                },
+                {
+                    "name": "Sphe",
+                    "image": "Sphe.jpg",
+                    "aka": "The Influenza"
+                },
+                {
+                    "name": "Sabelo",
+                    "image": "Sabelo.jpg",
+                    "aka": "The Playmaker"
+                },
+                {
+                    "name": "Nelson",
+                    "image": "Nelson.jpg",
+                    "aka": "The Hacker"
+                }
+            ]
+        },
+        {
+            "department": "Account Management",
+            "aka" : "The Avengers",
+            "quote" : "It's all about the benjamins",
+            "staffMembers": [
+                {
+                    "name": "Akhona",
+                    "image":  "Akhona.jpg",
+                    "aka": "The Real Housewife"
+                },
+                {
+                    "name": "Osego",
+                    "image":  "Osego.jpg",
+                    "aka": "Donda"
+                },
+                {
+                    "name": "Banele",
+                    "image":  "Banele.jpg",
+                    "aka": "The Link"
+                },
+                {
+                    "name": "Katso",
+                    "image":  "Katso.jpg",
+                    "aka": "Miss Trunchball"
+                },
+                {
+                    "name": "Justine",
+                    "image":  "Justine.jpg",
+                    "aka": "Cristina Yang"
+                },
+                {
+                    "name": "Lesedi",
+                    "image":  "Lesedi.jpg",
+                    "aka": "Top Sjambok"
+                }
+            ]
+        },
+        {
+            "department": "Creative",
+            "aka" : "The Stood",
+            "quote" : "Creativity is seeing what others see and thinking what no one else ever thought",
+            "staffMembers": [
+                {
+                    "name": "Keke",
+                    "image":  "Keke.jpg",
+                    "aka": "The Merch"
+                },
+                {
+                    "name": "Cheslyn",
+                    "image":  "Cheslyn.jpg",
+                    "aka": "The Mage"
+    
+                },
+                {
+                    "name": "Emil",
+                    "image":  "Emil.jpg",
+                    "aka": "The Father"
+                },
+                {
+                    "name": "Anele",
+                    "image":  "Anele.jpg",
+                    "aka": "The UX Half-Man Half-Machine"
+                },
+                {
+                    "name": "Koketso2",
+                    "image":  "Koketso-2.jpg",
+                    "aka": "New Kid On The Block"
+            
+                },
+                {
+                    "name": "Thube",
+                    "image":  "Thube.jpg",
+                    "aka": "The Conceptualiser"
+                },
+                {
+                    "name": "Lerato",
+                    "image":  "Lerato.jpg",
+                    "aka": "JMPD"
+                }
+            ]
+        },
+        {
+            "department": "Social",
+            "aka": "The Party",
+            "quote": "Our Head of Social Media is you as a client",
+            "staffMembers":[
+                {
+                    "name": "Ayanda",
+                    "image": "Ayanda.jpg",
+                    "aka": "Mistress"
+
+                },
+                {
+                    "name": "Boitumelo",
+                    "image":  "Boitumelo.jpg",
+                    "aka": "The Real MVP"
+                },
+                {
+                    "name": "Nolly",
+                    "image":  "Nolly.jpg",
+                    "aka": "Wonder Woman"
+                },
+                {
+                    "name": "Koketso2",
+                    "image":  "Koketso-2.jpg",
+                    "aka": "M-fundi-si"
+                },
+                {
+                    "name": "Huli",
+                    "image":  "Huli.jpg",
+                    "aka": "The Rookie"
+                },
+                {
+                    "name": "Mojabeng",
+                    "image":  "Mojabeng.jpg",
+                    "aka": "All Star"
+                },
+                {
+                    "name": "Nosipho",
+                    "image":  "Nosipho.jpg",
+                    "aka": "Head Girl"
+                },
+                {
+                    "name": "Kele",
+                    "image":  "Kele.jpg",
+                    "aka": "G.O.A.T"
+                }
+            ]
+            
+        },
+        {
+            "department": "Production",
+            "aka": "The Final Cut",
+            "quote": "With us mood boards equal reality",
+            "staffMembers": [
+                {
+                    "name": "Tash",
+                    "image": "Tash.jpg",
+                    "aka": "The Planner"
+                },
+                {
+                    "name": "Kashifa" ,
+                    "image": "Kashifa.jpg",
+                    "aka": " The Kreative"
+                }
+            ]
+        },
+        {
+            "department": "Ops",
+            "aka": "The Office",
+            "quote": "At your command",
+            "staffMembers": [
+                {
+                    "name": "Lindi",
+                    "image": "Lindi.jpg",
+                    "aka": "Kahuna"
+                },
+                {
+                    "name": "Sibu",
+                    "image": "Sibu.jpg",
+                    "aka": "The Fixer"
+                },
+                {
+                    "name": "Senzi",
+                    "image": "Senzi.jpg",
+                    "aka": "Ama Million"
+                },
+                {
+                    "name": "Gugu",
+                    "image": "Gugu.jpg",
+                    "aka": "The Comforter"
+                },
+                {
+                    "name": "Cyan",
+                    "image": "Cyan.jpg",
+                    "aka": "The Jack"
+                }
+            ]
+        }
+    ],
+"clients":[
+    {
+        "clientName": "Nba Africa",
+        "clientLogo": "NBA_Africa.png"
+    },
+    {
+        "clientName":"Toyota",
+        "clientLogo": "Toyota.png"
+    },
+    {
+        "clientName":"Sasol",
+        "clientLogo": "Sasol.png"
+    },
+    {
+        "clientName":"Puma",
+        "clientLogo": "Puma.png"
+    },
+    {
+        "clientName":"Redbull",
+        "clientLogo": "Red_Bull.png"
+    },
+    {
+        "clientName": "Engen",
+        "clientLogo": "Engen.png"
+    },
+    {
+        "clientName" : "Jagermeister",
+        "clientLogo" : "Jagermeister.png"
+    },
+    {
+        "clientName": "Coca Cola",
+        "clientLogo": "Coca_Cola.png"
+    },
+    {
+        "clientName": "FNB",
+        "clientLogo": "FNB.png"
+    },
+    {
+        "clientName": "Samsung",
+        "clientLogo": "Samsung.png"
+    },
+    {
+        "clientName": "OR Tambo Foundation",
+        "clientLogo": "OATF.png"
+    },
+    {
+        "clientName": "Gauteng Provincial",
+        "clientLogo": "Gauteng_Provincial.png"
+    },
+    {
+        "clientName": "Multichoice",
+        "clientLogo": "MultiChoice.png"
+    },
+    {
+        "clientName" : "DStv",
+        "clientLogo" : "DStv.png"
+    },
+    {
+        "clientName":"Showmax",
+        "clientLogo": "Showmax.png"
+    },
+    {
+        "clientName":"Heineken",
+        "clientLogo": "Heineken.png"
+    },
+    {
+        "clientName":"Drip",
+        "clientLogo": "Drip.png"
+    },
+    {
+        "clientName":"Chivas Regal",
+        "clientLogo": "Chivas.png"
+    },
+    {
+        "clientName":"Mtv",
+        "clientLogo": "Mtv.png"
+    },
+    {
+        "clientName":"Yfm",
+        "clientLogo": "Yfm.png"
+    }
+],
+    "NewsRoom": [
+        {
+            "title" : "Sibu wins big",
+            "date": "19 February 2023",
+            "caption": "The Founder and Chief Creative Officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first reciptient in Africa...",
+            "image": "SibuMabena.jpg"
+        },
+        {
+            "title": "Duma Collective dissolves it's talent management division",
+            "date": "7 November 2022",
+            "caption": "Every new beginning comes from some other beginning's end",
+            "image": "..."
+        },
+        {
+            "title": "MultiChoice group appoints Duma Collective",
+            "date": "9 March 2022",
+            "caption": "The MultiChoice Group has announced appointment of Duma Collective as its lead creative communications agency. Duma Collective will oversee Public Relations and Social Media for DStv, general entertainment channels, and the group's Corporate Brand.",
+            "image": "....."
+        },
+        {
+            "title": "Duma Collective, M&N brands in share deal",
+            "date":"9 March 2022",
+            "caption": "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
+            "image": "....."
+        }
+    ],
+    "services": [
+        {
+            "title": "Effective talent management",
+            "id": "talent",
+            "name": "Logistics Management",
+            "descriptions": [
+                "Talent Sourcing",
+                "Negotiations and Onboarding",
+                "Briefing and Scripting",
+                "Logistics Management"
+            ]
+        },
+        {
+            "title": "Events and Production",
+            "id": "events",
+            "name": "Brand Activations",
+            "descriptions": [
+                "Conceptualisation and Development of small to large scale events",
+                "Production" 
+            ]
+        },
+        {
+            "title": "Influencer Marketing",
+            "id": "influencer",
+            "name": "Negotiations and Briefings",
+            "descriptions": [
+                "Digital strategy development",
+                "Content Curation",
+                "Community Management",
+                "Audio & Visual"
+            ]
+        },
+        {
+            "title": "Social Media",
+            "id": "social",
+            "name": "Analytics and Paid Media",
+            "descriptions": [
+                "Digital strategy development",
+                "Content Curation",
+                "Community Management",
+                "Audio & Visual"
+            ]
+        },
+        {
+            "title": "Public Relations",
+            "id": "pr",
+            "name": "Monitoring Evaluating & Reporting",
+            "descriptions": [
+                "Social PR",
+                "Corporate Communication",
+                "Media Relations",
+                "Campaign media planning and buying"
+            ]             
+            
+        },
+        {
+            "title": "Branding & Creative Strategy",
+            "id": "branding",
+            "name": "Development of Brand Repositioning Strategies",
+            "descriptions": 
+                [
+                    "Branding Planning and CI Development",
+                    "Graphic Design",
+                    "Multimedia Production"
+                ]             
+            
+        }
+        ],
+    "headers": [
+        {
+            "title": "Home",
+            "headerImage": "Duma_Africa.png",
+            "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+        },
+        {
+            "title": "What We Do",
+            "headerImage":"Duma_Africa.png",
+            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+        },
+        {
+            "title": "The Squad",
+            "headerImage":"Duma_Africa.png",
+            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+        },
+        {
+            "title": "The Grind",
+            "headerImage":"Duma_Africa.png",
+            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+        },
+        {
+            "title": "Newsroom",
+            "headerImage":"Duma_Africa.png",
+            "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+        },
+        {
+            "title": "Get In Touch",
+            "headerImage":"Duma_Africa.png",
+            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+        }
+    ]
+}
