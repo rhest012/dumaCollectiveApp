@@ -49,7 +49,7 @@ const Nav = () => {
                 src={Logo}
                 height="60px"
                 layoutId="duma-logo"
-                transition={{ease:[0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+                transition={{ ease: "linear", duration: 1.6 }}
             />
         </Box>
         <Menu 

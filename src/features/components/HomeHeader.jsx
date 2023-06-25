@@ -76,7 +76,7 @@ const HomeHeader = () => {
             initial="hidden"
             animate="visible"
             exit= 'exit'
-            transition={{ease:[0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+            transition={{ ease: "linear", duration: 1.6 }}
           />
           <MotionImage
             src={africaOutline}
