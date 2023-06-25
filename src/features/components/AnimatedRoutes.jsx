@@ -30,7 +30,7 @@ const AnimatedRoutes = () => {
   return (
     <>
         
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
         {loading ? (
         <motion.div key="loader" layoutId="page-transitions">
           <Loader setLoading={setLoading} />

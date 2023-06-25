@@ -23,14 +23,9 @@ const HomeHeader = () => {
   } 
   
   const imageVariants = {
-    hidden: {
-      y: -50,
-      opacity: 0,
-    },
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {duration: 1, delay: 2.5}
+      transition: {ease: [0.6, 0.01, -0.05, 0.9], duration: 2}
     }
   }
 
@@ -71,6 +66,7 @@ const HomeHeader = () => {
         <Box width="35%" className="header-container__right">
           <MotionImage
             src={HomeHeaderBackground}
+            layoutId= "africa-image"
             zIndex="-1"
             height="700px"
             position="absolute"
@@ -80,7 +76,7 @@ const HomeHeader = () => {
             initial="hidden"
             animate="visible"
             exit= 'exit'
-
+            transition={{ease:[0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
           />
           <MotionImage
             src={africaOutline}

@@ -4,6 +4,7 @@ import React from 'react'
 import HeaderImage from "../assets/headers/grind-header.jpg"
 import { Links } from '../styles/Navbar.style'
 import { Link, NavLink, Link as ReachLink, useLocation} from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 const Nav = () => {
     const menuItems = [
@@ -33,6 +34,9 @@ const Nav = () => {
         },
     ]
 
+    // Framer Motion
+    const MotionImage = motion(Image);
+
   return (
     <Flex 
         height="80px"
@@ -41,9 +45,11 @@ const Nav = () => {
         padding="1rem 2rem"
     >  
         <Box>
-            <Image
+            <MotionImage
                 src={Logo}
                 height="60px"
+                layoutId="duma-logo"
+                transition={{ease:[0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
             />
         </Box>
         <Menu 

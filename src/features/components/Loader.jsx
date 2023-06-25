@@ -6,6 +6,7 @@ import HomeHeaderBackground from '../../assets/headers/home-header.png'
 import { motion } from 'framer-motion'
 
 const Loader = ({ setLoading }) => {
+    // Framer Motion
     const MotionImage = motion(Image);
     const MotionHeading = motion(Heading);
 
@@ -15,12 +16,12 @@ const Loader = ({ setLoading }) => {
           },
           visible: {
             opacity: 1,
-            transition: {duration: 1}
+            transition: {delay: 0.5, duration: 1}
           },
-          exit: {
-            opacity: 0,
-            transition: {duration: 1}
-          }
+        //   exit: {
+        //     opacity: 0,
+        //     transition: {delay: 1.75, duration: 1}
+        //   }
     }
 
     const textVariants = {
@@ -29,7 +30,7 @@ const Loader = ({ setLoading }) => {
           },
           visible: {
             opacity: 1,
-            transition: {delay: 1, duration: 1}
+            transition: {delay: 1.2, duration: 1}
           },
           exit: {
             opacity: 0,
@@ -45,11 +46,11 @@ const Loader = ({ setLoading }) => {
           visible: {
             y: 0,
             opacity: 0.8,
-            transition: {delay: 1.5, duration: 1}
+            transition: {delay: 1.5, duration: 1.2}
           },
           exit: {
             opacity: 0,
-            transition: {delay: 1.5, duration: 1}
+            transition: {delay: 1.25, duration: 1}
           }
     }
 
@@ -61,12 +62,8 @@ const Loader = ({ setLoading }) => {
           visible: {
             y: 0,
             opacity: 0.8,
-            transition: {delay: 2, duration: 1}
+            transition: {delay: 2.5, duration: 1}
           },
-          exit: {
-            opacity: 0,
-            transition: {delay: 2, duration: 1}
-          }
     }
 
   return (
@@ -84,6 +81,7 @@ const Loader = ({ setLoading }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
+            layoutId="duma-logo"
         />
         <Flex>
             <MotionImage
@@ -113,7 +111,6 @@ const Loader = ({ setLoading }) => {
             </MotionHeading>
             <MotionImage
                 src={HomeHeaderBackground}
-                onAnimationComplete={() => setLoading(false)}
                 position="absolute"
                 zIndex="-1"
                 height="300px"
@@ -121,9 +118,10 @@ const Loader = ({ setLoading }) => {
                 right="100px"
                 opacity="0.5"
                 variants={rightImageVariants}
+                layoutId= "africa-image"
                 initial="hidden"
                 animate="visible"
-                exit="exit"
+                onAnimationComplete={() => setLoading(false)}
             />
         </Flex>
     </Flex>
