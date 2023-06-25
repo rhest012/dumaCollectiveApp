@@ -143,3 +143,8 @@ h5 {
   transition: all 0.4s;
 }
 
+/* Icons */
+.contact-icon {
+  font-size: 1.5rem;
+  color: #1E174B;
+}
