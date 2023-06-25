@@ -37,9 +37,9 @@ const TheGrind = () => {
     }
   }
 
-  const { data, error, isPending} = useFetch(' http://localhost:8000/clients');
+  // const { data, error, isPending} = useFetch(' http://localhost:8000/clients');
 
-  // const data  = useFetchFirebase('clients');
+  const data  = useFetchFirebase('clients');
 
   // Page Location
   const location = useLocation();
