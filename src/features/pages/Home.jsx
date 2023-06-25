@@ -34,13 +34,12 @@ const Home = () => {
     }
 
     const data = useFetchFirebase('services');
-    console.log(data)
 
   return (
     <>
       <HomeHeader/>
       <Box 
-        margin="4rem 2rem"
+        padding="4rem 2rem"
       >
         <Text variant="p" as="p" textAlign="center">
           Duma Collective is a Creative Communications Agency in the business of redefining creative communication from Africa, to the world.<br/>  ​

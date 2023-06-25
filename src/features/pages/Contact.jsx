@@ -141,7 +141,7 @@ const Contact = () => {
                         </Text>
                     </GridItem>
                 </Grid>
-                <Flex flexDirecion="column" paddingY="1rem" justifyContent="space-between">
+                <Flex flexDirecion="column" paddingTop="1rem" justifyContent="space-between">
                     <Link>
                         <FaFacebookF
                             className="contact-icon"

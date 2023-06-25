@@ -49,7 +49,7 @@ const HomeHeader = () => {
   return (
     <Flex 
     height="90vh" 
-    width="100wh" 
+    width="100%" 
     padding="2rem"
     flexDir="row"
     alignItems="center"
@@ -68,13 +68,13 @@ const HomeHeader = () => {
             Duma Collective in action from branding, and creative strategy to PR, Social Media, Influencer Marketing, Events, Production, and Talent Procurement.
           </Text>
         </Box>
-        <Box width="50%" className="header-container_right">
+        <Box width="35%" className="header-container__right">
           <MotionImage
             src={HomeHeaderBackground}
             zIndex="-1"
             height="700px"
             position="absolute"
-            left="800"
+            left="770"
             top="90"
             variants={imageVariants}
             initial="hidden"
@@ -87,7 +87,7 @@ const HomeHeader = () => {
             position="absolute"
             zIndex="-2"
             height="650px"
-            left="780"
+            left="750"
             top="100"
             variants={outlineVariants}
             initial="hidden"
