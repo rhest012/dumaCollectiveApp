@@ -31,11 +31,11 @@ const AnimatedRoutes = () => {
     <>
         
         <AnimatePresence mode="wait">
-        {loading ? (
+        {/* {loading ? (
         <motion.div key="loader" layoutId="page-transitions">
           <Loader setLoading={setLoading} />
         </motion.div>
-      ) : (
+      ) : ( */}
         <>
             <Nav />
             <CustomCursor />
@@ -50,7 +50,7 @@ const AnimatedRoutes = () => {
             </Routes>
             <Footer/>
         </>
-      )}
+      {/* )} */}
         </AnimatePresence>
         
     </>

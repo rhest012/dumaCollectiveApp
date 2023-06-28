@@ -72,12 +72,12 @@ h5 {
   background: #2C245B !important;
 }
 
-.aka-text {
+.staff__text {
   opacity: 0;
   transition: all ease 0.7s;
 }
 
-.staff-container:hover .aka-text{
+.staff-container:hover .staff__text {
   opacity: 1;
 }
 

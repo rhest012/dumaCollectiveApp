@@ -46,23 +46,29 @@ const PageIntro = ( {pageLocation} ) => {
   return (
     <Grid
         marginX="2rem"
-        marginY="6rem"
-        gridTemplateColumns="1fr 1fr"
-        gap="1rem"
+        marginY={{ base: "4rem", sm:"4rem", md:"4rem", lg:"6rem", xl:"6rem"}}
+        gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"1fr 1fr", lg:"1fr 1fr", xl:"1fr 1fr"}}
+        gap={{ base:"2rem", sm:"2rem", md:"1rem", lg:"1rem", xl:"1rem" }}
       >
         <GridItem
           display="flex"
-          justifyContent="space-between"
+          gap="1rem"
+          flexDirection= {{base: "column", sm:"column", md:"column", lg:"row", xl:"row"}}
+          width="100%"
+          justifyContent={{base:"center",  sm:"center", md:"center", lg:"space-between", xl:"space-between" }}
+          alignItems={{base: "center", sm:"center", md:"flex-start", lg:"flex-start", xl:"flex-start" }}
         >
           <Image
-              height="300px"
-              src={PortraitImage}
-              sx={imageStyling}
+            maxhHeight="300px"
+            maxWidth="200px"
+            src={PortraitImage}
+            sx={imageStyling}
           />
           <Image
-              height="300px"
-              src={LandscapeImage}
-              sx={imageStyling}
+            maxhHeight="300px"
+            maxWidth="451px"
+            src={LandscapeImage}
+            sx={imageStyling}
           />
         </GridItem>
         <GridItem 
@@ -79,9 +85,7 @@ const PageIntro = ( {pageLocation} ) => {
             animate="visible"
             exit= 'exit'
             dangerouslySetInnerHTML={{ __html: activePage.description }}
-          >
-            {/* {activePage.description} */}
-          </MotionText>
+          />
         </GridItem>
       </Grid>
   )
