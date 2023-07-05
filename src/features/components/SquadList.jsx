@@ -168,6 +168,8 @@ const SquadList = () => {
                                 borderRadius="1rem"
                                 w="239px"
                                 h="181px"
+                                boxShadow= "rgba(0, 0, 0, 0.24) 0px 3px 8px"
+                                // box-shadow: ;
                                 transition="all  0.7s ease"
                                 variants={singleImageChildVariants}
                                 initial="hidden"

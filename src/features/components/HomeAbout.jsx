@@ -40,7 +40,7 @@ const HomeAbout = () => {
         >
             <Image
                 src={Lady}
-                height="500px"
+                height="600px"
             />
             
         </GridItem>

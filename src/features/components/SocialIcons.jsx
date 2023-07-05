@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Grid, GridItem, HStack, Heading, Image, Text } from '@chakra-ui/react'
 import { AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 
@@ -17,30 +17,50 @@ const SocialIcons = () => {
   return (
     <>
         <Flex flexDir="column" gap="0.5rem">
-            <Box sx={socialIconContainerStyling} as="button" >
-                <AiOutlineInstagram
-                    color="#1E174B"
-                    fontSize="1.25rem"
-                />
-            </Box>
-            <Box sx={socialIconContainerStyling} as="button" >
-                <AiOutlineTwitter
-                    color="#1E174B"
-                    fontSize="1.25rem"
-                />
-            </Box>
-            <Box sx={socialIconContainerStyling} as="button" >
-                <FaFacebookF
-                    color="#1E174B"
-                    fontSize="1.25rem"
-                />
-            </Box>
-            <Box sx={socialIconContainerStyling} as="button" >
-                <FaLinkedinIn
-                    color="#1E174B"
-                    fontSize="1.25rem"
-                />
-            </Box>
+            <HStack>
+                <Box sx={socialIconContainerStyling} as="button" >
+                    <AiOutlineInstagram
+                        color="#1E174B"
+                        fontSize="1.5rem"
+                    />
+                </Box>
+                <Text variant="p">
+                    Instagram
+                </Text>
+            </HStack>
+            <HStack>
+                <Box sx={socialIconContainerStyling} as="button" >
+                    <AiOutlineTwitter
+                        color="#1E174B"
+                        fontSize="1.5rem"
+                    />
+                </Box>
+                <Text variant="p">
+                    Twitter
+                </Text>
+            </HStack>
+            <HStack>
+                <Box sx={socialIconContainerStyling} as="button" >
+                    <FaFacebookF
+                        color="#1E174B"
+                        fontSize="1.5rem"
+                    />
+                </Box>
+                <Text variant="p">
+                    Facebook
+                </Text>
+            </HStack>
+            <HStack>
+                <Box sx={socialIconContainerStyling} as="button" >
+                    <FaLinkedinIn
+                        color="#1E174B"
+                        fontSize="1.5rem"
+                    />
+                </Box>
+                <Text variant="p">
+                    LinkedIn
+                </Text>
+            </HStack>
         </Flex>
     </>
   )

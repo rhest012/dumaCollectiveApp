@@ -89,7 +89,7 @@ const TheGrind = () => {
         <GridItem width="100%">
             <Grid gridTemplateColumns="repeat(5, 1fr)" gap="2rem" marginY="2rem">
               {data.map((item, index) => (  
-                <GridItem key={index} width="130px" height="130px" border="1px solid #2C245B" >
+                <GridItem boxShadow= "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" key={index} width="130px" height="130px" display="flex" alignItems="center" justifyContent="center"> 
                   <Image
                     src={require(`../../../assets/theGrind/clientLogos/${item.clientLogo}`)}
                     width="190px"

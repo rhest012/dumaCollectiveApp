@@ -18,7 +18,7 @@ const ServiceList = () => {
         gridTemplateColumns="45% 55%"
         marginX="2rem"
         gap="2rem"
-        height="90vh"
+        height="83vh"
         display="flex"
         justifyContent="center"
         alignItems="center"

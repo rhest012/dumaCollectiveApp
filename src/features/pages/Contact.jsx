@@ -10,6 +10,7 @@ import {SlLocationPin} from 'react-icons/sl'
 import {BsEnvelopeAt, BsTelephone} from 'react-icons/bs'
 import {AiOutlineTwitter, AiOutlineInstagram} from 'react-icons/ai'
 import {FaFacebookF, FaTiktok, FaLinkedinIn} from 'react-icons/fa'
+import SocialIconsHorizontal from '../components/SocialIconsHorizontal'
 
 const Contact = () => {
     const inputStyling= {
@@ -42,6 +43,10 @@ const Contact = () => {
         alignItems:"center"
     }
 
+    const contactDetailStyling = {
+        paddingTop:"1rem"
+    }
+
 
         // Page Location
     const location = useLocation();
@@ -49,13 +54,12 @@ const Contact = () => {
 
   return (
     <>
-        <SecondaryHeader pageLocation={pageLocation}/>
         <Grid
             // marginY="4rem"
-            marginX="2rem"
-            marginY="8rem"
-            gridTemplateColumns="50% 50%"
+            margin="2rem"
+            gridTemplateColumns="40% 60%"
             gap="2rem"
+            height="75vh"
         >
             <GridItem
                sx={singleGridContainerStyling}
@@ -63,27 +67,19 @@ const Contact = () => {
             >
                 
                 <Heading 
-                    variant="h3" 
-                    as="h3"
+                    variant="h2" 
+                    as="h2"
                 >
-                    Questions?
+                    Get in touch
                 </Heading>
                 <Text 
                     variant="p" 
-                    paddingBottom="2rem"
+                    paddingY="2rem"
+                    width="90%"
                 >
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus rem blanditiis nobis laborum molestiae neque dicta nihil quibusdam. Sed, dolorem.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem quisquam adipisci aspernatur? Sed, provident. A velit eum voluptatem sint dolore omnis laudantium illum dolorum est autem? Ad repellendus omnis mollitia cum magnam blanditiis, labore sint maiores amet modi esse culpa qui facilis quod et ab odit! Nostrum, illum blanditiis.
                 </Text>
-                <Flex justifyContent="space-between">
-                    <Image
-                        src={PlaceholderImageLs}
-                        sx={imageStyling}
-                    />
-                    <Image
-                        src={PlaceholderImageP}
-                        sx={imageStyling}
-                    />
-                </Flex>
+                <SocialIconsHorizontal/>
             </GridItem>
             <GridItem
                 sx={singleGridContainerStyling}
@@ -115,59 +111,32 @@ const Contact = () => {
                         sx={inputStyling}
                     />
                 </form>
-                <Grid gridTemplateColumns="repeat(3, 1fr)" justifyContent="center" paddingY="1rem">
-                    <GridItem sx={socialmediaContainerStyling}>
-                        <SlLocationPin
-                            className="contact-icon"
-                        />
-                        <Text variant="p" textAlign="center">
-                            51 Glenhove, Melrose Estate Johannesburg, 2196
-                        </Text>
-                    </GridItem>
+                <Grid gridTemplateColumns="repeat(3, 1fr)" justifyContent="center" paddingY="2rem">
                     <GridItem sx={socialmediaContainerStyling}>
                         <BsEnvelopeAt
                             className="contact-icon"
                         />
-                        <Text variant="p">
+                        <Text sx={contactDetailStyling} variant="p">
                             info@dumacollective.com
+                        </Text>
+                    </GridItem>
+                    <GridItem sx={socialmediaContainerStyling}>
+                        <SlLocationPin
+                            className="contact-icon"
+                        />
+                        <Text sx={contactDetailStyling} variant="p" textAlign="center">
+                            51 Glenhove, Melrose Estate Johannesburg, 2196
                         </Text>
                     </GridItem>
                     <GridItem sx={socialmediaContainerStyling}>
                         <BsTelephone
                             className="contact-icon"
                         />
-                        <Text variant="p">
+                        <Text sx={contactDetailStyling} variant="p">
                             0104435854​
                         </Text>
                     </GridItem>
                 </Grid>
-                <Flex flexDirecion="column" paddingTop="1rem" justifyContent="space-between">
-                    <Link>
-                        <FaFacebookF
-                            className="contact-icon"
-                        />
-                    </Link>
-                    <Link>
-                        <FaTiktok
-                            className="contact-icon"
-                        />
-                    </Link>
-                    <Link>
-                        <FaLinkedinIn
-                            className="contact-icon"
-                        />
-                    </Link>
-                    <Link>
-                        <AiOutlineTwitter
-                            className="contact-icon"
-                        />
-                    </Link>
-                    <Link>
-                        <AiOutlineInstagram
-                            className="contact-icon"
-                        />
-                    </Link>
-                </Flex>
         </GridItem>  
       </Grid>
     </>

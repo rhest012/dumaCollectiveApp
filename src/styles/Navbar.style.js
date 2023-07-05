@@ -133,6 +133,7 @@ export const NavbarLinkMobile = styled(Link) `
 
 export const Links = styled(Link) `
     color: #1E174B;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     font-size: 0.9rem;
