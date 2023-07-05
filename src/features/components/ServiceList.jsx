@@ -12,32 +12,31 @@ const ServiceList = () => {
         "Talent Procurement"
     ]
 
-    console.log(services)
   return (
     <Grid 
-        gridTemplateColumns="45% 55%"
-        marginX="2rem"
-        gap="2rem"
-        height="83vh"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
+        gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"1fr", lg:"45% 55%", xl:"45% 55%" }}
+        gap={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
+        height={{ base:"auto", sm:"auto", md:"auto", lg:"83vh", xl:"83vh"}}
+        marginY="2rem"
+        // display="flex"
+        // justifyContent="center"
+        // alignItems="center"
     >
-        <GridItem>
+        <GridItem marginX="2rem">
             <Heading variant="h2">
                 A solution<br/>for every need
             </Heading>
-            <Text variant="p" paddingY="2rem">
+            <Text variant="p" paddingY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}>
                 At Duma Collective we thrive on building brands, driven by creative ideation and insights.  Servicing an array of clients, from FMCG, Energy and Sustainability, Technology and Enterprise Development, Financial Services to government departments. We drive business growth for our clients through collaborative thinking and the implementation of our service offerings with excellence! We are an oasis for African Creativity to flourish and committed to delivering impactful creative solutions for our clients.
             </Text>
             <SocialIconsHorizontal/>
         </GridItem>
         <GridItem 
             display="grid"
-            gridTemplateColumns="repeat(3, 1fr)" 
-            gridTemplateRows="repeat(2, 1fr)"
-            gap="2rem"
-            marginX="4rem"
+            gridTemplateColumns={{base:"1fr", sm:"repeat(2, 1fr)", md:"repeat(2, 1fr)",  xl:"repeat(3, 1fr)" }}
+            gridTemplateRows={{ base:"auto", sm:"auto", md:"auto", lg:"repeat(2, 1fr)", xl:"repeat(2, 1fr)"}}
+            gap={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
+            marginX={{ base:"2rem", sm:"1.3rem", md:"2rem", lg:"2rem", xl:"2rem"}}
         >
             {services.map((service, index) => (
                 <Box 

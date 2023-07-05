@@ -45,9 +45,9 @@ const Navbar = () => {
         <NavbarLinkMobile to="/">Home</NavbarLinkMobile>
         <NavbarLinkMobile to="/what-we-do">What We Do</NavbarLinkMobile>
         <NavbarLinkMobile to="/the-grind">The Grind</NavbarLinkMobile>
-        <NavbarLinkMobile to="/squad">The Squad</NavbarLinkMobile>
-        <NavbarLinkMobile to="/newsroom">Newsroom</NavbarLinkMobile>
-        <NavbarLinkMobile to="/contact">Contact</NavbarLinkMobile>
+        <NavbarLinkMobile to="/the-squad">The Squad</NavbarLinkMobile>
+        <NavbarLinkMobile to="/the-buzz">Newsroom</NavbarLinkMobile>
+        <NavbarLinkMobile to="/get-in-touch">Contact</NavbarLinkMobile>
       </NavbarMobileContainer>
       )}
     </NavbarContainer>

@@ -14,10 +14,14 @@ const SocialIcons = () => {
         justifyContent:"center",
         alignItems:"center"
     }
+
+    const socialIconInlineContainerStyling = {
+        gap:"1rem"
+    }
   return (
     <>
         <Flex flexDir="column" gap="0.5rem">
-            <HStack>
+            <HStack sx={socialIconInlineContainerStyling}>
                 <Box sx={socialIconContainerStyling} as="button" >
                     <AiOutlineInstagram
                         color="#1E174B"
@@ -28,7 +32,7 @@ const SocialIcons = () => {
                     Instagram
                 </Text>
             </HStack>
-            <HStack>
+            <HStack sx={socialIconInlineContainerStyling}>
                 <Box sx={socialIconContainerStyling} as="button" >
                     <AiOutlineTwitter
                         color="#1E174B"
@@ -39,7 +43,7 @@ const SocialIcons = () => {
                     Twitter
                 </Text>
             </HStack>
-            <HStack>
+            <HStack sx={socialIconInlineContainerStyling}>
                 <Box sx={socialIconContainerStyling} as="button" >
                     <FaFacebookF
                         color="#1E174B"
@@ -50,7 +54,7 @@ const SocialIcons = () => {
                     Facebook
                 </Text>
             </HStack>
-            <HStack>
+            <HStack sx={socialIconInlineContainerStyling}>
                 <Box sx={socialIconContainerStyling} as="button" >
                     <FaLinkedinIn
                         color="#1E174B"

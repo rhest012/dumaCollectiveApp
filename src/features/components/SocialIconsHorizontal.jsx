@@ -13,7 +13,7 @@ const SocialIconsHorizontal = () => {
         alignItems:"center"
     }
   return (
-    <Flex gap="1rem" paddingY="2rem">
+    <Flex gap="1rem" paddingY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}>
         <Box sx={socialIconContainerStyling} as="button" >
             <AiOutlineInstagram
                 color="#1E174B"

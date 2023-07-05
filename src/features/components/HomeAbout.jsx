@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom'
 const HomeAbout = () => {
   return (
     <Grid 
-        gridTemplateColumns="1fr 1fr"
+        gridTemplateColumns={{ base:"1fr", sm:"1fr",  md:"1fr", lg:"1fr 1fr", xl:"1fr 1fr"}}
         background="brand.900"
-        height="80vh"
+        height={{ base:"auto", sm:"auto", md:"auto", lg:"80vh", xl:"80vh"}}
         
     >
         <GridItem
@@ -40,7 +40,7 @@ const HomeAbout = () => {
         >
             <Image
                 src={Lady}
-                height="600px"
+                height={{ base:"500px", sm:"500px", md:"500px", lg:"600px", xl:"600px" }}
             />
             
         </GridItem>

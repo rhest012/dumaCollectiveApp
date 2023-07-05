@@ -33,11 +33,11 @@ const NewsRoom = () => {
       {data.map((buzzItem, index) => (
   <Grid
     key={index}
-    gridTemplateColumns="30% 70%"
-    marginX="2.5rem"
-    marginTop="3rem"
+    gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"30%, 70%", lg:"30%, 70%", xl:"30% 37%" }}
+    marginX="2rem"
+    marginTop={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
     gap="2rem"
-    paddingY="2.5rem"
+    paddingY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
     borderBottom="1.5px solid #1E174B"
   >
     <GridItem>

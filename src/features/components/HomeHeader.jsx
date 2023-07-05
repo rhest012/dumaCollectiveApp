@@ -52,10 +52,11 @@ const HomeHeader = () => {
 
   return (
     <Grid 
-    height="90vh"
-    gridTemplateColumns="70% 30%" 
-    width="100%" 
-    padding="2rem"
+    height={{ base:"auto", sm:"auto", md:"auto", lg:"90vh", xl:"90vh" }}
+    gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"1fr", lg:"70%, 30%", xl:"70% 30%" }}
+    width="100vw" 
+    paddingY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
+    paddingX="2rem"
     flexDir="row"
     alignItems="center"
     borderBottom="1px solid #1a202c"
@@ -68,11 +69,14 @@ const HomeHeader = () => {
           </Heading>
           <Text
             variant="p"
-            marginY="2rem"
+            marginY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
           >
             Our collaborative work environment fosters a culture of innovation, allowing our team to constantly inspire and elevate one another, From brainstorming sessions to meticulous attention to detail, our creative staff thrives on turning ideas into captivating realities.
           </Text>
-          <Flex gap="2rem" marginY="2rem">
+          <Flex 
+            gap="2rem"
+            marginY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
+          >
             <Box sx={socialIconContainerStyling} as="button" >
               <AiOutlineInstagram
                   color="#1E174B"
@@ -109,9 +113,10 @@ const HomeHeader = () => {
         <GridItem display="flex" justifyContent="center">
           <MotionImage
             src={HomeHeaderBackground}
-            height="700px"
-            width="409px"
+            height={{ base:"550px", base:"550px", md:"550px", lg:"700px", xl:"700px" }}
+            width={{ base:"321px", sm:"321px", md:"321px", lg:"409px",  xl:"409px" }}
             layoutId= "africa-image"
+            paddingTop={{ base:"1rem", sm:"1rem", md:"1rem", lg:"0px",  xl:"0xp" }}
             variants={imageVariants}
             initial="hidden"
             animate="visible"

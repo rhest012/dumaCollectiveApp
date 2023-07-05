@@ -18,8 +18,6 @@ const WhatWeDo = () => {
 
   return (
     <Box>
-      {/* <SecondaryHeader pageLocation={pageLocation}/>
-      <PageIntro pageLocation={pageLocation}/> */}
       <ServiceList/>
       </Box>
   )

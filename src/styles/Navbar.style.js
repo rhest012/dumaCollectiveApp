@@ -16,7 +16,6 @@ export const NavbarContainer = styled.nav `
 
 export const LeftContainer = styled.div`
     display: flex;
-    flex: 20%;
     padding: 10px 0 10px 1.5rem
 `
 
@@ -96,6 +95,11 @@ export const NavbarLink = styled(Link) `
 export const Logo = styled.img `
     height: auto;
     width: 200px;
+
+    @media (max-width:700px) {
+        height: 100px;
+
+    }
 `;
 
 export const MobileMenuButton = styled.button `
@@ -143,6 +147,10 @@ export const Links = styled(Link) `
     position: relative;
     /* transform: translateY(-200%); */
     transition: all 1s;
+
+    @media (max-width:700px) {
+        display: none;
+    }
 
      &::after {
         content: "";
