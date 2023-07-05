@@ -1,9 +1,18 @@
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react'
-import HomeHeaderBackground from '../../assets/headers/home-header.png'
+import { Box, Button, Flex, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react'
+import HomeHeaderBackground from '../../assets/headers/africa image.png'
 import africaOutline from '../../assets/headers/Duma_Africa_outline.png'
 import { motion } from "framer-motion"
+import { AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const HomeHeader = () => {
+  const socialIconContainerStyling = {
+    border:"1px solid #1E174B",
+    padding:"0.5rem", 
+    borderRadius:"100%"
+  }
+  
   // Framer Motion
   const MotionHeading = motion(Heading);
   const MotionText = motion(Text);
@@ -42,56 +51,75 @@ const HomeHeader = () => {
   }
 
   return (
-    <Flex 
-    height="90vh" 
+    <Grid 
+    height="90vh"
+    gridTemplateColumns="70% 30%" 
     width="100%" 
     padding="2rem"
     flexDir="row"
     alignItems="center"
     borderBottom="1px solid #1a202c"
     >
-        <Box width="65%">
+        <GridItem display="flex" flexDir="column" justifyContent="flex-end">
           <Heading 
             variant="h1"
-            marginBottom="3rem"
           >
               Redefining creative communications from Africa to the world 
           </Heading>
           <Text
             variant="p"
+            marginY="2rem"
           >
-            Duma Collective in action from branding, and creative strategy to PR, Social Media, Influencer Marketing, Events, Production, and Talent Procurement.
+            Our collaborative work environment fosters a culture of innovation, allowing our team to constantly inspire and elevate one another, From brainstorming sessions to meticulous attention to detail, our creative staff thrives on turning ideas into captivating realities.
           </Text>
-        </Box>
-        <Box width="35%" className="header-container__right">
+          <Flex gap="2rem" marginY="2rem">
+            <Box sx={socialIconContainerStyling} as="button" >
+              <AiOutlineInstagram
+                  color="#1E174B"
+                  fontSize="1.5rem"
+              />
+            </Box>
+            <Box sx={socialIconContainerStyling} as="button" >
+              <AiOutlineTwitter
+                  color="#1E174B"
+                  fontSize="1.5rem"
+              />
+            </Box>
+            <Box sx={socialIconContainerStyling} as="button" >
+              <FaFacebookF
+                  color="#1E174B"
+                  fontSize="1.5rem"
+              />
+            </Box>
+            <Box sx={socialIconContainerStyling} as="button" >
+              <FaLinkedinIn
+                color="#1E174B"
+                fontSize="1.5rem"
+              />
+            </Box>
+          </Flex>
+          <Link  to="/get-in-touch">
+            <Button 
+             variant="standardButton"
+            >
+              Get In Touch
+            </Button>
+          </Link>
+        </GridItem>
+        <GridItem display="flex" justifyContent="center">
           <MotionImage
             src={HomeHeaderBackground}
-            layoutId= "africa-image"
-            zIndex="-1"
             height="700px"
-            position="absolute"
-            left="770"
-            top="90"
+            width="409px"
+            layoutId= "africa-image"
             variants={imageVariants}
             initial="hidden"
             animate="visible"
             exit= 'exit'
             transition={{ ease: "linear", duration: 1.6 }}
           />
-          <MotionImage
-            src={africaOutline}
-            position="absolute"
-            zIndex="-2"
-            height="650px"
-            left="750"
-            top="100"
-            variants={outlineVariants}
-            initial="hidden"
-            animate="visible"
-            exit= 'exit'
-          />
-        </Box>
-    </Flex>
+        </GridItem>
+    </Grid>
   )
 }
 

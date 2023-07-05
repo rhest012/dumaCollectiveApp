@@ -7,6 +7,7 @@ export const NavbarContainer = styled.nav `
     /* padding: 10px 20px; */
     display: flex;
     flex-direction: column;
+    align-items: baseline;
 
     @media (min-width: 700px) {
         height: 80px;
@@ -16,15 +17,16 @@ export const NavbarContainer = styled.nav `
 export const LeftContainer = styled.div`
     display: flex;
     flex: 20%;
-    padding: 10px 0 0 20px 
+    padding: 10px 0 10px 1.5rem
 `
 
 export const RightContainer = styled.div`
     display: flex;
     justify-content: flex-end;
+    align-items: baseline;
     flex: 80%;
     gap: 7%;
-    padding: 10px 0 0 30px 
+    padding: 0 2rem 0 0; 
 `
 
 export const NavbarLinkContainer = styled.div`
@@ -93,7 +95,7 @@ export const NavbarLink = styled(Link) `
 
 export const Logo = styled.img `
     height: auto;
-    width: 238px;
+    width: 200px;
 `;
 
 export const MobileMenuButton = styled.button `
@@ -104,6 +106,10 @@ export const MobileMenuButton = styled.button `
     color: #1E174B;
     font-size:  1.25rem;
     cursor: pointer; 
+
+    @media (min-width:700px) {
+        display: none;
+    }
 `;
 
 export const NavbarMobileContainer = styled.div`

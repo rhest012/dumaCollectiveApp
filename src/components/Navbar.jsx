@@ -10,7 +10,8 @@ import {
   Logo,
   MobileMenuButton,
   NavbarLinkContainer,
-  NavbarLinkMobile
+  NavbarLinkMobile,
+  Links
  } from '../styles/Navbar.style'
  import LogoImage from '../assets/Duma-Collective-Logo.svg'
 
@@ -25,7 +26,12 @@ const Navbar = () => {
           <Logo src={LogoImage}></Logo>
         </LeftContainer>
         <RightContainer>
-          <NavbarLink> Home</NavbarLink>
+          <Links to="/">Home</Links>
+          <Links to="what-we-do">What We Do</Links>
+          <Links to="the-grind">The Grind</Links>
+          <Links to="the-squad">The Squad</Links>
+          <Links to="the-buzz">The Buzz</Links>
+          <Links tp="/get-in-touch">Get In Touch</Links>
           <MobileMenuButton onClick={() => {
             setNavBarOpener((curr) => !curr);
           }}

@@ -1,101 +1,63 @@
-import {
-    Box,
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
-    Heading,
-    Grid,
-    GridItem,
-    Text,
-    Image,
-    Flex,
-    createMultiStyleConfigHelpers 
-  } from '@chakra-ui/react'
-import { accordionAnatomy } from '@chakra-ui/anatomy'
-import placeHolderImage from '../../assets/squad/squadOri/Akhona.jpg'
-import useFetch from '../../actions/useFetchData'
-import { useFetchFirebase } from '../../actions/useFetchFirebase'
-import { color } from 'framer-motion'
+import { Box, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
+import React from 'react'
+import SocialIconsHorizontal from './SocialIconsHorizontal'
 
 const ServiceList = () => {
-    
-    const data = useFetchFirebase('services');
+    const services = [
+        "Branding & Creative Strategy",
+        "Public Relations",
+        "Social Media",
+        "Influencer Marketing",
+        "Events and Production",
+        "Talent Procurement"
+    ]
 
-
+    console.log(services)
   return (
-    <>
-        {data && (
-            <Box
-                marginX="2rem"
-                marginY="4rem"
-            >
-                <Accordion  
-                    allowToggle
+    <Grid 
+        gridTemplateColumns="45% 55%"
+        marginX="2rem"
+        gap="2rem"
+        height="90vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+    >
+        <GridItem>
+            <Heading variant="h2">
+                A solution<br/>for every need
+            </Heading>
+            <Text variant="p" paddingY="2rem">
+                At Duma Collective we thrive on building brands, driven by creative ideation and insights.  Servicing an array of clients, from FMCG, Energy and Sustainability, Technology and Enterprise Development, Financial Services to government departments. We drive business growth for our clients through collaborative thinking and the implementation of our service offerings with excellence! We are an oasis for African Creativity to flourish and committed to delivering impactful creative solutions for our clients.
+            </Text>
+            <SocialIconsHorizontal/>
+        </GridItem>
+        <GridItem 
+            display="grid"
+            gridTemplateColumns="repeat(3, 1fr)" 
+            gridTemplateRows="repeat(2, 1fr)"
+            gap="2rem"
+            marginX="4rem"
+        >
+            {services.map((service, index) => (
+                <Box 
+                    border="1px solid #1d1749" 
+                    padding="1rem"
+                    height="150px"
+                    width="220px"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    key={index}
+                    paddingX="1rem"
                 >
-                    {data.map((service, index) => (
-                        <AccordionItem 
-                            className="accordion-container"
-                            key={index} 
-                            borderBottom="1px solid #1E174B"
-                            _first = {{
-                                borderY:"1px solid #1E174B"
-                            }}
-                        >
-                            <AccordionButton 
-                                className="accordion-button"
-                                _expanded={{ bg: "brand.900", color: 'white' }}
-                                _hover = {{
-                                    backgroundColor: "brand.900",
-                                    color: "#fff",
-                        
-                                }}
-                            >
-                                <Box as="span" paddingY="1rem" flex='1' textAlign='left'>
-                                    <Heading variant="h3" as="h3">
-                                        {service.title} 
-                                    </Heading>
-                                </Box>
-                                <AccordionIcon/>
-                            </AccordionButton>
-                            <AccordionPanel paddingY="1rem">
-                            <Grid gridTemplateColumns="repeat(3, 1fr)">
-                                    <GridItem >
-                                    <Flex height="100%" alignItems="flex-end">
-                                        <Heading variant="h5">
-                                            {service.name}
-                                        </Heading>
-                                    </Flex>
-                                    </GridItem>
-                                    <GridItem marginLeft="1rem">
-                                        <Flex height="100%" justifyContent="flex-end" flexDir="column">
-                                            {service.descriptions.map((serviceDescription, index) => (
-                                                <Text key={index} width="100%">
-                                                    {serviceDescription} <br/>
-                                                </Text>
-                                        
-                                            ))}
-                                        </Flex>
-                                    </GridItem>
-                                    <GridItem>
-                                        <Flex justifyContent="flex-end">
-                                            <Image
-                                                src={placeHolderImage}
-                                                borderRadius="0.5rem"
-                                                width="300px"
-                                            />
-                                        </Flex>
-                                    </GridItem>
-
-                            </Grid>
-                            </AccordionPanel>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
-            </Box>
-        )}
-    </>
+                    <Heading variant="h5" textTransform="uppercase">
+                        {service}
+                    </Heading>
+                </Box>
+            ))}
+        </GridItem>
+    </Grid>
   )
 }
 

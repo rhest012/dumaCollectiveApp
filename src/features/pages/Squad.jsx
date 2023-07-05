@@ -17,8 +17,6 @@ const Squad = () => {
  
   return (
    <>
-      <SecondaryHeader pageLocation={pageLocation}/>
-      <PageIntro pageLocation={pageLocation}/>
       <SquadList/>
     </>  
   )

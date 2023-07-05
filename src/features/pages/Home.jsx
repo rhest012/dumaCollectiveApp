@@ -1,12 +1,7 @@
 import { Box, Flex, Grid, GridItem, Heading, Image, ListItem, Text, UnorderedList } from "@chakra-ui/react"
 import HomeHeader from "../components/HomeHeader"
-import HomeSquad from "../components/HomeSquad"
-import { useFetchFirebase } from "../../actions/useFetchFirebase"
-import LandscapeImage from "../../assets/bodyImages/DumaImage01.jpg"
-import PortraitImage from "../../assets/bodyImages/DumaImage02.jpg"
-import Beliefs from "../components/Beliefs"
-import HomeServices from "../components/HomeServices"
-import HomeStats from "../components/HomeStats"
+import HomeAbout from "../components/HomeAbout"
+import HomeContat from "../components/HomeContat"
 
 const Home = () => {
     const listyling = {
@@ -36,18 +31,8 @@ const Home = () => {
   return (
     <>
       <HomeHeader/>
-      <Box 
-        padding="4rem 2rem"
-      >
-        <Text variant="p" as="p" textAlign="center">
-          Duma Collective is a Creative Communications Agency in the business of redefining creative communication from Africa, to the world.<br/>  ​
-          We are an oasis for African Creativity to flourish and committed to delivering impactful creative solutions for our clients.​
-        </Text>
-      </Box>
-      <Beliefs/>
-      <HomeSquad/>
-      <HomeServices/>
-      <HomeStats/>
+      <HomeAbout/>
+      <HomeContat/>
     </>
   )
 }

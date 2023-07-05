@@ -12,7 +12,7 @@ import NewsRoom from '../theNewsRoom/pages/NewsRoom';
 import Contact from '../pages/Contact';
 
 // Components
-import Nav from '../../components/Nav';
+import Navbar from "../../components/Navbar"
 import CustomCursor from '../../components/CustomCursor';
 import Footer from '../../components/Footer';
 
@@ -37,7 +37,7 @@ const AnimatedRoutes = () => {
         </motion.div>
       ) : ( */}
         <>
-            <Nav />
+            <Navbar />
             <CustomCursor />
             <Routes>
             <Route path="/"element = {<Home/>}/>

@@ -6,6 +6,7 @@ import MultichoiceLogo from '../../../assets/theGrind/Multichoice/Multichoice_Lo
 import JffLogo from '../../../assets/theGrind/jff/JFF_Logo.svg'
 import { useFetchFirebase } from '../../../actions/useFetchFirebase'
 import { Link, Link as ReachLink, useLocation} from 'react-router-dom'
+import SocialIconsHorizontal from "../../components/SocialIconsHorizontal"
 import useFetch from '../../../actions/useFetchData'
 import { Links, NavbarLink } from '../../../styles/Navbar.style'
 
@@ -59,30 +60,36 @@ const TheGrind = () => {
     <>  
       {data && (  
       <Box>
-      <SecondaryHeader pageLocation={pageLocation}/>
-      <PageIntro pageLocation={pageLocation}/>
-      <Box borderTop="1px solid #1E174B"/>
-      <Grid margin="4rem 2rem" gridTemplateColumns="32% 68%">
+      <Grid margin="2rem" gridTemplateColumns="40% 60%">
         <GridItem>
-          <MotionBox className="client-outer-container" ref={targetRef}>
-            <Flex className="client-inner-container" height="100%" justifyContent="center">
-              <MotionHeading 
-                variant="h3" 
-                as="h3" 
-                textAlign="right" 
-                pathLength="1"
-                style={{ pathLength: scrollYProgress }}
-              >
-                Shoutout To <br/>
-                Our Clients
-              </MotionHeading>
-            </Flex>
+          <MotionBox 
+            className="client-outer-container" 
+            ref={targetRef}
+            display="flex"
+            flexDir="column"
+            height="100%" 
+            marginRight="2rem" 
+            flexWrap="wrap" 
+            justifyContent="center"
+          >
+            <MotionHeading 
+              variant="h2" 
+              as="h2"  
+              pathLength="1"
+              style={{ pathLength: scrollYProgress }}
+            >
+              A big Shout out <br/> to our clients
+            </MotionHeading>
+            <Text variant="p" as="p" paddingY="2rem">
+              Duma Collective prides itself on serving a diverse range of clients in the advertising and entertainment industry. Our client portfolio includes renowned advertising agencies, production houses, and entertainment companies seeking innovative solutions to captivate their target audience. 
+            </Text>
+            <SocialIconsHorizontal/>
           </MotionBox>
         </GridItem>
         <GridItem width="100%">
-            <Grid gridTemplateColumns="repeat(4, 1fr)" gap="2rem" marginY="2rem">
+            <Grid gridTemplateColumns="repeat(5, 1fr)" gap="2rem" marginY="2rem">
               {data.map((item, index) => (  
-                <GridItem key={index} width="100%" border="1px solid #2C245B" borderRadius="0.5rem" padding="2rem">
+                <GridItem key={index} width="130px" height="130px" border="1px solid #2C245B" >
                   <Image
                     src={require(`../../../assets/theGrind/clientLogos/${item.clientLogo}`)}
                     width="190px"

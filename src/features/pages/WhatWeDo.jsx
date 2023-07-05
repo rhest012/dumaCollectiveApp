@@ -18,15 +18,9 @@ const WhatWeDo = () => {
 
   return (
     <Box>
-      <SecondaryHeader pageLocation={pageLocation}/>
-      <PageIntro pageLocation={pageLocation}/>
+      {/* <SecondaryHeader pageLocation={pageLocation}/>
+      <PageIntro pageLocation={pageLocation}/> */}
       <ServiceList/>
-      <Flex justifyContent="space-between" marginY="4rem" marginX="2rem">
-        <Image src={LandscapeImageOne} sx={imageStyling} height="270px" width="auto"/>
-        <Image src={PortraitImageOne} sx={imageStyling} height="270px" width="auto"/>
-        <Image src={LandscapeImageOne} sx={imageStyling} height="270px" width="auto"/>
-        <Image src={PortraitImageOne} sx={imageStyling} height="270px" width="auto"/>
-      </Flex>
       </Box>
   )
 }
