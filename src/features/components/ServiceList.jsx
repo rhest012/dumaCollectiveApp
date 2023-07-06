@@ -16,13 +16,16 @@ const ServiceList = () => {
     <Grid 
         gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"1fr", lg:"45% 55%", xl:"45% 55%" }}
         gap={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
-        height={{ base:"auto", sm:"auto", md:"auto", lg:"83vh", xl:"83vh"}}
+        height={{ base:"auto", sm:"auto", md:"auto", lg:"80vh", xl:"75vh"}}
         marginY="2rem"
-        // display="flex"
-        // justifyContent="center"
-        // alignItems="center"
+        maxWidth="100vw"
+        marginX="2rem"
     >
-        <GridItem marginX="2rem">
+        <GridItem
+            display="flex"
+            flexDir="column"
+            justifyContent="center"
+        >
             <Heading variant="h2">
                 A solution<br/>for every need
             </Heading>
@@ -32,11 +35,13 @@ const ServiceList = () => {
             <SocialIconsHorizontal/>
         </GridItem>
         <GridItem 
-            display="grid"
-            gridTemplateColumns={{base:"1fr", sm:"repeat(2, 1fr)", md:"repeat(2, 1fr)",  xl:"repeat(3, 1fr)" }}
-            gridTemplateRows={{ base:"auto", sm:"auto", md:"auto", lg:"repeat(2, 1fr)", xl:"repeat(2, 1fr)"}}
-            gap={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
-            marginX={{ base:"2rem", sm:"1.3rem", md:"2rem", lg:"2rem", xl:"2rem"}}
+            display="flex"
+            flexWrap="wrap"
+            justifyContent={{ base:"center", sm:"center", md:"space-between", lg:"space-between", xl:"space-between" }}
+            alignContent="center"
+            gap={{ base:"0", sm:"1rem", md:"1rem", lg:"0", xl:"0"}}
+            width="100%"
+            paddingRight={{base:"0", sm:"0", md:"0", lg:"2rem", xl:"2rem"}}
         >
             {services.map((service, index) => (
                 <Box 
@@ -48,7 +53,8 @@ const ServiceList = () => {
                     justifyContent="center"
                     alignItems="center"
                     key={index}
-                    paddingX="1rem"
+                    marginY="0.6rem"
+                    
                 >
                     <Heading variant="h5" textTransform="uppercase">
                         {service}
