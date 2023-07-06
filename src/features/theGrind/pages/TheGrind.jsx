@@ -22,7 +22,7 @@ const TheGrind = () => {
     alignItems:"center",
     border:"1px solid #1E174B",
     borderRadius:"0.5rem",
-    width:"400px",
+    width:{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"},
 
     _hover: {
       
@@ -133,7 +133,6 @@ const TheGrind = () => {
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
                 height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
-                width={{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"}}
                 flexShrink="3"
               >
                 <Image
@@ -187,7 +186,7 @@ const TheGrind = () => {
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
                 height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
-                width={{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"}}
+                width={{base:"100px", sm:"100px", md:"400px", lg:"400px", xl:"400px"}}
                 flexShrink="3"
               >
                 <Image

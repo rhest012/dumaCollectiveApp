@@ -1,9 +1,7 @@
-import { Flex, Grid, GridItem, Heading, Image, Input, Select, Stack, Text, Textarea } from '@chakra-ui/react'
-import SecondaryHeader from '../components/SecondaryHeader'
-import PlaceholderImageLs from "../../assets/bodyImages/DumaImage01.jpg"
-import PlaceholderImageP from "../../assets/bodyImages/DumaImage02.jpg"
+import { Button, Flex, Grid, GridItem, Heading, Image, Input, Select, Stack, Text, Textarea } from '@chakra-ui/react'
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import ContactForm from '../components/ContactForm'
 
 // Icons
 import {SlLocationPin} from 'react-icons/sl'
@@ -13,6 +11,8 @@ import {FaFacebookF, FaTiktok, FaLinkedinIn} from 'react-icons/fa'
 import SocialIconsHorizontal from '../components/SocialIconsHorizontal'
 
 const Contact = () => {
+    
+
     const inputStyling= {
         border:"none",
         borderBottom:"1px solid #1E174B",
@@ -51,7 +51,7 @@ const Contact = () => {
 
         // Page Location
     const location = useLocation();
-    const pageLocation = location.pathname;
+
 
   return (
     <>
@@ -86,32 +86,7 @@ const Contact = () => {
                 sx={singleGridContainerStyling}
                 marginRight="2rem"
             >
-                <form>
-                    <Flex gap="1rem">
-                        <Input
-                            placeholder="Full Name"
-                            type="text"
-                            sx={inputStyling}
-                        />
-                        <Input
-                            placeholder="Email"
-                            type="email"
-                            sx={inputStyling}
-                        />
-                    </Flex>
-                    <Select
-                        sx={inputStyling}
-                        placeholder="Subject"
-                    >
-                        <option value='business'>Business</option>
-                        <option value='careers'>Careers</option>
-                        <option value='enquiries'>General Enquiries</option>
-                    </Select>
-                    <Textarea
-                        placeholder="Message"
-                        sx={inputStyling}
-                    />
-                </form>
+                <ContactForm/>
                 <Grid 
                     gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"repeat(3, 1fr)", lg:"repeat(3, 1fr)", xl:"repeat(3, 1fr)" }} 
                     paddingY="2rem"

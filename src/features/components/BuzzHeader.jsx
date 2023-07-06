@@ -7,13 +7,12 @@ import BuzzCircle from "../../assets/headers/buzz-circle.png"
 const BuzzHeader = () => {
   return (
    <Grid
-   height={{ base:"auto", sm:"auto", md:"auto", lg:"80vh", xl:"75vh" }}
+   height={{ base:"auto", sm:"auto", md:"auto", lg:"75vh", xl:"75vh" }}
    gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"1fr", lg:"50%, 50%", xl:"50% 50%" }}
    width="100vw" 
 //    paddingX="2rem"
    flexDir="row"
    alignItems="center"
-   borderBottom="1px solid #1a202c"
    background="#221c45"
    overflow="hidden"
    >
@@ -42,12 +41,13 @@ const BuzzHeader = () => {
         display="flex"
         alignContent="flex-end"
         backgroundImage={DumaLady}
-        backgroundPosition="center"
-        backgroundSize="cover"
+        backgroundPosition="bottom"
+        backgroundSize="750px"
+        bgRepeat="no-repeat"
     >
         <Image
             src={BuzzCircle}
-            height={{ base:"500px", sm:"500px", md:"500px", lg:"750px", xl:"750px" }}
+            height={{ base:"500px", sm:"500px", md:"500px", lg:"600px", xl:"600px" }}
             width="750px"
         />
     </GridItem>
