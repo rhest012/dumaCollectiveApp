@@ -129,7 +129,7 @@ export const NavbarMobileContainer = styled.div`
 
 export const NavbarLinkMobile = styled(Link) `
     color: #1E174B;
-    font-size: 3.05rem;
+    font-size: 1.5rem;
     font-family: 'Roc Grotesk Wide', Arial, sans-serif;
     text-transform: uppercase;
     text-decoration: none;
