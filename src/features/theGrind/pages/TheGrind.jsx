@@ -81,7 +81,7 @@ const TheGrind = () => {
               pathLength="1"
               style={{ pathLength: scrollYProgress }}
             >
-              A big Shout out <br/> to our clients
+              A big Shout out to our clients
             </MotionHeading>
             <Text variant="p" as="p" paddingY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}>
               Duma Collective prides itself on serving a diverse range of clients in the advertising and entertainment industry. Our client portfolio includes renowned advertising agencies, production houses, and entertainment companies seeking innovative solutions to captivate their target audience. 
@@ -118,30 +118,29 @@ const TheGrind = () => {
         >
           Case Studies
         </Heading>
-        <Grid 
-          gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"1fr", lg:"repeat(3, 1fr)", xl:"repeat(3, 1fr)" }}
+        <Flex 
+          flexDir={{base: "column", sm: "column", md:"column", lg:"row", xl:"row"}}
+          justifyContent="space-between"
+          alignItems={{ base:"center", sm:"center", md:"center", lg:"space-between", xl: "space-between" }}
+          gap={{base:"2rem", sm:"2rem", md:"2rem", lg:"0", xl:"0"}}
           width="100%"
+          flexWrap="wrap"
         >
-          <Flex 
-            flexDir={{base: "column", sm: "column", md:"column", lg:"row", xl:"row"}}
-            justifyContent="space-between"
-            alignItems={{ base:"center", sm:"center", md:"center", lg:"space-between", xl: "space-between" }}
-            gap={{base:"2rem", sm:"2rem", md:"2rem", lg:"0", xl:"0"}}
-            width="100%"
-          >
-            <GridItem>
+            
               <LinkBox 
                 as={ReachLink}
                 className="case-study-container" 
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
-                height="260px"
+                height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
+                width={{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"}}
+                flexShrink="3"
               >
                 <Image
                   src={JffLogo}
                   className="case-study-image" 
-                  width="400px"
-                  height="225px"
+                  width={{ base:"350px", sm:"400px", md:"400px", lg:"400px", xl:"400px" }}
+                  height={{ base:"200px", xl:"225px", md:"225px", lg:"225px", xl:"225px" }}
                   borderRadius="0.6rem"
                   _hover = {{
                     content: `url(${require(`../../../assets/theGrind/jff/JFF_Header.png`)})`,
@@ -152,21 +151,23 @@ const TheGrind = () => {
                   Explore
                 </Heading>
               </LinkBox>
-            </GridItem>
+            
 
-            <GridItem>
+            
               <LinkBox 
                 as={ReachLink}
                 className="case-study-container" 
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
-                height="260px"
+                height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
+                width={{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"}}
+                flexShrink="3"
               >
                 <Image
                   src={MultichoiceLogo}
                   className="case-study-image" 
-                  width="400px"
-                  height="225px"
+                  width={{ base:"350px", sm:"400px", md:"400px", lg:"400px", xl:"400px" }}
+                  height={{ base:"200px", xl:"225px", md:"225px", lg:"225px", xl:"225px" }}
                   borderRadius="0.6rem"
                   _hover = {{
                     content: `url(${require(`../../../assets/theGrind/jff/JFF_Header.png`)})`,
@@ -177,21 +178,23 @@ const TheGrind = () => {
                   Explore
                 </Heading>
               </LinkBox>
-            </GridItem>
             
-            <GridItem>
+            
+            
               <LinkBox 
                 as={ReachLink}
                 className="case-study-container" 
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
-                height="260px"
+                height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
+                width={{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"}}
+                flexShrink="3"
               >
                 <Image
                   src={JffLogo}
                   className="case-study-image" 
-                  width="400px"
-                  height="225px"
+                  width={{ base:"350px", sm:"400px", md:"400px", lg:"400px", xl:"400px" }}
+                  height={{ base:"200px", xl:"225px", md:"225px", lg:"225px", xl:"225px" }}
                   borderRadius="0.6rem"
                   _hover = {{
                     content: `url(${require(`../../../assets/theGrind/jff/JFF_Header.png`)})`,
@@ -202,9 +205,9 @@ const TheGrind = () => {
                   Explore
                 </Heading>
               </LinkBox>
-            </GridItem>
-          </Flex>
-        </Grid>
+            
+
+        </Flex>
       </Box>
       </Box>
       )}
