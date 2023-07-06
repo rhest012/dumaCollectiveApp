@@ -3,6 +3,7 @@ import SibuMabena from '../../../assets/newsroom/SibuMabena.jpg'
 import NewsRoomHeader from '../components/NewsRoomHeader'
 import { useFetchFirebase } from '../../../actions/useFetchFirebase'
 import { Link } from 'react-router-dom'
+import BuzzHeader from '../../components/BuzzHeader'
 
 const NewsRoom = () => {
   const buttonStyle = {
@@ -28,7 +29,7 @@ const NewsRoom = () => {
     <>
       {data && (
     <Box> 
-      <NewsRoomHeader/>
+    <BuzzHeader/>
       <>
       {data.map((buzzItem, index) => (
   <Grid
