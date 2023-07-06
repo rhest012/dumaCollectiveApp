@@ -16,34 +16,6 @@ const SquadList = () => {
     textAlign: {base: "center", sm:"center", md:"left", lg:"left", xl:"left"}
   }
 
-  const subHeadingStyle = {
-    color:"brand.900", 
-    textAlign: "left",
-  }
-
-  const linkContainerStyling = {
-    justifyContent:"space-between", 
-    paddingY:"1rem", 
-    alignItems:"center",
-    flexDirection: {base: "column", sm:"column", md:"column", lg:"row", xl:"row"}
-  }
-
-  const buttonStyle = {
-    color:"#fff",
-    background:"transparent",
-    color: "brand.900",
-    paddingY:"1.25rem",
-    textTransform:"uppercase",
-    fontSize: "1rem",
-    fontfamily: "'Roc Grotesk Wide', sans-serif",
-    fontWeight: "600",
-    colorScheme: "none",
-
-    _hover: {
-      background:"#transparent",
-    }
-  }
-
   const imageCaption = {
     textAlign : "center",
     pt: "0.25rem",
@@ -106,6 +78,7 @@ const SquadList = () => {
             alignContent="center" 
             gridTemplateColumns={{ base:"1fr", sm:"1fr",  md:"1fr", lg:"40% 60%", xl:"40% 60%"}}
             overflow="hidden"
+            gap="1rem"
           >
             <GridItem 
               className="staff-text-container"
@@ -134,8 +107,8 @@ const SquadList = () => {
                 <Grid 
                   className="staff-image-container"  
                   key={index} 
-                  gridTemplateColumns={{ base:"repeat(2, 1fr)", sm:"1fr", md:"1fr", lg:"repeat(3, 1fr)", xl:"repeat(3, 1fr)"}}
-                  display={{ base:"flex", sm:"flex", md:"flex", lg:"grid", xl:"grid"}}
+                  gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"repeat(3, 1fr)", lg:"repeat(2, 1fr)", xl:"repeat(3, 1fr)"}}
+                  flexDir="row"
                   flexDirection="column"
                   width="100%"
                   justifyContent="center"
