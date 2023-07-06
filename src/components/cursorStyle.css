@@ -17,13 +17,14 @@
     transform: translate(-50%, -50%);
     pointer-events: none; 
     transition: width 1000ms, height 1000ms;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+    transition: width 1000ms, height 1000ms;
 
     @media (max-width: 768px) {
       display: none;
     }
   
-    transform: translate(-50%, -50%);
-    pointer-events: none; 
-    transition: width 1000ms, height 1000ms;
+    
   }
 
