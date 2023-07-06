@@ -23,7 +23,7 @@ const TheGrind = () => {
     border:"1px solid #1E174B",
     borderRadius:"0.5rem",
     width:{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"},
-
+    height:{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"},
     _hover: {
       
     }
@@ -133,7 +133,7 @@ const TheGrind = () => {
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
                 height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
-                flexShrink="3"
+                
               >
                 <Image
                   src={JffLogo}
@@ -158,9 +158,8 @@ const TheGrind = () => {
                 className="case-study-container" 
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
-                height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
-                width={{base:"308px", sm:"400px", md:"400px", lg:"400px", xl:"400px"}}
-                flexShrink="3"
+         
+              
               >
                 <Image
                   src={MultichoiceLogo}
@@ -185,9 +184,8 @@ const TheGrind = () => {
                 className="case-study-container" 
                 to="/the-grind/jff"
                 sx={linkBoxStyling }
-                height={{ base:"200px", sm:"260px", md:"260px", lg:"260px", xl:"260px"}}
-                width={{base:"100px", sm:"100px", md:"400px", lg:"400px", xl:"400px"}}
-                flexShrink="3"
+             
+             
               >
                 <Image
                   src={JffLogo}
