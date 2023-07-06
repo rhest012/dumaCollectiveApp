@@ -205,8 +205,6 @@ const TheGrind = () => {
                   Explore
                 </Heading>
               </LinkBox>
-            
-
         </Flex>
       </Box>
       </Box>
