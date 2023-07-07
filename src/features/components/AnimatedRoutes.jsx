@@ -17,6 +17,7 @@ import CustomCursor from '../../components/CustomCursor';
 import Footer from '../../components/Footer';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import ScrollToTop from '../../components/ScrollToTop';
 
 const AnimatedRoutes = () => {
     const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ const AnimatedRoutes = () => {
         </motion.div>
       ) : ( */}
         <>
+            <ScrollToTop/>
             <Navbar />
             <CustomCursor />
             <Routes>

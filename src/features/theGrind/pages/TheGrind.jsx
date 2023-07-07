@@ -59,7 +59,7 @@ const TheGrind = () => {
       {data && (  
       <Box>
       <Grid 
-        margin="2rem" 
+        marginX="2rem" 
         gridTemplateColumns={{ base:"1fr", sm:"1fr", base:"1fr", lg:"40%,630%", xl:"40% 60%" }}
       >
         <GridItem>
@@ -104,7 +104,7 @@ const TheGrind = () => {
               </Grid>  
         </GridItem>
       </Grid>
-      <Box
+      {/* <Box
         marginY={{ base:"2rem", sm:"2rem", md:"2rem", lg:"4rem", xl:"4rem" }}
         marginX="2rem"
       > 
@@ -201,7 +201,7 @@ const TheGrind = () => {
                 </Heading>
               </LinkBox>
         </Flex>
-      </Box>
+      </Box> */}
       </Box>
       )}
     </>

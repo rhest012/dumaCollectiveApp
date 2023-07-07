@@ -1,14 +1,13 @@
-import { Box, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
+import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Grid, GridItem, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
 import SocialIconsHorizontal from './SocialIconsHorizontal'
 
 const ServiceList = () => {
     const services = [
-        "Branding & Creative Strategy",
-        "Public Relations",
         "Social Media",
+        "Public Relations",
         "Influencer Marketing",
-        "Events and Production",
+        "Events & Production",
         "Talent Procurement"
     ]
 
@@ -35,16 +34,16 @@ const ServiceList = () => {
             <SocialIconsHorizontal/>
         </GridItem>
         <GridItem 
-            display="flex"
-            flexWrap="wrap"
-            justifyContent={{ base:"center", sm:"center", md:"space-between", lg:"space-between", xl:"space-between" }}
-            alignContent="center"
-            gap={{ base:"0", sm:"1rem", md:"1rem", lg:"0", xl:"0"}}
+        
             width="100%"
-            paddingRight={{base:"0", sm:"0", md:"0", lg:"2rem", xl:"2rem"}}
+            paddingX={{ base:"0", sm:"0", md:"0", lg: "2rem", xl: "2rem"}}
+            display="flex"
+            justifyContent="center"
+            flexDir="column"
+            height="100%"
         >
-            {services.map((service, index) => (
-                <Box 
+            
+                {/* <Box 
                     border="1px solid #1d1749" 
                     padding="1rem"
                     height="150px"
@@ -59,8 +58,38 @@ const ServiceList = () => {
                     <Heading variant="h5" textTransform="uppercase">
                         {service}
                     </Heading>
-                </Box>
-            ))}
+                </Box> */}
+                
+                    <Accordion 
+                        // allowToggle
+                        className="accordion-container"
+                    >
+                    {services.map((service, index) => (
+                        <AccordionItem 
+                            className="accordion-item" 
+                            key={index} 
+                            borderBottom="1px solid #1d1749"
+                            _first=  {{
+                                borderTop:"1px solid #1d1749" 
+                            }}
+
+                            _hover= {{
+                                background: "#1d1749",
+                                color:"#fff",
+                                borderY:"1px solid #1d1749"
+                            }}
+                            >
+                            <AccordionButton className="accordion-button">
+                                <Heading variant="h4" as="h4" textAlign="left">
+                                    {service}
+                                </Heading>
+                            </AccordionButton>
+                            {/* <AccordionPanel className="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aliquam quidem voluptas exercitationem harum ut eius alias dolorum rem. Excepturi enim exercitationem placeat corporis blanditiis facilis dicta provident. Nisi libero commodi incidunt aperiam veniam delectus repudiandae voluptate ut velit voluptas atque sint at dolorem inventore modi nulla, rem quasi nesciunt?
+                            </AccordionPanel> */}
+                        </AccordionItem>
+                    ))}
+                    </Accordion>
         </GridItem>
     </Grid>
   )
