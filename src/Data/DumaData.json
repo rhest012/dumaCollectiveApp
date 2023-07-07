@@ -22,11 +22,6 @@
                     "aka": "The Plug"
                 },
                 {
-                    "name": "Tumi",
-                    "image":  "Tumi.jpg",
-                    "aka": "The PR Mavern"
-                },
-                {
                     "name": "Petunia",
                     "image":  "Petunia.jpg",
                     "aka": "Wordsmith"
@@ -105,11 +100,6 @@
                     "name": "Justine",
                     "image":  "Justine.jpg",
                     "aka": "Cristina Yang"
-                },
-                {
-                    "name": "Lesedi",
-                    "image":  "Lesedi.jpg",
-                    "aka": "Top Sjambok"
                 }
             ]
         },
@@ -140,8 +130,8 @@
                     "aka": "The UX Half-Man Half-Machine"
                 },
                 {
-                    "name": "Koketso2",
-                    "image":  "Koketso-2.jpg",
+                    "name": "Koketso1",
+                    "image":  "Koketso-1.jpg",
                     "aka": "New Kid On The Block"
             
                 },
@@ -151,9 +141,14 @@
                     "aka": "The Conceptualiser"
                 },
                 {
-                    "name": "Lerato",
-                    "image":  "Lerato.jpg",
-                    "aka": "JMPD"
+                    "name": "Cyan",
+                    "image": "Cyan.jpg",
+                    "aka": "The Jack"
+                },
+                {
+                    "name": "Cezanne",
+                    "image":  "Cezanne.jpg",
+                    "aka": "The Tailor"
                 }
             ]
         },
@@ -202,13 +197,18 @@
                     "name": "Kele",
                     "image":  "Kele.jpg",
                     "aka": "G.O.A.T"
+                },
+                {
+                    "name": "Asande",
+                    "image":  "Asande.jpg",
+                    "aka": "Digital Storyteller"
                 }
             ]
             
         },
         {
             "department": "Production",
-            "aka": "The Final Cut",
+            "aka": "The Event Architects",
             "quote": "With us mood boards equal reality",
             "staffMembers": [
                 {
@@ -220,6 +220,11 @@
                     "name": "Kashifa" ,
                     "image": "Kashifa.jpg",
                     "aka": " The Kreative"
+                },
+                {
+                    "name": "Kgothatso",
+                    "image":  "Kgothatso.jpg",
+                    "aka": "President of Vibe"
                 }
             ]
         },
@@ -247,11 +252,6 @@
                     "name": "Gugu",
                     "image": "Gugu.jpg",
                     "aka": "The Comforter"
-                },
-                {
-                    "name": "Cyan",
-                    "image": "Cyan.jpg",
-                    "aka": "The Jack"
                 }
             ]
         }

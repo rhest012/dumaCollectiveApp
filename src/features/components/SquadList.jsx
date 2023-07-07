@@ -4,6 +4,7 @@ import { useFetchFirebase } from '../../actions/useFetchFirebase'
 
 
 import { easeIn, motion } from 'framer-motion'
+import useFetch from '../../actions/useFetchData'
 
 const SquadList = () => {
   const containerStyle = {
@@ -53,17 +54,11 @@ const SquadList = () => {
    
    // Fetch Data
    const data  = useFetchFirebase('staff');
+  //  const {data, isPending, error}  = useFetch(' http://localhost:8000/staff');
+
+  //  console.log(newData)
    
-   // Filter squad departments
-   const [currentDepartment, setCurrentDepartment] = useState("Public Relations");
- 
-   const handleDepartmentChange = (department) => {
-     setCurrentDepartment(department);
-   };
- 
-   const filteredSquad = currentDepartment === "all"
-   ? data
-   : data.filter(item => item.department === currentDepartment);
+   
  
  
   return (
@@ -100,13 +95,12 @@ const SquadList = () => {
             </GridItem>
             <GridItem overflowY="scroll">
             {data.map((staff, index) => (
-              <Box marginY="1rem" display="flex" flexDir="column" justifyContent="center">
+              <Box key={index} marginY="1rem" display="flex" flexDir="column" justifyContent="center">
                 <Heading sx={staffHeadingStyle} variant="h2">
                   {staff.aka}
                 </Heading>
                 <Grid 
                   className="staff-image-container"  
-                  key={index} 
                   gridTemplateColumns={{ base:"1fr", sm:"1fr", md:"repeat(3, 1fr)", lg:"repeat(2, 1fr)", xl:"repeat(3, 1fr)"}}
                   flexDir="row"
                   flexDirection="column"

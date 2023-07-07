@@ -1,8 +1,7 @@
-
-import React, {useState} from 'react'
-import { 
-  NavbarContainer, 
-  LeftContainer, 
+import React, { useState } from 'react';
+import {
+  NavbarContainer,
+  LeftContainer,
   RightContainer,
   NavbarInnerContainer,
   NavbarMobileContainer,
@@ -11,16 +10,15 @@ import {
   MobileMenuButton,
   NavbarLinkContainer,
   NavbarLinkMobile,
-  Links
- } from '../styles/Navbar.style'
- import LogoImage from '../assets/Duma-Collective-Logo.svg'
+  Links,
+} from '../styles/Navbar.style';
+import LogoImage from '../assets/Duma-Collective-Logo.svg';
 
 const Navbar = () => {
-  const [navBarOpener, setNavBarOpener] = useState(false);
-
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <NavbarContainer navBarOpener={ navBarOpener }>
+    <NavbarContainer navBarOpener={isNavOpen}>
       <NavbarInnerContainer>
         <LeftContainer>
           <Logo src={LogoImage}></Logo>
@@ -32,27 +30,69 @@ const Navbar = () => {
           <Links to="the-squad">The Squad</Links>
           <Links to="the-buzz">The Buzz</Links>
           <Links to="/get-in-touch">Get In Touch</Links>
-          <MobileMenuButton onClick={() => {
-            setNavBarOpener((curr) => !curr);
-          }}
-            >
-              {navBarOpener ? <> &#10005; </> : <> Menu </>}
+          <MobileMenuButton
+            onClick={() => {
+              setIsNavOpen((prevNavOpen) => !prevNavOpen);
+            }}
+          >
+            {isNavOpen ? <> &#10005; </> : <> &#9776; </>}
           </MobileMenuButton>
         </RightContainer>
       </NavbarInnerContainer>
-      { navBarOpener && ( 
-        <NavbarMobileContainer>
-        <NavbarLinkMobile to="/">Home</NavbarLinkMobile>
-        <NavbarLinkMobile to="/what-we-do">What We Do</NavbarLinkMobile>
-        <NavbarLinkMobile to="/the-grind">The Grind</NavbarLinkMobile>
-        <NavbarLinkMobile to="/the-squad">The Squad</NavbarLinkMobile>
-        <NavbarLinkMobile to="/the-buzz">Newsroom</NavbarLinkMobile>
-        <NavbarLinkMobile to="/get-in-touch">Contact</NavbarLinkMobile>
-      </NavbarMobileContainer>
+      {isNavOpen && (
+        <NavbarMobileContainer isOpen={isNavOpen}>
+          <NavbarLinkMobile
+            to="/"
+            onClick={() => {
+              setIsNavOpen(false);
+            }}
+          >
+            Home
+          </NavbarLinkMobile>
+          <NavbarLinkMobile
+            to="/what-we-do"
+            onClick={() => {
+              setIsNavOpen(false);
+            }}
+          >
+            What We Do
+          </NavbarLinkMobile>
+          <NavbarLinkMobile
+            to="/the-grind"
+            onClick={() => {
+              setIsNavOpen(false);
+            }}
+          >
+            The Grind
+          </NavbarLinkMobile>
+          <NavbarLinkMobile
+            to="/the-squad"
+            onClick={() => {
+              setIsNavOpen(false);
+            }}
+          >
+            The Squad
+          </NavbarLinkMobile>
+          <NavbarLinkMobile
+            to="/the-buzz"
+            onClick={() => {
+              setIsNavOpen(false);
+            }}
+          >
+            Newsroom
+          </NavbarLinkMobile>
+          <NavbarLinkMobile
+            to="/get-in-touch"
+            onClick={() => {
+              setIsNavOpen(false);
+            }}
+          >
+            Contact
+          </NavbarLinkMobile>
+        </NavbarMobileContainer>
       )}
     </NavbarContainer>
-   
-    )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

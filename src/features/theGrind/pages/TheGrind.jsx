@@ -1,7 +1,5 @@
 import { Box, Flex, Grid, GridItem, Heading, Image, LinkBox, Text, background, textDecoration } from '@chakra-ui/react'
-import GrindHeader from '../components/GrindHeader'
-import SecondaryHeader from '../../components/SecondaryHeader'
-import NbaAfricaLogo from '../../../assets/theGrind/Nba_Africa/NBA_Africa_Logo.svg'
+
 import MultichoiceLogo from '../../../assets/theGrind/Multichoice/Multichoice_Logo.svg'
 import JffLogo from '../../../assets/theGrind/jff/JFF_Logo.svg'
 import { useFetchFirebase } from '../../../actions/useFetchFirebase'
