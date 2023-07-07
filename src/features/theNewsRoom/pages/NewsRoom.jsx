@@ -42,7 +42,10 @@ const NewsRoom = () => {
     borderBottom="1.5px solid #1E174B"
   >
     <GridItem>
-      <Image src={SibuMabena} />
+      <Image 
+        // src={SibuMabena} 
+        src={require(`../../../assets/newsroom/${buzzItem.image}`)}
+      />
     </GridItem>
     <GridItem>
       <Flex height="100%" flexDirection="column" flexWrap="wrap" justifyContent="space-between" paddingRight="2rem">
@@ -53,11 +56,11 @@ const NewsRoom = () => {
         <Text>
          {buzzItem.caption}
         </Text>
-        <Link>
+        {/* <Link>
           <Button variant="standardButton">
             Read Article
           </Button>
-        </Link>
+        </Link> */}
       </Flex>
     </GridItem>
   </Grid>
