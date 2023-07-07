@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import SocialIconsHorizontal from './SocialIconsHorizontal'
 
 const HomeHeader = () => {
   const socialIconContainerStyling = {
@@ -73,35 +74,7 @@ const HomeHeader = () => {
           >
             Our collaborative work environment fosters a culture of innovation, allowing our team to constantly inspire and elevate one another, From brainstorming sessions to meticulous attention to detail, our creative staff thrives on turning ideas into captivating realities.
           </Text>
-          <Flex 
-            gap="2rem"
-            marginY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}
-          >
-            <Box sx={socialIconContainerStyling} as="button" >
-              <AiOutlineInstagram
-                  color="#1E174B"
-                  fontSize="1.5rem"
-              />
-            </Box>
-            <Box sx={socialIconContainerStyling} as="button" >
-              <AiOutlineTwitter
-                  color="#1E174B"
-                  fontSize="1.5rem"
-              />
-            </Box>
-            <Box sx={socialIconContainerStyling} as="button" >
-              <FaFacebookF
-                  color="#1E174B"
-                  fontSize="1.5rem"
-              />
-            </Box>
-            <Box sx={socialIconContainerStyling} as="button" >
-              <FaLinkedinIn
-                color="#1E174B"
-                fontSize="1.5rem"
-              />
-            </Box>
-          </Flex>
+          <SocialIconsHorizontal/>
           <Link  to="/get-in-touch">
             <Button 
              variant="standardButton"

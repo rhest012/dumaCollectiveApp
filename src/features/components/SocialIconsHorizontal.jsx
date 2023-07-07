@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Flex, Link } from '@chakra-ui/react'
 import { AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 
@@ -14,30 +14,42 @@ const SocialIconsHorizontal = () => {
     }
   return (
     <Flex gap="1rem" paddingY={{ base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}}>
-        <Box sx={socialIconContainerStyling} as="button" >
-            <AiOutlineInstagram
-                color="#1E174B"
-                fontSize="1.25rem"
-            />
-        </Box>
-        <Box sx={socialIconContainerStyling} as="button" >
-            <AiOutlineTwitter
-                color="#1E174B"
-                fontSize="1.25rem"
-            />
-        </Box>
-        <Box sx={socialIconContainerStyling} as="button" >
-            <FaFacebookF
-                color="#1E174B"
-                fontSize="1.25rem"
-            />
-        </Box>
-        <Box sx={socialIconContainerStyling} as="button" >
-            <FaLinkedinIn
-                color="#1E174B"
-                fontSize="1.25rem"
-            />
-        </Box>
+        <Link isExternal href="https://www.instagram.com/dumacollective/">
+            <Box className="social-icon-container" sx={socialIconContainerStyling} as="button" >
+                <AiOutlineInstagram
+                    className="social-icon"
+                    color="#1E174B"
+                    fontSize="1.25rem"
+                />
+            </Box>
+        </Link>
+        <Link isExternal href="https://twitter.com/DumaCollective/">
+            <Box className="social-icon-container" sx={socialIconContainerStyling} as="button" >
+                <AiOutlineTwitter
+                    className="social-icon"
+                    color="#1E174B"
+                    fontSize="1.25rem"
+                />
+            </Box>
+        </Link>
+        <Link href="https://www.facebook.com/dumacollective/" isExternal>
+            <Box className="social-icon-container" sx={socialIconContainerStyling} as="button" >
+                <FaFacebookF
+                    className="social-icon"
+                    color="#1E174B"
+                    fontSize="1.25rem"
+                />
+            </Box>
+        </Link>
+        <Link href="https://za.linkedin.com/company/dumacollective" isExternal>
+            <Box className="social-icon-container" sx={socialIconContainerStyling} as="button" >
+                <FaLinkedinIn
+                    className="social-icon"
+                    color="#1E174B"
+                    fontSize="1.25rem"
+                />
+            </Box>
+        </Link>
     </Flex>
   )
 }
