@@ -54,9 +54,7 @@ const SquadList = () => {
    
    // Fetch Data
    const data  = useFetchFirebase('staff');
-  //  const {data, isPending, error}  = useFetch(' http://localhost:8000/staff');
 
-  //  console.log(newData)
    
    
  
