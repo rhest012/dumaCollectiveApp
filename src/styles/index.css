@@ -6,7 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url'assets/Duma-Africa.svg', auto;
+  /* cursor: url'assets/Duma-Africa.svg', auto; */
 }
 
 code {

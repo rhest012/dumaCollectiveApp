@@ -1,5 +1,6 @@
 * {
   cursor: url('../assets/Duma-Africa.png') 14 15, auto;
+
 }
 
 .app-cursor {
@@ -24,7 +25,7 @@
     @media (max-width: 768px) {
       display: none;
     }
-  
+
     
   }
 
