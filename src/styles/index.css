@@ -147,4 +147,19 @@ h5 {
 .contact-icon {
   font-size: 1.5rem;
   color: #1E174B;
+} 
+
+/* Header Images */
+.header__image {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1s cubic-bezier(0.077, 0, 0.175, 1);
 }
+
+.header__image.is-reveal {
+  clip-path: inset(0 0 0 0);
+}
+
+.lineChildren {
+  transform: translate(0, 500px);
+}
+

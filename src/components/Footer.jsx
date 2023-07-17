@@ -1,21 +1,26 @@
-import { Box, Flex, Heading, Grid, GridItem, Text } from '@chakra-ui/react';
-import React from 'react'
-// Icons
-import {AiOutlineTwitter, AiOutlineInstagram} from 'react-icons/ai'
-import {FaFacebookF, FaLinkedinIn} from 'react-icons/fa'
-import { Link } from 'react-router-dom';
-import { Links } from '../styles/Navbar.style';
-import SocialIcons from '../features/components/SocialIcons';
+import { Box, Text } from "@chakra-ui/react";
+import React from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  // Framer Motion
+  const MotionBox = motion(Box);
+  const MotionText = motion(Text);
 
   return (
-    <Box background="brand.900" width="100%">
-      <Text variant="p" paddingY="1rem" color="#fff" textAlign="center">
+    <MotionBox
+      background="brand.900"
+      width="100%"
+      layout
+      initial={{ height: 0 }}
+      animate={{ height: "100%" }}
+      transition={{ duration: 0.5 }}
+    >
+      <MotionText variant="p" paddingY="1rem" color="#fff" textAlign="center">
         &copy; {new Date().getFullYear()} Duma Collective. All rights reserved.
-      </Text>
-    </Box>
-  )
-}
+      </MotionText>
+    </MotionBox>
+  );
+};
 
-export default Footer
+export default Footer;
