@@ -284,6 +284,18 @@
         {
             "clientName":"Drip",
             "clientLogo": "Drip.png"
+        },
+        {
+            "clientName":"BET",
+            "clientLogo": "BET.png"
+        },
+        {
+            "clientName":"Honor",
+            "clientLogo": "Honor.png"
+        },
+        {
+            "clientName": "SlikourOnLife",
+            "clientLogo": "Slikour_Online.png"
         }
     ],
     "newsRoom": [
