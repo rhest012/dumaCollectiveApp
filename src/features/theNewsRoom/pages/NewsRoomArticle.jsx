@@ -99,7 +99,7 @@ const NewsRoomArticle = () => {
                     src={require(`../../../assets/newsroom/${activeNewsroomArticle.image}`)}
                   />
                 </GridItem>
-                <GridItem paddingRight="2rem">
+                <GridItem paddingRight="2rem" height="60vh" overflowY="scroll">
                   <Box
                     dangerouslySetInnerHTML={{
                       __html: activeNewsroomArticle.body,

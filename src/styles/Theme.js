@@ -24,7 +24,7 @@ const theme = extendTheme ({
             fontSize: "2.44rem",
             letterSpacing: "1.5px",
             color: "#1E174B",
-            paddingBottom: { base:"1rem", sm:"1rem", md:"1rem", lg:"2rem", xl:"2rem"}
+            paddingBottom: { base:"1rem", sm:"1rem", md:"1rem", lg:"1rem", xl:"1rem"}
           },
           h3: {
             fontWeight: 600,
@@ -36,7 +36,6 @@ const theme = extendTheme ({
             fontWeight: 600,
             fontSize: "1.56rem",
             letterSpacing: "1.5px",
-            marginBottom: "1rem",
             
           },
           h5: {
