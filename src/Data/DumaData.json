@@ -256,112 +256,68 @@
             ]
         }
     ],
-"clients":[
-    {
-        "clientName": "Nba Africa",
-        "clientLogo": "NBA_Africa.png"
-    },
-    {
-        "clientName":"Toyota",
-        "clientLogo": "Toyota.png"
-    },
-    {
-        "clientName":"Sasol",
-        "clientLogo": "Sasol.png"
-    },
-    {
-        "clientName":"Puma",
-        "clientLogo": "Puma.png"
-    },
-    {
-        "clientName":"Redbull",
-        "clientLogo": "Red_Bull.png"
-    },
-    {
-        "clientName": "Engen",
-        "clientLogo": "Engen.png"
-    },
-    {
-        "clientName" : "Jagermeister",
-        "clientLogo" : "Jagermeister.png"
-    },
-    {
-        "clientName": "Coca Cola",
-        "clientLogo": "Coca_Cola.png"
-    },
-    {
-        "clientName": "FNB",
-        "clientLogo": "FNB.png"
-    },
-    {
-        "clientName": "Samsung",
-        "clientLogo": "Samsung.png"
-    },
-    {
-        "clientName": "OR Tambo Foundation",
-        "clientLogo": "OATF.png"
-    },
-    {
-        "clientName": "Gauteng Provincial",
-        "clientLogo": "Gauteng_Provincial.png"
-    },
-    {
-        "clientName": "Multichoice",
-        "clientLogo": "MultiChoice.png"
-    },
-    {
-        "clientName" : "DStv",
-        "clientLogo" : "DStv.png"
-    },
-    {
-        "clientName":"Showmax",
-        "clientLogo": "Showmax.png"
-    },
-    {
-        "clientName":"Heineken",
-        "clientLogo": "Heineken.png"
-    },
-    {
-        "clientName":"Drip",
-        "clientLogo": "Drip.png"
-    },
-    {
-        "clientName":"Chivas Regal",
-        "clientLogo": "Chivas.png"
-    },
-    {
-        "clientName":"Mtv",
-        "clientLogo": "Mtv.png"
-    },
-    {
-        "clientName":"Yfm",
-        "clientLogo": "Yfm.png"
-    }
-],
-    "NewsRoom": [
+    "clients":[
         {
+            "clientName": "Nba Africa",
+            "clientLogo": "NBA_Africa.png"
+        },
+        {
+            "clientName":"Sasol",
+            "clientLogo": "Sasol.png"
+        },
+        {
+            "clientName": "Multichoice",
+            "clientLogo": "MultiChoice.png"
+        },
+        {
+            "clientName" : "DStv",
+            "clientLogo" : "DStv.png"
+        },
+        {
+            "clientName":"Showmax",
+            "clientLogo": "Showmax.png"
+        },
+        {
+            "clientName":"Heineken",
+            "clientLogo": "Heineken.png"
+        },
+        {
+            "clientName":"Drip",
+            "clientLogo": "Drip.png"
+        }
+    ],
+    "newsRoom": [
+        {
+            "id": "100",   
             "title" : "Sibu wins big",
             "date": "19 February 2023",
             "caption": "The Founder and Chief Creative Officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first reciptient in Africa...",
-            "image": "SibuMabena.jpg"
+            "image": "SibuMabena.jpg",
+            "body": "MZANSI'S creatives have taken their skills to the next level in the past years, with Sibu Mabena being one of the people who have raised the bar high. <br/><br/>The businesswoman and event organiser was among other women who walked away with an award on Wednesday, 15 February. This after creative industry leaders gathered to attend the Inaugural Advertising Week Africa's Future is Female Awards in Westcliff, Joburg.<br/> <br/>The founder and chief creative officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first recipient in Africa. She was nominated alongside 24 influential creatives in Africa's advertising, marketing and communication sectors.<br/> <br/>Advertising Week Africa is the world's largest annual gathering of leaders in the advertising space. The three-day conference kicked off with an awards ceremony to recognise women who produced momentous work and continuously challenged the status quo.<br/> <br/>Sibu was nominated for her outstanding work in the Fundi Fund, her contribution to the Global Citizen project as well as boldly advocating for change and awareness for youth-related topics.<br/>"
         },
         {
+            "id": "101",
             "title": "Duma Collective dissolves it's talent management division",
             "date": "7 November 2022",
             "caption": "Every new beginning comes from some other beginning's end",
-            "image": "DumaLogo.jpg"
+            "image": "DumaLogo.jpg",
+            "body": "Duma Collective, founded by Sibu Mabena, says goodbye to its talent management division. In a statement shared, the business had to relook at its offerings and how each of them creates value for its stakeholders. <br/><br/>The Duma team will focus on solidifying its position as a creative communications agency with key offerings such as Public Relations, Social Media, Eventing, Influencer Marketing, Multi-Media Production, and Talent Procurement. The company no longer has direct representation of Jessica Nkosi, Mihlali Ndamase, Bonko Khoza, Somizi Mhlongo, Motshidisi Mohono, and Kwesta.<br/> <br/>Duma Collective thanks all the stakeholders, clients and agencies who supported their talent and collaborated with them.<br/>"
         },
         {
+            "id": "102",
             "title": "MultiChoice group appoints Duma Collective",
             "date": "9 March 2022",
             "caption": "The MultiChoice Group has announced appointment of Duma Collective as its lead creative communications agency. Duma Collective will oversee Public Relations and Social Media for DStv, general entertainment channels, and the group's Corporate Brand.",
-            "image": "Multichoice.jpg"
+            "image": "Multichoice.jpg",
+            "body": "Announced as one of the eight MultiChoice Innovation Fund beneficiaries of 2020, MultiChoice says that it has continued in its commitment to scale and ensure the development of Duma Collective in awarding them this contract. <br/><br/>Duma Collective is a 100% black female-owned creative communications agency. It services: FMCG brands, event production companies, performing talent, and government departments in South Africa and the rest of Africa.<br/> MultiChoice looks to investing in businesses like Duma Collective because they want to be part of the solution. They recognise that we are trying our best to contribute to the economy and contribute to the growth of our country, and they want to be part of that,” says Sibu Mabena, Duma Collective's director.<br/> <br/>It's been a crazy experience seeing us go from a small boutique agency to this formidable creative communications firm and MultiChoice has been a catalyst in getting us here,” adds Mabena.<br/> <br/>The agency has been a MultiChoice Group service provider since 2019, having worked on: the DStv Showcase, Phuthuma Nathi, DStv Premiership, the new show launches for M-Net, Showmax, and and Channel O's Lockdown House Party. According to the agency, this presents a great opportunity in Duma Collectives' future growth, since starting the business in 2014. Duma Collective has earned its place as a premier creative communications agency. It is a young agency that pushes the envelope and is closest to the pulse of South Africa's creative industry. They are a natural fit in ensuring our platforms continue being the voice of South Africa's ingenious industry,” concludes Joe Heshu, MultiChoice Group's executive for corporate affairs.<br/>"
         },
         {
+            "id": "103",
             "title": "Duma Collective, M&N brands in share deal",
             "date":"9 March 2022",
             "caption": "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
-            "image": "M&N.jpg"
+            "image": "M&N.jpg",
+            "body": "Duma collective and M&N brands have entered a share exchange deal that sees Sibu Mabena, Duma founder and MD, become a partner in M&N brands and a minority shareholder in M&N agencies avatar Johannesburg, avatar Cape Town, avatar PR and avatar media agency, the newly formed media agency venture with park advertising.<br/> <br>M&N brands, in turn, acquires a minority stake in Duma Collective. Mabena remains MD of Duma Collective and the agency will remain operationally independent from Avatarand the network's associated agencies, although Duma has already taken a floor in the Avatar/M&N Brands building in Melrose Estate, Johannesburg.<br/> <br/>The deal doesn't include any shareholding changes to M&N Brands agencies Mela Events, Bozza, M&N Entertainment and Fresh AF. Mabena says Duma adds strong event production, activations, social media, strategy, and influencer management capabilities to the network. The agency has 44 permanent employees, and credits influencer marketing and social media management for its rapid growth over the last three years.<br/> <br/> “Duma Collective was once a service provider to Avatar and then we found ourselves in the same boardrooms as partner agencies on various brands and we've always enjoyed a great working relationship,” says Mabena, when asked what attracted her to doing a deal with M&N. “Zibusiso [Mkhwanazi, M&N Brands executive chairperson] became my business mentor about a year ago and my learnings over this time have inspired me to want to work closer with this amazing, independent, black and excellent group of agencies. The vision to become a black-owned global agency is one that I buy into.” The most significant effect of the deal on Duma will be the agency-wide mentorship project, “considering that Avatar has some of the best talent in industry and Duma Collective is still a developing agency, that will allow for immediate mentorship for all of the talent within Duma Collective,” she says.<br/> <br/>She also expects the agency to now be able to take on bigger projects and clients because of access to capacity within the agency network. “Duma Collective and Avatar certainly maintain their operational independence but will now work more efficiently with the increased collaboration capacity [taken into consideration].” Partners In Business - As a new partner in M&N, what does Mabena hope to bring to the broader network? “The network that I've spent the past 15 years establishing, my creativity and exposure, my business development capabilities, my strategic-thinking ability and my passion for this industry and its transformation,” she says. “What Duma Collective will be bringing to the table is street smarts, long-standing relationships with some of the best stakeholders in entertainment and marketing, and all-round cool vibes!” “While our exco and senior managers are majority female in most of our businesses, this was never enough,” says Mkhwanazi. <br/><br>“This is why it was important to open M&N Brands further from an ownership perspective. Sibu is a [young] 30-year-old black woman who employs 44 people… and she achieved this without having any partners by her side. This is why I deeply admire her entrepreneurial spirit, and I'm looking forward to a future where we can support her dreams and create opportunities for many entrepreneurs, with a special focus on women in the industry.” <br/><br/>“Duma brings skills and specialist services like talent management, activations and specialised influencer management [to the network], among others,” he adds. “What this means is that we can offer better value for all our clients as a whole. The Duma Collective team is also a [young] dynamic majority-female team and they add… to the diversity of the network.”<br/>"
         }
     ],
     "services": [

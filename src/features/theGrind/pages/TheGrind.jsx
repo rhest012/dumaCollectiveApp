@@ -9,14 +9,16 @@ import {
 } from "@chakra-ui/react";
 
 import { useFetchFirebase } from "../../../actions/useFetchFirebase";
+import useFetch from "../../../actions/useFetchData";
 import { Link, Link as ReachLink, useLocation } from "react-router-dom";
 import SocialIconsHorizontal from "../../components/SocialIconsHorizontal";
+
 import { useRef } from "react";
 
 import { useScroll, motion } from "framer-motion";
 
 const TheGrind = () => {
-  // const { data, error, isPending} = useFetch(' http://localhost:8000/clients');
+  // const { data, error, isPending } = useFetch(" http://localhost:8000/clients");
 
   const data = useFetchFirebase("clients");
 
@@ -81,6 +83,7 @@ const TheGrind = () => {
               lg: "40%,630%",
               xl: "40% 60%",
             }}
+            height="83vh"
           >
             <GridItem>
               <MotionBox
@@ -136,14 +139,17 @@ const TheGrind = () => {
                 lg: "0",
                 xl: "0",
               }}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
             >
               <Grid
                 gridTemplateColumns={{
                   base: "repeat(2, 1fr)",
-                  sm: "repeat(3, 1fr)",
-                  md: "repeat(5, 1fr)",
-                  lg: "repeat(5, 1fr)",
-                  xl: "repeat(5, 1fr)",
+                  sm: "repeat(2, 1fr)",
+                  md: "repeat(4, 1fr)",
+                  lg: "repeat(4, 1fr)",
+                  xl: "repeat(4, 1fr)",
                 }}
                 gap={{
                   base: "1rem",
@@ -159,6 +165,7 @@ const TheGrind = () => {
                   lg: "2rem",
                   xl: "2rem",
                 }}
+                height="300px"
               >
                 {data.map((item, index) => (
                   <MotionGridItem

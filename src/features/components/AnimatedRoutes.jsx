@@ -19,6 +19,7 @@ import Footer from "../../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollToTop from "../../components/ScrollToTop";
 import { Box } from "@chakra-ui/react";
+import NewsRoomArticle from "../theNewsRoom/pages/NewsRoomArticle";
 
 const AnimatedRoutes = () => {
   const [loading, setLoading] = useState(true);
@@ -49,6 +50,7 @@ const AnimatedRoutes = () => {
               <Route path="/the-grind" element={<TheGrind />} />
               <Route path="/the-grind/jff" element={<Jff />} />
               <Route path="/the-buzz" element={<NewsRoom />} />
+              <Route path="/the-buzz/:id" element={<NewsRoomArticle />} />
               <Route path="/get-in-touch" element={<Contact />} />
             </Routes>
             <Footer />
