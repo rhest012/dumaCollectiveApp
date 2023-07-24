@@ -39,7 +39,7 @@ const NewsRoomArticle = () => {
   const { id } = useParams();
   const location = useLocation();
 
-  const [activeNewsroomArticle, setActiveNewsroomArticle] = useState("");
+  const [activeNewsroomArticle, setActiveNewsroomArticle] = useState(null);
 
   useEffect(() => {
     if (data !== null) {
@@ -95,11 +95,9 @@ const NewsRoomArticle = () => {
                 gap="2rem"
               >
                 <GridItem paddingRight="2rem">
-                  {activeNewsroomArticle.image && (
-                    <Image
-                      src={require(`../../../assets/newsroom/${activeNewsroomArticle.image}`)}
-                    />
-                  )}
+                  <Image
+                    src={require(`../../../assets/newsroom/${activeNewsroomArticle.image}`)}
+                  />
                 </GridItem>
                 <GridItem paddingRight="2rem">
                   <Box

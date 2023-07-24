@@ -12,9 +12,9 @@ const Footer = () => {
       background="brand.900"
       width="100%"
       layout
-      initial={{ height: 0 }}
-      animate={{ height: "100%" }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 100 }}
+      transition={{ delay: 2, duration: 1 }}
     >
       <MotionText variant="p" paddingY="1rem" color="#fff" textAlign="center">
         &copy; {new Date().getFullYear()} Duma Collective. All rights reserved.
