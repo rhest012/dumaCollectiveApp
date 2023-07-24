@@ -32,9 +32,7 @@ const NewsRoom = () => {
     },
   };
 
-  const { data, error, isPending } = useFetch(
-    " http://localhost:8000/newsRoom"
-  );
+  const data = useFetchFirebase("newsRoom");
   console.log(data);
 
   return (
