@@ -33,9 +33,6 @@ const NewsRoomArticle = () => {
   };
 
   const data = useFetchFirebase("newsRoom");
-  // const { data, error, isPending } = useFetch(
-  //   " http://localhost:8000/newsRoom"
-  // );
   console.log(data);
 
   // Handle Location
@@ -55,7 +52,7 @@ const NewsRoomArticle = () => {
 
   return (
     <>
-      {data && (
+      {activeNewsroomArticle && (
         <Box margin="2rem">
           <>
             <Box
