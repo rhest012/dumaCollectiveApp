@@ -1,435 +1,411 @@
 {
-    "staff": [
+  "staff": [
+    {
+      "department": "Public Relations",
+      "aka": "The Mavericks",
+      "quote": "Work is love made visible",
+      "staffMembers": [
         {
-            "department": "Public Relations", 
-            "aka" : "The Mavericks",
-            "quote" : "Work is love made visible",
-            "staffMembers" : [
-                {
-                    "name": "Azande",
-                    "image":  "Azande.jpg",
-                    "aka": "The O.G"
-
-                },
-                {
-                    "name": "Vusi",
-                    "image":  "Vusi.jpg",
-                    "aka": "Charlie"
-                },
-                {
-                    "name": "Siya",
-                    "image":  "Siya.jpg",
-                    "aka": "The Plug"
-                },
-                {
-                    "name": "Petunia",
-                    "image":  "Petunia.jpg",
-                    "aka": "Wordsmith"
-    
-                }
-            ]
+          "name": "Azande",
+          "image": "Azande.jpg",
+          "aka": "The O.G"
         },
         {
-            "department": "Culture and Relationships",
-            "aka": "The Blessers",
-            "quote":"Whatever you need, we make it happen",
-            "staffMembers": [
-                {
-                    "name": "Raquel",
-                    "image": "Raquel.jpg",
-                    "aka": "Momager"
-                },
-                {
-                    "name": "Ntokozo",
-                    "image": "Ntokozo.jpg",
-                    "aka": "The Quarterback" 
-                },
-                {
-                    "name": "Lee-Ann",
-                    "image": "Lee-Ann.jpg",
-                    "aka": "Superstar"
-                },
-                {
-                    "name": "Oarabile",
-                    "image": "Oarabile.jpg",
-                    "aka": "Creative Engineer"
-                },
-                {
-                    "name": "Sphe",
-                    "image": "Sphe.jpg",
-                    "aka": "The Influenza"
-                },
-                {
-                    "name": "Sabelo",
-                    "image": "Sabelo.jpg",
-                    "aka": "The Playmaker"
-                },
-                {
-                    "name": "Nelson",
-                    "image": "Nelson.jpg",
-                    "aka": "The Hacker"
-                }
-            ]
+          "name": "Vusi",
+          "image": "Vusi.jpg",
+          "aka": "Charlie"
         },
         {
-            "department": "Account Management",
-            "aka" : "The Avengers",
-            "quote" : "It's all about the benjamins",
-            "staffMembers": [
-                {
-                    "name": "Akhona",
-                    "image":  "Akhona.jpg",
-                    "aka": "The Real Housewife"
-                },
-                {
-                    "name": "Osego",
-                    "image":  "Osego.jpg",
-                    "aka": "Donda"
-                },
-                {
-                    "name": "Banele",
-                    "image":  "Banele.jpg",
-                    "aka": "The Link"
-                },
-                {
-                    "name": "Katso",
-                    "image":  "Katso.jpg",
-                    "aka": "Miss Trunchball"
-                },
-                {
-                    "name": "Justine",
-                    "image":  "Justine.jpg",
-                    "aka": "Cristina Yang"
-                }
-            ]
+          "name": "Siya",
+          "image": "Siya.jpg",
+          "aka": "The Plug"
         },
         {
-            "department": "Creative",
-            "aka" : "The Stood",
-            "quote" : "Creativity is seeing what others see and thinking what no one else ever thought",
-            "staffMembers": [
-                {
-                    "name": "Keke",
-                    "image":  "Keke.jpg",
-                    "aka": "The Merch"
-                },
-                {
-                    "name": "Cheslyn",
-                    "image":  "Cheslyn.jpg",
-                    "aka": "The Mage"
-    
-                },
-                {
-                    "name": "Emil",
-                    "image":  "Emil.jpg",
-                    "aka": "The Father"
-                },
-                {
-                    "name": "Anele",
-                    "image":  "Anele.jpg",
-                    "aka": "The UX Half-Man Half-Machine"
-                },
-                {
-                    "name": "Koketso1",
-                    "image":  "Koketso-1.jpg",
-                    "aka": "New Kid On The Block"
-            
-                },
-                {
-                    "name": "Thube",
-                    "image":  "Thube.jpg",
-                    "aka": "The Conceptualiser"
-                },
-                {
-                    "name": "Cyan",
-                    "image": "Cyan.jpg",
-                    "aka": "The Jack"
-                },
-                {
-                    "name": "Cezanne",
-                    "image":  "Cezanne.jpg",
-                    "aka": "The Tailor"
-                }
-            ]
-        },
-        {
-            "department": "Social",
-            "aka": "The Party",
-            "quote": "Our Head of Social Media is you as a client",
-            "staffMembers":[
-                {
-                    "name": "Ayanda",
-                    "image": "Ayanda.jpg",
-                    "aka": "Mistress"
-
-                },
-                {
-                    "name": "Boitumelo",
-                    "image":  "Boitumelo.jpg",
-                    "aka": "The Real MVP"
-                },
-                {
-                    "name": "Nolly",
-                    "image":  "Nolly.jpg",
-                    "aka": "Wonder Woman"
-                },
-                {
-                    "name": "Koketso2",
-                    "image":  "Koketso-2.jpg",
-                    "aka": "M-fundi-si"
-                },
-                {
-                    "name": "Huli",
-                    "image":  "Huli.jpg",
-                    "aka": "The Rookie"
-                },
-                {
-                    "name": "Mojabeng",
-                    "image":  "Mojabeng.jpg",
-                    "aka": "All Star"
-                },
-                {
-                    "name": "Nosipho",
-                    "image":  "Nosipho.jpg",
-                    "aka": "Head Girl"
-                },
-                {
-                    "name": "Kele",
-                    "image":  "Kele.jpg",
-                    "aka": "G.O.A.T"
-                },
-                {
-                    "name": "Asande",
-                    "image":  "Asande.jpg",
-                    "aka": "Digital Storyteller"
-                }
-            ]
-            
-        },
-        {
-            "department": "Production",
-            "aka": "The Event Architects",
-            "quote": "With us mood boards equal reality",
-            "staffMembers": [
-                {
-                    "name": "Tash",
-                    "image": "Tash.jpg",
-                    "aka": "The Planner"
-                },
-                {
-                    "name": "Kashifa" ,
-                    "image": "Kashifa.jpg",
-                    "aka": " The Kreative"
-                },
-                {
-                    "name": "Kgothatso",
-                    "image":  "Kgothatso.jpg",
-                    "aka": "President of Vibe"
-                }
-            ]
-        },
-        {
-            "department": "Ops",
-            "aka": "The Office",
-            "quote": "At your command",
-            "staffMembers": [
-                {
-                    "name": "Lindi",
-                    "image": "Lindi.jpg",
-                    "aka": "Kahuna"
-                },
-                {
-                    "name": "Sibu",
-                    "image": "Sibu.jpg",
-                    "aka": "The Fixer"
-                },
-                {
-                    "name": "Senzi",
-                    "image": "Senzi.jpg",
-                    "aka": "Ama Million"
-                },
-                {
-                    "name": "Gugu",
-                    "image": "Gugu.jpg",
-                    "aka": "The Comforter"
-                }
-            ]
+          "name": "Petunia",
+          "image": "Petunia.jpg",
+          "aka": "Wordsmith"
         }
-    ],
-    "clients":[
+      ]
+    },
+    {
+      "department": "Culture and Partnerships",
+      "aka": "The Blessers",
+      "quote": "Whatever you need, we make it happen",
+      "staffMembers": [
         {
-            "clientName": "Nba Africa",
-            "clientLogo": "NBA_Africa.png"
+          "name": "Ntokozo",
+          "image": "Ntokozo.jpg",
+          "aka": "The Quarterback"
         },
         {
-            "clientName":"Sasol",
-            "clientLogo": "Sasol.png"
+          "name": "Lee-Ann",
+          "image": "Lee-Ann.jpg",
+          "aka": "Superstar"
         },
         {
-            "clientName": "Multichoice",
-            "clientLogo": "MultiChoice.png"
+          "name": "Oarabile",
+          "image": "Oarabile.jpg",
+          "aka": "Creative Engineer"
         },
         {
-            "clientName" : "DStv",
-            "clientLogo" : "DStv.png"
+          "name": "Sabelo",
+          "image": "Sabelo.jpg",
+          "aka": "The Playmaker"
         },
         {
-            "clientName":"Showmax",
-            "clientLogo": "Showmax.png"
-        },
-        {
-            "clientName":"Heineken",
-            "clientLogo": "Heineken.png"
-        },
-        {
-            "clientName":"Drip",
-            "clientLogo": "Drip.png"
-        },
-        {
-            "clientName":"BET",
-            "clientLogo": "BET.png"
-        },
-        {
-            "clientName":"Honor",
-            "clientLogo": "Honor.png"
-        },
-        {
-            "clientName": "SlikourOnLife",
-            "clientLogo": "Slikour_Online.png"
+          "name": "Nelson",
+          "image": "Nelson.jpg",
+          "aka": "The Hacker"
         }
-    ],
-    "newsRoom": [
+      ]
+    },
+    {
+      "department": "Account Management",
+      "aka": "The Avengers",
+      "quote": "It's all about the benjamins",
+      "staffMembers": [
         {
-            "id": "100",   
-            "title" : "Sibu wins big",
-            "date": "19 February 2023",
-            "caption": "The Founder and Chief Creative Officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first reciptient in Africa...",
-            "image": "SibuMabena.jpg",
-            "body": "MZANSI'S creatives have taken their skills to the next level in the past years, with Sibu Mabena being one of the people who have raised the bar high. <br/><br/>The businesswoman and event organiser was among other women who walked away with an award on Wednesday, 15 February. This after creative industry leaders gathered to attend the Inaugural Advertising Week Africa's Future is Female Awards in Westcliff, Joburg.<br/> <br/>The founder and chief creative officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first recipient in Africa. She was nominated alongside 24 influential creatives in Africa's advertising, marketing and communication sectors.<br/> <br/>Advertising Week Africa is the world's largest annual gathering of leaders in the advertising space. The three-day conference kicked off with an awards ceremony to recognise women who produced momentous work and continuously challenged the status quo.<br/> <br/>Sibu was nominated for her outstanding work in the Fundi Fund, her contribution to the Global Citizen project as well as boldly advocating for change and awareness for youth-related topics.<br/>"
+          "name": "Akhona",
+          "image": "Akhona.jpg",
+          "aka": "The Real Housewife"
         },
         {
-            "id": "101",
-            "title": "Duma Collective dissolves it's talent management division",
-            "date": "7 November 2022",
-            "caption": "Every new beginning comes from some other beginning's end",
-            "image": "DumaLogo.jpg",
-            "body": "Duma Collective, founded by Sibu Mabena, says goodbye to its talent management division. In a statement shared, the business had to relook at its offerings and how each of them creates value for its stakeholders. <br/><br/>The Duma team will focus on solidifying its position as a creative communications agency with key offerings such as Public Relations, Social Media, Eventing, Influencer Marketing, Multi-Media Production, and Talent Procurement. The company no longer has direct representation of Jessica Nkosi, Mihlali Ndamase, Bonko Khoza, Somizi Mhlongo, Motshidisi Mohono, and Kwesta.<br/> <br/>Duma Collective thanks all the stakeholders, clients and agencies who supported their talent and collaborated with them.<br/>"
+          "name": "Osego",
+          "image": "Osego.jpg",
+          "aka": "Donda"
         },
         {
-            "id": "102",
-            "title": "MultiChoice group appoints Duma Collective",
-            "date": "9 March 2022",
-            "caption": "The MultiChoice Group has announced appointment of Duma Collective as its lead creative communications agency. Duma Collective will oversee Public Relations and Social Media for DStv, general entertainment channels, and the group's Corporate Brand.",
-            "image": "Multichoice.jpg",
-            "body": "Announced as one of the eight MultiChoice Innovation Fund beneficiaries of 2020, MultiChoice says that it has continued in its commitment to scale and ensure the development of Duma Collective in awarding them this contract. <br/><br/>Duma Collective is a 100% black female-owned creative communications agency. It services: FMCG brands, event production companies, performing talent, and government departments in South Africa and the rest of Africa.<br/> MultiChoice looks to investing in businesses like Duma Collective because they want to be part of the solution. They recognise that we are trying our best to contribute to the economy and contribute to the growth of our country, and they want to be part of that,” says Sibu Mabena, Duma Collective's director.<br/> <br/>It's been a crazy experience seeing us go from a small boutique agency to this formidable creative communications firm and MultiChoice has been a catalyst in getting us here,” adds Mabena.<br/> <br/>The agency has been a MultiChoice Group service provider since 2019, having worked on: the DStv Showcase, Phuthuma Nathi, DStv Premiership, the new show launches for M-Net, Showmax, and and Channel O's Lockdown House Party. According to the agency, this presents a great opportunity in Duma Collectives' future growth, since starting the business in 2014. Duma Collective has earned its place as a premier creative communications agency. It is a young agency that pushes the envelope and is closest to the pulse of South Africa's creative industry. They are a natural fit in ensuring our platforms continue being the voice of South Africa's ingenious industry,” concludes Joe Heshu, MultiChoice Group's executive for corporate affairs.<br/>"
+          "name": "Banele",
+          "image": "Banele.jpg",
+          "aka": "The Link"
         },
         {
-            "id": "103",
-            "title": "Duma Collective, M&N brands in share deal",
-            "date":"9 March 2022",
-            "caption": "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
-            "image": "M&N.jpg",
-            "body": "Duma collective and M&N brands have entered a share exchange deal that sees Sibu Mabena, Duma founder and MD, become a partner in M&N brands and a minority shareholder in M&N agencies avatar Johannesburg, avatar Cape Town, avatar PR and avatar media agency, the newly formed media agency venture with park advertising.<br/> <br>M&N brands, in turn, acquires a minority stake in Duma Collective. Mabena remains MD of Duma Collective and the agency will remain operationally independent from Avatarand the network's associated agencies, although Duma has already taken a floor in the Avatar/M&N Brands building in Melrose Estate, Johannesburg.<br/> <br/>The deal doesn't include any shareholding changes to M&N Brands agencies Mela Events, Bozza, M&N Entertainment and Fresh AF. Mabena says Duma adds strong event production, activations, social media, strategy, and influencer management capabilities to the network. The agency has 44 permanent employees, and credits influencer marketing and social media management for its rapid growth over the last three years.<br/> <br/> “Duma Collective was once a service provider to Avatar and then we found ourselves in the same boardrooms as partner agencies on various brands and we've always enjoyed a great working relationship,” says Mabena, when asked what attracted her to doing a deal with M&N. “Zibusiso [Mkhwanazi, M&N Brands executive chairperson] became my business mentor about a year ago and my learnings over this time have inspired me to want to work closer with this amazing, independent, black and excellent group of agencies. The vision to become a black-owned global agency is one that I buy into.” The most significant effect of the deal on Duma will be the agency-wide mentorship project, “considering that Avatar has some of the best talent in industry and Duma Collective is still a developing agency, that will allow for immediate mentorship for all of the talent within Duma Collective,” she says.<br/> <br/>She also expects the agency to now be able to take on bigger projects and clients because of access to capacity within the agency network. “Duma Collective and Avatar certainly maintain their operational independence but will now work more efficiently with the increased collaboration capacity [taken into consideration].” Partners In Business - As a new partner in M&N, what does Mabena hope to bring to the broader network? “The network that I've spent the past 15 years establishing, my creativity and exposure, my business development capabilities, my strategic-thinking ability and my passion for this industry and its transformation,” she says. “What Duma Collective will be bringing to the table is street smarts, long-standing relationships with some of the best stakeholders in entertainment and marketing, and all-round cool vibes!” “While our exco and senior managers are majority female in most of our businesses, this was never enough,” says Mkhwanazi. <br/><br>“This is why it was important to open M&N Brands further from an ownership perspective. Sibu is a [young] 30-year-old black woman who employs 44 people… and she achieved this without having any partners by her side. This is why I deeply admire her entrepreneurial spirit, and I'm looking forward to a future where we can support her dreams and create opportunities for many entrepreneurs, with a special focus on women in the industry.” <br/><br/>“Duma brings skills and specialist services like talent management, activations and specialised influencer management [to the network], among others,” he adds. “What this means is that we can offer better value for all our clients as a whole. The Duma Collective team is also a [young] dynamic majority-female team and they add… to the diversity of the network.”<br/>"
+          "name": "Katso",
+          "image": "Katso.jpg",
+          "aka": "Miss Trunchball"
+        },
+        {
+          "name": "Raquel",
+          "image": "Raquel.jpg",
+          "aka": "Momager"
+        },
+        {
+          "name": "Justine",
+          "image": "Justine.jpg",
+          "aka": "Cristina Yang"
         }
-    ],
-    "services": [
+      ]
+    },
+    {
+      "department": "Creative",
+      "aka": "The Stood",
+      "quote": "Creativity is seeing what others see and thinking what no one else ever thought",
+      "staffMembers": [
         {
-            "title": "Effective talent management",
-            "id": "talent",
-            "name": "Logistics Management",
-            "descriptions": [
-                "Talent Sourcing",
-                "Negotiations and Onboarding",
-                "Briefing and Scripting",
-                "Logistics Management"
-            ]
+          "name": "Keke",
+          "image": "Keke.jpg",
+          "aka": "The Merch"
         },
         {
-            "title": "Events and Production",
-            "id": "events",
-            "name": "Brand Activations",
-            "descriptions": [
-                "Conceptualisation and Development of small to large scale events",
-                "Production" 
-            ]
+          "name": "Cheslyn",
+          "image": "Cheslyn.jpg",
+          "aka": "The Mage"
         },
         {
-            "title": "Influencer Marketing",
-            "id": "influencer",
-            "name": "Negotiations and Briefings",
-            "descriptions": [
-                "Digital strategy development",
-                "Content Curation",
-                "Community Management",
-                "Audio & Visual"
-            ]
+          "name": "Emil",
+          "image": "Emil.jpg",
+          "aka": "The Father"
         },
         {
-            "title": "Social Media",
-            "id": "social",
-            "name": "Analytics and Paid Media",
-            "descriptions": [
-                "Digital strategy development",
-                "Content Curation",
-                "Community Management",
-                "Audio & Visual"
-            ]
+          "name": "Anele",
+          "image": "Anele.jpg",
+          "aka": "The UX Half-Man Half-Machine"
         },
         {
-            "title": "Public Relations",
-            "id": "pr",
-            "name": "Monitoring Evaluating & Reporting",
-            "descriptions": [
-                "Social PR",
-                "Corporate Communication",
-                "Media Relations",
-                "Campaign media planning and buying"
-            ]             
-            
+          "name": "Koketso1",
+          "image": "Koketso-1.jpg",
+          "aka": "New Kid On The Block"
         },
         {
-            "title": "Branding & Creative Strategy",
-            "id": "branding",
-            "name": "Development of Brand Repositioning Strategies",
-            "descriptions": 
-                [
-                    "Branding Planning and CI Development",
-                    "Graphic Design",
-                    "Multimedia Production"
-                ]             
-            
+          "name": "Cyan",
+          "image": "Cyan.jpg",
+          "aka": "The Jack"
+        },
+        {
+          "name": "Cezanne",
+          "image": "Cezanne.jpg",
+          "aka": "The Tailor"
         }
-        ],
-    "headers": [
+      ]
+    },
+    {
+      "department": "Social",
+      "aka": "The Party",
+      "quote": "Our Head of Social Media is you as a client",
+      "staffMembers": [
         {
-            "title": "Home",
-            "headerImage": "Duma_Africa.png",
-            "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+          "name": "Ayanda",
+          "image": "Ayanda.jpg",
+          "aka": "Mistress"
         },
         {
-            "title": "What We Do",
-            "headerImage":"Duma_Africa.png",
-            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+          "name": "Boitumelo",
+          "image": "Boitumelo.jpg",
+          "aka": "The Real MVP"
         },
         {
-            "title": "The Squad",
-            "headerImage":"Duma_Africa.png",
-            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+          "name": "Koketso2",
+          "image": "Koketso-2.jpg",
+          "aka": "M-fundi-si"
         },
         {
-            "title": "The Grind",
-            "headerImage":"Duma_Africa.png",
-            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+          "name": "Huli",
+          "image": "Huli.jpg",
+          "aka": "The Rookie"
         },
         {
-            "title": "Newsroom",
-            "headerImage":"Duma_Africa.png",
-            "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+          "name": "Mojabeng",
+          "image": "Mojabeng.jpg",
+          "aka": "All Star"
         },
         {
-            "title": "Get In Touch",
-            "headerImage":"Duma_Africa.png",
-            "caption":"DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+          "name": "Nosipho",
+          "image": "Nosipho.jpg",
+          "aka": "Head Girl"
+        },
+        {
+          "name": "Kele",
+          "image": "Kele.jpg",
+          "aka": "G.O.A.T"
+        },
+        {
+          "name": "Asande",
+          "image": "Asande.jpg",
+          "aka": "Digital Storyteller"
         }
-    ]
+      ]
+    },
+    {
+      "department": "Production",
+      "aka": "The Event Architects",
+      "quote": "With us mood boards equal reality",
+      "staffMembers": [
+        {
+          "name": "Tash",
+          "image": "Tash.jpg",
+          "aka": "The Planner"
+        },
+        {
+          "name": "Kashifa",
+          "image": "Kashifa.jpg",
+          "aka": " The Kreative"
+        },
+        {
+          "name": "Kgothatso",
+          "image": "Kgothatso.jpg",
+          "aka": "President of Vibe"
+        }
+      ]
+    },
+    {
+      "department": "Ops",
+      "aka": "The Office",
+      "quote": "At your command",
+      "staffMembers": [
+        {
+          "name": "Lindi",
+          "image": "Lindi.jpg",
+          "aka": "Kahuna"
+        },
+        {
+          "name": "Sibu",
+          "image": "Sibu.jpg",
+          "aka": "The Fixer"
+        },
+        {
+          "name": "Senzi",
+          "image": "Senzi.jpg",
+          "aka": "Ama Million"
+        },
+        {
+          "name": "Gugu",
+          "image": "Gugu.jpg",
+          "aka": "The Comforter"
+        }
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "clientName": "Nba Africa",
+      "clientLogo": "NBA_Africa.png"
+    },
+    {
+      "clientName": "Sasol",
+      "clientLogo": "Sasol.png"
+    },
+    {
+      "clientName": "Multichoice",
+      "clientLogo": "MultiChoice.png"
+    },
+    {
+      "clientName": "DStv",
+      "clientLogo": "DStv.png"
+    },
+    {
+      "clientName": "Showmax",
+      "clientLogo": "Showmax.png"
+    },
+    {
+      "clientName": "Heineken",
+      "clientLogo": "Heineken.png"
+    },
+    {
+      "clientName": "Drip",
+      "clientLogo": "Drip.png"
+    },
+    {
+      "clientName": "BET",
+      "clientLogo": "BET.png"
+    },
+    {
+      "clientName": "Honor",
+      "clientLogo": "Honor.png"
+    },
+    {
+      "clientName": "SlikourOnLife",
+      "clientLogo": "Slikour_Online.png"
+    }
+  ],
+  "newsRoom": [
+    {
+      "id": "100",
+      "title": "Sibu wins big",
+      "date": "19 February 2023",
+      "caption": "The Founder and Chief Creative Officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first reciptient in Africa...",
+      "image": "SibuMabena.jpg",
+      "body": "MZANSI'S creatives have taken their skills to the next level in the past years, with Sibu Mabena being one of the people who have raised the bar high. <br/><br/>The businesswoman and event organiser was among other women who walked away with an award on Wednesday, 15 February. This after creative industry leaders gathered to attend the Inaugural Advertising Week Africa's Future is Female Awards in Westcliff, Joburg.<br/> <br/>The founder and chief creative officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first recipient in Africa. She was nominated alongside 24 influential creatives in Africa's advertising, marketing and communication sectors.<br/> <br/>Advertising Week Africa is the world's largest annual gathering of leaders in the advertising space. The three-day conference kicked off with an awards ceremony to recognise women who produced momentous work and continuously challenged the status quo.<br/> <br/>Sibu was nominated for her outstanding work in the Fundi Fund, her contribution to the Global Citizen project as well as boldly advocating for change and awareness for youth-related topics.<br/>"
+    },
+    {
+      "id": "101",
+      "title": "Duma Collective dissolves it's talent management division",
+      "date": "7 November 2022",
+      "caption": "Every new beginning comes from some other beginning's end",
+      "image": "DumaLogo.jpg",
+      "body": "Duma Collective, founded by Sibu Mabena, says goodbye to its talent management division. In a statement shared, the business had to relook at its offerings and how each of them creates value for its stakeholders. <br/><br/>The Duma team will focus on solidifying its position as a creative communications agency with key offerings such as Public Relations, Social Media, Eventing, Influencer Marketing, Multi-Media Production, and Talent Procurement. The company no longer has direct representation of Jessica Nkosi, Mihlali Ndamase, Bonko Khoza, Somizi Mhlongo, Motshidisi Mohono, and Kwesta.<br/> <br/>Duma Collective thanks all the stakeholders, clients and agencies who supported their talent and collaborated with them.<br/>"
+    },
+    {
+      "id": "102",
+      "title": "MultiChoice group appoints Duma Collective",
+      "date": "9 March 2022",
+      "caption": "The MultiChoice Group has announced appointment of Duma Collective as its lead creative communications agency. Duma Collective will oversee Public Relations and Social Media for DStv, general entertainment channels, and the group's Corporate Brand.",
+      "image": "Multichoice.jpg",
+      "body": "Announced as one of the eight MultiChoice Innovation Fund beneficiaries of 2020, MultiChoice says that it has continued in its commitment to scale and ensure the development of Duma Collective in awarding them this contract. <br/><br/>Duma Collective is a 100% black female-owned creative communications agency. It services: FMCG brands, event production companies, performing talent, and government departments in South Africa and the rest of Africa.<br/> MultiChoice looks to investing in businesses like Duma Collective because they want to be part of the solution. They recognise that we are trying our best to contribute to the economy and contribute to the growth of our country, and they want to be part of that,” says Sibu Mabena, Duma Collective's director.<br/> <br/>It's been a crazy experience seeing us go from a small boutique agency to this formidable creative communications firm and MultiChoice has been a catalyst in getting us here,” adds Mabena.<br/> <br/>The agency has been a MultiChoice Group service provider since 2019, having worked on: the DStv Showcase, Phuthuma Nathi, DStv Premiership, the new show launches for M-Net, Showmax, and and Channel O's Lockdown House Party. According to the agency, this presents a great opportunity in Duma Collectives' future growth, since starting the business in 2014. Duma Collective has earned its place as a premier creative communications agency. It is a young agency that pushes the envelope and is closest to the pulse of South Africa's creative industry. They are a natural fit in ensuring our platforms continue being the voice of South Africa's ingenious industry,” concludes Joe Heshu, MultiChoice Group's executive for corporate affairs.<br/>"
+    },
+    {
+      "id": "103",
+      "title": "Duma Collective, M&N brands in share deal",
+      "date": "9 March 2022",
+      "caption": "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
+      "image": "M&N.jpg",
+      "body": "Duma collective and M&N brands have entered a share exchange deal that sees Sibu Mabena, Duma founder and MD, become a partner in M&N brands and a minority shareholder in M&N agencies avatar Johannesburg, avatar Cape Town, avatar PR and avatar media agency, the newly formed media agency venture with park advertising.<br/> <br>M&N brands, in turn, acquires a minority stake in Duma Collective. Mabena remains MD of Duma Collective and the agency will remain operationally independent from Avatarand the network's associated agencies, although Duma has already taken a floor in the Avatar/M&N Brands building in Melrose Estate, Johannesburg.<br/> <br/>The deal doesn't include any shareholding changes to M&N Brands agencies Mela Events, Bozza, M&N Entertainment and Fresh AF. Mabena says Duma adds strong event production, activations, social media, strategy, and influencer management capabilities to the network. The agency has 44 permanent employees, and credits influencer marketing and social media management for its rapid growth over the last three years.<br/> <br/> “Duma Collective was once a service provider to Avatar and then we found ourselves in the same boardrooms as partner agencies on various brands and we've always enjoyed a great working relationship,” says Mabena, when asked what attracted her to doing a deal with M&N. “Zibusiso [Mkhwanazi, M&N Brands executive chairperson] became my business mentor about a year ago and my learnings over this time have inspired me to want to work closer with this amazing, independent, black and excellent group of agencies. The vision to become a black-owned global agency is one that I buy into.” The most significant effect of the deal on Duma will be the agency-wide mentorship project, “considering that Avatar has some of the best talent in industry and Duma Collective is still a developing agency, that will allow for immediate mentorship for all of the talent within Duma Collective,” she says.<br/> <br/>She also expects the agency to now be able to take on bigger projects and clients because of access to capacity within the agency network. “Duma Collective and Avatar certainly maintain their operational independence but will now work more efficiently with the increased collaboration capacity [taken into consideration].” Partners In Business - As a new partner in M&N, what does Mabena hope to bring to the broader network? “The network that I've spent the past 15 years establishing, my creativity and exposure, my business development capabilities, my strategic-thinking ability and my passion for this industry and its transformation,” she says. “What Duma Collective will be bringing to the table is street smarts, long-standing relationships with some of the best stakeholders in entertainment and marketing, and all-round cool vibes!” “While our exco and senior managers are majority female in most of our businesses, this was never enough,” says Mkhwanazi. <br/><br>“This is why it was important to open M&N Brands further from an ownership perspective. Sibu is a [young] 30-year-old black woman who employs 44 people… and she achieved this without having any partners by her side. This is why I deeply admire her entrepreneurial spirit, and I'm looking forward to a future where we can support her dreams and create opportunities for many entrepreneurs, with a special focus on women in the industry.” <br/><br/>“Duma brings skills and specialist services like talent management, activations and specialised influencer management [to the network], among others,” he adds. “What this means is that we can offer better value for all our clients as a whole. The Duma Collective team is also a [young] dynamic majority-female team and they add… to the diversity of the network.”<br/>"
+    }
+  ],
+  "services": [
+    {
+      "title": "Effective talent management",
+      "id": "talent",
+      "name": "Logistics Management",
+      "descriptions": [
+        "Talent Sourcing",
+        "Negotiations and Onboarding",
+        "Briefing and Scripting",
+        "Logistics Management"
+      ]
+    },
+    {
+      "title": "Events and Production",
+      "id": "events",
+      "name": "Brand Activations",
+      "descriptions": [
+        "Conceptualisation and Development of small to large scale events",
+        "Production"
+      ]
+    },
+    {
+      "title": "Influencer Marketing",
+      "id": "influencer",
+      "name": "Negotiations and Briefings",
+      "descriptions": [
+        "Digital strategy development",
+        "Content Curation",
+        "Community Management",
+        "Audio & Visual"
+      ]
+    },
+    {
+      "title": "Social Media",
+      "id": "social",
+      "name": "Analytics and Paid Media",
+      "descriptions": [
+        "Digital strategy development",
+        "Content Curation",
+        "Community Management",
+        "Audio & Visual"
+      ]
+    },
+    {
+      "title": "Public Relations",
+      "id": "pr",
+      "name": "Monitoring Evaluating & Reporting",
+      "descriptions": [
+        "Social PR",
+        "Corporate Communication",
+        "Media Relations",
+        "Campaign media planning and buying"
+      ]
+    },
+    {
+      "title": "Branding & Creative Strategy",
+      "id": "branding",
+      "name": "Development of Brand Repositioning Strategies",
+      "descriptions": [
+        "Branding Planning and CI Development",
+        "Graphic Design",
+        "Multimedia Production"
+      ]
+    }
+  ],
+  "headers": [
+    {
+      "title": "Home",
+      "headerImage": "Duma_Africa.png",
+      "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+    },
+    {
+      "title": "What We Do",
+      "headerImage": "Duma_Africa.png",
+      "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+    },
+    {
+      "title": "The Squad",
+      "headerImage": "Duma_Africa.png",
+      "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+    },
+    {
+      "title": "The Grind",
+      "headerImage": "Duma_Africa.png",
+      "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+    },
+    {
+      "title": "Newsroom",
+      "headerImage": "Duma_Africa.png",
+      "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+    },
+    {
+      "title": "Get In Touch",
+      "headerImage": "Duma_Africa.png",
+      "caption": "DUMA COLLECTIVE is A 100% Black Owned Creative Communications Agency that started in influencer management and evolved into the full service company you see today."
+    }
+  ]
 }

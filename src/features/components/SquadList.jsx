@@ -66,8 +66,9 @@ const SquadList = () => {
   };
 
   // Fetch Data
+  // const data = useFetch("http://localhost:8000/staff");
   const data = useFetchFirebase("staff");
-  console.log(data);
+  // console.log(newData);
 
   return (
     <>
@@ -142,103 +143,95 @@ const SquadList = () => {
               </Text>
             </GridItem>
             <GridItem overflowY="scroll">
-              {data.map((staff, index) => (
-                <Box
-                  key={index}
-                  marginY="1rem"
-                  display="flex"
-                  flexDir="column"
-                  justifyContent="center"
-                >
-                  <Heading
-                    sx={staffHeadingStyle}
-                    variant="h2"
-                    paddingBottom="0"
-                  >
-                    {staff.aka}
-                  </Heading>
-                  <Text variant="p" fontSize="1.25rem" paddingBottom="2rem">
-                    {staff.department}{" "}
-                  </Text>
-                  <Grid
-                    className="staff-image-container"
-                    gridTemplateColumns={{
-                      base: "1fr",
-                      sm: "1fr",
-                      md: "repeat(3, 1fr)",
-                      lg: "repeat(2, 1fr)",
-                      xl: "repeat(3, 1fr)",
-                    }}
-                    flexDir="row"
-                    flexDirection="column"
-                    width="100%"
+              {data !== null &&
+                data.map((staff, index) => (
+                  <Box
+                    key={index}
+                    marginY="1rem"
+                    display="flex"
+                    flexDir="column"
                     justifyContent="center"
                   >
-                    {staff.staffMembers.map((staffMember, index) => {
-                      return (
-                        <>
-                          <GridItem key={index}>
+                    <Heading
+                      sx={staffHeadingStyle}
+                      variant="h2"
+                      paddingBottom="0"
+                    >
+                      {staff.aka}
+                    </Heading>
+                    <Text variant="p" fontSize="1.25rem" paddingBottom="2rem">
+                      {staff.department}{" "}
+                    </Text>
+                    <Grid
+                      className="staff-image-container"
+                      gridTemplateColumns={{
+                        base: "1fr",
+                        sm: "1fr",
+                        md: "repeat(3, 1fr)",
+                        lg: "repeat(2, 1fr)",
+                        xl: "repeat(3, 1fr)",
+                      }}
+                      flexDir="row"
+                      flexDirection="column"
+                      width="100%"
+                      justifyContent="center"
+                    >
+                      {staff.staffMembers.map((staffMember, index) => (
+                        <div key={index}>
+                          {" "}
+                          {/* Replace fragment with <div> */}
+                          <GridItem>
                             <Flex
-                              flexDirection="column"
+                              flexDirection={{
+                                base: "column",
+                                sm: "column",
+                                md: "column",
+                                lg: "row",
+                                xl: "row",
+                              }}
+                              justifyContent="center"
+                              alignItems="center"
                               className="staff-container"
                               width="auto"
                               variants={imageContainerVariants}
                               initial="hidden"
                               animate="visible"
                             >
-                              <MotionFlex
-                                flexDirection={{
-                                  base: "columm",
-                                  sm: "column",
-                                  md: "column",
-                                  lg: "row",
-                                  xl: "row",
-                                }}
-                                justifyContent="center"
-                                alignItems="center"
-                                className="staff-container"
-                                variants={imageContainerVariants}
+                              <MotionImage
+                                className="staff__image"
+                                key={index}
+                                src={require(`../../assets/squad/squadOri/${staffMember.image}`)}
+                                borderRadius="1rem"
+                                w="239px"
+                                h="181px"
+                                boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+                                transition="all  0.7s ease"
+                                variants={singleImageChildVariants}
                                 initial="hidden"
                                 animate="visible"
-                              >
-                                <MotionImage
-                                  className="staff__image"
-                                  key={index}
-                                  src={require(`../../assets/squad/squadOri/${staffMember.image}`)}
-                                  borderRadius="1rem"
-                                  w="239px"
-                                  h="181px"
-                                  boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
-                                  // box-shadow: ;
-                                  transition="all  0.7s ease"
-                                  variants={singleImageChildVariants}
-                                  initial="hidden"
-                                  animate="visible"
-                                  _hover={{
-                                    content: `url(${require(`../../assets/squad/squadHover/${staffMember.image}`)})`,
-                                    w: "239px",
-                                    h: "181px",
-                                  }}
-                                />
-                              </MotionFlex>
-                              <Text className="staff__text" sx={imageCaption}>
-                                {staffMember.aka}
-                              </Text>
+                                _hover={{
+                                  content: `url(${require(`../../assets/squad/squadHover/${staffMember.image}`)})`,
+                                  w: "239px",
+                                  h: "181px",
+                                }}
+                              />
                             </Flex>
+                            <Text className="staff__text" sx={imageCaption}>
+                              {staffMember.aka}
+                            </Text>
                           </GridItem>
-                        </>
-                      );
-                    })}
-                  </Grid>
-                  <Heading
-                    padding="2rem 0 2rem 1rem"
-                    variant="h5"
-                    sx={staffHeadingStyle}
-                  >
-                    {staff.quote}
-                  </Heading>
-                </Box>
-              ))}
+                        </div>
+                      ))}
+                    </Grid>
+                    <Heading
+                      padding="2rem 0 2rem 1rem"
+                      variant="h5"
+                      sx={staffHeadingStyle}
+                    >
+                      {staff.quote}
+                    </Heading>
+                  </Box>
+                ))}
             </GridItem>
           </Grid>
         </Box>

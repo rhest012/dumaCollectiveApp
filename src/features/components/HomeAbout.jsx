@@ -2,6 +2,7 @@ import { Button, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
 import Lady from "../../assets/bodyImages/lady-looking-up.png";
 import React from "react";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 const HomeAbout = () => {
   return (
@@ -13,8 +14,7 @@ const HomeAbout = () => {
         lg: "1fr 1fr",
         xl: "1fr 1fr",
       }}
-      background="brand.900"
-      height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "80vh" }}
+      height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "100vh" }}
       overflow="hidden"
       data-scroll-section
     >
@@ -25,10 +25,10 @@ const HomeAbout = () => {
         justifyContent="center"
         alignContent="center"
       >
-        <Heading variant="h2" color="#fff">
+        <Heading variant="h2">
           An Oasis for African creativity to flourish
         </Heading>
-        <Text variant="p" color="#fff">
+        <Text variant="p">
           Through our collaborative partnerships and unwavering support, we aim
           to catalyse a vibrant and inclusive creative ecosystem that celebrates
           the unique perspective and talents of Africa.
@@ -39,24 +39,20 @@ const HomeAbout = () => {
           turning ideas into reality.
         </Text>
         <Link to="/get-in-touch">
-          <Button variant="standardButtonLight">Get In Touch</Button>
+          <Button variant="standardButton">Get In Touch</Button>
         </Link>
       </GridItem>
       <GridItem
         display="flex"
-        alignContent="flex-end"
-        alignItems="flex-end"
-        justifyContent="flex-end"
+        alignContent="center"
+        alignItems="center"
+        justifyContent="center"
       >
-        <Image
-          src={Lady}
-          height={{
-            base: "400px",
-            sm: "500px",
-            md: "500px",
-            lg: "600px",
-            xl: "600px",
-          }}
+        <ReactPlayer
+          width="400px"
+          height="711px"
+          paddingY="4rem"
+          url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
         />
       </GridItem>
     </Grid>

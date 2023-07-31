@@ -1,4 +1,12 @@
-import { Button, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import HomeHeaderBackground from "../../assets/headers/home-header.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -6,6 +14,7 @@ import SocialIconsHorizontal from "./SocialIconsHorizontal";
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import SplitText from "../../utils/split3.min.js";
+import HeaderBackground from "../../assets/headers/homeHeader/BB Titans.png";
 
 const HomeHeader = () => {
   const socialIconContainerStyling = {
@@ -14,42 +23,21 @@ const HomeHeader = () => {
     borderRadius: "100%",
   };
 
+  const imageList = [
+    "Soweto.png",
+    "BB Titans.png",
+    "Sasol.jpg",
+    "Springboks.png",
+    "DSTV Prem.jpg",
+    "Lockdown House Party.jpg",
+    "JFF.png",
+    "NBA Playoffs.png",
+    "Robot Boi.jpg",
+  ];
+
   // Framer Motion
-  const MotionHeading = motion(Heading);
-  const MotionText = motion(Text);
+
   const MotionImage = motion(Image);
-
-  const textVariants = {
-    hidden: {
-      x: -1000,
-      opacity: 0,
-      transition: { duration: 2.5, delay: 0.5 },
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: { duration: 3.5 },
-    },
-  };
-
-  const imageVariants = {
-    visible: {
-      y: 0,
-      transition: { ease: [0.6, 0.01, -0.05, 0.9], duration: 2 },
-    },
-  };
-
-  const outlineVariants = {
-    hidden: {
-      y: 50,
-      opacity: 0,
-    },
-    visible: {
-      y: 10,
-      opacity: 1,
-      transition: { duration: 1, delay: 2.5 },
-    },
-  };
 
   useEffect(() => {
     const split = new SplitText(".header-description", {
@@ -68,7 +56,7 @@ const HomeHeader = () => {
 
   return (
     <Grid
-      height={{ base: "auto", sm: "auto", md: "auto", lg: "90vh", xl: "79vh" }}
+      height={{ base: "auto", sm: "auto", md: "auto", lg: "90vh", xl: "90vh" }}
       gridTemplateColumns={{
         base: "1fr",
         sm: "1fr",
@@ -81,8 +69,8 @@ const HomeHeader = () => {
         base: "1rem",
         sm: "1rem",
         md: "1rem",
-        lg: "2rem",
-        xl: "2rem",
+        lg: "0",
+        xl: "0",
       }}
       paddingLeft="2rem"
       flexDir="row"
@@ -120,39 +108,38 @@ const HomeHeader = () => {
           <Button variant="standardButton">Get In Touch</Button>
         </Link>
       </GridItem>
-      <GridItem
-        display="flex"
-        overflow="hidden"
-        width="100%"
-        height="100%"
-        justifyContent="flex-end"
-      >
-        <MotionImage
-          data-scroll
-          // className="header__image"
-          src={HomeHeaderBackground}
-          height={{
-            base: "550px",
-            base: "550px",
-            md: "550px",
-            lg: "600px",
-            xl: "600px",
-          }}
-          width="auto"
-          layoutId="africa-image"
-          paddingTop={{
-            base: "1rem",
-            sm: "1rem",
-            md: "1rem",
-          }}
-          // marginTop="-5rem"
+      <GridItem>
+        <Box
+          display="flex"
+          overflow="hidden"
+          width="100%"
+          height="100%"
+          justifyContent="space-between"
+          flexWrap="wrap"
+          // gap="1rem"
+          paddingX="4rem"
+          gap="1rem"
+        >
+          {imageList.map((image, index) => (
+            <MotionImage
+              data-scroll
+              // className="header__image"
+              // src={HomeHeaderBackground}
+              key={index}
+              src={require(`../../assets/headers/homeHeader/${image}`)}
+              height="180px"
+              width="180px"
 
-          // variants={imageVariants}
-          // initial="hidden"
-          // animate="visible"
-          // exit="exit"
-          // transition={{ ease: "linear", duration: 1.6 }}
-        />
+              // marginTop="-5rem"
+
+              // variants={imageVariants}
+              // initial="hidden"
+              // animate="visible"
+              // exit="exit"
+              // transition={{ ease: "linear", duration: 1.6 }}
+            />
+          ))}
+        </Box>
       </GridItem>
     </Grid>
   );

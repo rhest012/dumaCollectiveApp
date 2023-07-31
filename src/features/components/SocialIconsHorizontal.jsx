@@ -9,7 +9,7 @@ const SocialIconsHorizontal = () => {
   const socialIconContainerStyling = {
     border: "1px solid #1E174B",
     padding: "0.5rem",
-    borderRadius: "50%",
+    borderRadius: "0.5rem",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
