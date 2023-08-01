@@ -10,6 +10,7 @@ import {
 import React from "react";
 import SocialIcons from "./SocialIcons";
 import { Link } from "react-router-dom";
+import Osego from "../../assets/bodyImages/Osego.jpg";
 
 const HomeContat = () => {
   return (
@@ -23,7 +24,7 @@ const HomeContat = () => {
       }}
       height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "85vh" }}
       overflow="hidden"
-      data-scroll-section
+      marginY="2rem"
     >
       <GridItem
         display="flex"
@@ -58,6 +59,7 @@ const HomeContat = () => {
         <Image
           width="400px"
           height="400px"
+          src={Osego}
 
           // url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
         />

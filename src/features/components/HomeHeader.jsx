@@ -60,7 +60,7 @@ const HomeHeader = () => {
       gridTemplateColumns={{
         base: "1fr",
         sm: "1fr",
-        md: "1fr",
+        md: "50%, 50%",
         lg: "50%, 50%",
         xl: "50% 50%",
       }}
