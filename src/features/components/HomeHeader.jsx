@@ -72,7 +72,7 @@ const HomeHeader = () => {
         lg: "0",
         xl: "0",
       }}
-      paddingLeft="2rem"
+      paddingX="2rem"
       flexDir="row"
       alignItems="center"
       borderBottom="1px solid #1a202c"
@@ -114,14 +114,18 @@ const HomeHeader = () => {
           overflow="hidden"
           width="100%"
           height="100%"
-          justifyContent={{ base: "center", xl: "space-between" }}
+          justifyContent={{
+            base: "center",
+            md: "space-between",
+            xl: "space-between",
+          }}
           flexWrap="wrap"
           // gap="1rem"
           padding={{
             base: "2rem 0",
             sm: "2rem 0",
             md: "2rem 0",
-            lg: "2rem",
+            lg: "2rem 0",
             xl: "0 2rem",
           }}
           gap="1rem"
@@ -136,15 +140,15 @@ const HomeHeader = () => {
               height={{
                 base: "170px",
                 sm: "170px",
-                md: "170px",
-                lg: "170px",
+                md: "220px",
+                lg: "220px",
                 xl: "170px",
               }}
               width={{
                 base: "170px",
                 sm: "170px",
-                md: "170px",
-                lg: "170px",
+                md: "220px",
+                lg: "220px",
                 xl: "170px",
               }}
 

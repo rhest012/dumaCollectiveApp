@@ -12,6 +12,7 @@ import { useFetchFirebase } from "../../../actions/useFetchFirebase";
 import useFetch from "../../../actions/useFetchData";
 import { Link, Link as ReachLink, useLocation } from "react-router-dom";
 import SocialIconsHorizontal from "../../components/SocialIconsHorizontal";
+import CaseStudies from "../components/CaseStudies";
 
 import { useRef } from "react";
 
@@ -194,6 +195,7 @@ const TheGrind = () => {
           </Grid>
         </Box>
       )}
+      <CaseStudies />
     </>
   );
 };

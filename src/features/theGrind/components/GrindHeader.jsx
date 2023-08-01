@@ -1,11 +1,11 @@
-import { Flex, Heading, Text } from '@chakra-ui/react'
-import HeaderBackground from '../../../assets/headers/grind-header.jpg'
+import { Flex, Heading, Text } from "@chakra-ui/react";
+import HeaderBackground from "../../../assets/headers/grind-header.jpg";
 
 const GrindHeader = () => {
   return (
-    <Flex 
-      height="40vh" 
-      width="100wh" 
+    <Flex
+      height="40vh"
+      width="100wh"
       flexDir="column"
       paddingY="2rem"
       paddingX="4rem"
@@ -13,22 +13,16 @@ const GrindHeader = () => {
       justifyContent="flex-end"
       borderBottom="1px solid #1a202c"
     >
-        <Heading 
-          variant="h1"
-          width="60%"
-          marginBottom="3rem"
-        >
-          The Grind
-        </Heading>
-        <Text
-          textAlign="right"
-          paddingLeft="60%"
-          variant="p"
-        >
-         Duma Collective in action from branding, and creative strategy to PR, Social Media, Influencer Marketing, Events, Production, and Talent Procurement.
-        </Text>
+      <Heading variant="h1" width="60%" marginBottom="3rem">
+        The Grind
+      </Heading>
+      <Text textAlign="right" paddingLeft="60%" variant="p">
+        Duma Collective in action from branding, and creative strategy to PR,
+        Social Media, Influencer Marketing, Events, Production, and Talent
+        Procurement.
+      </Text>
     </Flex>
-  )
-}
+  );
+};
 
-export default GrindHeader
+export default GrindHeader;

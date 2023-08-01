@@ -76,7 +76,7 @@ const SquadList = () => {
         <Box sx={containerStyle}>
           <></>
           <Grid
-            marginY="2rem"
+            margin="2rem"
             height={{
               base: "auto",
               sm: "auto",
@@ -147,7 +147,7 @@ const SquadList = () => {
                 data.map((staff, index) => (
                   <Box
                     key={index}
-                    marginY="1rem"
+                    margin="1rem 0 1rem 2rem"
                     display="flex"
                     flexDir="column"
                     justifyContent="center"
@@ -189,7 +189,7 @@ const SquadList = () => {
                                 lg: "row",
                                 xl: "row",
                               }}
-                              justifyContent="center"
+                              // justifyContent="center"
                               alignItems="center"
                               className="staff-container"
                               width="auto"

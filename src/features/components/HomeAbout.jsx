@@ -16,12 +16,12 @@ const HomeAbout = () => {
       }}
       height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "100vh" }}
       overflow="hidden"
+      margin="2rem"
       data-scroll-section
     >
       <GridItem
         display="flex"
         flexDir="column"
-        padding="2rem"
         justifyContent="center"
         alignContent="center"
       >

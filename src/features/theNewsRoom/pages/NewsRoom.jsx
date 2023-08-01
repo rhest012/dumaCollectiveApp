@@ -33,13 +33,11 @@ const NewsRoom = () => {
   };
 
   const data = useFetchFirebase("newsRoom");
-  console.log(data);
 
   return (
     <>
       {data && (
         <Box>
-          <BuzzHeader />
           <>
             {data.map((buzzItem, index) => (
               <Grid
