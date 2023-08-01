@@ -56,7 +56,7 @@ const HomeHeader = () => {
 
   return (
     <Grid
-      height={{ base: "auto", sm: "auto", md: "auto", lg: "90vh", xl: "90vh" }}
+      height={{ base: "auto", sm: "auto", md: "auto", lg: "auto", xl: "90vh" }}
       gridTemplateColumns={{
         base: "1fr",
         sm: "1fr",
@@ -121,8 +121,8 @@ const HomeHeader = () => {
             base: "2rem 0",
             sm: "2rem 0",
             md: "2rem 0",
-            lg: "0 4rem",
-            xl: "0 4rem",
+            lg: "2rem",
+            xl: "0 2rem",
           }}
           gap="1rem"
         >
@@ -136,16 +136,16 @@ const HomeHeader = () => {
               height={{
                 base: "170px",
                 sm: "170px",
-                md: "180px",
-                lg: "180px",
-                xl: "180px",
+                md: "170px",
+                lg: "170px",
+                xl: "170px",
               }}
               width={{
                 base: "170px",
                 sm: "170px",
-                md: "180px",
-                lg: "180px",
-                xl: "180px",
+                md: "170px",
+                lg: "170px",
+                xl: "170px",
               }}
 
               // marginTop="-5rem"
