@@ -1,5 +1,5 @@
 import { Button, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
-import Lady from "../../assets/bodyImages/lady-looking-up.png";
+import Video from "../../assets/videos/homeVideo.mp4";
 import React from "react";
 import { Link } from "react-router-dom";
 import ReactPlayer from "react-player";
@@ -52,7 +52,10 @@ const HomeAbout = () => {
           width="400px"
           height="711px"
           paddingY="4rem"
-          url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+          url={Video}
+          playing={true} // Enable autoplay
+          loop={true} // Enable video looping
+          muted={true} // Enable mute
         />
       </GridItem>
     </Grid>

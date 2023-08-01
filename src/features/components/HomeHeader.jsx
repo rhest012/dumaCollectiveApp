@@ -114,10 +114,16 @@ const HomeHeader = () => {
           overflow="hidden"
           width="100%"
           height="100%"
-          justifyContent="space-between"
+          justifyContent={{ base: "center", xl: "space-between" }}
           flexWrap="wrap"
           // gap="1rem"
-          paddingX="4rem"
+          padding={{
+            base: "2rem 0",
+            sm: "2rem 0",
+            md: "2rem 0",
+            lg: "0 4rem",
+            xl: "0 4rem",
+          }}
           gap="1rem"
         >
           {imageList.map((image, index) => (
@@ -127,8 +133,20 @@ const HomeHeader = () => {
               // src={HomeHeaderBackground}
               key={index}
               src={require(`../../assets/headers/homeHeader/${image}`)}
-              height="180px"
-              width="180px"
+              height={{
+                base: "170px",
+                sm: "170px",
+                md: "180px",
+                lg: "180px",
+                xl: "180px",
+              }}
+              width={{
+                base: "170px",
+                sm: "170px",
+                md: "180px",
+                lg: "180px",
+                xl: "180px",
+              }}
 
               // marginTop="-5rem"
 
