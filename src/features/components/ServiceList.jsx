@@ -65,14 +65,16 @@ const ServiceList = () => {
             xl: "2rem",
           }}
         >
-          At Duma Collective we thrive on building brands, driven by creative
-          ideation and insights. Servicing an array of clients, from FMCG,
-          Energy and Sustainability, Technology and Enterprise Development,
-          Financial Services to government departments. We drive business growth
-          for our clients through collaborative thinking and the implementation
-          of our service offerings with excellence! We are an oasis for African
-          Creativity to flourish and committed to delivering impactful creative
-          solutions for our clients.
+          Brand-building is our passion, and creativity knows no bounds! With a
+          flair for ideas, backed by valuable insights, we take pride in serving
+          a diverse range of clients that spans across FMCG, Energy and
+          Sustainability, Technology and Enterprise Development, Financial
+          Services, and even government departments.
+          <br /> <br />
+          Our secret sauce? Collaborative thinking! We believe in working hand
+          in hand with our clients to drive business growth and achieve
+          extraordinary results. Our services are top-notch, delivered with
+          excellence and finesse, leaving a trail of success wherever we go!
         </Text>
         <SocialIconsHorizontal />
       </GridItem>

@@ -109,7 +109,7 @@ const TheGrind = () => {
                   pathLength="1"
                   style={{ pathLength: scrollYProgress }}
                 >
-                  A big Shout out to our clients
+                  A BIG Shout out to our clients
                 </MotionHeading>
                 <Text
                   variant="p"
@@ -122,11 +122,11 @@ const TheGrind = () => {
                     xl: "2rem",
                   }}
                 >
-                  Duma Collective prides itself on serving a diverse range of
-                  clients in the advertising and entertainment industry. Our
-                  client portfolio includes renowned advertising agencies,
-                  production houses, and entertainment companies seeking
-                  innovative solutions to captivate their target audience.
+                  We wear our pride on our sleeves as we cater to an array of
+                  clients in the advertising and entertainment industry. From
+                  dynamic production houses to forward-thinking entertainment
+                  companies, we're the go-to destination for those seeking the
+                  next big thing.
                 </Text>
                 <SocialIconsHorizontal />
               </MotionBox>

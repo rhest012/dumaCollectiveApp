@@ -56,7 +56,7 @@ const HomeHeader = () => {
 
   return (
     <Grid
-      height={{ base: "auto", sm: "auto", md: "auto", lg: "auto", xl: "90vh" }}
+      height={{ base: "auto", sm: "auto", md: "auto", lg: "auto", xl: "89vh" }}
       gridTemplateColumns={{
         base: "1fr",
         sm: "1fr",
@@ -98,10 +98,12 @@ const HomeHeader = () => {
             xl: "2rem",
           }}
         >
-          Our collaborative work environment fosters a culture of innovation,
-          allowing our team to constantly inspire and elevate one another, From
-          brainstorming sessions to meticulous attention to detail, our creative
-          thrives on turning ideas into captivating realities.
+          Step into our collaborative work environment, where innovation is at
+          the heart of everything we do. Here, we cultivate a culture that
+          inspires our team, fuelling a continuous flow of creative brilliance.
+          From insightful brainstorming sessions to extreme attention to detail,
+          we pride ourselves on transforming ideas into realities. <br /> <br />
+          Are you ready to be part of the Duma family?
         </Text>
         <SocialIconsHorizontal />
         <Link to="/get-in-touch">

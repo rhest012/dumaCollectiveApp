@@ -35,16 +35,9 @@ const HomeContat = () => {
       >
         <Heading variant="h2">Get in touch with us</Heading>
         <Text variant="p">
-          Ready to make things happen? Whether you have a burning question, a
-          brilliant idea, or a desire to collaborate, we're here to listen,
-          connect, and transform your vision into reality. Reach out to us using
-          the contact details below or fill out the form, and we'll get back to
-          you as soon as possible.
-          <br />
-          <br />
-          Together, we are building a future where African creativity takes
-          centre stage and transforms the world. Our creative staff thrives on
-          turning ideas into reality.
+          Got a burning question or a stroke of genius? Let's make things
+          happen, shall we? Whether you've got an epic idea or a craving to
+          collaborate, we're all ears and ready to work our magic!
         </Text>
         <Link to="/get-in-touch">
           <Button variant="standardButton">Get In Touch</Button>

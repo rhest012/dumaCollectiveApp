@@ -29,14 +29,15 @@ const HomeAbout = () => {
           An Oasis for African creativity to flourish
         </Heading>
         <Text variant="p">
-          Through our collaborative partnerships and unwavering support, we aim
-          to catalyse a vibrant and inclusive creative ecosystem that celebrates
-          the unique perspective and talents of Africa.
+          We delve into the power of collaboration and support as we set out on
+          a mission to catalyse a vibrant and inclusive creative ecosystem that
+          celebrates Africa's unique perspectives and talents.
           <br />
           <br />
-          Together, we are building a future where African creativity takes
-          centre stage and transforms the world. Our creative staff thrives on
-          turning ideas into reality.
+          We envision a future where African creativity shines brightly, taking
+          centre stage and leaving an impact on the world. Our dedicated
+          creative staff thrives on turning your ideas into viral-worthy
+          realities, pushing the boundaries of what's possible.
         </Text>
         <Link to="/get-in-touch">
           <Button variant="standardButton">Get In Touch</Button>
