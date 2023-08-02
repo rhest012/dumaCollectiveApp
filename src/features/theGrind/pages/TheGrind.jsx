@@ -76,7 +76,7 @@ const TheGrind = () => {
       {data && (
         <Box>
           <Grid
-            marginX="2rem"
+            margin=" 8rem 2rem"
             gridTemplateColumns={{
               base: "1fr",
               sm: "1fr",
@@ -84,7 +84,7 @@ const TheGrind = () => {
               lg: "40%,630%",
               xl: "40% 60%",
             }}
-            height="83vh"
+            // height={{"83vh"}}
           >
             <GridItem>
               <MotionBox
@@ -118,8 +118,8 @@ const TheGrind = () => {
                     base: "1rem",
                     sm: "1rem",
                     md: "1rem",
-                    lg: "2rem",
-                    xl: "2rem",
+                    lg: "1rem",
+                    xl: "1rem",
                   }}
                 >
                   We wear our pride on our sleeves as we cater to an array of
@@ -166,7 +166,13 @@ const TheGrind = () => {
                   lg: "2rem",
                   xl: "2rem",
                 }}
-                height="300px"
+                height={{
+                  base: "auto",
+                  sm: "auto",
+                  md: "auto",
+                  lg: "300px",
+                  xl: "300px",
+                }}
               >
                 {data.map((item, index) => (
                   <MotionGridItem
