@@ -18,7 +18,24 @@ import "swiper/css/autoplay";
 
 const JFFSwiper = () => {
   return (
-    <>
+    <Box margin="4rem 2rem">
+      <Text>
+        <Heading variant="h3" as="h3" marginBottom="1rem">
+          JFF Social Content
+        </Heading>
+        <Text variant="p" marginBottom="2rem">
+          Duma Collective developed an innovative mobile content campaign for
+          the Johannesburg Film Festival, aimed at bringing the festival
+          experience to a wider audience through engaging and shareable digital
+          content. The campaign included short videos, interactive quizzes, and
+          social media challenges, all centered around the festival's theme of
+          African cinema and culture. By leveraging mobile platforms and
+          creating content that was easily shareable, Duma Collective
+          successfully generated buzz and excitement for the festival, leading
+          to increased attendance and engagement from both local and
+          international audiences.
+        </Text>
+      </Text>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         navigation
@@ -27,45 +44,14 @@ const JFFSwiper = () => {
         }}
       >
         <SwiperSlide>
-          <Box marginY="4rem" marginX="4rem">
-            <Grid gridTemplateColumns="50% 50%">
-              <GridItem height="100%">
-                <Flex
-                  height="100%"
-                  flexDirection="column"
-                  alignContent="center"
-                  justifyContent="center"
-                >
-                  <Heading variant="h3" as="h3" marginBottom="1rem">
-                    JFF Social Content
-                  </Heading>
-                  <Text variant="p">
-                    Duma Collective developed an innovative mobile content
-                    campaign for the Johannesburg Film Festival, aimed at
-                    bringing the festival experience to a wider audience through
-                    engaging and shareable digital content. The campaign
-                    included short videos, interactive quizzes, and social media
-                    challenges, all centered around the festival’s theme of
-                    African cinema and culture. By leveraging mobile platforms
-                    and creating content that was easily shareable, Duma
-                    Collective successfully generated buzz and excitement for
-                    the festival, leading to increased attendance and engagement
-                    from both local and international audiences.
-                  </Text>
-                </Flex>
-              </GridItem>
-              <GridItem height="100%">
-                <Flex
-                  height="100%"
-                  flexDirection="column"
-                  justifyContent="center"
-                  alignItems="center"
-                >
-                  <Image src={JffPhone1} height="550px" width="363px" />
-                </Flex>
-              </GridItem>
-            </Grid>
-          </Box>
+          <Flex
+            height="100%"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Image src={JffPhone1} height="550px" width="363px" />
+          </Flex>
         </SwiperSlide>
         <SwiperSlide>
           <Flex
@@ -88,7 +74,7 @@ const JFFSwiper = () => {
           </Flex>
         </SwiperSlide>
       </Swiper>
-    </>
+    </Box>
   );
 };
 

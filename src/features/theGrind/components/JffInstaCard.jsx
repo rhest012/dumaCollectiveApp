@@ -93,11 +93,20 @@ const JffInstaCard = () => {
         </Heading>
       </Flex>
 
-      <Grid gridTemplateColumns="30% 70%" my="2rem">
-        <GridItem mx="auto" paddingBottom={3}>
+      <Grid
+        gridTemplateColumns={{
+          base: "1fr",
+          sm: "1fr",
+          md: "30%: 70%",
+          lg: "30%: 70%",
+          xl: "30% 70%",
+        }}
+        my="2rem"
+      >
+        <GridItem display="flex" justifyContent="center" marginBottom="2rem">
           <Image src={InstagramFeed} height="400" width="auto" />
         </GridItem>
-        <GridItem mx="8" my="auto">
+        <GridItem mx="2rem" my="auto">
           <Text textAlign="center">
             For the past five months, the Instagram profile has seen an immense
             increase in followership, reach and impressions and website taps.

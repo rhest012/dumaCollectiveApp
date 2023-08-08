@@ -50,11 +50,24 @@ const Jff = () => {
       />
       <JFFSwiper />
       <Flex
-        gap="12rem"
-        justifyContent="center"
+        justifyContent="space-between"
+        gap={{
+          base: "2rem",
+          sm: "2rem",
+          md: "2rem",
+          lg: "12rem",
+          xl: "12rem",
+        }}
         alignItems="center"
         my="4rem"
         mx="4rem"
+        flexDirection={{
+          base: "column",
+          sm: "column",
+          md: "column",
+          lg: "row",
+          xl: "row",
+        }}
       >
         <Box backgroundImage={JffBackground} sx={singleAnnualSocialStyle}>
           <Flex justifyContent="space-between" alignItems="center">
