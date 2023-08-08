@@ -163,3 +163,9 @@ h5 {
   transform: translate(0, 500px);
 }
 
+/* Social Icons */
+.social-icon-light {
+  font-size: 2rem;
+    color: #fff;
+}
+
