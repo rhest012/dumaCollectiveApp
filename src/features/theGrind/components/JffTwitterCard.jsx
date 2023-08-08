@@ -15,8 +15,9 @@ import React from "react";
 import JffBackground from "../../../assets/theGrind/jff/jff-background.png";
 import { FaUsers, FaUser, FaHandshake } from "react-icons/fa";
 import { ImStatsBars2 } from "react-icons/im";
+import { BsBarChartLine } from "react-icons/bs";
 
-const JffInstaCard = () => {
+const JffTwitterCard = () => {
   const socialContainer = {
     border: "1px solid #1E174B",
     mx: "4rem",
@@ -50,12 +51,14 @@ const JffInstaCard = () => {
     as: "h5",
     textTransform: "uppercase",
     textAlign: "center",
+    fontSize: "1rem",
   };
 
   const statDescriptionStyle = {
     // fontFamily: "Fira Sans Condensed",
     textAlign: "center",
     textTransform: "uppercase",
+    fontSize: "0.85rem",
   };
 
   const verticalHeading = {
@@ -73,6 +76,14 @@ const JffInstaCard = () => {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     padding: "2rem",
+  };
+
+  const twoColStatContainer = {
+    marginX: "0.25rem",
+    display: "flex",
+    flexDir: "column",
+    alignItems: "center",
+    width: "100%",
   };
 
   function Countdown({ n }) {
@@ -101,79 +112,88 @@ const JffInstaCard = () => {
           <Text textAlign="center">
             Page Tweet impressions <strong>before</strong> we handled the
             account. In the first six months of January 2022, the Joburg Film
-            Festival garnered 31 total followers & total tweet impressions being{" "}
-            <strong>2432</strong>
+            Festival garnered 31 total followers & total tweet impressions being
+            2432.
           </Text>
-          <Grid gridTemplateColumns="repeat(4, 1fr)" my="4rem">
-            <GridItem>
-              <Flex sx={statContainerFlex}>
-                <Text sx={verticalHeading}>Before&nbsp; &nbsp; &nbsp;</Text>
+
+          <Flex justifyContent="space-between" padding="2rem 0 1rem 0">
+            <Flex sx={statContainerFlex}>
+              <Heading sx={statStyle}>January 2022</Heading>
+              <FaUsers fontSize="2rem" />
+              <Heading sx={statStyle}>-4</Heading>
+              <Text sx={statDescriptionStyle}>Followers</Text>
+            </Flex>
+
+            <Flex sx={statContainerFlex}>
+              <Heading sx={statStyle}>February 2022</Heading>
+              <Flex>
+                <Stack sx={twoColStatContainer}>
+                  <BsBarChartLine fontSize="2rem" />
+                  <Heading sx={statStyle}>1</Heading>
+                  <Text sx={statDescriptionStyle}>Impression</Text>
+                </Stack>
+                <Stack sx={twoColStatContainer}>
+                  <FaUsers fontSize="2rem" />
+                  <Heading sx={statStyle}>2</Heading>
+                  <Text sx={statDescriptionStyle}>Followers</Text>
+                </Stack>
               </Flex>
-            </GridItem>
-            <GridItem></GridItem>
-            <GridItem mx="auto">
-              <Flex sx={statContainerFlex}>
-                <Heading sx={statStyle}>
-                  <FaUsers fontSize="2.5rem" />
-                  <HStack>
-                    <Countdown n={6} />
-                    <>&nbsp;K</>
-                  </HStack>
-                </Heading>
-                <Text sx={statDescriptionStyle}>Followers</Text>
+            </Flex>
+
+            <Flex sx={statContainerFlex}>
+              <Heading sx={statStyle}>March 2022</Heading>
+              <Flex>
+                <Stack sx={twoColStatContainer}>
+                  <BsBarChartLine fontSize="2rem" />
+                  <Heading sx={statStyle}>156</Heading>
+                  <Text sx={statDescriptionStyle}>Impressions</Text>
+                </Stack>
+                <Stack sx={twoColStatContainer}>
+                  <FaUsers fontSize="2rem" />
+                  <Heading sx={statStyle}>7</Heading>
+                  <Text sx={statDescriptionStyle}>Followers</Text>
+                </Stack>
               </Flex>
-            </GridItem>
-            <GridItem mx="auto"></GridItem>
-          </Grid>
-          <Grid gridTemplateColumns="repeat(4, 1fr)" my="4rem">
-            <GridItem mx="auto">
-              <Flex sx={statContainerFlex}>
-                <Text sx={verticalHeading}>
-                  After&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                </Text>
+            </Flex>
+          </Flex>
+
+          <Flex justifyContent="space-between" padding="1rem 0 1rem 0">
+            <Flex sx={statContainerFlex}>
+              <Heading sx={statStyle}>April 2022</Heading>
+              <Flex>
+                <Stack sx={twoColStatContainer}>
+                  <BsBarChartLine fontSize="2rem" />
+                  <Heading sx={statStyle}>648</Heading>
+                  <Text sx={statDescriptionStyle}>Impressions</Text>
+                </Stack>
+                <Stack sx={twoColStatContainer}>
+                  <FaUsers fontSize="2rem" />
+                  <Heading sx={statStyle}>1</Heading>
+                  <Text sx={statDescriptionStyle}>Follower</Text>
+                </Stack>
               </Flex>
-            </GridItem>
-            <GridItem>
-              <Flex sx={statContainerFlex}>
-                <Heading sx={statStyle}>
-                  <FaUsers fontSize="2.5rem" />
-                  <HStack>
-                    <Countdown n={16} />
-                    <>&nbsp;K</>
-                  </HStack>
-                </Heading>
-                <Text sx={statDescriptionStyle}>Followers</Text>
+            </Flex>
+
+            <Flex sx={statContainerFlex}>
+              <Heading sx={statStyle}>May 2022</Heading>
+              <Flex>
+                <Stack sx={twoColStatContainer}>
+                  <BsBarChartLine fontSize="2rem" />
+                  <Heading sx={statStyle}>181</Heading>
+                  <Text sx={statDescriptionStyle}>Impression</Text>
+                </Stack>
+                <Stack sx={twoColStatContainer}>
+                  <FaUsers fontSize="2rem" />
+                  <Heading sx={statStyle}>-5</Heading>
+                  <Text sx={statDescriptionStyle}>Followers</Text>
+                </Stack>
               </Flex>
-            </GridItem>
-            <GridItem>
-              <Flex sx={statContainerFlex}>
-                <Heading sx={statStyle}>
-                  <ImStatsBars2 fontSize="2.5rem" />
-                  <HStack>
-                    <Countdown n={4.2} />
-                    <>&nbsp;M</>
-                  </HStack>
-                </Heading>
-                <Text sx={statDescriptionStyle}>Impressions</Text>
-              </Flex>
-            </GridItem>
-            <GridItem>
-              <Flex sx={statContainerFlex}>
-                <Heading sx={statStyle}>
-                  <FaHandshake fontSize="2.5rem" />
-                  <HStack>
-                    <Countdown left="50%" n={3.1} />
-                    <>&nbsp;M</>
-                  </HStack>
-                </Heading>
-                <Text sx={statDescriptionStyle}>Reach</Text>
-              </Flex>
-            </GridItem>
-          </Grid>
+            </Flex>
+          </Flex>
         </GridItem>
       </Grid>
 
-      <Box sx={socialStatsContainer} backgroundImage={JffBackground}>
+      {/* <Box sx={socialStatsContainer} backgroundImage={JffBackground}>
         <Text color="white" textAlign="center">
           From a content perspective, we went live with a mixture of static &
           video content, also taking advantage of the Reels option, which
@@ -186,7 +206,7 @@ const JffInstaCard = () => {
           paddingX="1rem"
           paddingY="2rem"
         >
-          <GridItem color="#fff">
+          <GridItem color="#fff" paddingY="1rem">
             <Flex sx={statContainerFlex}>
               <Heading sx={statStyle}>
                 <HStack>
@@ -356,9 +376,9 @@ const JffInstaCard = () => {
             </Flex>
           </GridItem>
         </Grid>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
 
-export default JffInstaCard;
+export default JffTwitterCard;
