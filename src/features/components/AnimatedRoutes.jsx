@@ -17,7 +17,7 @@ import CustomCursor from "../../components/CustomCursor";
 import Footer from "../../components/Footer";
 
 import { motion, AnimatePresence } from "framer-motion";
-import ScrollToTop from "../../components/ScrollToTop";
+import ScrollToTop from "./ScrollToTop";
 import { Box } from "@chakra-ui/react";
 import NewsRoomArticle from "../theNewsRoom/pages/NewsRoomArticle";
 
@@ -38,8 +38,8 @@ const AnimatedRoutes = () => {
           <Loader setLoading={setLoading} />
         </motion.div>
       ) : ( */}
+        <ScrollToTop />
         <>
-          <ScrollToTop />
           <Box>
             <Navbar />
             <CustomCursor />
