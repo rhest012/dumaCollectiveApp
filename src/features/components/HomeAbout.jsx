@@ -48,6 +48,7 @@ const HomeAbout = () => {
         alignContent="center"
         alignItems="center"
         justifyContent="center"
+        marginTop={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
       >
         <ReactPlayer
           width="400px"

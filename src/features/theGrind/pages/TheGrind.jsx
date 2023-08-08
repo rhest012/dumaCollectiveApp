@@ -76,7 +76,12 @@ const TheGrind = () => {
       {data && (
         <Box>
           <Grid
-            margin=" 8rem 2rem"
+            margin={{
+              base: "4rem 2rem",
+              md: "4rem 2rem",
+              lg: "8rem 2rem",
+              xl: " 8rem 2rem",
+            }}
             gridTemplateColumns={{
               base: "1fr",
               sm: "1fr",

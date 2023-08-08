@@ -89,7 +89,7 @@ const JffInstaCard = () => {
     <Box sx={socialContainer}>
       <Flex justifyContent="center">
         <Heading sx={socialContainerHeading}>
-          &nbsp;&nbsp;Instagram&nbsp;&nbsp;
+          &nbsp;&nbsp;Twitter&nbsp;&nbsp;
         </Heading>
       </Flex>
 
@@ -99,8 +99,10 @@ const JffInstaCard = () => {
         </GridItem>
         <GridItem mx="8" my="auto">
           <Text textAlign="center">
-            For the past five months, the Instagram profile has seen an immense
-            increase in followership, reach and impressions and website taps.
+            Page Tweet impressions <strong>before</strong> we handled the
+            account. In the first six months of January 2022, the Joburg Film
+            Festival garnered 31 total followers & total tweet impressions being{" "}
+            <strong>2432</strong>
           </Text>
           <Grid gridTemplateColumns="repeat(4, 1fr)" my="4rem">
             <GridItem>
@@ -184,7 +186,7 @@ const JffInstaCard = () => {
           paddingX="1rem"
           paddingY="2rem"
         >
-          <GridItem color="#fff" paddingY="1rem">
+          <GridItem color="#fff">
             <Flex sx={statContainerFlex}>
               <Heading sx={statStyle}>
                 <HStack>

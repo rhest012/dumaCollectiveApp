@@ -29,7 +29,7 @@ const HomeContat = () => {
       <GridItem
         display="flex"
         flexDir="column"
-        padding="2rem"
+        margin="2rem"
         justifyContent="center"
         alignContent="center"
       >
@@ -48,6 +48,7 @@ const HomeContat = () => {
         alignContent="center"
         alignItems="center"
         justifyContent="center"
+        marginTop="2rem"
       >
         <Image
           width="400px"

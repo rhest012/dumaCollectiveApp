@@ -132,7 +132,7 @@ const Contact = () => {
             </Text>
             <Heading variant="h4">Address</Heading>
             <Text sx={contactDetailStyling} variant="p">
-              67 Wessel Road, Bentley Office Park, Rivonia, Johannesburg
+              20 Republic Road, Johannesburg
             </Text>
           </Box>
           <SocialIconsHorizontal />
