@@ -8,6 +8,7 @@ import JffInstaCard from "../components/JffInstaCard";
 import JFFSwiper from "../components/JFFSwiper";
 import JffHeader from "../../../assets/theGrind/jff/JFF_Header.png";
 import JffTwitterCard from "../components/JffTwitterCard";
+import JffFbCard from "../components/JFFFbCard";
 
 const Jff = () => {
   const singleAnnualSocialStyle = {
@@ -96,6 +97,7 @@ const Jff = () => {
 
       <JffInstaCard />
       <JffTwitterCard />
+      <JffFbCard />
     </>
   );
 };
