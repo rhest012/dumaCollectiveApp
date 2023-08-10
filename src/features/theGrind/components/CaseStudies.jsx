@@ -173,7 +173,7 @@ const CaseStudies = () => {
           </Box>
         </Link>
 
-        <LinkBox as="ReachLink">
+        <Link to="/the-grind/multichoice">
           <Box
             className="single-case-study-container"
             sx={singleCaseStudyContainer}
@@ -191,7 +191,7 @@ const CaseStudies = () => {
                 height="200px"
                 marginBottom="0.5rem"
                 _hover={{
-                  content: `url(${require(`../../../assets/theGrind/jff/JFF_Header.png`)})`,
+                  content: `url(${require(`../../../assets/theGrind/Multichoice/MCG_Header.png`)})`,
                   width: {
                     base: "300px",
                     sm: "300px",
@@ -204,7 +204,7 @@ const CaseStudies = () => {
               <Links>Explore</Links>
             </Box>
           </Box>
-        </LinkBox>
+        </Link>
       </Flex>
     </Box>
   );

@@ -3,13 +3,12 @@ import {
   Flex,
   Grid,
   GridItem,
-  HStack,
   Heading,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import InstagramFeed from "../../../assets/theGrind/jff/JFF-Phone-1.png";
+import TwitterFeed from "../../../assets/theGrind/jff/JFF Screen 2.png";
 import { useSpring, animated } from "react-spring";
 import React from "react";
 import JffBackground from "../../../assets/theGrind/jff/jff-background.png";
@@ -20,8 +19,7 @@ import { BsBarChartLine } from "react-icons/bs";
 const JffTwitterCard = () => {
   const socialContainer = {
     border: "1px solid #1E174B",
-    mx: "4rem",
-    my: "6rem",
+    margin: "4rem 2rem",
   };
 
   const socialContainerHeading = {
@@ -149,7 +147,7 @@ const JffTwitterCard = () => {
         my="2rem"
       >
         <GridItem mx="auto" paddingBottom={3}>
-          <Image src={InstagramFeed} height="400" width="auto" />
+          <Image src={TwitterFeed} height="400" width="auto" />
         </GridItem>
         <GridItem mx="8" my="auto">
           <Text textAlign="center">

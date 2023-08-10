@@ -19,8 +19,7 @@ import { ImStatsBars2 } from "react-icons/im";
 const JffInstaCard = () => {
   const socialContainer = {
     border: "1px solid #1E174B",
-    mx: "4rem",
-    my: "6rem",
+    margin: "4rem 2rem",
   };
 
   const socialContainerHeading = {
@@ -118,7 +117,12 @@ const JffInstaCard = () => {
         }}
         my="2rem"
       >
-        <GridItem display="flex" justifyContent="center" marginBottom="2rem">
+        <GridItem
+          display="flex"
+          justifyContent="center"
+          marginBottom="2rem"
+          marginY="auto"
+        >
           <Image src={InstagramFeed} height="400" width="auto" />
         </GridItem>
         <GridItem>

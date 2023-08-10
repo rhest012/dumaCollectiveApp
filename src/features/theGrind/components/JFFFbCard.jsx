@@ -9,19 +9,20 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import InstagramFeed from "../../../assets/theGrind/jff/JFF-Phone-1.png";
+import FacebookFeed from "../../../assets/theGrind/jff/JFF Phone Screen 1.png";
 import { useSpring, animated } from "react-spring";
 import React from "react";
 import JffBackground from "../../../assets/theGrind/jff/jff-background.png";
 import { FaUsers, FaUser, FaHandshake } from "react-icons/fa";
 import { ImStatsBars2 } from "react-icons/im";
 import { BsBarChartLine } from "react-icons/bs";
+import JffFbGraph from "../../../assets/theGrind/jff/Facebook Graph.svg";
+import JffFbGraph2 from "../../../assets/theGrind/jff/Facebook Graph 2.svg";
 
 const JffFbCard = () => {
   const socialContainer = {
     border: "1px solid #1E174B",
-    mx: "4rem",
-    my: "6rem",
+    margin: "4rem 2rem",
   };
 
   const socialContainerHeading = {
@@ -33,12 +34,6 @@ const JffFbCard = () => {
     mx: "0.5rem",
     background: "#fff",
     display: "inline-block",
-  };
-
-  const statContainer = {
-    m: 0,
-    borderLeft: "1px solid #fff",
-    color: "#FFFFFF",
   };
 
   const statContainerFlex = {
@@ -70,24 +65,9 @@ const JffFbCard = () => {
     fontSize: "0.85rem",
   };
 
-  const statDescriptionLightStyle = {
-    textAlign: "center",
-    textTransform: "uppercase",
-    fontSize: "0.85rem",
-    color: "#fff",
-  };
-
-  const verticalHeading = {
-    fontSize: "1.5rem",
-    fontFamily: "Roc Grotesk Wide",
-    textAlign: "center",
-    textTransform: "uppercase",
-    transform: "rotate(-90deg)",
-  };
-
   const socialStatsContainer = {
     marginY: "2rem",
-    marginX: "4rem",
+    marginX: "2rem",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -146,10 +126,9 @@ const JffFbCard = () => {
           lg: "30%: 70%",
           xl: "30% 70%",
         }}
-        my="2rem"
       >
         <GridItem mx="auto" paddingBottom={3}>
-          <Image src={InstagramFeed} height="400" width="auto" />
+          <Image src={FacebookFeed} height="400" width="auto" />
         </GridItem>
         <GridItem mx="8" my="auto">
           <Text textAlign="center">
@@ -227,8 +206,8 @@ const JffFbCard = () => {
           }}
           paddingY="4rem"
         >
-          <GridItem>
-            <Text textAlign="center" color="#fff">
+          <GridItem display="flex" alignItems="center">
+            <Text variant="p" textAlign="center" color="#fff">
               On the Facebook platform, from January-August 2022, the brand had
               3099 Facebook reach, whereas when we started handling the account,
               the brand garnered over 1, 006, 278 page reach, which is a 41.8K%
@@ -240,7 +219,10 @@ const JffFbCard = () => {
               assisted in getting the brand's posts out there.
             </Text>
           </GridItem>
-          <GridItem></GridItem>
+          <GridItem>
+            <Image src={JffFbGraph} />
+            <Image src={JffFbGraph2} />
+          </GridItem>
         </Grid>
       </Box>
     </Box>

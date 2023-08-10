@@ -17,6 +17,15 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/css/autoplay";
 
 const JFFSwiper = () => {
+  const imageList = [
+    "JFF Screen 4.png",
+    "JFF Screen 5.png",
+    "JFF Screen 6.png",
+    "JFF Screen 8.png",
+    "JFF Screen 9.png",
+    "JFF Screen 10.png",
+  ];
+
   return (
     <Box margin="4rem 2rem">
       <Text>
@@ -43,36 +52,22 @@ const JFFSwiper = () => {
           clickable: true,
         }}
       >
-        <SwiperSlide>
-          <Flex
-            height="100%"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Image src={JffPhone1} height="550px" width="363px" />
-          </Flex>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            height="100%"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Image src={JffPhone1} height="550px" width="363px" />
-          </Flex>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            height="100%"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Image src={JffPhone1} height="550px" width="363px" />
-          </Flex>
-        </SwiperSlide>
+        {imageList.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Flex
+              height="100%"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Image
+                src={require(`../../../assets/theGrind/jff/${item}`)}
+                height="550px"
+                width="363px"
+              />
+            </Flex>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );
