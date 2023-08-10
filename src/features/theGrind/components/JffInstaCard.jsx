@@ -63,7 +63,13 @@ const JffInstaCard = () => {
     fontFamily: "Roc Grotesk Wide",
     textAlign: "center",
     textTransform: "uppercase",
-    transform: "rotate(-90deg)",
+    transform: {
+      base: "none",
+      base: "sm",
+      md: "none",
+      lg: "rotate(-90deg)",
+      xl: "rotate(-90deg)",
+    },
   };
 
   const socialStatsContainer = {
@@ -73,6 +79,17 @@ const JffInstaCard = () => {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     padding: "2rem",
+  };
+
+  const socialStatsRow = {
+    gridTemplateColumns: {
+      base: "1fr",
+      sm: "1fr",
+      md: "30%: 70%",
+      lg: "30%: 70%",
+      xl: "30% 70%",
+    },
+    my: "2rem",
   };
 
   function Countdown({ n }) {
@@ -87,11 +104,9 @@ const JffInstaCard = () => {
 
   return (
     <Box sx={socialContainer}>
-      <Flex justifyContent="center">
-        <Heading sx={socialContainerHeading}>
-          &nbsp;&nbsp;Instagram&nbsp;&nbsp;
-        </Heading>
-      </Flex>
+      <Heading sx={socialContainerHeading}>
+        &nbsp;&nbsp;Instagram&nbsp;&nbsp;
+      </Heading>
 
       <Grid
         gridTemplateColumns={{
@@ -106,12 +121,22 @@ const JffInstaCard = () => {
         <GridItem display="flex" justifyContent="center" marginBottom="2rem">
           <Image src={InstagramFeed} height="400" width="auto" />
         </GridItem>
-        <GridItem mx="2rem" my="auto">
-          <Text textAlign="center">
+        <GridItem>
+          <Text textAlign="center" paddingX="2rem">
             For the past five months, the Instagram profile has seen an immense
             increase in followership, reach and impressions and website taps.
           </Text>
-          <Grid gridTemplateColumns="repeat(4, 1fr)" my="4rem">
+          <Grid
+            gridTemplateColumns={{
+              base: "1fr",
+              sm: "1fr",
+              md: "1fr",
+              lg: "repeat(4, 1fr)",
+              xl: "repeat(4, 1fr)",
+            }}
+            my="4rem"
+            paddingX="2rem"
+          >
             <GridItem>
               <Flex sx={statContainerFlex}>
                 <Text sx={verticalHeading}>Before&nbsp; &nbsp; &nbsp;</Text>
@@ -132,7 +157,16 @@ const JffInstaCard = () => {
             </GridItem>
             <GridItem mx="auto"></GridItem>
           </Grid>
-          <Grid gridTemplateColumns="repeat(4, 1fr)" my="4rem">
+          <Grid
+            gridTemplateColumns={{
+              base: "1fr",
+              sm: "1fr",
+              md: "30%: 70%",
+              lg: "30%: 70%",
+              xl: "30% 70%",
+            }}
+            my="2rem"
+          >
             <GridItem mx="auto">
               <Flex sx={statContainerFlex}>
                 <Text sx={verticalHeading}>
@@ -188,8 +222,20 @@ const JffInstaCard = () => {
           audience.
         </Text>
         <Grid
-          gridTemplateColumns="repeat(3, 1fr)"
-          gridTemplateRows="repeat(5, 1fr)"
+          gridTemplateColumns={{
+            base: "1fr",
+            sm: "1fr",
+            md: "1fr",
+            lg: "repeat(3, 1fr)",
+            xl: "repeat(3, 1fr)",
+          }}
+          gridTemplateRows={{
+            base: "auto",
+            sm: "auto",
+            md: "auto",
+            lg: "repeat(5, 1fr)",
+            xl: "repeat(5, 1fr)",
+          }}
           paddingX="1rem"
           paddingY="2rem"
         >
