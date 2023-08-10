@@ -190,6 +190,15 @@ const MultichoiceReachCard = () => {
             </Flex>
           </GridItem>
           <GridItem mx="8" my="auto">
+            <Heading
+              variant="h4"
+              textAlign="center"
+              textTransform="uppercase"
+              marginTop="1rem"
+              marginLeft={{ base: "0", sm: "0", md: "6rem", xl: "6rem" }}
+            >
+              Reach breakdown by device
+            </Heading>
             <Flex
               flexDir={{
                 base: "column",
@@ -256,6 +265,15 @@ const MultichoiceReachCard = () => {
       </Box>
 
       <Box sx={socialStatsContainer} backgroundImage={MultichoiceBackground}>
+        <Heading
+          variant="h4"
+          textAlign="center"
+          textTransform="uppercase"
+          marginBottom="1rem"
+          color="#fff"
+        >
+          Social Reach
+        </Heading>
         <Text textAlign="center" color="#fff">
           Page Tweet impressions <strong>after</strong> we handled the account.
           Since we handled the social media for the Joburg Film Festival from
