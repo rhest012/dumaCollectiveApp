@@ -26,13 +26,16 @@ const HomeHeader = () => {
   const imageList = [
     "Soweto.png",
     "BB Titans.png",
-    "Sasol.jpg",
-    "Springboks.png",
-    "DSTV Prem.jpg",
-    "Lockdown House Party.jpg",
     "JFF.png",
     "NBA Playoffs.png",
-    "Robot Boi.jpg",
+    "Friends Of Amstel.jpeg",
+    "A Grade.png",
+    "Origins.png",
+    "Multi Choice Innovation Hub.png",
+    "Springboks.png",
+    "DSTV Prem.jpg",
+    "Chivas.png",
+    "Sasol.jpg",
   ];
 
   // Framer Motion
@@ -60,9 +63,9 @@ const HomeHeader = () => {
       gridTemplateColumns={{
         base: "1fr",
         sm: "1fr",
-        md: "50%, 50%",
-        lg: "50%, 50%",
-        xl: "50% 50%",
+        md: "40%, 60%",
+        lg: "40%, 60%",
+        xl: "40% 60%",
       }}
       width="100vw"
       paddingTop={{

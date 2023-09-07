@@ -79,39 +79,40 @@ const TheGrind = () => {
             margin={{
               base: "4rem 2rem",
               md: "4rem 2rem",
-              lg: "8rem 2rem",
-              xl: " 8rem 2rem",
+              lg: "4rem 2rem 8rem 2rem",
+              xl: " 4rem 2rem 8rem 2rem",
             }}
             gridTemplateColumns={{
               base: "1fr",
               sm: "1fr",
               base: "1fr",
-              lg: "40%,630%",
+              lg: "40%,60%",
               xl: "40% 60%",
             }}
             // height={{"83vh"}}
           >
-            <GridItem>
+            <GridItem marginRight={{ base: "0", lg: "2rem", xl: "2rem" }}>
               <MotionBox
                 className="client-outer-container"
                 ref={targetRef}
                 display="flex"
                 flexDir="column"
                 height="100%"
-                marginRight={{
-                  base: "0",
-                  sm: "0",
-                  md: "0",
-                  lg: "2rem",
-                  xl: "2rem",
-                }}
+                // marginRight={{
+                //   base: "0",
+                //   sm: "0",
+                //   md: "0",
+                //   lg: "2rem",
+                //   xl: "2rem",
+                // }}
                 flexWrap="wrap"
-                justifyContent="center"
+                // justifyContent="center"
               >
                 <MotionHeading
                   variant="h2"
                   as="h2"
                   pathLength="1"
+                  marginTop="2rem"
                   style={{ pathLength: scrollYProgress }}
                 >
                   A BIG Shout out to our clients
@@ -138,70 +139,36 @@ const TheGrind = () => {
             </GridItem>
             <GridItem
               width="100%"
-              paddingTop={{
-                base: "1rem",
-                sm: "1rem",
-                md: "1rem",
-                lg: "0",
-                xl: "0",
-              }}
               display="flex"
-              justifyContent="center"
+              justifyContent="space-between"
               alignItems="center"
+              flexWrap="wrap"
+              gap="2rem"
             >
-              <Grid
-                gridTemplateColumns={{
-                  base: "repeat(2, 1fr)",
-                  sm: "repeat(2, 1fr)",
-                  md: "repeat(4, 1fr)",
-                  lg: "repeat(5, 1fr)",
-                  xl: "repeat(5, 1fr)",
-                }}
-                gap={{
-                  base: "1rem",
-                  sm: "1rem",
-                  md: "1rem",
-                  lg: "2rem",
-                  xl: "2rem",
-                }}
-                marginY={{
-                  base: "1rem",
-                  sm: "1rem",
-                  md: "1rem",
-                  lg: "2rem",
-                  xl: "2rem",
-                }}
-                height={{
-                  base: "auto",
-                  sm: "auto",
-                  md: "auto",
-                  lg: "300px",
-                  xl: "300px",
-                }}
-              >
-                {data.map((item, index) => (
-                  <MotionGridItem
-                    boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+              {data.map((item, index) => (
+                <MotionGridItem
+                  className="image-container"
+                  boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+                  key={index}
+                  width="250px"
+                  height="250px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  variants={imageContainerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  <MotionImage
+                    className="image"
+                    src={require(`../../../assets/theGrind/clientLogos/${item.clientLogo}`)}
+                    width="225px"
                     key={index}
-                    width="130px"
-                    height="130px"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    variants={imageContainerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                  >
-                    <MotionImage
-                      src={require(`../../../assets/theGrind/clientLogos/${item.clientLogo}`)}
-                      width="190px"
-                      key={index}
-                      variants={imageChildVariants}
-                    />
-                  </MotionGridItem>
-                ))}
-              </Grid>
+                    variants={imageChildVariants}
+                  />
+                </MotionGridItem>
+              ))}
             </GridItem>
           </Grid>
         </Box>
