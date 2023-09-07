@@ -16,7 +16,12 @@ const Footer = () => {
       animate={{ opacity: 100 }}
       transition={{ delay: 2, duration: 1 }}
     >
-      <MotionText variant="p" paddingY="1rem" color="#fff" textAlign="center">
+      <MotionText
+        variant="p"
+        padding="1rem 0 2rem 0"
+        color="#fff"
+        textAlign="center"
+      >
         &copy; {new Date().getFullYear()} Duma Collective. All rights reserved.
       </MotionText>
     </MotionBox>

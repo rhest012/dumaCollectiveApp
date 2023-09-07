@@ -46,16 +46,23 @@ h5 {
   font-size: 1.25rem;
 }
 
+/* Default styles for cursor */
 .cursor {
   position: fixed;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid #1E174B;;
+  border: 2px solid #1E174B;
   left: 0;
   transform: translate(-50%, -50%);
-  pointer-events: none; 
+  pointer-events: none;
   transition: width 1000ms, height 1000ms;
+}
+
+@media screen and (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
 }
 
 .cursor.large {

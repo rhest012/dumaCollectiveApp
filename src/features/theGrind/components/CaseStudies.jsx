@@ -41,10 +41,10 @@ const CaseStudies = () => {
     alignItems: "center",
     width: {
       base: "300px",
-      sm: "300px",
-      md: "300px",
-      lg: "300px",
-      xl: "350px",
+      sm: "350px",
+      md: "400px",
+      lg: "400px",
+      xl: "420px",
     },
     height: {
       base: "200px",
@@ -125,10 +125,10 @@ const CaseStudies = () => {
                   content: `url(${require(`../../../assets/theGrind/jff/JFF_Header.png`)})`,
                   width: {
                     base: "300px",
-                    sm: "300px",
-                    md: "300px",
-                    lg: "300px",
-                    xl: "350px",
+                    sm: "350px",
+                    md: "400px",
+                    lg: "400px",
+                    xl: "420px",
                   },
                 }}
               />
@@ -161,10 +161,10 @@ const CaseStudies = () => {
 
                   width: {
                     base: "300px",
-                    sm: "300px",
-                    md: "300px",
-                    lg: "300px",
-                    xl: "350px",
+                    sm: "350px",
+                    md: "400px",
+                    lg: "400px",
+                    xl: "420px",
                   },
                 }}
               />
@@ -194,10 +194,10 @@ const CaseStudies = () => {
                   content: `url(${require(`../../../assets/theGrind/Multichoice/MCG_Header.png`)})`,
                   width: {
                     base: "300px",
-                    sm: "300px",
-                    md: "300px",
-                    lg: "300px",
-                    xl: "350px",
+                    sm: "350px",
+                    md: "400px",
+                    lg: "400px",
+                    xl: "420px",
                   },
                 }}
               />

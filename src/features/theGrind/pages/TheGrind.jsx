@@ -140,7 +140,7 @@ const TheGrind = () => {
             <GridItem
               width="100%"
               display="flex"
-              justifyContent="space-between"
+              justifyContent={{ base: "center", lg: "space-between" }}
               alignItems="center"
               flexWrap="wrap"
               gap="2rem"

@@ -1,7 +1,13 @@
+/* Default cursor style for all elements */
 * {
   cursor: url('../assets/Duma-Africa.png') 14 15, auto;
-
 }
+@media screen and (max-width: 768px) {
+  * {
+    cursor: auto;
+  }
+}
+
 
 .app-cursor {
     z-index: 1000;
