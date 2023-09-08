@@ -39,9 +39,6 @@ const HomeAbout = () => {
           creative staff thrives on turning your ideas into viral-worthy
           realities, pushing the boundaries of what's possible.
         </Text>
-        <Link to="/get-in-touch">
-          <Button variant="standardButton">Get In Touch</Button>
-        </Link>
       </GridItem>
       <GridItem
         display="flex"

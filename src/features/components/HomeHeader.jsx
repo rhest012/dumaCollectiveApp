@@ -32,8 +32,8 @@ const HomeHeader = () => {
     "A Grade.png",
     "Origins.png",
     "Multi Choice Innovation Hub.png",
-    "Springboks.png",
-    "DSTV Prem.jpg",
+    "Heineken Trophy Tour.jpeg",
+    "Fnb.png",
     "Chivas.png",
     "Sasol.jpg",
   ];
@@ -101,17 +101,12 @@ const HomeHeader = () => {
             xl: "2rem",
           }}
         >
-          Step into our collaborative work environment, where innovation is at
+          Step into our collaborative work environment, where creativity is at
           the heart of everything we do. Here, we cultivate a culture that
           inspires our team, fuelling a continuous flow of creative brilliance.
-          From insightful brainstorming sessions to extreme attention to detail,
-          we pride ourselves on transforming ideas into realities. <br /> <br />
-          Are you ready to be part of the Duma family?
+          We pride ourselves on transforming ideas into realities.
         </Text>
         <SocialIconsHorizontal />
-        <Link to="/get-in-touch">
-          <Button variant="standardButton">Get In Touch</Button>
-        </Link>
       </GridItem>
       <GridItem>
         <Box
