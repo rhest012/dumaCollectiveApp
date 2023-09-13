@@ -78,7 +78,7 @@ const CaseStudies = () => {
   };
   return (
     <Box marginY="4rem" marginX="2rem">
-      <Heading variant="h2" as="h3" textAlign="center">
+      <Heading variant="h2" as="h3">
         Our Work Never Stops
       </Heading>
       <Text variant="p" margin="-1rem 0 4rem 0">
