@@ -54,7 +54,7 @@ const SocialIconsHorizontal = () => {
   return (
     <MotionFlex
       gap="1rem"
-      paddingY={{
+      paddingTop={{
         base: "1rem",
         sm: "1rem",
         md: "1rem",

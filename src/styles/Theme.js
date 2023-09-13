@@ -21,6 +21,7 @@ const theme = extendTheme ({
           },
           h2: {
             fontWeight: 800,
+            
             fontSize: "2.44rem",
             letterSpacing: "1.5px",
             color: "#1E174B",

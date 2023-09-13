@@ -12,6 +12,7 @@ import {
 import React from "react";
 import SocialIconsHorizontal from "./SocialIconsHorizontal";
 import { motion } from "framer-motion";
+import GetInTouchSection from "./GetInTouchSection";
 
 const ServiceList = () => {
   const services = [
@@ -33,14 +34,13 @@ const ServiceList = () => {
         base: "1fr",
         sm: "1fr",
         md: "1fr",
-        lg: "45% 55%",
-        xl: "45% 55%",
+        lg: "55% 45%",
+        xl: "55% 45%",
       }}
       gap={{ base: "1rem", sm: "1rem", md: "1rem", lg: "2rem", xl: "2rem" }}
       height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "75vh" }}
-      marginY="2rem"
+      margin="2rem 2rem 4rem 2rem"
       maxWidth="100vw"
-      marginX="2rem"
       className="service-list"
       data-scroll-section
     >
@@ -50,59 +50,6 @@ const ServiceList = () => {
         flexDir="column"
         justifyContent="center"
       >
-        <Heading variant="h2">
-          A solution
-          <br />
-          for every need
-        </Heading>
-        <Text
-          variant="p"
-          paddingY={{
-            base: "1rem",
-            sm: "1rem",
-            md: "1rem",
-            lg: "2rem",
-            xl: "2rem",
-          }}
-        >
-          Brand-building is our passion, and creativity knows no bounds! With a
-          flair for ideas, backed by valuable insights, we take pride in serving
-          a diverse range of clients that spans across FMCG, Energy and
-          Sustainability, Technology and Enterprise Development, Financial
-          Services, and even government departments.
-          <br /> <br />
-          Our secret sauce? Collaborative thinking! We believe in working hand
-          in hand with our clients to drive business growth and achieve
-          extraordinary results. Our services are top-notch, delivered with
-          excellence and finesse, leaving a trail of success wherever we go!
-        </Text>
-        <SocialIconsHorizontal />
-      </GridItem>
-      <GridItem
-        width="100%"
-        paddingX={{ base: "0", sm: "0", md: "0", lg: "2rem", xl: "2rem" }}
-        display="flex"
-        justifyContent="center"
-        flexDir="column"
-        height="100%"
-      >
-        {/* <Box 
-                    border="1px solid #1d1749" 
-                    padding="1rem"
-                    height="150px"
-                    width="220px"
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    key={index}
-                    marginY="0.6rem"
-                    
-                >
-                    <Heading variant="h5" textTransform="uppercase">
-                        {service}
-                    </Heading>
-                </Box> */}
-
         <Accordion
           // allowToggle
           className="accordion-container"
@@ -141,6 +88,32 @@ const ServiceList = () => {
             </AccordionItem>
           ))}
         </Accordion>
+      </GridItem>
+      <GridItem
+        width="100%"
+        paddingX={{ base: "0", sm: "0", md: "0", lg: "2rem", xl: "2rem" }}
+        display="flex"
+        justifyContent="center"
+        flexDir="column"
+        height="100%"
+      >
+        <GetInTouchSection />
+        {/* <Box 
+                    border="1px solid #1d1749" 
+                    padding="1rem"
+                    height="150px"
+                    width="220px"
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    key={index}
+                    marginY="0.6rem"
+                    
+                >
+                    <Heading variant="h5" textTransform="uppercase">
+                        {service}
+                    </Heading>
+                </Box> */}
       </GridItem>
     </Grid>
   );

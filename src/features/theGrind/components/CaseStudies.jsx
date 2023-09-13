@@ -6,11 +6,12 @@ import {
   Heading,
   Image,
   LinkBox,
+  Text,
   background,
 } from "@chakra-ui/react";
 import { Link, Link as RouterLink, useLocation } from "react-router-dom";
 import React from "react";
-import NbaLogo from "../../../assets/theGrind/Nba_Africa/NBA_Africa_Logo.svg";
+import NbaLogo from "../../../assets/theGrind/caseStudies/nba-africa-square.png";
 import JffLogo from "../../../assets/theGrind/jff/JFF_Logo.svg";
 import MultichoiceLogo from "../../../assets/theGrind/Multichoice/Multichoice_Logo.svg";
 import JffHeader from "../../../assets/theGrind/jff/JFF_Header.png";
@@ -20,17 +21,17 @@ const CaseStudies = () => {
   const activeCaseStudies = [
     {
       clientName: "NBA",
-      clientLogo: "nba-africa.png",
+      image: "nba-africa-square.png",
       url: "/the-grind/nba",
     },
     {
       clientName: "JFF",
-      clientLogo: "jff.png",
+      image: "jff-square.png",
       url: "/the-grind/jff",
     },
     {
       clientName: "multiChoice",
-      clientLogo: "multichoice.png",
+      image: "multichoice-square.jpg",
       url: "/the-grind/multichoice",
     },
   ];
@@ -41,17 +42,17 @@ const CaseStudies = () => {
     alignItems: "center",
     width: {
       base: "300px",
-      sm: "350px",
-      md: "400px",
-      lg: "400px",
-      xl: "420px",
+      sm: "300px",
+      md: "300px",
+      lg: "350px",
+      xl: "350px",
     },
     height: {
-      base: "200px",
-      sm: "200px",
-      md: "200px",
-      lg: "200px",
-      xl: "233px",
+      base: "300px",
+      sm: "300px",
+      md: "300px",
+      lg: "350px",
+      xl: "350px",
     },
     boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
   };
@@ -77,9 +78,15 @@ const CaseStudies = () => {
   };
   return (
     <Box marginY="4rem" marginX="2rem">
-      <Heading variant="h3" as="h3" textAlign="center" paddingBottom="2rem">
-        Case Studies
+      <Heading variant="h2" as="h3" textAlign="center">
+        Our Work Never Stops
       </Heading>
+      <Text variant="p" margin="-1rem 0 4rem 0">
+        To redefine creative communications, we approach our work to achieve
+        long-term objectives - to create sustainable brand communications that
+        last.
+      </Text>
+      {/* <Text >To redefine creative communications.</Text> */}
       <Flex
         flexDir={{
           base: "column",
@@ -96,48 +103,33 @@ const CaseStudies = () => {
           xl: "space-between",
         }}
         alignItems="center"
-        gap={{ sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
       >
-        <LinkBox as="ReachLink">
-          <Box
-            className="single-case-study-container"
-            sx={singleCaseStudyContainer}
-          >
-            <Box>
+        {activeCaseStudies?.map((caseStudy, index) => (
+          <Link to={caseStudy.url} as="ReachLink" key={index}>
+            <Box
+              className="single-case-study-container"
+              // sx={singleCaseStudyContainer}
+              marginY={{ base: "1.5rem", xl: "0" }}
+            >
               <Image
-                src={NbaLogo}
-                width={{
-                  base: "300px",
-                  sm: "300px",
-                  md: "300px",
-                  lg: "300px",
-                  xl: "350px",
-                }}
+                // src={NbaLogo}
+                src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
                 height={{
-                  base: "150px",
-                  sm: "150px",
-                  md: "150px",
-                  lg: "200px",
-                  xl: "200px",
+                  base: "350px",
+                  sm: "350px",
+                  md: "350px",
+                  lg: "400px",
+                  xl: "400px",
                 }}
                 marginBottom="0.5rem"
-                _hover={{
-                  content: `url(${require(`../../../assets/theGrind/jff/JFF_Header.png`)})`,
-                  width: {
-                    base: "300px",
-                    sm: "350px",
-                    md: "400px",
-                    lg: "400px",
-                    xl: "420px",
-                  },
-                }}
+                boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
               />
               <Links>Explore</Links>
             </Box>
-          </Box>
-        </LinkBox>
+          </Link>
+        ))}
 
-        <Link to="/the-grind/jff">
+        {/* <Link to="/the-grind/jff">
           <Box
             className="single-case-study-container"
             sx={singleCaseStudyContainer}
@@ -204,7 +196,7 @@ const CaseStudies = () => {
               <Links>Explore</Links>
             </Box>
           </Box>
-        </Link>
+        </Link> */}
       </Flex>
     </Box>
   );

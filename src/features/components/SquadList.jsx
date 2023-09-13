@@ -1,25 +1,13 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useFetchFirebase } from "../../actions/useFetchFirebase";
 
 import { easeIn, motion } from "framer-motion";
-import useFetch from "../../actions/useFetchData";
 
 const SquadList = () => {
   const containerStyle = {
-    height: { base: "auto", sm: "auto", md: "auto", lg: "100vh", xl: "80vh" },
-
-    marginX: "2rem",
+    // height: { base: "auto", sm: "auto", md: "auto", lg: "100vh", xl: "80vh" },
+    margin: "4rem 2rem 2rem 2rem",
   };
 
   const staffHeadingStyle = {
@@ -35,7 +23,6 @@ const SquadList = () => {
   const imageCaption = {
     textAlign: "center",
     pt: "0.25rem",
-    pb: "0.5rem",
   };
 
   // Framer Motion
@@ -74,166 +61,109 @@ const SquadList = () => {
     <>
       {data && (
         <Box sx={containerStyle}>
-          <></>
-          <Grid
-            margin="2rem"
-            height={{
-              base: "auto",
-              sm: "auto",
-              md: "auto",
-              lg: "100%",
-              xl: "100%",
+          <Flex
+            className="staff-text-container"
+            flexDirection="column"
+            justifyContent="center"
+            flexWrap={{
+              base: "wrap",
+              sm: "wrap",
+              md: "wrap",
+              lg: "no-wrap",
+              xl: "no-wrap",
             }}
-            alignContent="center"
-            gridTemplateColumns={{
-              base: "1fr",
-              sm: "1fr",
-              md: "1fr",
-              lg: "40% 60%",
-              xl: "40% 60%",
+            alignItems={{
+              base: "center",
+              sm: "center",
+              md: "center",
+              lg: "flex-start",
+              xl: "flex-start",
             }}
-            overflow="hidden"
-            gap="1rem"
+            paddingTop={{
+              base: "2rem",
+              sm: "2rem",
+              md: "2rem",
+              lg: "0",
+              xl: "0",
+            }}
           >
-            <GridItem
-              className="staff-text-container"
-              display="flex"
-              flexDirection="column"
-              justifyContent="center"
-              flexWrap={{
-                base: "wrap",
-                sm: "wrap",
-                md: "wrap",
-                lg: "no-wrap",
-                xl: "no-wrap",
-              }}
-              alignItems={{
-                base: "center",
-                sm: "center",
-                md: "center",
-                lg: "flex-start",
-                xl: "flex-start",
-              }}
-              height="100%"
-              paddingLeft={{
-                base: "0",
-                sm: "0",
-                md: "0",
-                lg: "1.5rem",
-                xl: "1.5rem",
-              }}
-              paddingTop={{
-                base: "2rem",
-                sm: "2rem",
-                md: "2rem",
-                lg: "0",
-                xl: "0",
-              }}
-            >
-              <Heading variant="h2">
-                Meet the awesome people that make things happen
-              </Heading>
-              <Text marginY="2rem" variant="p">
-                At Duma Collective, creativity is at the heart of everything we
-                do. Our highly talented and passionate team of creative
-                professional forms the backbone of our agency, bringing
-                unparalleled vision and ingenuity to every project. With diverse
-                backgrounds in design, copywriting, production, social media and
-                more, our staff is a melting pot of artistic brilliance.
-              </Text>
-            </GridItem>
-            <GridItem overflowY="scroll">
-              {data !== null &&
-                data.map((staff, index) => (
-                  <Box
-                    key={index}
-                    margin="1rem 0 1rem 2rem"
-                    display="flex"
-                    flexDir="column"
-                    justifyContent="center"
+            <Heading variant="h2">Our people, our heart.</Heading>
+            <Text marginBottom="2rem" variant="p">
+              The people that make epic sh*t happen, the people redefining
+              creative communications.
+            </Text>
+          </Flex>
+          <Box>
+            {data !== null &&
+              data.map((staff, index) => (
+                <Box
+                  key={index}
+                  display="flex"
+                  flexDir="column"
+                  justifyContent="center"
+                  marginY="1.5rem"
+                >
+                  <Heading
+                    sx={staffHeadingStyle}
+                    variant="h3"
+                    paddingBottom="0"
                   >
-                    <Heading
-                      sx={staffHeadingStyle}
-                      variant="h2"
-                      paddingBottom="0"
-                    >
-                      {staff.aka}
-                    </Heading>
-                    <Text variant="p" fontSize="1.25rem" paddingBottom="2rem">
-                      {staff.department}{" "}
-                    </Text>
-                    <Grid
-                      className="staff-image-container"
-                      gridTemplateColumns={{
-                        base: "1fr",
-                        sm: "1fr",
-                        md: "repeat(3, 1fr)",
-                        lg: "repeat(2, 1fr)",
-                        xl: "repeat(3, 1fr)",
-                      }}
-                      flexDir="row"
-                      flexDirection="column"
-                      width="100%"
-                      justifyContent="center"
-                    >
-                      {staff.staffMembers.map((staffMember, index) => (
-                        <div key={index}>
-                          {" "}
-                          {/* Replace fragment with <div> */}
-                          <GridItem>
-                            <Flex
-                              flexDirection={{
-                                base: "column",
-                                sm: "column",
-                                md: "column",
-                                lg: "row",
-                                xl: "row",
-                              }}
-                              // justifyContent="center"
-                              alignItems="center"
-                              className="staff-container"
-                              width="auto"
-                              variants={imageContainerVariants}
-                              initial="hidden"
-                              animate="visible"
-                            >
-                              <MotionImage
-                                className="staff__image"
-                                key={index}
-                                src={require(`../../assets/squad/squadOri/${staffMember.image}`)}
-                                borderRadius="1rem"
-                                w="239px"
-                                h="181px"
-                                boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
-                                transition="all  0.7s ease"
-                                variants={singleImageChildVariants}
-                                initial="hidden"
-                                animate="visible"
-                                _hover={{
-                                  content: `url(${require(`../../assets/squad/squadHover/${staffMember.image}`)})`,
-                                  w: "239px",
-                                  h: "181px",
-                                }}
-                              />
-                            </Flex>
-                            <Text className="staff__text" sx={imageCaption}>
-                              {staffMember.aka}
-                            </Text>
-                          </GridItem>
-                        </div>
-                      ))}
-                    </Grid>
-                    <Heading
-                      padding="2rem 0 2rem 1rem"
-                      variant="h5"
-                      sx={staffHeadingStyle}
-                    >
-                      {staff.quote}
-                    </Heading>
-                  </Box>
-                ))}
-            </GridItem>
-          </Grid>
+                    {staff.aka}
+                  </Heading>
+                  <Text variant="p" fontSize="1.25rem" paddingBottom="1rem">
+                    {staff.department}{" "}
+                  </Text>
+                  <Flex
+                    className="staff-image-container"
+                    flexDir="row"
+                    width="100%"
+                    flexWrap="wrap"
+                    gap="1.5rem"
+                  >
+                    {staff.staffMembers.map((staffMember, index) => (
+                      <Box key={index}>
+                        {" "}
+                        <Flex
+                          flexDirection={{
+                            base: "column",
+                            sm: "column",
+                            md: "column",
+                            lg: "row",
+                            xl: "row",
+                          }}
+                          alignItems="center"
+                          className="staff-container"
+                          width="auto"
+                          variants={imageContainerVariants}
+                          initial="hidden"
+                          animate="visible"
+                        >
+                          <MotionImage
+                            className="staff__image"
+                            key={index}
+                            src={require(`../../assets/squad/squadOri/${staffMember.image}`)}
+                            borderRadius="1rem"
+                            w="239px"
+                            h="181px"
+                            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+                            transition="all  0.7s ease"
+                            variants={singleImageChildVariants}
+                            initial="hidden"
+                            animate="visible"
+                            _hover={{
+                              content: `url(${require(`../../assets/squad/squadHover/${staffMember.image}`)})`,
+                              w: "239px",
+                              h: "181px",
+                            }}
+                          />
+                        </Flex>
+                        <Text sx={imageCaption}>{staffMember.aka}</Text>
+                      </Box>
+                    ))}
+                  </Flex>
+                </Box>
+              ))}
+          </Box>
         </Box>
       )}
     </>
