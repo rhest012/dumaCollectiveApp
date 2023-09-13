@@ -60,7 +60,7 @@ const HomeShowreel = () => {
             loop={true}
             muted={true}
             width="100%"
-            // height={{ base: "inherit", lg: "100%" }}
+            height="100%"
           />
         </Box>
         {/* <Image src={PlaceHolderImage} height="500px" /> */}
