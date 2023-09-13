@@ -51,19 +51,20 @@ const HomeShowreel = () => {
         alignContent="center"
         alignItems="center"
         justifyContent="center"
+        width="100%"
+        height="100%"
+        paddingY={{ base: "2rem", lg: "0" }}
         // marginTop={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
       >
-        <Box height="100%" width="100%" paddingY="2rem">
-          <ReactPlayer
-            url="https://vimeo.com/864014782?share=copy"
-            playing={true}
-            loop={true}
-            muted={true}
-            width="100%"
-            height="100%"
-          />
-        </Box>
-        {/* <Image src={PlaceHolderImage} height="500px" /> */}
+        <ReactPlayer
+          url="https://vimeo.com/864014782?share=copy"
+          playing={true}
+          loop={true}
+          muted={true}
+          width="100%"
+          height="100%"
+          // height="394px"
+        />
       </GridItem>
     </Grid>
   );
