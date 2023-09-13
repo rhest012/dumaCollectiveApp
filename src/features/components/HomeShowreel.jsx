@@ -53,7 +53,7 @@ const HomeShowreel = () => {
         justifyContent="center"
         width="100%"
         height="100%"
-        paddingY={{ base: "2rem", lg: "0" }}
+
         // marginTop={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
       >
         <ReactPlayer
