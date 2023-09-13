@@ -55,7 +55,7 @@ const AnimatedRoutes = () => {
               <Route path="/the-buzz/:id" element={<NewsRoomArticle />} />
               <Route path="/get-in-touch" element={<Contact />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
           </Box>
         </>
         {/* )} */}

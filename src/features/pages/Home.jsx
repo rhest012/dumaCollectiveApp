@@ -11,9 +11,8 @@ const Home = () => {
   return (
     <>
       <Box data-scroll-container>
-        <HomeHeader />
-        <HomeAbout />
         <HomeShowreel />
+        <HomeAbout />
         <ContactSection />
       </Box>
     </>

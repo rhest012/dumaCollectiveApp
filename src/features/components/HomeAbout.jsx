@@ -25,7 +25,7 @@ const HomeAbout = () => {
         alignContent="center"
       >
         <Heading variant="h2">
-          An Oasis for African creativity to flourish
+          Redefining creative communications from Africa to the world.
         </Heading>
         <Text variant="p">
           We envision a future in which African creativity emerges boldly,

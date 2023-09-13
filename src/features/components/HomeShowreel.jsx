@@ -15,9 +15,9 @@ const HomeShowreel = () => {
         lg: "1fr 2fr",
         xl: "1fr 2fr",
       }}
-      height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "100vh" }}
+      height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "90vh" }}
       overflow="hidden"
-      margin="2rem"
+      marginX="2rem"
       data-scroll-section
     >
       <GridItem
