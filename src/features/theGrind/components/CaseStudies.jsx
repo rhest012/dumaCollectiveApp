@@ -79,7 +79,7 @@ const CaseStudies = () => {
   return (
     <Box marginY="3rem" marginX="2rem">
       <Heading variant="h2" as="h3">
-        Our Work Never Stops
+        Our Work Never Stops...
       </Heading>
       <Text variant="p" margin="-1rem 0 4rem 0">
         To redefine creative communications, we approach our work to achieve
@@ -118,7 +118,7 @@ const CaseStudies = () => {
                   base: "350px",
                   sm: "350px",
                   md: "350px",
-                  lg: "400px",
+                  lg: "350px",
                   xl: "400px",
                 }}
                 marginBottom="0.5rem"

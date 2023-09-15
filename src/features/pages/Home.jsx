@@ -13,7 +13,7 @@ const Home = () => {
       <Box data-scroll-container>
         <HomeShowreel />
         <HomeAbout />
-        <ContactSection />
+        {/* <ContactSection /> */}
       </Box>
     </>
   );
