@@ -21,6 +21,7 @@ import ScrollToTop from "./ScrollToTop";
 import { Box } from "@chakra-ui/react";
 import NewsRoomArticle from "../theNewsRoom/pages/NewsRoomArticle";
 import Multichoice from "../theGrind/pages/Multichoice";
+import NbaAfrica from "../theGrind/pages/NbaAfrica";
 
 const AnimatedRoutes = () => {
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ const AnimatedRoutes = () => {
               <Route path="/the-grind" element={<TheGrind />} />
               <Route path="/the-grind/jff" element={<Jff />} />
               <Route path="/the-grind/multichoice" element={<Multichoice />} />
+              <Route path="/the-grind/nba-africa" element={<NbaAfrica />} />
               <Route path="/the-buzz" element={<NewsRoom />} />
               <Route path="/the-buzz/:id" element={<NewsRoomArticle />} />
               <Route path="/get-in-touch" element={<Contact />} />

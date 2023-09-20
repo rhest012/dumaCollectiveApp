@@ -22,7 +22,7 @@ const CaseStudies = () => {
     {
       clientName: "NBA",
       image: "nba-africa-square.png",
-      url: "/the-grind/nba",
+      url: "/the-grind/nba-africa",
     },
     {
       clientName: "JFF",
@@ -128,75 +128,6 @@ const CaseStudies = () => {
             </Box>
           </Link>
         ))}
-
-        {/* <Link to="/the-grind/jff">
-          <Box
-            className="single-case-study-container"
-            sx={singleCaseStudyContainer}
-          >
-            <Box>
-              <Image
-                // src={activeCaseStudy.clientLogo}
-                src={JffLogo}
-                // src={require(`../../../assets/theGrind/caseStudies/${activeCaseStudy.clientLogo}`)}
-                width={{
-                  base: "300px",
-                  sm: "300px",
-                  md: "300px",
-                  lg: "300px",
-                  xl: "350px",
-                }}
-                height="200px"
-                marginBottom="0.5rem"
-                _hover={{
-                  content: `url(${require(`../../../assets/theGrind/jff/JFF_Header.png`)})`,
-
-                  width: {
-                    base: "300px",
-                    sm: "350px",
-                    md: "400px",
-                    lg: "400px",
-                    xl: "420px",
-                  },
-                }}
-              />
-              <Links>Explore</Links>
-            </Box>
-          </Box>
-        </Link>
-
-        <Link to="/the-grind/multichoice">
-          <Box
-            className="single-case-study-container"
-            sx={singleCaseStudyContainer}
-          >
-            <Box>
-              <Image
-                src={MultichoiceLogo}
-                width={{
-                  base: "300px",
-                  sm: "300px",
-                  md: "300px",
-                  lg: "300px",
-                  xl: "350px",
-                }}
-                height="200px"
-                marginBottom="0.5rem"
-                _hover={{
-                  content: `url(${require(`../../../assets/theGrind/Multichoice/MCG_Header.png`)})`,
-                  width: {
-                    base: "300px",
-                    sm: "350px",
-                    md: "400px",
-                    lg: "400px",
-                    xl: "420px",
-                  },
-                }}
-              />
-              <Links>Explore</Links>
-            </Box>
-          </Box>
-        </Link> */}
       </Flex>
     </Box>
   );
