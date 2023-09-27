@@ -65,9 +65,9 @@ const ServiceList = () => {
                 borderTop: "1px solid #1d1749",
               }}
               _hover={{
-                background: "#1d1749",
-                color: "#fff",
-                borderY: "1px solid #1d1749",
+                background: "F9F9F9",
+                // color: "#fff",
+                // borderY: "1px solid #1d1749",
               }}
             >
               <AccordionButton
@@ -98,22 +98,6 @@ const ServiceList = () => {
         height="100%"
       >
         <GetInTouchSection />
-        {/* <Box 
-                    border="1px solid #1d1749" 
-                    padding="1rem"
-                    height="150px"
-                    width="220px"
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    key={index}
-                    marginY="0.6rem"
-                    
-                >
-                    <Heading variant="h5" textTransform="uppercase">
-                        {service}
-                    </Heading>
-                </Box> */}
       </GridItem>
     </Grid>
   );

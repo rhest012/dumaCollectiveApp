@@ -83,10 +83,6 @@ const ContactSection = () => {
           <Text sx={contactDetailStyling} variant="p">
             010 443 5854
           </Text>
-          <Heading variant="h4">Address</Heading>
-          <Text sx={contactDetailStyling} variant="p">
-            20 Republic Road, Johannesburg
-          </Text>
         </Box>
         <SocialIconsHorizontal />
       </GridItem>

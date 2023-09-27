@@ -38,7 +38,7 @@ const theme = extendTheme ({
             fontWeight: 600,
             fontSize: "1.56rem",
             letterSpacing: "1.5px",
-            // color: "#1E174B",
+            color: "#1E174B",
           },
           h5: {
             fontWeight: 600,

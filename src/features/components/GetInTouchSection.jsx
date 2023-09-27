@@ -54,7 +54,8 @@ const GetInTouchSection = () => {
         Reach out to us using the contact details below or fill out the form,
         and we'll get back to you as soon as possible.
       </Text>
-      <Box>
+
+      <Box marginTop="2rem">
         <Heading variant="h4">Email Address</Heading>
         <Text sx={contactDetailStyling} variant="p">
           info@dumacollective.com
@@ -62,10 +63,6 @@ const GetInTouchSection = () => {
         <Heading variant="h4">Contact Number</Heading>
         <Text sx={contactDetailStyling} variant="p">
           010 443 5854
-        </Text>
-        <Heading variant="h4">Address</Heading>
-        <Text sx={contactDetailStyling} variant="p">
-          20 Republic Road, Johannesburg
         </Text>
       </Box>
       <SocialIconsHorizontal />
