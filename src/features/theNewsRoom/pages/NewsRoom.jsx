@@ -34,12 +34,67 @@ const NewsRoom = () => {
 
   const data = useFetchFirebase("newsRoom");
 
+  const theBuzz = [
+    {
+      id: "105",
+      title: "#Newsmaker: Lindiwe Maduna, MD of Duma Collective",
+      date: "26 July 2023",
+      caption:
+        "With no formal qualifications in communications, she developed her skills and knowledge through sheer hard work.",
+      image: "Lindi.jpg",
+      url: "https://www.bizcommunity.com/Article/196/18/240473.html",
+    },
+    {
+      id: "104",
+      title: "Lindiwe Maduna appointed MD of Duma Collective",
+      date: "11 July 2023",
+      caption:
+        "Lindiwe Maduna has been promoted to managing director of the Duma Collective.",
+      image: "Lindi.jpg",
+      url: "https://www.bizcommunity.com/Article/196/18/240060.html",
+    },
+    {
+      id: "100",
+      title: "Sibu wins big",
+      date: "19 February 2023",
+      caption:
+        "The Founder and Chief Creative Officer of Duma Collective walked away with the headlining award for the Prestigious Inverroche Future is Female, making her the first reciptient in Africa...",
+      image: "SibuMabena.jpg",
+      url: "https://www.snl24.com/dailysun/celebs/sibu-mabena-wins-big-award-20230218",
+    },
+    {
+      id: "101",
+      title: "Duma Collective dissolves it's talent management division",
+      date: "7 November 2022",
+      caption: "Every new beginning comes from some other beginning's end",
+      image: "DumaLogo.jpg",
+      url: "https://www.kaya959.co.za/entertainment/duma-collective-dissolves-its-talent-management-division/",
+    },
+    {
+      id: "102",
+      title: "MultiChoice group appoints Duma Collective",
+      date: "9 March 2022",
+      caption:
+        "The MultiChoice Group has announced appointment of Duma Collective as its lead creative communications agency. Duma Collective will oversee Public Relations and Social Media for DStv, general entertainment channels, and the group's Corporate Brand.",
+      image: "Multichoice.jpg",
+      url: "https://www.multichoice.com/media/news/multichoice-group-appoints-duma-collective-as-lead-creative-communications-agency",
+    },
+    {
+      id: "103",
+      title: "Duma Collective, M&N brands in share deal",
+      date: "9 March 2022",
+      caption:
+        "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
+      image: "M&N.jpg",
+      url: "https://www.bizcommunity.com/Article/196/12/225854.html",
+    },
+  ];
   return (
     <>
       {data && (
         <Box>
           <>
-            {data.map((buzzItem, index) => (
+            {theBuzz.map((buzzItem, index) => (
               <Grid
                 key={index}
                 gridTemplateColumns={{
@@ -69,7 +124,6 @@ const NewsRoom = () => {
               >
                 <GridItem>
                   <Image
-                    // src={SibuMabena}
                     src={require(`../../../assets/newsroom/${buzzItem.image}`)}
                   />
                 </GridItem>
@@ -95,7 +149,7 @@ const NewsRoom = () => {
                       </Text>
                     </Stack>
                     <Text>{buzzItem.caption}</Text>
-                    <Link to={`/the-buzz/${buzzItem.id}`}>
+                    <Link isExternal to={buzzItem.url}>
                       <Button variant="standardButton">Read Article</Button>
                     </Link>
                   </Flex>
