@@ -54,6 +54,15 @@ const NewsRoom = () => {
       url: "https://www.bizcommunity.com/Article/196/18/240060.html",
     },
     {
+      id: "105",
+      title: "Mabena rides wave of creativity",
+      date: "06 March 2023",
+      caption:
+        "Young and versatile entrepreneur, Sibu Mabena is a shining example that when you live towards fulfilling your dreams, all is possible as you can go beyond to reach for the stars.",
+      image: "SibuMabena 2.png",
+      url: "https://sundayworld.co.za/news/business/hustlers-avenue/mabena-rides-wave-of-creativity-2/",
+    },
+    {
       id: "100",
       title: "Sibu wins big",
       date: "19 February 2023",
