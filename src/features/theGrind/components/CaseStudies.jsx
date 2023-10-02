@@ -16,6 +16,7 @@ import JffLogo from "../../../assets/theGrind/jff/JFF_Logo.svg";
 import MultichoiceLogo from "../../../assets/theGrind/Multichoice/Multichoice_Logo.svg";
 import JffHeader from "../../../assets/theGrind/jff/JFF_Header.png";
 import { Links } from "../../../styles/Navbar.style";
+import { motion } from "framer-motion";
 
 const CaseStudies = () => {
   const activeCaseStudies = [
@@ -36,46 +37,48 @@ const CaseStudies = () => {
     },
   ];
 
-  const singleCaseStudyContainer = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: {
-      base: "300px",
-      sm: "300px",
-      md: "300px",
-      lg: "350px",
-      xl: "350px",
-    },
-    height: {
-      base: "300px",
-      sm: "300px",
-      md: "300px",
-      lg: "350px",
-      xl: "350px",
-    },
-    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-  };
+  // Framer Motion
+  const MotionImage = motion(Image);
+  const MotionBox = motion(Box);
 
-  const caseStudyImage = {
-    width: {
-      base: "300px",
-      sm: "300px",
-      md: "300px",
-      lg: "300px",
-      xl: "350px",
+  const imageContainerVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+      scale: 1, // Initial scale
     },
-    marginBottom: "0.5rem",
-    _hover: {
-      width: {
-        base: "300px",
-        sm: "300px",
-        md: "300px",
-        lg: "300px",
-        xl: "350px",
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1, // Initial scale
+      transition: {
+        duration: 1,
+        when: "beforeChildren",
+        staggerChildren: 0.4,
       },
     },
+    exit: {
+      y: -20,
+      opacity: 0,
+    },
   };
+
+  const imageChildVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+    },
+    hover: {
+      scale: 1.05,
+      duration: 2,
+    },
+  };
+
   return (
     <Box marginY="3rem" marginX="2rem">
       <Heading variant="h2" as="h3">
@@ -106,13 +109,37 @@ const CaseStudies = () => {
       >
         {activeCaseStudies?.map((caseStudy, index) => (
           <Link to={caseStudy.url} as="ReachLink" key={index}>
-            <Box
-              className="single-case-study-container"
-              // sx={singleCaseStudyContainer}
+            <MotionBox
+              // className="single-case-study-container"
               marginY={{ base: "1.5rem", xl: "0" }}
+              height={{
+                base: "350px",
+                sm: "350px",
+                md: "350px",
+                lg: "350px",
+                xl: "400px",
+              }}
+              width={{
+                base: "350px",
+                sm: "350px",
+                md: "350px",
+                lg: "350px",
+                xl: "400px",
+              }}
+              overflow="hidden"
+              className="image-container"
+              variants={imageContainerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              whileHover="hover"
             >
-              <Image
-                // src={NbaLogo}
+              <MotionImage
+                variants={imageChildVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                whileHover="hover"
                 src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
                 height={{
                   base: "350px",
@@ -122,10 +149,9 @@ const CaseStudies = () => {
                   xl: "400px",
                 }}
                 marginBottom="0.5rem"
-                boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
               />
               <Links>Explore</Links>
-            </Box>
+            </MotionBox>
           </Link>
         ))}
       </Flex>

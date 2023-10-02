@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import NbaImage1 from "../../../assets/theGrind/Nba_Africa/NBA-Africa-Image.jpg";
+import { motion } from "framer-motion";
 
 const NbaCaseStudy = () => {
   const socialContainer = {
@@ -30,6 +31,56 @@ const NbaCaseStudy = () => {
     borderRadius: "2rem",
   };
 
+  const caseStudyContainerRightImage = {
+    gridTemplateColumns: { base: "100%", md: "100%", lg: "40% 60%" },
+  };
+
+  const caseStudyContainerLeftImage = {
+    gridTemplateColumns: { base: "100%", md: "100%", lg: "60% 40%" },
+  };
+
+  // Framer Motion
+  const MotionImage = motion(Image);
+  const MotionBox = motion(Box);
+
+  const imageContainerVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+      scale: 1, // Initial scale
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1, // Initial scale
+      transition: {
+        duration: 1,
+        when: "beforeChildren",
+        staggerChildren: 0.4,
+      },
+    },
+    exit: {
+      y: -20,
+      opacity: 0,
+    },
+  };
+
+  const imageChildVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+    },
+    hover: {
+      scale: 1.05,
+      duration: 2,
+    },
+  };
+
   return (
     <>
       <Heading
@@ -46,7 +97,7 @@ const NbaCaseStudy = () => {
             &nbsp;&nbsp;The Problem&nbsp;&nbsp;
           </Heading>
         </Flex>
-        <Grid gridTemplateColumns="40% 60%">
+        <Grid sx={caseStudyContainerRightImage}>
           <GridItem
             margin="2rem"
             display="flex"
@@ -65,7 +116,24 @@ const NbaCaseStudy = () => {
             </Text>
           </GridItem>
           <GridItem margin="2rem">
-            <Image src={NbaImage1} />
+            <MotionBox
+              overflow="hidden"
+              className="image-container"
+              variants={imageContainerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              whileHover="hover"
+            >
+              <MotionImage
+                variants={imageChildVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                whileHover="hover"
+                src={NbaImage1}
+              />
+            </MotionBox>
           </GridItem>
         </Grid>
       </Box>
@@ -76,9 +144,26 @@ const NbaCaseStudy = () => {
             &nbsp;&nbsp;The Solve&nbsp;&nbsp;
           </Heading>
         </Flex>
-        <Grid gridTemplateColumns="60% 40%">
+        <Grid sx={caseStudyContainerLeftImage}>
           <GridItem padding="2rem">
-            <Image src={NbaImage1} />
+            <MotionBox
+              overflow="hidden"
+              className="image-container"
+              variants={imageContainerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              whileHover="hover"
+            >
+              <MotionImage
+                variants={imageChildVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                whileHover="hover"
+                src={NbaImage1}
+              />
+            </MotionBox>
           </GridItem>
 
           <GridItem
@@ -125,7 +210,7 @@ const NbaCaseStudy = () => {
             &nbsp;&nbsp;The Execution&nbsp;&nbsp;
           </Heading>
         </Flex>
-        <Grid gridTemplateColumns="40% 60%">
+        <Grid sx={caseStudyContainerRightImage}>
           <GridItem
             margin="2rem"
             display="flex"
@@ -147,7 +232,24 @@ const NbaCaseStudy = () => {
             </Text>
           </GridItem>
           <GridItem margin="2rem">
-            <Image src={NbaImage1} />
+            <MotionBox
+              overflow="hidden"
+              className="image-container"
+              variants={imageContainerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              whileHover="hover"
+            >
+              <MotionImage
+                variants={imageChildVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                whileHover="hover"
+                src={NbaImage1}
+              />
+            </MotionBox>
           </GridItem>
         </Grid>
       </Box>

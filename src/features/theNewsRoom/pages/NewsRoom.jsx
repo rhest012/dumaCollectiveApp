@@ -15,6 +15,7 @@ import { useFetchFirebase } from "../../../actions/useFetchFirebase";
 import useFetch from "../../../actions/useFetchData";
 import { Link } from "react-router-dom";
 import BuzzHeader from "../../components/BuzzHeader";
+import { motion } from "framer-motion";
 
 const NewsRoom = () => {
   const buttonStyle = {
@@ -98,6 +99,25 @@ const NewsRoom = () => {
       url: "https://www.bizcommunity.com/Article/196/12/225854.html",
     },
   ];
+
+  // Framer Motion
+  const MotionImage = motion(Image);
+  const imageChildVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+    },
+    hover: {
+      scale: 1.05,
+      duration: 2,
+    },
+  };
+
   return (
     <>
       {data && (
@@ -132,9 +152,16 @@ const NewsRoom = () => {
                 borderBottom="1.5px solid #1E174B"
               >
                 <GridItem>
-                  <Image
-                    src={require(`../../../assets/newsroom/${buzzItem.image}`)}
-                  />
+                  <Box overflow="hidden" className="image-container">
+                    <MotionImage
+                      src={require(`../../../assets/newsroom/${buzzItem.image}`)}
+                      variants={imageChildVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      whileHover="hover"
+                    />
+                  </Box>
                 </GridItem>
                 <GridItem>
                   <Flex

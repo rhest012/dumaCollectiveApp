@@ -26,29 +26,43 @@ const SquadList = () => {
   };
 
   // Framer Motion
-  const MotionFlex = motion(Flex);
   const MotionImage = motion(Image);
 
   const imageContainerVariants = {
     hidden: {
       opacity: 0,
+      y: -20,
+      scale: 1, // Initial scale
     },
     visible: {
       opacity: 1,
+      y: 0,
+      scale: 1, // Initial scale
       transition: {
-        duration: 0.5,
+        duration: 1,
         when: "beforeChildren",
         staggerChildren: 0.4,
       },
     },
+    exit: {
+      y: -20,
+      opacity: 0,
+    },
   };
 
-  const singleImageChildVariants = {
-    initial: {
+  const imageChildVariants = {
+    hidden: {
       opacity: 0,
+      y: -20,
     },
     visible: {
       opacity: 1,
+      y: 0,
+      duration: 1,
+    },
+    hover: {
+      scale: 1.05,
+      duration: 2,
     },
   };
 
@@ -87,7 +101,7 @@ const SquadList = () => {
               xl: "0",
             }}
           >
-            <Heading variant="h2">Our people, our heart.</Heading>
+            <Heading variant="h2">Our people, our heart...</Heading>
             <Text marginBottom="2rem" variant="p">
               The people that make epic sh*t happen, the people redefining
               creative communications.
@@ -138,24 +152,32 @@ const SquadList = () => {
                           initial="hidden"
                           animate="visible"
                         >
-                          <MotionImage
-                            className="staff__image"
-                            key={index}
-                            src={require(`../../assets/squad/squadOri/${staffMember.image}`)}
+                          <Box
+                            overflow="hidden"
                             borderRadius="1rem"
-                            w="239px"
-                            h="181px"
-                            boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
-                            transition="all  0.7s ease"
-                            variants={singleImageChildVariants}
-                            initial="hidden"
-                            animate="visible"
-                            _hover={{
-                              content: `url(${require(`../../assets/squad/squadHover/${staffMember.image}`)})`,
-                              w: "239px",
-                              h: "181px",
-                            }}
-                          />
+                            className="image-container"
+                          >
+                            <MotionImage
+                              className="staff__image"
+                              key={index}
+                              src={require(`../../assets/squad/squadOri/${staffMember.image}`)}
+                              borderRadius="1rem"
+                              w="239px"
+                              h="181px"
+                              boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+                              transition="all  0.7s ease"
+                              variants={imageChildVariants}
+                              initial="hidden"
+                              animate="visible"
+                              exit="exit"
+                              whileHover="hover"
+                              _hover={{
+                                content: `url(${require(`../../assets/squad/squadHover/${staffMember.image}`)})`,
+                                w: "239px",
+                                h: "181px",
+                              }}
+                            />
+                          </Box>
                         </Flex>
                         <Text sx={imageCaption}>{staffMember.aka}</Text>
                       </Box>

@@ -109,7 +109,7 @@ const HomeHeader = () => {
         <SocialIconsHorizontal />
       </GridItem>
       <GridItem>
-        <Box
+        {/* <Box
           display="flex"
           overflow="hidden"
           width="100%"
@@ -133,8 +133,6 @@ const HomeHeader = () => {
           {imageList.map((image, index) => (
             <MotionImage
               data-scroll
-              // className="header__image"
-              // src={HomeHeaderBackground}
               key={index}
               src={require(`../../assets/headers/homeHeader/${image}`)}
               height={{
@@ -161,7 +159,7 @@ const HomeHeader = () => {
               // transition={{ ease: "linear", duration: 1.6 }}
             />
           ))}
-        </Box>
+        </Box> */}
       </GridItem>
     </Grid>
   );

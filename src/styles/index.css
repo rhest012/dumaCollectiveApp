@@ -176,3 +176,13 @@ h5 {
     color: #fff;
 }
 
+/* Image Container */
+.image-container {
+  box-shadow: rgba(30, 23, 75, 0.2) 0px 7px 29px 0px;
+  transition: all 2 ease;
+}
+
+.image-container:hover {
+  box-shadow: rgba(30, 23, 75, 0.4) 0px 7px 29px 0px;
+}
+

@@ -25,16 +25,22 @@ const NbaEvaluation = () => {
     variant: "h3",
     color: "#fff",
   };
+
+  const singleEvaluationContainer = {
+    minHeight: "550px",
+    backgroundPosition: "center",
+    backgroundSize: "contain",
+    margin: "4rem 2rem",
+  };
+
+  const evaluationDescription = {
+    padding: " 4rem 2rem",
+    width: { base: "100%", lg: "70%" },
+  };
   return (
     <>
-      <Box
-        margin="4rem 2rem"
-        backgroundImage={NbaImage1}
-        height="550px"
-        backgroundPosition="center"
-        backgroundSize="contain"
-      >
-        <Box padding=" 4rem 2rem" width="70%">
+      <Box backgroundImage={NbaImage1} sx={singleEvaluationContainer}>
+        <Box sx={evaluationDescription}>
           <Heading sx={socialContainerHeading}>Evaluation</Heading>
           <Box>
             <Text fontSize="1.25rem" variant="p" color="#fff">
@@ -69,14 +75,8 @@ const NbaEvaluation = () => {
         </Box>
       </Box>
 
-      <Box
-        margin="4rem 2rem"
-        backgroundImage={NbaImage1}
-        height="550px"
-        backgroundPosition="center"
-        backgroundSize="contain"
-      >
-        <Box padding=" 4rem 2rem" width="70%">
+      <Box backgroundImage={NbaImage1} sx={singleEvaluationContainer}>
+        <Box sx={evaluationDescription}>
           <Heading sx={socialContainerHeading}>The Results</Heading>
           <Box>
             <Text fontSize="1.25rem" variant="p" color="#fff">
