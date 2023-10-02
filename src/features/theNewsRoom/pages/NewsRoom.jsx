@@ -59,7 +59,7 @@ const NewsRoom = () => {
       date: "06 March 2023",
       caption:
         "Young and versatile entrepreneur, Sibu Mabena is a shining example that when you live towards fulfilling your dreams, all is possible as you can go beyond to reach for the stars.",
-      image: "SibuMabena 2.png",
+      image: "SibuMabena.jpg",
       url: "https://sundayworld.co.za/news/business/hustlers-avenue/mabena-rides-wave-of-creativity-2/",
     },
     {
@@ -103,7 +103,7 @@ const NewsRoom = () => {
       {data && (
         <Box>
           <>
-            {theBuzz.map((buzzItem, index) => (
+            {theBuzz?.map((buzzItem, index) => (
               <Grid
                 key={index}
                 gridTemplateColumns={{
