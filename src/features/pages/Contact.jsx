@@ -1,27 +1,11 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  Input,
-  Select,
-  Stack,
-  Text,
-  Textarea,
-} from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Text, Textarea } from "@chakra-ui/react";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
 
 // Icons
-import { SlLocationPin } from "react-icons/sl";
-import { BsEnvelopeAt, BsTelephone } from "react-icons/bs";
-import { AiOutlineTwitter, AiOutlineInstagram } from "react-icons/ai";
-import { FaFacebookF, FaTiktok, FaLinkedinIn } from "react-icons/fa";
 import SocialIconsHorizontal from "../components/SocialIconsHorizontal";
+import transition from "../components/transition";
 
 const Contact = () => {
   const inputStyling = {
@@ -141,4 +125,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default transition(Contact);

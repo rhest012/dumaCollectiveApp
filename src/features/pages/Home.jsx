@@ -5,6 +5,7 @@ import { Box } from "@chakra-ui/react";
 import useLocoScroll from "../../actions/useLocoScroll";
 import HomeShowreel from "../components/HomeShowreel";
 import ContactSection from "../components/ContactSection";
+import transition from "../components/transition";
 
 const Home = () => {
   useLocoScroll();
@@ -19,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default transition(Home);

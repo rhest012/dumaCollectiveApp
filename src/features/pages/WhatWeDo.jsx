@@ -3,7 +3,7 @@ import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import WhatWeDoClients from "../components/WhatWeDoClients";
 import ServiceList from "../components/ServiceList";
 import { useLocation } from "react-router-dom";
-import PageIntro from "../theGrind/components/pageIntro";
+import transition from "../components/transition";
 
 const WhatWeDo = () => {
   const imageStyling = {
@@ -21,4 +21,4 @@ const WhatWeDo = () => {
   );
 };
 
-export default WhatWeDo;
+export default transition(WhatWeDo);

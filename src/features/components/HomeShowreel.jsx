@@ -58,7 +58,7 @@ const HomeShowreel = () => {
         // marginTop={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
       >
         <ReactPlayer
-          url="https://vimeo.com/864014782?share=copy"
+          url="https://vimeo.com/870557050?share=copy"
           playing={true}
           loop={true}
           muted={true}

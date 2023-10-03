@@ -110,7 +110,6 @@ const CaseStudies = () => {
         {activeCaseStudies?.map((caseStudy, index) => (
           <Link to={caseStudy.url} as="ReachLink" key={index}>
             <MotionBox
-              // className="single-case-study-container"
               marginY={{ base: "1.5rem", xl: "0" }}
               height={{
                 base: "350px",

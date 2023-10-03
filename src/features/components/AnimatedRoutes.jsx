@@ -35,11 +35,6 @@ const AnimatedRoutes = () => {
   return (
     <>
       <AnimatePresence mode="wait">
-        {/* {loading ? (
-        <motion.div key="loader" layoutId="page-transitions">
-          <Loader setLoading={setLoading} />
-        </motion.div>
-      ) : ( */}
         <ScrollToTop />
         <>
           <Box>

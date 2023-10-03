@@ -16,6 +16,7 @@ import useFetch from "../../../actions/useFetchData";
 import { Link } from "react-router-dom";
 import BuzzHeader from "../../components/BuzzHeader";
 import { motion } from "framer-motion";
+import transition from "../../components/transition";
 
 const NewsRoom = () => {
   const buttonStyle = {
@@ -199,4 +200,4 @@ const NewsRoom = () => {
   );
 };
 
-export default NewsRoom;
+export default transition(NewsRoom);

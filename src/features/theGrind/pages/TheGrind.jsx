@@ -17,6 +17,7 @@ import CaseStudies from "../components/CaseStudies";
 import { useRef } from "react";
 
 import { useScroll, motion } from "framer-motion";
+import transition from "../../components/transition";
 
 const TheGrind = () => {
   // const { data, error, isPending } = useFetch(" http://localhost:8000/clients");
@@ -78,4 +79,4 @@ const TheGrind = () => {
   );
 };
 
-export default TheGrind;
+export default transition(TheGrind);
