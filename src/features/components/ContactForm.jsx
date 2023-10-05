@@ -64,7 +64,7 @@ const ContactForm = () => {
   return (
     <>
       <form ref={form} onSubmit={sendEmail}>
-        <Flex gap="1rem">
+        <Flex gap="1rem" flexDir="column">
           <Input
             placeholder="Full Name"
             type="Enter your name"
@@ -90,7 +90,7 @@ const ContactForm = () => {
         </Flex>
 
         <Input
-          placeholder="Provide a short description of what you’re looking for"
+          placeholder="Provide a short description of what you're looking for"
           name="formData.message"
           sx={inputStyling}
         />

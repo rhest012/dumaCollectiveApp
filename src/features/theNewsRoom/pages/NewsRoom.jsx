@@ -38,6 +38,25 @@ const NewsRoom = () => {
 
   const theBuzz = [
     {
+      id: "110",
+      title:
+        "Tbose Chats to “The Fixer” herself, Sibu Mabena The Founder of Duma Collective",
+      date: "25 August 2023",
+      caption:
+        "August is all about celebrating and who better than “The Fixer” herself, Sibu Mabena? T-Bose spoke to her about how and what inspired her to start her marketing agency Duma Collective, working on some of the biggest events in SA, and finally moving Duma Collective into their own building.",
+      image: "SibuMabena 2.png",
+      url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
+    },
+    {
+      id: "109",
+      title: "Sibu Mabena unveils newly renovated office space",
+      date: "7 August 2023",
+      caption:
+        "This #WomensMonth, Heineken South Africa has partnered with Bizcommunity to showcase the phenomenal work and impact of women entrepreneurs such as Mabena...",
+      image: "SibuMabena 2.png",
+      url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
+    },
+    {
       id: "105",
       title: "#Newsmaker: Lindiwe Maduna, MD of Duma Collective",
       date: "26 July 2023",
@@ -98,6 +117,25 @@ const NewsRoom = () => {
         "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
       image: "M&N.jpg",
       url: "https://www.bizcommunity.com/Article/196/12/225854.html",
+    },
+    {
+      id: "102",
+      title:
+        "Heineken South Africa Women's Month entrepreneur - Sibu Mabena, founder of Duma Collective",
+      date: "9 March 2022",
+      caption:
+        "This #WomensMonth, Heineken South Africa has partnered with Bizcommunity to showcase the phenomenal work and impact of women entrepreneurs such as Mabena...",
+      image: "SibuMabena 2.png",
+      url: "https://www.bizcommunity.com/Article/196/841/207697.html",
+    },
+    {
+      id: "104",
+      title: "Mail & Guardian 200 Young South Africans",
+      date: "22 June 2018",
+      caption:
+        "Mabena has managed to build a career around her passions — dance, social media, events and talent management. She founded Duma Collective while doing a Bachelor in Political Sciences and International Relations at the University of Pretoria.",
+      image: "SibuMabena 2.png",
+      url: "https://200youngsouthafricans.co.za/sibu-mabena-2018/",
     },
   ];
 

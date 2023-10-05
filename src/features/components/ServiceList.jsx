@@ -1,6 +1,7 @@
 import {
   Accordion,
   AccordionButton,
+  AccordionIcon,
   AccordionItem,
   AccordionPanel,
   Box,
@@ -16,13 +17,41 @@ import GetInTouchSection from "./GetInTouchSection";
 
 const ServiceList = () => {
   const services = [
-    "Brand Strategy",
-    "360 Creative Solutions",
-    "Social Media",
-    "Public Relations",
-    "Influencer Marketing",
-    "Events & Production",
-    "Talent Procurement",
+    {
+      name: "Brand Strategy",
+      description:
+        "We're the storytellers for your brand, creating chapters that will leave your competitors on the edge of their seats. Through real-life insights, we're able to craft the perfect strategy to get your brand noticed.",
+    },
+    {
+      name: "360 Creative Solutions",
+      description:
+        "We're the Swiss Army knife of creativity, slicing through your brand problems with style and the WOW-factor. With our expert team of creatives, we'll turn your brand's puzzles into creative masterpieces so epic you'll hang it up on your bedroom wall.",
+    },
+    {
+      name: "Social Media",
+      description:
+        "We turn thumb-scrolling into jaw dropping, making your online presence the life of the digital party. We help you connect with your audience in all the right places, at the right times, with the right budget.",
+    },
+    {
+      name: "Public Relations",
+      description:
+        "We spin stories so captivating, even your neighbour's cat will want to attend your next press conference. With a team that always exceeds the AVE expectations of our clients - just know your brand is in good hands. ",
+    },
+    {
+      name: "Influencer Marketing",
+      description:
+        "We make influencers, and their followers, fall in love with your brand faster than you can say “double tap”. With an impressive list of macro, micro and nano influencers under our belt, your brand will be basking in the limelight for months.",
+    },
+    {
+      name: "Events & Production",
+      description:
+        "We're the Spielberg of experiences, transforming your events into blockbuster memories that stick with you. Consider us The Event Surgeon, prescribing your brand a dose of A-list treatment.",
+    },
+    {
+      name: "Talent Procurement",
+      description:
+        "We're matchmakers for the stars, finding the perfect talent to gush over your brand. Picture this: your brand and the people's champions. We're talking a match made in heaven",
+    },
   ];
 
   //   Framer Motion
@@ -50,10 +79,7 @@ const ServiceList = () => {
         flexDir="column"
         justifyContent="center"
       >
-        <Accordion
-          // allowToggle
-          className="accordion-container"
-        >
+        <Accordion allowToggle className="accordion-container">
           {services.map((service, index) => (
             <AccordionItem
               layout
@@ -75,16 +101,19 @@ const ServiceList = () => {
                 display="flex"
                 flexWrap="wrap"
                 alignContent="center"
-                alignItems="center"
+                alignItems="space-between"
+                justifyContent="space-between"
                 height="100%"
+                width="100%"
               >
                 <Heading variant="h4" as="h4" textAlign="left">
-                  {service}
+                  {service.name}
                 </Heading>
+                <AccordionIcon />
               </AccordionButton>
-              {/* <AccordionPanel className="accordion-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia aliquam quidem voluptas exercitationem harum ut eius alias dolorum rem. Excepturi enim exercitationem placeat corporis blanditiis facilis dicta provident. Nisi libero commodi incidunt aperiam veniam delectus repudiandae voluptate ut velit voluptas atque sint at dolorem inventore modi nulla, rem quasi nesciunt?
-                            </AccordionPanel> */}
+              <AccordionPanel className="accordion-body">
+                {service.description}
+              </AccordionPanel>
             </AccordionItem>
           ))}
         </Accordion>

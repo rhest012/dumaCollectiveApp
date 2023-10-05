@@ -55,8 +55,8 @@ const Contact = () => {
           base: "1fr",
           sm: "1fr",
           base: "1fr",
-          lg: "40%, 60%",
-          xl: "40% 60%",
+          lg: "50%, 50%",
+          xl: "50% 50%",
         }}
         gap="2rem"
         height={{

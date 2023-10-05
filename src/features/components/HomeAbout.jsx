@@ -2,6 +2,7 @@ import { Button, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
 import Video from "../../assets/videos/homeVideo.mp4";
 import React from "react";
 import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
 
 const HomeAbout = () => {
   return (
@@ -33,6 +34,10 @@ const HomeAbout = () => {
           thrives on turning your ideas into a viral-worthy reality, pushing the
           limits of what's possible.
         </Text>
+
+        <Link to="/what-we-do">
+          <Button variant="standardButton">What We Do</Button>
+        </Link>
       </GridItem>
       <GridItem
         display="flex"
