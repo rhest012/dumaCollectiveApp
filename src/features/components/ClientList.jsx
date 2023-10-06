@@ -14,7 +14,7 @@ const ClientList = () => {
   const imageContainerVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      y: 20,
       scale: 1, // Initial scale
     },
     visible: {
@@ -22,6 +22,7 @@ const ClientList = () => {
       y: 0,
       scale: 1, // Initial scale
       transition: {
+        delay: 1.5,
         duration: 1,
         when: "beforeChildren",
         staggerChildren: 0.4,
@@ -36,7 +37,7 @@ const ClientList = () => {
   const imageChildVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      y: 20,
     },
     visible: {
       opacity: 1,
@@ -44,8 +45,8 @@ const ClientList = () => {
       duration: 1,
     },
     hover: {
-      scale: 1.2,
-      duration: 2,
+      scale: 1.1,
+      duration: 3,
     },
   };
 
@@ -59,6 +60,7 @@ const ClientList = () => {
             md: "repeat(4,1fr)",
             xl: "repeat(5,1fr)",
           }}
+          marginBottom="4rem"
         >
           {data.map((item, index) => (
             <MotionGridItem

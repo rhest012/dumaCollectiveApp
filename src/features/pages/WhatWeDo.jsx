@@ -10,6 +10,7 @@ const WhatWeDo = () => {
   return (
     <Box marginY="3rem" marginX="2rem">
       <SecondaryPageHeader />
+      <WhatWeDoClients />
       <ServiceList />
     </Box>
   );

@@ -114,7 +114,7 @@ const ServiceList = () => {
       }}
       // gap={{ base: "1rem", sm: "1rem", md: "1rem", lg: "2rem", xl: "2rem" }}
 
-      margin="0 0 4rem 0"
+      margin="2rem 0 4rem 0"
       maxWidth="100vw"
       className="service-list"
       data-scroll-section
