@@ -22,20 +22,20 @@ const SocialIconsHorizontal = () => {
   const containerVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      y: -10,
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 1.5,
         delay: 2,
         when: "beforeChildren",
         staggerChildren: 0.4,
       },
     },
     exit: {
-      y: -20,
+      y: -10,
       opacity: 0,
     },
   };
@@ -43,12 +43,12 @@ const SocialIconsHorizontal = () => {
   const iconChildVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      y: -10,
     },
     visible: {
       opacity: 1,
       y: 0,
-      duration: 0.5,
+      duration: 1.5,
     },
   };
   return (

@@ -2,10 +2,12 @@ import { Box, Grid, GridItem, Heading, Text, Textarea } from "@chakra-ui/react";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
+import Typewriter from "typewriter-effect";
 
 // Icons
 import SocialIconsHorizontal from "../components/SocialIconsHorizontal";
 import transition from "../components/transition";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const inputStyling = {
@@ -46,6 +48,89 @@ const Contact = () => {
   // Page Location
   const location = useLocation();
 
+  // Framer Motion
+  const MotionText = motion(Text);
+  const MotionHeading = motion(Heading);
+  const MotionGridItem = motion(GridItem);
+
+  const textDescriptionVariants = {
+    hidden: {
+      opacity: 0,
+      y: -10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 1,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const bodyHeadingVariants = {
+    hidden: {
+      opacity: 0,
+      y: -10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+    },
+  };
+
+  const bodyTextDescriptionVariants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+    },
+  };
+
+  const contactFormVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+
+      transition: {
+        duration: 1.5,
+        delay: 2.5,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+    },
+  };
   return (
     <>
       <Grid
@@ -78,10 +163,22 @@ const Contact = () => {
           }}
         >
           <Heading variant="h2" as="h2">
-            Get in touch
+            <Typewriter
+              options={{
+                strings: "Get In Touch",
+                autoStart: true,
+                delay: 25,
+                pauseFor: 3000000,
+                cursor: "",
+              }}
+            />
           </Heading>
-          <Text
+          <MotionText
             variant="p"
+            variants={textDescriptionVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
             paddingY={{
               base: "1rem",
               sm: "1rem",
@@ -104,22 +201,56 @@ const Contact = () => {
             <br />
             Reach out to us using the contact details below or fill out the
             form, and we'll get back to you as soon as possible.
-          </Text>
+          </MotionText>
           <Box>
-            <Heading variant="h4">Email Address</Heading>
-            <Text sx={contactDetailStyling} variant="p">
+            <MotionHeading
+              variant="h4"
+              variants={bodyHeadingVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              Email Address
+            </MotionHeading>
+            <MotionText
+              sx={contactDetailStyling}
+              variant="p"
+              variants={bodyTextDescriptionVariants}
+              initial="hidden"
+              animate="visible"
+            >
               info@dumacollective.com
-            </Text>
-            <Heading variant="h4">Contact Number</Heading>
-            <Text sx={contactDetailStyling} variant="p">
+            </MotionText>
+            <MotionHeading
+              variant="h4"
+              variants={bodyHeadingVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
+              Contact Number
+            </MotionHeading>
+            <MotionText
+              sx={contactDetailStyling}
+              variant="p"
+              variants={bodyTextDescriptionVariants}
+              initial="hidden"
+              animate="visible"
+            >
               010 443 5854
-            </Text>
+            </MotionText>
           </Box>
           <SocialIconsHorizontal />
         </GridItem>
-        <GridItem sx={singleGridContainerStyling} marginRight="2rem">
+        <MotionGridItem
+          sx={singleGridContainerStyling}
+          marginRight="2rem"
+          variants={contactFormVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <ContactForm />
-        </GridItem>
+        </MotionGridItem>
       </Grid>
     </>
   );

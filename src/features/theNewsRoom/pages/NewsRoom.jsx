@@ -13,7 +13,7 @@ import {
 import { useFetchFirebase } from "../../../actions/useFetchFirebase";
 
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import transition from "../../components/transition";
 import { useInView } from "react-intersection-observer";
 
@@ -258,119 +258,117 @@ const NewsRoom = () => {
   return (
     <>
       <Box ref={ref}>
-        <AnimatePresence initial={false}>
-          <>
-            {theBuzz?.map((buzzItem, index) => (
-              <>
-                <Grid
-                  key={index}
-                  gridTemplateColumns={{
-                    base: "1fr",
-                    sm: "1fr",
-                    md: "30%, 70%",
-                    lg: "30%, 70%",
-                    xl: "30% 37%",
-                  }}
-                  marginX="2rem"
-                  marginTop={{
-                    base: "1rem",
-                    sm: "1rem",
-                    md: "1rem",
-                    lg: "2rem",
-                    xl: "2rem",
-                  }}
-                  gap="2rem"
-                  paddingY={{
-                    base: "1rem",
-                    sm: "1rem",
-                    md: "1rem",
-                    lg: "2rem",
-                    xl: "2rem",
-                  }}
-                  // borderBottom="1.5px solid #1E174B"
+        <>
+          {theBuzz?.map((buzzItem, index) => (
+            <>
+              <Grid
+                key={index}
+                gridTemplateColumns={{
+                  base: "1fr",
+                  sm: "1fr",
+                  md: "30%, 70%",
+                  lg: "30%, 70%",
+                  xl: "30% 37%",
+                }}
+                marginX="2rem"
+                marginTop={{
+                  base: "1rem",
+                  sm: "1rem",
+                  md: "1rem",
+                  lg: "2rem",
+                  xl: "2rem",
+                }}
+                gap="2rem"
+                paddingY={{
+                  base: "1rem",
+                  sm: "1rem",
+                  md: "1rem",
+                  lg: "2rem",
+                  xl: "2rem",
+                }}
+                // borderBottom="1.5px solid #1E174B"
+              >
+                <MotionGridItem
+                  variants={leftContainerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
                 >
-                  <MotionGridItem
-                    variants={leftContainerVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
+                  <Box overflow="hidden" className="image-container">
+                    <MotionImage
+                      variants={imageChildVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      whileHover="hover"
+                      src={require(`../../../assets/newsroom/${buzzItem.image}`)}
+                    />
+                  </Box>
+                </MotionGridItem>
+                <GridItem>
+                  <Flex
+                    height="100%"
+                    flexDirection="column"
+                    flexWrap="wrap"
+                    justifyContent="space-between"
+                    paddingRight="2rem"
                   >
-                    <Box overflow="hidden" className="image-container">
-                      <MotionImage
-                        variants={imageChildVariants}
+                    <Stack>
+                      <MotionHeading
+                        variants={headingVariants}
                         initial="hidden"
                         animate="visible"
                         exit="exit"
-                        whileHover="hover"
-                        src={require(`../../../assets/newsroom/${buzzItem.image}`)}
-                      />
-                    </Box>
-                  </MotionGridItem>
-                  <GridItem>
-                    <Flex
-                      height="100%"
-                      flexDirection="column"
-                      flexWrap="wrap"
-                      justifyContent="space-between"
-                      paddingRight="2rem"
-                    >
-                      <Stack>
-                        <MotionHeading
-                          variants={headingVariants}
-                          initial="hidden"
-                          animate="visible"
-                          exit="exit"
-                          variant="h3"
-                          as="h3"
-                        >
-                          {buzzItem.title}
-                        </MotionHeading>
-                        <MotionText
-                          variants={textVariants}
-                          initial="hidden"
-                          animate="visible"
-                          exit="exit"
-                          variant="p"
-                          as="p"
-                          fontSize="1rem"
-                          textTransform="uppercase"
-                        >
-                          {buzzItem.date}
-                        </MotionText>
-                      </Stack>
+                        variant="h3"
+                        as="h3"
+                      >
+                        {buzzItem.title}
+                      </MotionHeading>
                       <MotionText
                         variants={textVariants}
                         initial="hidden"
                         animate="visible"
                         exit="exit"
+                        variant="p"
+                        as="p"
+                        fontSize="1rem"
+                        textTransform="uppercase"
                       >
-                        {buzzItem.caption}
+                        {buzzItem.date}
                       </MotionText>
-                      <Link isExternal to={buzzItem.url}>
-                        <MotionButton
-                          variants={buttonVariants}
-                          initial="hidden"
-                          animate="visible"
-                          exit="exit"
-                          variant="standardButton"
-                        >
-                          Read Article
-                        </MotionButton>
-                      </Link>
-                    </Flex>
-                  </GridItem>
-                </Grid>
-                <MotionBox
-                  variants={borderVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  borderBottom="1px solid #1E174B"
-                />
-              </>
-            ))}
-          </>
-        </AnimatePresence>
+                    </Stack>
+                    <MotionText
+                      variants={textVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                    >
+                      {buzzItem.caption}
+                    </MotionText>
+                    <Link isExternal to={buzzItem.url}>
+                      <MotionButton
+                        variants={buttonVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        variant="standardButton"
+                      >
+                        Read Article
+                      </MotionButton>
+                    </Link>
+                  </Flex>
+                </GridItem>
+              </Grid>
+              <MotionBox
+                variants={borderVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                borderBottom="1px solid #1E174B"
+              />
+            </>
+          ))}
+        </>
       </Box>
     </>
   );
