@@ -15,12 +15,11 @@ const ClientList = () => {
     hidden: {
       opacity: 0,
       y: 20,
-      scale: 1, // Initial scale
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1, // Initial scale
+
       transition: {
         delay: 1.5,
         duration: 1,
@@ -37,7 +36,7 @@ const ClientList = () => {
   const imageChildVariants = {
     hidden: {
       opacity: 0,
-      y: 20,
+      y: 10,
     },
     visible: {
       opacity: 1,

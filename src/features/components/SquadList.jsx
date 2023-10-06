@@ -28,25 +28,48 @@ const SquadList = () => {
 
   // Framer Motion
   const MotionImage = motion(Image);
+  const MotionBox = motion(Box);
+  const MotionHeading = motion(Heading);
+  const MotionText = motion(Text);
 
-  const imageContainerVariants = {
+  const subHeadingVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
-      scale: 1, // Initial scale
+      y: -10,
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1, // Initial scale
       transition: {
+        duration: 1,
+        delay: 1.5,
+        when: "beforeChildren",
+        staggerChildren: 0.4,
+      },
+    },
+    exit: {
+      y: -10,
+      opacity: 0,
+    },
+  };
+
+  const imageContainerVariants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 1.5,
         duration: 1,
         when: "beforeChildren",
         staggerChildren: 0.4,
       },
     },
     exit: {
-      y: -20,
+      y: -10,
       opacity: 0,
     },
   };
@@ -54,12 +77,13 @@ const SquadList = () => {
   const imageChildVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      y: 0,
     },
     visible: {
       opacity: 1,
       y: 0,
       duration: 1,
+      delay: 2,
     },
     hover: {
       scale: 1.05,
@@ -114,16 +138,27 @@ const SquadList = () => {
                   justifyContent="center"
                   marginY="1.5rem"
                 >
-                  <Heading
+                  <MotionHeading
                     sx={staffHeadingStyle}
+                    variants={subHeadingVariants}
+                    initial="hidden"
+                    animate="visible"
                     variant="h3"
                     paddingBottom="0"
                   >
                     {staff.aka}
-                  </Heading>
-                  <Text variant="p" fontSize="1.25rem" paddingBottom="1rem">
+                  </MotionHeading>
+                  <MotionText
+                    variant="p"
+                    fontSize="1.25rem"
+                    paddingBottom="1rem"
+                    sx={staffHeadingStyle}
+                    variants={subHeadingVariants}
+                    initial="hidden"
+                    animate="visible"
+                  >
                     {staff.department}{" "}
-                  </Text>
+                  </MotionText>
                   <Flex
                     className="staff-image-container"
                     flexDir="row"
@@ -132,7 +167,7 @@ const SquadList = () => {
                     gap="1.5rem"
                   >
                     {staff.staffMembers.map((staffMember, index) => (
-                      <Box key={index}>
+                      <Box key={index} className="staff-container">
                         {" "}
                         <Flex
                           flexDirection={{
@@ -143,16 +178,15 @@ const SquadList = () => {
                             xl: "row",
                           }}
                           alignItems="center"
-                          className="staff-container"
                           width="auto"
-                          variants={imageContainerVariants}
-                          initial="hidden"
-                          animate="visible"
                         >
-                          <Box
+                          <MotionBox
                             overflow="hidden"
                             borderRadius="1rem"
                             className="image-container"
+                            variants={imageContainerVariants}
+                            initial="hidden"
+                            animate="visible"
                           >
                             <MotionImage
                               className="staff__image"
@@ -174,9 +208,11 @@ const SquadList = () => {
                                 h: "181px",
                               }}
                             />
-                          </Box>
+                          </MotionBox>
                         </Flex>
-                        <Text sx={imageCaption}>{staffMember.aka}</Text>
+                        <Text className="staff__text" sx={imageCaption}>
+                          {staffMember.aka}
+                        </Text>
                       </Box>
                     ))}
                   </Flex>
