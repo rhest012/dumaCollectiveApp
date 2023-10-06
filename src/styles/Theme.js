@@ -56,6 +56,12 @@ const theme = extendTheme ({
             fontSize: "1rem",
             fontWeight:"regular",
             color: "#1E174B",
+          },
+          sectionDescription: {
+            fontSize: "1rem",
+            fontWeight:"regular",
+            color: "#1E174B",
+            marginTop:"1rem"
           }
         },
       },

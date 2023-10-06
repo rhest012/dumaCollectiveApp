@@ -8,12 +8,15 @@ import {
   Grid,
   GridItem,
   Heading,
+  Image,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
 import SocialIconsHorizontal from "./SocialIconsHorizontal";
 import { motion } from "framer-motion";
 import GetInTouchSection from "./GetInTouchSection";
+import PlaceHolderImage from "../../assets/newsroom/SibuMabena 2.png";
+import Typewriter from "typewriter-effect";
 
 const ServiceList = () => {
   const services = [
@@ -56,6 +59,49 @@ const ServiceList = () => {
 
   //   Framer Motion
   const MotionAccordionItem = motion(AccordionItem);
+  const MotionGridItem = motion(GridItem);
+
+  const leftContainerVariants = {
+    hidden: {
+      opacity: 0,
+      x: -10,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const rightContainerVariants = {
+    hidden: {
+      opacity: 0,
+      x: 10,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
 
   return (
     <Grid
@@ -66,18 +112,23 @@ const ServiceList = () => {
         lg: "55% 45%",
         xl: "55% 45%",
       }}
-      gap={{ base: "1rem", sm: "1rem", md: "1rem", lg: "2rem", xl: "2rem" }}
-      height={{ base: "auto", sm: "auto", md: "auto", lg: "80vh", xl: "75vh" }}
-      margin="2rem 2rem 4rem 2rem"
+      // gap={{ base: "1rem", sm: "1rem", md: "1rem", lg: "2rem", xl: "2rem" }}
+
+      margin="0 0 4rem 0"
       maxWidth="100vw"
       className="service-list"
       data-scroll-section
     >
-      <GridItem
+      <MotionGridItem
         data-scroll
+        variants={leftContainerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
         display="flex"
         flexDir="column"
         justifyContent="center"
+        paddingBottom={{ base: "2rem", lg: "0" }}
       >
         <Accordion allowToggle className="accordion-container">
           {services.map((service, index) => (
@@ -107,8 +158,17 @@ const ServiceList = () => {
                 width="100%"
               >
                 <Heading variant="h4" as="h4" textAlign="left">
-                  {service.name}
+                  <Typewriter
+                    options={{
+                      strings: service.name,
+                      autoStart: true,
+                      delay: 50,
+                      pauseFor: 3000000,
+                      cursor: "",
+                    }}
+                  />
                 </Heading>
+
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel className="accordion-body">
@@ -117,8 +177,12 @@ const ServiceList = () => {
             </AccordionItem>
           ))}
         </Accordion>
-      </GridItem>
-      <GridItem
+      </MotionGridItem>
+      <MotionGridItem
+        variants={rightContainerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
         width="100%"
         paddingX={{ base: "0", sm: "0", md: "0", lg: "2rem", xl: "2rem" }}
         display="flex"
@@ -126,8 +190,8 @@ const ServiceList = () => {
         flexDir="column"
         height="100%"
       >
-        <GetInTouchSection />
-      </GridItem>
+        <Image src={PlaceHolderImage} />
+      </MotionGridItem>
     </Grid>
   );
 };

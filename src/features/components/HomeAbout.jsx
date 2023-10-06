@@ -1,10 +1,99 @@
 import { Button, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
 import Video from "../../assets/videos/homeVideo.mp4";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
+import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 const HomeAbout = () => {
+  // Typewriter
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  const [typewriterStarted, setTypewriterStarted] = useState(false);
+
+  useEffect(() => {
+    if (inView && !typewriterStarted) {
+      const timeoutId = setTimeout(() => {
+        setTypewriterStarted(true);
+      }, 100);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [inView, typewriterStarted]);
+
+  // Framer Motion
+  const MotionGridItem = motion(GridItem);
+  const MotionText = motion(Text);
+  const MotionButton = motion(Button);
+
+  const videoContainerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2.5,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 0.1,
+    },
+  };
+
+  const textDescriptionVariants = {
+    hidden: {
+      opacity: 0,
+      y: -10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 0.1,
+    },
+  };
+
   return (
     <Grid
       gridTemplateColumns={{
@@ -18,6 +107,7 @@ const HomeAbout = () => {
       overflow="hidden"
       margin="2rem"
       data-scroll-section
+      ref={ref}
     >
       <GridItem
         display="flex"
@@ -25,26 +115,53 @@ const HomeAbout = () => {
         justifyContent="center"
         alignContent="center"
       >
-        <Heading variant="h2">
-          Redefining creative communications from Africa to the world.
+        <Heading variant="h2" minHeight="140px">
+          <Typewriter
+            options={{
+              strings:
+                "Redefining creative communications from Africa to the world.",
+              autoStart: typewriterStarted,
+              delay: 25,
+              pauseFor: 2000000,
+              cursor: "",
+            }}
+          />
         </Heading>
-        <Text variant="p">
+        <MotionText
+          variant="sectionDescription"
+          variants={textDescriptionVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
           We envision a future in which African creativity emerges boldly,
           taking centre stage and making a global influence. Our creative team
           thrives on turning your ideas into a viral-worthy reality, pushing the
           limits of what's possible.
-        </Text>
+        </MotionText>
 
         <Link to="/what-we-do">
-          <Button variant="standardButton">What We Do</Button>
+          <MotionButton
+            variant="standardButton"
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            What We Do
+          </MotionButton>
         </Link>
       </GridItem>
-      <GridItem
+      <MotionGridItem
         display="flex"
         alignContent="center"
         alignItems="center"
         justifyContent="center"
         marginTop={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
+        variants={videoContainerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
         <ReactPlayer
           width="400px"
@@ -55,7 +172,7 @@ const HomeAbout = () => {
           loop={true}
           muted={true}
         />
-      </GridItem>
+      </MotionGridItem>
     </Grid>
   );
 };

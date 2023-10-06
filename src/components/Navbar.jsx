@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   NavbarContainer,
   LeftContainer,
@@ -11,8 +11,8 @@ import {
   NavbarLinkContainer,
   NavbarLinkMobile,
   Links,
-} from '../styles/Navbar.style';
-import LogoImage from '../assets/Duma-Collective-Logo.svg';
+} from "../styles/Navbar.style";
+import LogoImage from "../assets/Duma-Collective-Logo.svg";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);

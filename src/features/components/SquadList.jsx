@@ -3,6 +3,7 @@ import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { useFetchFirebase } from "../../actions/useFetchFirebase";
 
 import { easeIn, motion } from "framer-motion";
+import SecondaryPageHeader from "../components/SecondaryPageHeader";
 
 const SquadList = () => {
   const containerStyle = {
@@ -101,11 +102,7 @@ const SquadList = () => {
               xl: "0",
             }}
           >
-            <Heading variant="h2">Our people, our heart...</Heading>
-            <Text marginBottom="2rem" variant="p">
-              The people that make epic sh*t happen, the people redefining
-              creative communications.
-            </Text>
+            <SecondaryPageHeader />
           </Flex>
           <Box>
             {data !== null &&

@@ -7,13 +7,80 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import Video from "../../assets/videos/homeVideo.mp4";
-import PlaceHolderImage from "../../assets/headers/newsroom-header.jpg";
 import React from "react";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const HomeShowreel = () => {
+  // Framer Motion
+  const MotionGridItem = motion(GridItem);
+  const MotionText = motion(Text);
+  const MotionButton = motion(Button);
+
+  const videoContainerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2.5,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const textDescriptionVariants = {
+    hidden: {
+      opacity: 0,
+      y: -10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 2,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
   return (
     <Grid
       gridTemplateColumns={{
@@ -35,18 +102,41 @@ const HomeShowreel = () => {
         alignContent="center"
         marginRight={{ base: "0", sm: "0", md: "", lg: "1rem", xl: "1rem" }}
       >
-        <Heading variant="h2">
-          An oasis for African creativity to flourish
+        <Heading variant="h2" minHeight="150px">
+          <Typewriter
+            options={{
+              strings: "An oasis for African creativity to flourish.",
+              autoStart: true,
+              delay: 25,
+              pauseFor: 2000000,
+              cursor: "",
+            }}
+          />
         </Heading>
-        <Text variant="p">
+        <MotionText
+          variant="p"
+          variants={textDescriptionVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          marginTop="1rem"
+        >
           Step into our collaborative work environment, where creativity is at
           the heart of everything we do.
-        </Text>
+        </MotionText>
         <Link to="/the-grind">
-          <Button variant="standardButton">The Grind</Button>
+          <MotionButton
+            variant="standardButton"
+            variants={buttonVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            The Grind
+          </MotionButton>
         </Link>
       </GridItem>
-      <GridItem
+      <MotionGridItem
         display="flex"
         alignContent="center"
         alignItems="center"
@@ -54,8 +144,10 @@ const HomeShowreel = () => {
         width="100%"
         height="100%"
         marginTop={{ base: "2rem", lg: "0" }}
-
-        // marginTop={{ base: "2rem", sm: "2rem", md: "2rem", lg: "0", xl: "0" }}
+        variants={videoContainerVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
       >
         <ReactPlayer
           url="https://vimeo.com/870557050?share=copy"
@@ -66,7 +158,7 @@ const HomeShowreel = () => {
           height="100%"
           // height="394px"
         />
-      </GridItem>
+      </MotionGridItem>
     </Grid>
   );
 };

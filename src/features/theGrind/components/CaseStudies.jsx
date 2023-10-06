@@ -11,12 +11,9 @@ import {
 } from "@chakra-ui/react";
 import { Link, Link as RouterLink, useLocation } from "react-router-dom";
 import React from "react";
-import NbaLogo from "../../../assets/theGrind/caseStudies/nba-africa-square.png";
-import JffLogo from "../../../assets/theGrind/jff/JFF_Logo.svg";
-import MultichoiceLogo from "../../../assets/theGrind/Multichoice/Multichoice_Logo.svg";
-import JffHeader from "../../../assets/theGrind/jff/JFF_Header.png";
 import { Links } from "../../../styles/Navbar.style";
 import { motion } from "framer-motion";
+import SecondaryPageHeader from "../../components/SecondaryPageHeader";
 
 const CaseStudies = () => {
   const activeCaseStudies = [
@@ -40,11 +37,12 @@ const CaseStudies = () => {
   // Framer Motion
   const MotionImage = motion(Image);
   const MotionBox = motion(Box);
+  const MotionText = motion(Text);
 
   const imageContainerVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      y: 20,
       scale: 1, // Initial scale
     },
     visible: {
@@ -55,6 +53,7 @@ const CaseStudies = () => {
         duration: 1,
         when: "beforeChildren",
         staggerChildren: 0.4,
+        delay: 1.5,
       },
     },
     exit: {
@@ -81,15 +80,8 @@ const CaseStudies = () => {
 
   return (
     <Box marginY="3rem" marginX="2rem">
-      <Heading variant="h2" as="h3">
-        Our Work Never Stops...
-      </Heading>
-      <Text variant="p" margin="-1rem 0 4rem 0">
-        To redefine creative communications, we approach our work to achieve
-        long-term objectives - to create sustainable brand communications that
-        last.
-      </Text>
-      {/* <Text >To redefine creative communications.</Text> */}
+      <SecondaryPageHeader />
+
       <Flex
         flexDir={{
           base: "column",
