@@ -9,14 +9,13 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import SibuMabena from "../../../assets/newsroom/SibuMabena.jpg";
-import NewsRoomHeader from "../components/NewsRoomHeader";
+
 import { useFetchFirebase } from "../../../actions/useFetchFirebase";
-import useFetch from "../../../actions/useFetchData";
+
 import { Link } from "react-router-dom";
-import BuzzHeader from "../../components/BuzzHeader";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import transition from "../../components/transition";
+import { useInView } from "react-intersection-observer";
 
 const NewsRoom = () => {
   const buttonStyle = {
@@ -33,8 +32,6 @@ const NewsRoom = () => {
       color: "#1E174B",
     },
   };
-
-  const data = useFetchFirebase("newsRoom");
 
   const theBuzz = [
     {
@@ -141,6 +138,12 @@ const NewsRoom = () => {
 
   // Framer Motion
   const MotionImage = motion(Image);
+  const MotionGridItem = motion(GridItem);
+  const MotionHeading = motion(Heading);
+  const MotionText = motion(Text);
+  const MotionButton = motion(Button);
+  const MotionBox = motion(Box);
+
   const imageChildVariants = {
     hidden: {
       opacity: 0,
@@ -157,83 +160,218 @@ const NewsRoom = () => {
     },
   };
 
+  const leftContainerVariants = {
+    hidden: {
+      opacity: 0,
+      x: -10,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 1,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const headingVariants = {
+    hidden: {
+      opacity: 0,
+      y: -10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 1,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1.5,
+        delay: 1,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+
+      transition: {
+        duration: 1,
+        delay: 1.5,
+      },
+    },
+    exit: {
+      y: 0,
+      opacity: 0,
+      delay: 1,
+    },
+  };
+
+  const borderVariants = {
+    hidden: {
+      width: 0,
+    },
+    visible: {
+      width: "100%",
+      transition: { delay: 2, duration: 1 },
+    },
+  };
+
+  // Trigger when in View
+  const { ref, inView } = useInView();
+
   return (
     <>
-      {data && (
-        <Box>
+      <Box ref={ref}>
+        <AnimatePresence initial={false}>
           <>
             {theBuzz?.map((buzzItem, index) => (
-              <Grid
-                key={index}
-                gridTemplateColumns={{
-                  base: "1fr",
-                  sm: "1fr",
-                  md: "30%, 70%",
-                  lg: "30%, 70%",
-                  xl: "30% 37%",
-                }}
-                marginX="2rem"
-                marginTop={{
-                  base: "1rem",
-                  sm: "1rem",
-                  md: "1rem",
-                  lg: "2rem",
-                  xl: "2rem",
-                }}
-                gap="2rem"
-                paddingY={{
-                  base: "1rem",
-                  sm: "1rem",
-                  md: "1rem",
-                  lg: "2rem",
-                  xl: "2rem",
-                }}
-                borderBottom="1.5px solid #1E174B"
-              >
-                <GridItem>
-                  <Box overflow="hidden" className="image-container">
-                    <MotionImage
-                      src={require(`../../../assets/newsroom/${buzzItem.image}`)}
-                      variants={imageChildVariants}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      whileHover="hover"
-                    />
-                  </Box>
-                </GridItem>
-                <GridItem>
-                  <Flex
-                    height="100%"
-                    flexDirection="column"
-                    flexWrap="wrap"
-                    justifyContent="space-between"
-                    paddingRight="2rem"
+              <>
+                <Grid
+                  key={index}
+                  gridTemplateColumns={{
+                    base: "1fr",
+                    sm: "1fr",
+                    md: "30%, 70%",
+                    lg: "30%, 70%",
+                    xl: "30% 37%",
+                  }}
+                  marginX="2rem"
+                  marginTop={{
+                    base: "1rem",
+                    sm: "1rem",
+                    md: "1rem",
+                    lg: "2rem",
+                    xl: "2rem",
+                  }}
+                  gap="2rem"
+                  paddingY={{
+                    base: "1rem",
+                    sm: "1rem",
+                    md: "1rem",
+                    lg: "2rem",
+                    xl: "2rem",
+                  }}
+                  // borderBottom="1.5px solid #1E174B"
+                >
+                  <MotionGridItem
+                    variants={leftContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
                   >
-                    <Stack>
-                      <Heading variant="h3" as="h3">
-                        {buzzItem.title}
-                      </Heading>
-                      <Text
-                        variant="p"
-                        as="p"
-                        fontSize="1rem"
-                        textTransform="uppercase"
+                    <Box overflow="hidden" className="image-container">
+                      <MotionImage
+                        variants={imageChildVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        whileHover="hover"
+                        src={require(`../../../assets/newsroom/${buzzItem.image}`)}
+                      />
+                    </Box>
+                  </MotionGridItem>
+                  <GridItem>
+                    <Flex
+                      height="100%"
+                      flexDirection="column"
+                      flexWrap="wrap"
+                      justifyContent="space-between"
+                      paddingRight="2rem"
+                    >
+                      <Stack>
+                        <MotionHeading
+                          variants={headingVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          variant="h3"
+                          as="h3"
+                        >
+                          {buzzItem.title}
+                        </MotionHeading>
+                        <MotionText
+                          variants={textVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          variant="p"
+                          as="p"
+                          fontSize="1rem"
+                          textTransform="uppercase"
+                        >
+                          {buzzItem.date}
+                        </MotionText>
+                      </Stack>
+                      <MotionText
+                        variants={textVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
                       >
-                        {buzzItem.date}
-                      </Text>
-                    </Stack>
-                    <Text>{buzzItem.caption}</Text>
-                    <Link isExternal to={buzzItem.url}>
-                      <Button variant="standardButton">Read Article</Button>
-                    </Link>
-                  </Flex>
-                </GridItem>
-              </Grid>
+                        {buzzItem.caption}
+                      </MotionText>
+                      <Link isExternal to={buzzItem.url}>
+                        <MotionButton
+                          variants={buttonVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                          variant="standardButton"
+                        >
+                          Read Article
+                        </MotionButton>
+                      </Link>
+                    </Flex>
+                  </GridItem>
+                </Grid>
+                <MotionBox
+                  variants={borderVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  borderBottom="1px solid #1E174B"
+                />
+              </>
             ))}
           </>
-        </Box>
-      )}
+        </AnimatePresence>
+      </Box>
     </>
   );
 };

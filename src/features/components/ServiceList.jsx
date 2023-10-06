@@ -11,12 +11,13 @@ import {
   Image,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SocialIconsHorizontal from "./SocialIconsHorizontal";
 import { motion } from "framer-motion";
 import GetInTouchSection from "./GetInTouchSection";
 import PlaceHolderImage from "../../assets/newsroom/SibuMabena 2.png";
 import Typewriter from "typewriter-effect";
+import { useInView } from "react-intersection-observer";
 
 const ServiceList = () => {
   const services = [
@@ -56,6 +57,25 @@ const ServiceList = () => {
         "We're matchmakers for the stars, finding the perfect talent to gush over your brand. Picture this: your brand and the people's champions. We're talking a match made in heaven",
     },
   ];
+
+  // Typewriter
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
+  const [typewriterStarted, setTypewriterStarted] = useState(false);
+
+  useEffect(() => {
+    if (inView && !typewriterStarted) {
+      const timeoutId = setTimeout(() => {
+        setTypewriterStarted(true);
+      }, 100);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [inView, typewriterStarted]);
 
   //   Framer Motion
   const MotionAccordionItem = motion(AccordionItem);
@@ -114,10 +134,11 @@ const ServiceList = () => {
       }}
       // gap={{ base: "1rem", sm: "1rem", md: "1rem", lg: "2rem", xl: "2rem" }}
 
-      margin="2rem 0 4rem 0"
+      margin="4rem 0 4rem 0"
       maxWidth="100vw"
       className="service-list"
       data-scroll-section
+      ref={ref}
     >
       <MotionGridItem
         data-scroll
@@ -161,7 +182,7 @@ const ServiceList = () => {
                   <Typewriter
                     options={{
                       strings: service.name,
-                      autoStart: true,
+                      autoStart: typewriterStarted,
                       delay: 50,
                       pauseFor: 3000000,
                       cursor: "",
