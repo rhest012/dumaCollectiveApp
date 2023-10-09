@@ -33,6 +33,24 @@ const CaseStudies = () => {
       url: "/the-grind/multichoice",
       id: "case-study-image-3",
     },
+    {
+      clientName: "Boity",
+      image: "boity-square.png",
+      url: "/the-grind/boity",
+      id: "case-study-image-3",
+    },
+    {
+      clientName: "Heineken",
+      image: "heineken-square.jpg",
+      url: "/the-grind/heineken",
+      id: "case-study-image-3",
+    },
+    {
+      clientName: "Uefa",
+      image: "eufa-square.png",
+      url: "/the-grind/eufa",
+      id: "case-study-image-3",
+    },
   ];
 
   // Framer Motion
@@ -66,15 +84,11 @@ const CaseStudies = () => {
   const imageChildVariants = {
     hidden: {
       opacity: 0,
-      // y: -20,
     },
     visible: {
       opacity: 1,
       y: 0,
       duration: 1,
-      // transition: {
-      //   ease: [0.6, 0.01, -0.05, 0.9],
-      // }
     },
     hidden: {
       opacity: 0,
@@ -124,6 +138,7 @@ const CaseStudies = () => {
           xl: "space-between",
         }}
         alignItems="center"
+        wrap="wrap"
       >
         {activeCaseStudies?.map((caseStudy, index) => (
           <Link
@@ -185,6 +200,7 @@ const CaseStudies = () => {
               textTransform="uppercase"
               textAlign="center"
               paddingTop="2rem"
+              marginBottom="2rem"
             >
               Explore
             </MotionHeading>

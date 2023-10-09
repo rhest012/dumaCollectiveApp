@@ -12,6 +12,7 @@ import {
 import React from "react";
 import NbaImage1 from "../../../assets/theGrind/Nba_Africa/NBA-Africa-Image.jpg";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const NbaCaseStudy = () => {
   const socialContainer = {
@@ -91,10 +92,19 @@ const NbaCaseStudy = () => {
       >
         &nbsp;&nbsp;4.8 M People Reached&nbsp;&nbsp;
       </Heading>
+
       <Box sx={socialContainer}>
         <Flex justifyContent="center">
-          <Heading variant="h3" sx={socialContainerHeading}>
-            &nbsp;&nbsp;The Problem&nbsp;&nbsp;
+          <Heading variant="h2" sx={socialContainerHeading}>
+            <Typewriter
+              options={{
+                strings: "The Problem",
+                autoStart: true,
+                delay: 25,
+                pauseFor: 2000000,
+                cursor: "",
+              }}
+            />
           </Heading>
         </Flex>
         <Grid sx={caseStudyContainerRightImage}>
@@ -140,7 +150,7 @@ const NbaCaseStudy = () => {
 
       <Box sx={socialContainer}>
         <Flex justifyContent="center">
-          <Heading sx={socialContainerHeading}>
+          <Heading variant="h2" sx={socialContainerHeading}>
             &nbsp;&nbsp;The Solve&nbsp;&nbsp;
           </Heading>
         </Flex>
