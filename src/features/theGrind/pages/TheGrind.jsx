@@ -18,6 +18,7 @@ import { useRef } from "react";
 
 import { useScroll, motion } from "framer-motion";
 import transition from "../../components/transition";
+import SecondaryPageHeader from "../../components/SecondaryPageHeader";
 
 const TheGrind = () => {
   // const { data, error, isPending } = useFetch(" http://localhost:8000/clients");
@@ -73,9 +74,10 @@ const TheGrind = () => {
   });
 
   return (
-    <>
+    <Box marginY="3rem" marginX="2rem">
+      <SecondaryPageHeader />
       <CaseStudies />
-    </>
+    </Box>
   );
 };
 

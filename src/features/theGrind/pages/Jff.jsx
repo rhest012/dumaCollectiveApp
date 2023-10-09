@@ -9,7 +9,7 @@ import JFFSwiper from "../components/JFFSwiper";
 import JffHeader from "../../../assets/theGrind/jff/JFF_Header.png";
 import JffTwitterCard from "../components/JffTwitterCard";
 import JffFbCard from "../components/JFFFbCard";
-import { motion } from "framer-motion";
+import { motion, easeIn } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
 const Jff = () => {
@@ -72,7 +72,7 @@ const Jff = () => {
         backgroundSize="cover"
         backgroundPosition="center"
         layoutId="case-study-image-2"
-        transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.1 }}
+        transition={{ ease: easeIn, duration: 0.8 }}
       />
       <JFFSwiper />
       <Flex

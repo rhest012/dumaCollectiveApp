@@ -11,9 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { Link, Link as RouterLink, useLocation } from "react-router-dom";
 import React from "react";
-import { Links } from "../../../styles/Navbar.style";
 import { motion } from "framer-motion";
-import SecondaryPageHeader from "../../components/SecondaryPageHeader";
 
 const CaseStudies = () => {
   const activeCaseStudies = [
@@ -109,9 +107,7 @@ const CaseStudies = () => {
   };
 
   return (
-    <Box marginY="3rem" marginX="2rem">
-      <SecondaryPageHeader />
-
+    <Box>
       <Flex
         flexDir={{
           base: "column",
