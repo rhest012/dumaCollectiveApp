@@ -93,7 +93,7 @@ const NbaCaseStudy = () => {
       </Heading>
       <Box sx={socialContainer}>
         <Flex justifyContent="center">
-          <Heading sx={socialContainerHeading}>
+          <Heading variant="h3" sx={socialContainerHeading}>
             &nbsp;&nbsp;The Problem&nbsp;&nbsp;
           </Heading>
         </Flex>
@@ -206,7 +206,7 @@ const NbaCaseStudy = () => {
 
       <Box sx={socialContainer}>
         <Flex justifyContent="center">
-          <Heading sx={socialContainerHeading}>
+          <Heading variant="h3" sx={socialContainerHeading}>
             &nbsp;&nbsp;The Execution&nbsp;&nbsp;
           </Heading>
         </Flex>
