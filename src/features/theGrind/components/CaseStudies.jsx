@@ -150,16 +150,16 @@ const CaseStudies = () => {
             <MotionBox
               marginY={{ base: "1.5rem", xl: "0" }}
               height={{
-                base: "350px",
-                sm: "350px",
-                md: "350px",
+                base: "400px",
+                sm: "400px",
+                md: "400px",
                 lg: "350px",
                 xl: "400px",
               }}
               width={{
-                base: "350px",
-                sm: "350px",
-                md: "350px",
+                base: "400px",
+                sm: "400px",
+                md: "400px",
                 lg: "350px",
                 xl: "400px",
               }}
