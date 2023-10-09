@@ -12,7 +12,7 @@ import NewsRoom from "../theNewsRoom/pages/NewsRoom";
 import Contact from "../pages/Contact";
 
 // Components
-import Navbar from "../../components/Navbar";
+import Nav from "../../components/Nav";
 import CustomCursor from "../../components/CustomCursor";
 import Footer from "../../components/Footer";
 
@@ -38,7 +38,7 @@ const AnimatedRoutes = () => {
         <ScrollToTop />
         <>
           <Box>
-            <Navbar />
+            <Nav />
             <CustomCursor />
             <Routes>
               <Route path="/" element={<Home />} />

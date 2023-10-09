@@ -48,6 +48,11 @@ const Nav = () => {
     },
   ];
 
+  // Style Active Location
+  const location = useLocation();
+
+  console.log(location.pathname);
+
   // Framer Motion
   const MotionImage = motion(Image);
 
@@ -66,8 +71,32 @@ const Nav = () => {
           transition={{ ease: "linear", duration: 1.6 }}
         />
       </Box>
-      <Menu closeOnSelect colorScheme="none">
-        <MenuButton>
+
+      <Flex
+        className="large-screen-menu"
+        justifyContent="flex-end"
+        gap="3rem"
+        display={{ base: "none", md: "none", lg: "flex", xl: "flex" }}
+      >
+        {menuItems.map((menuItem, index) => (
+          <Link className="link-container" key={index} to={menuItem.url}>
+            <Heading
+              className={`menu-item ${
+                location.pathname === menuItem.url ? "active" : ""
+              }`}
+              variant="h3"
+              fontSize="1rem"
+              textTransform="uppercase"
+            >
+              {menuItem.name}
+            </Heading>
+          </Link>
+        ))}
+      </Flex>
+      <Menu closeOnSelect colorScheme="none" className="mobile-menu">
+        <MenuButton
+          display={{ base: "block", md: "block", lg: "none", xl: "none" }}
+        >
           <Heading variant="h6">Menu</Heading>
         </MenuButton>
         <MenuList
@@ -97,53 +126,19 @@ const Nav = () => {
                   background: "none",
                 }}
               >
-                <Heading className="menu-item__heading" variant="h1">
+                <Heading
+                  className={`menu-item ${
+                    location.pathname === menuItem.url ? "active" : ""
+                  }`}
+                  variant="h3"
+                >
                   {menuItem.name}
                 </Heading>
-                <Image
-                  className="menu-item__image"
-                  // height="150px"
-                  src={HeaderImage}
-                />
               </MenuItem>
             </NavLink>
           ))}
         </MenuList>
       </Menu>
-      {/* <Box display="flex" justifyContent="flex-end" paddingRight="2rem" gap="4rem">
-        {/* {menuItems.map((menuItem, index) => { */}
-      {/* <NavLink to="/">
-                <Heading variant="h6" fontSize="1rem">
-                    Home
-                </Heading>
-            </NavLink>
-            <NavLink to="/what-we-do">
-                <Heading variant="h6" fontSize="1rem">
-                    What We Do
-                </Heading>
-            </NavLink>
-            <NavLink to="/the-grind">
-                <Heading variant="h6" fontSize="1rem">
-                    The Grind
-                </Heading>
-            </NavLink>
-            <NavLink to="/the-squad">
-                <Heading variant="h6" fontSize="1rem">
-                    The Squad
-                </Heading>
-            </NavLink>
-            <NavLink to="/the-buzz">
-                <Heading variant="h6" fontSize="1rem">
-                    The Buzz
-                </Heading>
-            </NavLink>
-            <NavLink to="/get-in-touch">
-                <Heading variant="h6" fontSize="1rem">
-                    Get In Touch
-                </Heading>
-            </NavLink> */}
-      {/* })} */}
-      {/* </Box> */}
     </Flex>
   );
 };

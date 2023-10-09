@@ -79,7 +79,6 @@ const ClientList = () => {
                 xl: "200px",
               }}
               className="image-container"
-              // boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -98,6 +97,7 @@ const ClientList = () => {
                 whileHover="hover"
                 src={require(`../../assets/theGrind/clientLogos/${item.clientLogo}`)}
                 width="200px"
+                layoutId= "case-study-image"
               />
             </MotionGridItem>
           ))}

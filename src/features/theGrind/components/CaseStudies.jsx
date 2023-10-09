@@ -100,7 +100,12 @@ const CaseStudies = () => {
         alignItems="center"
       >
         {activeCaseStudies?.map((caseStudy, index) => (
-          <Link to={caseStudy.url} as="ReachLink" key={index}>
+          <Link
+            to={caseStudy.url}
+            as="ReachLink"
+            key={index}
+            className="case-study-container"
+          >
             <MotionBox
               marginY={{ base: "1.5rem", xl: "0" }}
               height={{
@@ -141,8 +146,17 @@ const CaseStudies = () => {
                 }}
                 marginBottom="0.5rem"
               />
-              <Links>Explore</Links>
             </MotionBox>
+            <Heading
+              className="menu-item"
+              variant="h3"
+              fontSize="1rem"
+              textTransform="uppercase"
+              textAlign="center"
+              paddingTop="2rem"
+            >
+              Explore
+            </Heading>
           </Link>
         ))}
       </Flex>
