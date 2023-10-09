@@ -37,12 +37,12 @@ const CaseStudies = () => {
   // Framer Motion
   const MotionImage = motion(Image);
   const MotionBox = motion(Box);
-  const MotionText = motion(Text);
+  const MotionHeading = motion(Heading);
 
   const imageContainerVariants = {
     hidden: {
       opacity: 0,
-      y: 20,
+      y: -20,
       scale: 1, // Initial scale
     },
     visible: {
@@ -65,7 +65,7 @@ const CaseStudies = () => {
   const imageChildVariants = {
     hidden: {
       opacity: 0,
-      y: -20,
+      // y: -20,
     },
     visible: {
       opacity: 1,
@@ -75,6 +75,26 @@ const CaseStudies = () => {
     hover: {
       scale: 1.05,
       duration: 2,
+    },
+  };
+  const captionChildVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 1,
+
+        delay: 1.5,
+      },
+    },
+    exit: {
+      y: -20,
+      opacity: 0,
     },
   };
 
@@ -147,8 +167,12 @@ const CaseStudies = () => {
                 marginBottom="0.5rem"
               />
             </MotionBox>
-            <Heading
+            <MotionHeading
               className="menu-item"
+              variants={captionChildVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
               variant="h3"
               fontSize="1rem"
               textTransform="uppercase"
@@ -156,7 +180,7 @@ const CaseStudies = () => {
               paddingTop="2rem"
             >
               Explore
-            </Heading>
+            </MotionHeading>
           </Link>
         ))}
       </Flex>
