@@ -51,8 +51,6 @@ const Nav = () => {
   // Style Active Location
   const location = useLocation();
 
-  console.log(location.pathname);
-
   // Framer Motion
   const MotionImage = motion(Image);
 
@@ -75,7 +73,7 @@ const Nav = () => {
       <Flex
         className="large-screen-menu"
         justifyContent="flex-end"
-        gap="3rem"
+        gap={{ lg: "1rem", xl: "3rem" }}
         display={{ base: "none", md: "none", lg: "flex", xl: "flex" }}
       >
         {menuItems.map((menuItem, index) => (
@@ -85,7 +83,7 @@ const Nav = () => {
                 location.pathname === menuItem.url ? "active" : ""
               }`}
               variant="h3"
-              fontSize="1rem"
+              fontSize="0.9rem"
               textTransform="uppercase"
             >
               {menuItem.name}

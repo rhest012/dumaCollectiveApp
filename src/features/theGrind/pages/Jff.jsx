@@ -2,13 +2,15 @@ import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { CiTwitter } from "react-icons/ci";
 import { SlSocialFacebook } from "react-icons/sl";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import JffBackground from "../../../assets/theGrind/jff/jff-background.png";
 import JffInstaCard from "../components/JffInstaCard";
 import JFFSwiper from "../components/JFFSwiper";
 import JffHeader from "../../../assets/theGrind/jff/JFF_Header.png";
 import JffTwitterCard from "../components/JffTwitterCard";
 import JffFbCard from "../components/JFFFbCard";
+import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const Jff = () => {
   const singleAnnualSocialStyle = {
@@ -33,20 +35,44 @@ const Jff = () => {
     textTransform: "uppercase",
   };
 
+  // Framer Motion
+  const MotionBox = motion(Box);
+
+  // Typewriter
+  const [typewriterStarted, setTypewriterStarted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTypewriterStarted(true);
+    }, 1500); // Start Typewriter after 1.5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <Box marginTop="1rem">
         <Heading variant="h1" as="h1" textAlign="center">
-          JFF Case Study
+          <Typewriter
+            options={{
+              strings: "JFF Case Study",
+              autoStart: true,
+              delay: 25,
+              pauseFor: 2000000,
+              cursor: "",
+            }}
+          />
         </Heading>
       </Box>
-      <Box
+      <MotionBox
         marginTop="1rem"
         marginBottom="4rem"
         backgroundImage={JffHeader}
         height="92vh"
         backgroundSize="cover"
         backgroundPosition="center"
+        layoutId="case-study-image-2"
+        transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.1 }}
       />
       <JFFSwiper />
       <Flex

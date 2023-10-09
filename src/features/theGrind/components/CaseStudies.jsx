@@ -21,16 +21,19 @@ const CaseStudies = () => {
       clientName: "NBA",
       image: "nba-africa-square.png",
       url: "/the-grind/nba-africa",
+      id: "case-study-image-1",
     },
     {
       clientName: "JFF",
       image: "jff-square.png",
       url: "/the-grind/jff",
+      id: "case-study-image-2",
     },
     {
       clientName: "multiChoice",
       image: "multichoice-square.jpg",
       url: "/the-grind/multichoice",
+      id: "case-study-image-3",
     },
   ];
 
@@ -71,6 +74,13 @@ const CaseStudies = () => {
       opacity: 1,
       y: 0,
       duration: 1,
+      // transition: {
+      //   ease: [0.6, 0.01, -0.05, 0.9],
+      // }
+    },
+    hidden: {
+      opacity: 0,
+      y: -200,
     },
     hover: {
       scale: 1.05,
@@ -156,6 +166,7 @@ const CaseStudies = () => {
                 animate="visible"
                 exit="exit"
                 whileHover="hover"
+                layoutId={caseStudy.id}
                 src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
                 height={{
                   base: "350px",
