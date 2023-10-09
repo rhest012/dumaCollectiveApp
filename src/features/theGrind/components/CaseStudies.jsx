@@ -180,9 +180,9 @@ const CaseStudies = () => {
                 layoutId={caseStudy.id}
                 src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
                 height={{
-                  base: "350px",
-                  sm: "350px",
-                  md: "350px",
+                  base: "400px",
+                  sm: "400px",
+                  md: "400px",
                   lg: "350px",
                   xl: "400px",
                 }}
