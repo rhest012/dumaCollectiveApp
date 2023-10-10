@@ -43,19 +43,19 @@ const CaseStudies = () => {
       clientName: "Boity",
       image: "boity-square.png",
       url: "/the-grind/boity",
-      id: "case-study-image-3",
+      id: "case-study-image-4",
     },
     {
       clientName: "Heineken",
       image: "heineken-square.jpg",
       url: "/the-grind/heineken",
-      id: "case-study-image-3",
+      id: "case-study-image-5",
     },
     {
       clientName: "Uefa",
       image: "eufa-square.png",
       url: "/the-grind/champions-league",
-      id: "case-study-image-3",
+      id: "case-study-image-6",
     },
   ];
 

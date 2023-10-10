@@ -43,6 +43,7 @@ const ClassicCaseStudy = () => {
       id: "chivas",
       images: ["Chivas.jpg"],
       url: "/the-grind/chivas",
+      imageId: "case-study-image-4",
       description:
         "Chivas Venture 2021 partnered with Zaid Osman, founder, and CEO of Sneaker Exchange and Grade Africa. This partnership will give a once-in-a-lifetime opportunity to four apprentices from South Africa to become the next big creative entrepreneurs. Duma Collective provided the brand with Event Management and Public Relations Services for the Media Launch of the initiative. We organised the venue and catering for the event. As well as handling the general event logistics. We also arranged for media and influencers to attend the launch to guarantee coverage. Media PR Packs were arranged as tokens of gratitude. The tokens of gratitude, however, also had more information on the campaign, being a Press Release, Hype Video, and Images captured from the event.",
     },
@@ -65,7 +66,6 @@ const ClassicCaseStudy = () => {
     }
   }, []);
 
-  console.log(activeCaseStudy);
   return (
     <>
       {activeCaseStudy && (
