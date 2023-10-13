@@ -136,7 +136,6 @@ const Jff = () => {
 
       <JffInstaCard />
       <JffTwitterCard />
-      <JffFbCard />
     </>
   );
 };

@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import Logo from "../assets/Duma-Collective-Logo.svg";
 import React from "react";
-import HeaderImage from "../assets/headers/grind-header.jpg";
 import { Links } from "../styles/Navbar.style";
 import {
   Link,

@@ -63,15 +63,6 @@ const NewsRoom = () => {
       url: "https://www.bizcommunity.com/Article/196/18/240473.html",
     },
     {
-      id: "104",
-      title: "Lindiwe Maduna appointed MD of Duma Collective",
-      date: "11 July 2023",
-      caption:
-        "Lindiwe Maduna has been promoted to managing director of the Duma Collective.",
-      image: "Lindi.jpg",
-      url: "https://www.bizcommunity.com/Article/196/18/240060.html",
-    },
-    {
       id: "105",
       title: "Mabena rides wave of creativity",
       date: "06 March 2023",

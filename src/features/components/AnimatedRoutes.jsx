@@ -4,7 +4,6 @@ import { Routes, Route, useLocation, Router } from "react-router-dom";
 // Pages
 import Home from "../pages/Home";
 import WhatWeDo from "../pages/WhatWeDo";
-import Loader from "./Loader";
 import Squad from "../pages/Squad";
 import TheGrind from "../theGrind/pages/TheGrind";
 import Jff from "../theGrind/pages/Jff";
@@ -23,6 +22,7 @@ import NewsRoomArticle from "../theNewsRoom/pages/NewsRoomArticle";
 import Multichoice from "../theGrind/pages/Multichoice";
 import NbaAfrica from "../theGrind/pages/NbaAfrica";
 import ClassicCaseStudy from "../theGrind/pages/ClassicCaseStudy";
+import Origins from "../theGrind/pages/Origins";
 
 const AnimatedRoutes = () => {
   const [loading, setLoading] = useState(true);
@@ -47,6 +47,7 @@ const AnimatedRoutes = () => {
               <Route path="/the-squad" element={<Squad />} />
               <Route path="/the-grind" element={<TheGrind />} />
               <Route path="/the-grind/jff" element={<Jff />} />
+              <Route path="/the-grind/origins" element={<Origins />} />
               <Route path="/the-grind/multichoice" element={<Multichoice />} />
               <Route path="/the-grind/nba-africa" element={<NbaAfrica />} />
               <Route path="/the-grind/:id" element={<ClassicCaseStudy />} />

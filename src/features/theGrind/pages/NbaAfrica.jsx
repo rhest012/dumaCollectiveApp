@@ -1,7 +1,7 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 import NbaAfricaHeaderImage from "../../../assets/theGrind/Nba_Africa/NBA-Africa-Header.jpg";
-import NbaCaseStudy from "../components/NbaCaseStudy";
+import NbaCaseStudy from "../components/CaseStudyBody";
 import NbaEvaluation from "../components/NbaEvaluation";
 import { easeIn, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
@@ -15,7 +15,7 @@ const NbaAfrica = () => {
         <Heading variant="h1" as="h1" textAlign="center">
           <Typewriter
             options={{
-              strings: "JFF Case Study",
+              strings: "NBA Africa Case Study",
               autoStart: true,
               delay: 25,
               pauseFor: 2000000,

@@ -15,7 +15,7 @@ import React, { useEffect, useState } from "react";
 import SocialIconsHorizontal from "./SocialIconsHorizontal";
 import { motion } from "framer-motion";
 import GetInTouchSection from "./GetInTouchSection";
-import PlaceHolderImage from "../../assets/newsroom/SibuMabena 2.png";
+import DumaLogo from "../../assets/newsroom/DumaLogo.jpg";
 import Typewriter from "typewriter-effect";
 import { useInView } from "react-intersection-observer";
 
@@ -211,7 +211,7 @@ const ServiceList = () => {
         flexDir="column"
         height="100%"
       >
-        <Image src={PlaceHolderImage} />
+        <Image src={DumaLogo} />
       </MotionGridItem>
     </Grid>
   );

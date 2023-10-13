@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { easeIn, motion } from "framer-motion";
 
 // actions
-import PageIntro from "../theGrind/components/pageIntro";
-import SecondaryHeader from "../components/SecondaryHeader";
 import SquadList from "../components/SquadList";
 import transition from "../components/transition";
 import { Box } from "@chakra-ui/react";

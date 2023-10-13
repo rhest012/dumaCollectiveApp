@@ -7,16 +7,16 @@ import { useLocation, useParams } from "react-router-dom";
 const ClassicCaseStudy = () => {
   const classicCaseStudies = [
     {
-      name: "BET/Boity",
+      name: "Honor",
       images: [
-        "Boity Case Study 2.png",
-        "Boity Case Study 1.jpg",
-        "Boity Case Study 3.png",
+        "Honor Case Study 1.jpg",
+        "Honor Case Study 2.jpg",
+        "Honor Case Study 3.jpg",
       ],
-      id: "boity",
-      url: "/the-grind/boity",
+      id: "honor",
+      url: "/the-grind/honor",
       description:
-        "The 13-episode reality show Boity: Own Your Throne premiered on BET Africa in February 2020. The show closely followed Boity as she juggled her musical career with business, family, spirituality while giving viewers an exclusive view into her glamorous and busy life. Duma Collective provided the television network with Social Media & Influencers services. The brief was to create a social media and influencer strategy plan centered around creating awareness and engagement for the reality show. We created a strategic plan which focused on Boity as the main influencer, with the online conversation supplemented by other influencers and the social media army. We selected and managed the campaign's micro-influencers as well to create content for Facebook, Instagram, Twitter, and WhatsApp.",
+        "Launching a brand new phone in South Africa is tough - but with a wealth of content creators in our country we knew who we were speaking to. The HONOR 90 is exactly that, a device expertly crafted for the content creator. In order to speak to the correct audience we knew we had to emphasize the main aspect of creating quality content - manipulating light. <br/> <br/> Duma Collective set out to launch a content driven influencer campaign with up and coming influencers that highlights the beauty of the device, the main key selling points and it's tremendous technological capabilities. Welcome to the new dawn of Creating Content, introducing the HONOR 90 5G.",
     },
     {
       name: "Heineken 0.0",

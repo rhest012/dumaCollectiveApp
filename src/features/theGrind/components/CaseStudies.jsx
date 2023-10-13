@@ -28,9 +28,9 @@ const CaseStudies = () => {
       id: "case-study-image-2",
     },
     {
-      clientName: "multiChoice",
-      image: "multichoice-square.jpg",
-      url: "/the-grind/multichoice",
+      clientName: "origins",
+      image: "origins-square.jpg",
+      url: "/the-grind/origins",
       id: "case-study-image-3",
     },
     {
@@ -40,9 +40,9 @@ const CaseStudies = () => {
       id: "case-study-image-4",
     },
     {
-      clientName: "Boity",
-      image: "boity-square.png",
-      url: "/the-grind/boity",
+      clientName: "Honor",
+      image: "honor-square.jpg",
+      url: "/the-grind/honor",
       id: "case-study-image-4",
     },
     {
@@ -128,91 +128,83 @@ const CaseStudies = () => {
 
   return (
     <Box>
-      <Flex
-        flexDir={{
-          base: "column",
-          sm: "column",
-          md: "column",
-          lg: "row",
-          xl: "row",
+      <Grid
+        gridTemplateColumns={{
+          base: "1fr",
+          sm: "1fr",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(2, 1fr)",
+          xl: "repeat(3, 1fr)",
         }}
-        justifyContent={{
-          base: "center",
-          sm: "center",
-          md: "center",
-          lg: "space-between",
-          xl: "space-between",
-        }}
-        alignItems="center"
-        wrap="wrap"
       >
         {activeCaseStudies?.map((caseStudy, index) => (
-          <Link
-            to={caseStudy.url}
-            as="ReachLink"
-            key={index}
-            className="case-study-container"
-          >
-            <MotionBox
-              marginY={{ base: "1.5rem", xl: "0" }}
-              height={{
-                base: "400px",
-                sm: "400px",
-                md: "400px",
-                lg: "350px",
-                xl: "400px",
-              }}
-              width={{
-                base: "400px",
-                sm: "400px",
-                md: "400px",
-                lg: "350px",
-                xl: "400px",
-              }}
-              overflow="hidden"
-              className="image-container"
-              variants={imageContainerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              whileHover="hover"
+          <GridItem key={index} display="flex" justifyContent="center">
+            <Link
+              to={caseStudy.url}
+              as="ReachLink"
+              key={index}
+              className="case-study-container"
             >
-              <MotionImage
-                variants={imageChildVariants}
+              <MotionBox
+                marginY={{ base: "1.5rem", xl: "0" }}
+                height={{
+                  base: "400px",
+                  sm: "400px",
+                  md: "350px",
+                  lg: "400px",
+                  xl: "400px",
+                }}
+                width={{
+                  base: "400px",
+                  sm: "400px",
+                  md: "350px",
+                  lg: "400px",
+                  xl: "400px",
+                }}
+                overflow="hidden"
+                className="image-container"
+                variants={imageContainerVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
                 whileHover="hover"
-                layoutId={caseStudy.id}
-                src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
-                height={{
-                  base: "400px",
-                  sm: "400px",
-                  md: "400px",
-                  lg: "350px",
-                  xl: "400px",
-                }}
-                marginBottom="0.5rem"
-              />
-            </MotionBox>
-            <MotionHeading
-              className="menu-item"
-              variants={captionChildVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              variant="h3"
-              fontSize="1rem"
-              textTransform="uppercase"
-              textAlign="center"
-              paddingTop="2rem"
-              marginBottom="2rem"
-            >
-              Explore
-            </MotionHeading>
-          </Link>
+              >
+                <MotionImage
+                  variants={imageChildVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  whileHover="hover"
+                  layoutId={caseStudy.id}
+                  src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
+                  height={{
+                    base: "400px",
+
+                    md: "350px",
+                    lg: "400px",
+                  }}
+                  marginBottom="0.5rem"
+                />
+              </MotionBox>
+              <MotionHeading
+                className="menu-item"
+                variants={captionChildVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                variant="h3"
+                fontSize="1rem"
+                textTransform="uppercase"
+                textAlign="center"
+                paddingTop="2rem"
+                marginBottom="2rem"
+              >
+                Explore
+              </MotionHeading>
+            </Link>
+          </GridItem>
         ))}
-      </Flex>
+      </Grid>
     </Box>
   );
 };
