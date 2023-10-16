@@ -99,6 +99,7 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
               animate="visible"
               exit="exit"
               whileHover="hover"
+              marginBottom={{ base: "2rem", lg: "0" }}
             >
               <MotionImage
                 key={index}
