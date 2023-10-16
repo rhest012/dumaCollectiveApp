@@ -143,7 +143,7 @@ const NewsRoom = () => {
     visible: {
       opacity: 1,
       y: 0,
-      duration: 1,
+      duration: 0.1,
     },
     hover: {
       scale: 1.05,
@@ -162,7 +162,7 @@ const NewsRoom = () => {
 
       transition: {
         duration: 1.5,
-        delay: 1,
+        delay: 0.25,
       },
     },
     exit: {
@@ -183,7 +183,7 @@ const NewsRoom = () => {
 
       transition: {
         duration: 1.5,
-        delay: 1,
+        delay: 0.25,
       },
     },
     exit: {
@@ -204,7 +204,7 @@ const NewsRoom = () => {
 
       transition: {
         duration: 1.5,
-        delay: 1,
+        delay: 0.5,
       },
     },
     exit: {
@@ -223,7 +223,7 @@ const NewsRoom = () => {
 
       transition: {
         duration: 1,
-        delay: 1.5,
+        delay: 0.75,
       },
     },
     exit: {
@@ -239,7 +239,7 @@ const NewsRoom = () => {
     },
     visible: {
       width: "100%",
-      transition: { delay: 2, duration: 1 },
+      transition: { delay: 1, duration: 1 },
     },
   };
 
@@ -282,16 +282,22 @@ const NewsRoom = () => {
                 <MotionGridItem
                   variants={leftContainerVariants}
                   initial="hidden"
-                  animate="visible"
-                  exit="exit"
+                  whileInView="visible"
+                  viewport={{
+                    once: true,
+                  }}
+                  // exit="exit"
                 >
                   <Box overflow="hidden" className="image-container">
                     <MotionImage
                       variants={imageChildVariants}
                       initial="hidden"
-                      animate="visible"
-                      exit="exit"
+                      whileInView="visible"
+                      // exit="exit"
                       whileHover="hover"
+                      viewport={{
+                        once: true,
+                      }}
                       src={require(`../../../assets/newsroom/${buzzItem.image}`)}
                     />
                   </Box>
@@ -308,8 +314,11 @@ const NewsRoom = () => {
                       <MotionHeading
                         variants={headingVariants}
                         initial="hidden"
-                        animate="visible"
-                        exit="exit"
+                        whileInView="visible"
+                        viewport={{
+                          once: true,
+                        }}
+                        // exit="exit"
                         variant="h3"
                         as="h3"
                       >
@@ -318,8 +327,11 @@ const NewsRoom = () => {
                       <MotionText
                         variants={textVariants}
                         initial="hidden"
-                        animate="visible"
-                        exit="exit"
+                        whileInView="visible"
+                        viewport={{
+                          once: true,
+                        }}
+                        // exit="exit"
                         variant="p"
                         as="p"
                         fontSize="1rem"
@@ -331,8 +343,11 @@ const NewsRoom = () => {
                     <MotionText
                       variants={textVariants}
                       initial="hidden"
-                      animate="visible"
-                      exit="exit"
+                      whileInView="visible"
+                      viewport={{
+                        once: true,
+                      }}
+                      // exit="exit"
                     >
                       {buzzItem.caption}
                     </MotionText>
@@ -340,8 +355,11 @@ const NewsRoom = () => {
                       <MotionButton
                         variants={buttonVariants}
                         initial="hidden"
-                        animate="visible"
-                        exit="exit"
+                        whileInView="visible"
+                        viewport={{
+                          once: true,
+                        }}
+                        // exit="exit"
                         variant="standardButton"
                       >
                         Read Article
@@ -353,8 +371,11 @@ const NewsRoom = () => {
               <MotionBox
                 variants={borderVariants}
                 initial="hidden"
-                animate="visible"
-                exit="exit"
+                whileInView="visible"
+                viewport={{
+                  once: true,
+                }}
+                // exit="exit"
                 borderBottom="1px solid #1E174B"
               />
             </>
