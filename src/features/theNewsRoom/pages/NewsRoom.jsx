@@ -50,7 +50,7 @@ const NewsRoom = () => {
       date: "7 August 2023",
       caption:
         "This #WomensMonth, Heineken South Africa has partnered with Bizcommunity to showcase the phenomenal work and impact of women entrepreneurs such as Mabena...",
-      image: "SibuMabena 2.png",
+      image: "Duma Office.jpg",
       url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
     },
     {
@@ -68,7 +68,7 @@ const NewsRoom = () => {
       date: "06 March 2023",
       caption:
         "Young and versatile entrepreneur, Sibu Mabena is a shining example that when you live towards fulfilling your dreams, all is possible as you can go beyond to reach for the stars.",
-      image: "SibuMabena.jpg",
+      image: "Sibu Creativity.jpg",
       url: "https://sundayworld.co.za/news/business/hustlers-avenue/mabena-rides-wave-of-creativity-2/",
     },
     {
@@ -94,7 +94,7 @@ const NewsRoom = () => {
       date: "9 March 2022",
       caption:
         "The MultiChoice Group has announced appointment of Duma Collective as its lead creative communications agency. Duma Collective will oversee Public Relations and Social Media for DStv, general entertainment channels, and the group's Corporate Brand.",
-      image: "Multichoice.jpg",
+      image: "MCG Duma.jpg",
       url: "https://www.multichoice.com/media/news/multichoice-group-appoints-duma-collective-as-lead-creative-communications-agency",
     },
     {
@@ -103,7 +103,7 @@ const NewsRoom = () => {
       date: "9 March 2022",
       caption:
         "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
-      image: "M&N.jpg",
+      image: "M&N.png",
       url: "https://www.bizcommunity.com/Article/196/12/225854.html",
     },
     {
@@ -113,7 +113,7 @@ const NewsRoom = () => {
       date: "9 March 2022",
       caption:
         "This #WomensMonth, Heineken South Africa has partnered with Bizcommunity to showcase the phenomenal work and impact of women entrepreneurs such as Mabena...",
-      image: "SibuMabena 2.png",
+      image: "Sibu Heineken.jpeg",
       url: "https://www.bizcommunity.com/Article/196/841/207697.html",
     },
     {
@@ -122,7 +122,7 @@ const NewsRoom = () => {
       date: "22 June 2018",
       caption:
         "Mabena has managed to build a career around her passions — dance, social media, events and talent management. She founded Duma Collective while doing a Bachelor in Political Sciences and International Relations at the University of Pretoria.",
-      image: "SibuMabena 2.png",
+      image: "Sibu M&G.jpg",
       url: "https://200youngsouthafricans.co.za/sibu-mabena-2018/",
     },
   ];
