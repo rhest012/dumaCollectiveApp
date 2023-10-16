@@ -122,193 +122,203 @@ const CaseStudyBody = () => {
 
   return (
     <>
-      {location.pathname === "/the-grind/nba-africa" ? (
-        <Heading
-          variant="h2"
-          textAlign="center"
-          fontWeight="500"
-          textTransform="uppercase"
-        >
-          &nbsp;&nbsp;4.8 M People Reached&nbsp;&nbsp;
-        </Heading>
-      ) : null}
-
-      <Box sx={socialContainer}>
-        <Flex justifyContent="center">
-          <Heading variant="h2" sx={socialContainerHeading}>
-            <Typewriter
-              options={{
-                strings: "The Challenge",
-                autoStart: true,
-                delay: 25,
-                pauseFor: 2000000,
-                cursor: "",
-              }}
-            />
-          </Heading>
-        </Flex>
-        <Grid sx={caseStudyContainerRightImage}>
-          <GridItem
-            margin="2rem"
-            display="flex"
-            alignItems="center"
-            height="100%"
-          >
-            <Box
-              dangerouslySetInnerHTML={{ __html: activeCaseStudy.challenge }}
-            />
-          </GridItem>
-          <GridItem margin="2rem">
-            <MotionBox
-              overflow="hidden"
-              className="image-container"
-              variants={imageContainerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              whileHover="hover"
+      {activeCaseStudy && (
+        <Box>
+          {location.pathname === "/the-grind/nba-africa" ? (
+            <Heading
+              variant="h2"
+              textAlign="center"
+              fontWeight="500"
+              textTransform="uppercase"
             >
-              <MotionImage
-                variants={imageChildVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                whileHover="hover"
-                src={require(`../../../assets/theGrind/${activeCaseStudy.id}/${activeCaseStudy.image}`)}
-              />
-            </MotionBox>
-          </GridItem>
-        </Grid>
-      </Box>
-
-      <Box sx={socialContainer}>
-        <Flex justifyContent="center">
-          <Heading variant="h2" sx={socialContainerHeading}>
-            &nbsp;&nbsp;The Solve&nbsp;&nbsp;
-          </Heading>
-        </Flex>
-        <Grid sx={caseStudyContainerLeftImage}>
-          <GridItem padding="2rem">
-            <MotionBox
-              overflow="hidden"
-              className="image-container"
-              variants={imageContainerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              whileHover="hover"
-            >
-              <MotionImage
-                variants={imageChildVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                whileHover="hover"
-                src={require(`../../../assets/theGrind/${activeCaseStudy.id}/${activeCaseStudy.image}`)}
-              />
-            </MotionBox>
-          </GridItem>
-
-          <GridItem
-            padding="2rem"
-            display="flex"
-            flexDir="column"
-            // alignItems="center"
-            justifyContent="center"
-            height="100%"
-          >
-            <Box dangerouslySetInnerHTML={{ __html: activeCaseStudy.solve }} />
-            {location.pathname === "/the-grind/nba-africa" ? (
-              <Box>
-                <Heading variant="h5" textAlign="left" paddingY="1rem">
-                  Objectives
-                </Heading>
-                <UnorderedList>
-                  <ListItem>
-                    Foster robust online and offline community engagement across
-                    our multiple channels.
-                  </ListItem>
-                  <ListItem>
-                    Amplify overall brand engagement for NBA Africa.
-                  </ListItem>
-                  <ListItem>
-                    Generate widespread awareness and reach through meticulously
-                    crafted social media plans and strategic collaborations with
-                    influential, high-profile personalities.
-                  </ListItem>
-                </UnorderedList>
-              </Box>
-            ) : null}
-          </GridItem>
-        </Grid>
-      </Box>
-
-      {location.pathname === "/the-grind/nba-africa" ? (
-        <Box sx={socialContainer}>
-          <Flex justifyContent="center">
-            <Heading variant="h3" sx={socialContainerHeading}>
-              &nbsp;&nbsp;The Execution&nbsp;&nbsp;
+              &nbsp;&nbsp;4.8 M People Reached&nbsp;&nbsp;
             </Heading>
-          </Flex>
-          <Grid sx={caseStudyContainerRightImage}>
-            <GridItem
-              margin="2rem"
-              display="flex"
-              alignItems="center"
-              height="100%"
-            >
-              <Text>
-                he content pieces shared by our co-curators during the event
-                served as a pipeline for excitement, amplifying conversations
-                surrounding the NBA All-Star Weekend, especially within the
-                African audience. With their expertise and distinctive voices,
-                they left an indelible mark on the African landscape, ensuring
-                that the event resonated far and wide.
-                <br />
-                <br />
-                On the Nigerian front, the renowned rapper, Ladipoe and the
-                charismatic actor, Tobi Bakre, brought a contagious energy that
-                reverberated throughout the All-Star Weekend.
-              </Text>
-            </GridItem>
-            <GridItem margin="2rem">
-              <MotionBox
-                overflow="hidden"
-                className="image-container"
-                variants={imageContainerVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                whileHover="hover"
+          ) : null}
+
+          <Box sx={socialContainer}>
+            <Flex justifyContent="center">
+              <Heading variant="h2" sx={socialContainerHeading}>
+                <Typewriter
+                  options={{
+                    strings: "The Challenge",
+                    autoStart: true,
+                    delay: 25,
+                    pauseFor: 2000000,
+                    cursor: "",
+                  }}
+                />
+              </Heading>
+            </Flex>
+            <Grid sx={caseStudyContainerRightImage}>
+              <GridItem
+                margin="2rem"
+                display="flex"
+                alignItems="center"
+                height="100%"
               >
-                <MotionImage
-                  variants={imageChildVariants}
+                <Box
+                  dangerouslySetInnerHTML={{
+                    __html: activeCaseStudy.challenge,
+                  }}
+                />
+              </GridItem>
+              <GridItem margin="2rem">
+                <MotionBox
+                  overflow="hidden"
+                  className="image-container"
+                  variants={imageContainerVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
                   whileHover="hover"
-                  src={NbaImage1}
+                >
+                  <MotionImage
+                    variants={imageChildVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    whileHover="hover"
+                    src={require(`../../../assets/theGrind/${activeCaseStudy?.id}/${activeCaseStudy?.image}`)}
+                  />
+                </MotionBox>
+              </GridItem>
+            </Grid>
+          </Box>
+
+          <Box sx={socialContainer}>
+            <Flex justifyContent="center">
+              <Heading variant="h2" sx={socialContainerHeading}>
+                &nbsp;&nbsp;The Solve&nbsp;&nbsp;
+              </Heading>
+            </Flex>
+            <Grid sx={caseStudyContainerLeftImage}>
+              <GridItem padding="2rem">
+                <MotionBox
+                  overflow="hidden"
+                  className="image-container"
+                  variants={imageContainerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  whileHover="hover"
+                >
+                  <MotionImage
+                    variants={imageChildVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    whileHover="hover"
+                    src={require(`../../../assets/theGrind/${activeCaseStudy.id}/${activeCaseStudy.image}`)}
+                  />
+                </MotionBox>
+              </GridItem>
+
+              <GridItem
+                padding="2rem"
+                display="flex"
+                flexDir="column"
+                // alignItems="center"
+                justifyContent="center"
+                height="100%"
+              >
+                <Box
+                  dangerouslySetInnerHTML={{ __html: activeCaseStudy.solve }}
                 />
-              </MotionBox>
-            </GridItem>
-          </Grid>
+                {location.pathname === "/the-grind/nba-africa" ? (
+                  <Box>
+                    <Heading variant="h5" textAlign="left" paddingY="1rem">
+                      Objectives
+                    </Heading>
+                    <UnorderedList>
+                      <ListItem>
+                        Foster robust online and offline community engagement
+                        across our multiple channels.
+                      </ListItem>
+                      <ListItem>
+                        Amplify overall brand engagement for NBA Africa.
+                      </ListItem>
+                      <ListItem>
+                        Generate widespread awareness and reach through
+                        meticulously crafted social media plans and strategic
+                        collaborations with influential, high-profile
+                        personalities.
+                      </ListItem>
+                    </UnorderedList>
+                  </Box>
+                ) : null}
+              </GridItem>
+            </Grid>
+          </Box>
+
+          {location.pathname === "/the-grind/nba-africa" ? (
+            <Box sx={socialContainer}>
+              <Flex justifyContent="center">
+                <Heading variant="h3" sx={socialContainerHeading}>
+                  &nbsp;&nbsp;The Execution&nbsp;&nbsp;
+                </Heading>
+              </Flex>
+              <Grid sx={caseStudyContainerRightImage}>
+                <GridItem
+                  margin="2rem"
+                  display="flex"
+                  alignItems="center"
+                  height="100%"
+                >
+                  <Text>
+                    he content pieces shared by our co-curators during the event
+                    served as a pipeline for excitement, amplifying
+                    conversations surrounding the NBA All-Star Weekend,
+                    especially within the African audience. With their expertise
+                    and distinctive voices, they left an indelible mark on the
+                    African landscape, ensuring that the event resonated far and
+                    wide.
+                    <br />
+                    <br />
+                    On the Nigerian front, the renowned rapper, Ladipoe and the
+                    charismatic actor, Tobi Bakre, brought a contagious energy
+                    that reverberated throughout the All-Star Weekend.
+                  </Text>
+                </GridItem>
+                <GridItem margin="2rem">
+                  <MotionBox
+                    overflow="hidden"
+                    className="image-container"
+                    variants={imageContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    whileHover="hover"
+                  >
+                    <MotionImage
+                      variants={imageChildVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      whileHover="hover"
+                      src={NbaImage1}
+                    />
+                  </MotionBox>
+                </GridItem>
+              </Grid>
+            </Box>
+          ) : // <Flex width="100%" className="video-container">
+          //   <ReactPlayer
+          //     className="video-player"
+          //     url="https://vimeo.com/873650411?share=copy"
+          //     playing={true}
+          //     loop={true}
+          //     muted={true}
+          //     width="1280px"
+          //     height="100%"
+          //     options={{
+          //       width: "1280px",
+          //       height: "100%",
+          //     }}
+          //   />
+          // </Flex>
+          null}
         </Box>
-      ) : // <Flex width="100%" className="video-container">
-      //   <ReactPlayer
-      //     className="video-player"
-      //     url="https://vimeo.com/873650411?share=copy"
-      //     playing={true}
-      //     loop={true}
-      //     muted={true}
-      //     width="1280px"
-      //     height="100%"
-      //     options={{
-      //       width: "1280px",
-      //       height: "100%",
-      //     }}
-      //   />
-      // </Flex>
-      null}
+      )}
     </>
   );
 };

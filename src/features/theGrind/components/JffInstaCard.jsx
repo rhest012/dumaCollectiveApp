@@ -123,7 +123,12 @@ const JffInstaCard = () => {
           marginBottom="2rem"
           marginY="auto"
         >
-          <Image src={InstagramFeed} height="400" width="auto" />
+          <Image
+            src={InstagramFeed}
+            height="400"
+            width="auto"
+            padidngBottom="1rem"
+          />
         </GridItem>
         <GridItem>
           <Text textAlign="center" paddingX="2rem">
@@ -169,16 +174,24 @@ const JffInstaCard = () => {
               lg: "30%: 70%",
               xl: "30% 70%",
             }}
-            my="2rem"
+            m="4rem"
           >
             <GridItem mx="auto">
               <Flex sx={statContainerFlex}>
-                <Text sx={verticalHeading}>
-                  After&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <Text
+                  sx={verticalHeading}
+                  marginLeft={{ base: "0", lg: "-5.6rem" }}
+                >
+                  After
                 </Text>
               </Flex>
             </GridItem>
-            <GridItem>
+            <GridItem
+              display="flex"
+              flexDirection={{ base: "column", lg: "row" }}
+              gap={{ base: "1rem", lg: "0" }}
+              justifyContent="space-between"
+            >
               <Flex sx={statContainerFlex}>
                 <Heading sx={statStyle}>
                   <FaUsers fontSize="2.5rem" />
@@ -189,8 +202,7 @@ const JffInstaCard = () => {
                 </Heading>
                 <Text sx={statDescriptionStyle}>Followers</Text>
               </Flex>
-            </GridItem>
-            <GridItem>
+
               <Flex sx={statContainerFlex}>
                 <Heading sx={statStyle}>
                   <ImStatsBars2 fontSize="2.5rem" />
@@ -201,13 +213,12 @@ const JffInstaCard = () => {
                 </Heading>
                 <Text sx={statDescriptionStyle}>Impressions</Text>
               </Flex>
-            </GridItem>
-            <GridItem>
+
               <Flex sx={statContainerFlex}>
                 <Heading sx={statStyle}>
                   <FaHandshake fontSize="2.5rem" />
                   <HStack>
-                    <Countdown left="50%" n={3.1} />
+                    <Countdown n={3} />
                     <>&nbsp;M</>
                   </HStack>
                 </Heading>
