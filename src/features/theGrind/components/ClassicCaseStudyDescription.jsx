@@ -34,7 +34,9 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
         animate="visible"
         exit="exit"
       >
-        {activeCaseStudy.description}
+        <div
+          dangerouslySetInnerHTML={{ __html: activeCaseStudy.description }}
+        />
       </MotionText>
     </Box>
   );
