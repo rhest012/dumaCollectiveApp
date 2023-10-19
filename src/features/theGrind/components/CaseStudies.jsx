@@ -142,14 +142,14 @@ const CaseStudies = () => {
               <MotionBox
                 marginY={{ base: "1.5rem", xl: "0" }}
                 height={{
-                  base: "400px",
+                  base: "300px",
                   sm: "400px",
                   md: "350px",
                   lg: "400px",
                   xl: "400px",
                 }}
                 width={{
-                  base: "400px",
+                  base: "300px",
                   sm: "400px",
                   md: "350px",
                   lg: "400px",
@@ -172,9 +172,9 @@ const CaseStudies = () => {
                   layoutId={caseStudy.id}
                   src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
                   height={{
-                    base: "400px",
+                    base: "300px",
 
-                    md: "350px",
+                    md: "400px",
                     lg: "400px",
                   }}
                   marginBottom="0.5rem"
