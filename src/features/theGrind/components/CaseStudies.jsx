@@ -51,12 +51,6 @@ const CaseStudies = () => {
       url: "/the-grind/heineken",
       id: "case-study-image-5",
     },
-    {
-      clientName: "Uefa",
-      image: "eufa-square.png",
-      url: "/the-grind/champions-league",
-      id: "case-study-image-6",
-    },
   ];
 
   // Framer Motion
