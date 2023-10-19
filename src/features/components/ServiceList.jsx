@@ -144,7 +144,10 @@ const ServiceList = () => {
         data-scroll
         variants={leftContainerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{
+          once: true,
+        }}
         exit="exit"
         display="flex"
         flexDir="column"
@@ -202,7 +205,10 @@ const ServiceList = () => {
       <MotionGridItem
         variants={rightContainerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{
+          once: true,
+        }}
         exit="exit"
         width="100%"
         paddingX={{ base: "0", sm: "0", md: "0", lg: "2rem", xl: "2rem" }}

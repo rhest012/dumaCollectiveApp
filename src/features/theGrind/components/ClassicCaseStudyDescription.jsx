@@ -1,6 +1,8 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
+import ReactPlayer from "react-player";
+import { useLocation } from "react-router-dom";
 
 const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
   const MotionText = motion(Text);
@@ -25,20 +27,53 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
     },
   };
 
+  // Page Location
+  const location = useLocation();
+
   return (
-    <Box className="case-study-description" margin="2rem 0">
-      <MotionText
-        variant="p"
-        variants={captionChildVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <div
-          dangerouslySetInnerHTML={{ __html: activeCaseStudy.description }}
-        />
-      </MotionText>
-    </Box>
+    <>
+      <Box className="case-study-description" margin="2rem 0">
+        <MotionText
+          variant="p"
+          variants={captionChildVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <div
+            dangerouslySetInnerHTML={{ __html: activeCaseStudy.description }}
+          />
+        </MotionText>
+      </Box>
+
+      {activeCaseStudy?.videos ? (
+        <Grid
+          className="video-container"
+          gridTemplateColumns="1fr 1fr"
+          gap="1rem"
+          marginY="2rem"
+        >
+          {activeCaseStudy?.videos?.map((video, index) => (
+            <GridItem key={index}>
+              <ReactPlayer
+                className="video-player"
+                controls
+                url={video}
+                // muted
+                width="600"
+                height="338px"
+                loop={true}
+                config={{
+                  youtube: {
+                    width: "100px",
+                  },
+                }}
+              />
+            </GridItem>
+          ))}
+        </Grid>
+      ) : null}
+    </>
   );
 };
 

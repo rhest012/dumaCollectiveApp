@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { useLocation } from "react-router-dom";
 import ReactPlayer from "react-player";
+import NextGenLogo from "../../../assets/theGrind/origins/New-Gens-Awards-Logo.png";
 
 const CaseStudyBody = () => {
   // Styling
@@ -202,14 +203,33 @@ const CaseStudyBody = () => {
                   exit="exit"
                   whileHover="hover"
                 >
-                  <MotionImage
-                    variants={imageChildVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    whileHover="hover"
-                    src={require(`../../../assets/theGrind/${activeCaseStudy.id}/${activeCaseStudy.image}`)}
-                  />
+                  {location.pathname === "/the-grind/origins" ? (
+                    <ReactPlayer
+                      className="video-player"
+                      controls
+                      url="https://www.youtube.com/watch?v=NEQ5-4Xjm9E&ab_channel=ChivasRegal"
+                      muted
+                      width="775px"
+                      height="422px"
+                      loop={true}
+                      config={{
+                        vimeo: {
+                          youtube: {
+                            width: "100px",
+                          },
+                        },
+                      }}
+                    />
+                  ) : (
+                    <MotionImage
+                      variants={imageChildVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      whileHover="hover"
+                      src={require(`../../../assets/theGrind/${activeCaseStudy.id}/${activeCaseStudy.image}`)}
+                    />
+                  )}
                 </MotionBox>
               </GridItem>
 
@@ -250,6 +270,22 @@ const CaseStudyBody = () => {
             </Grid>
           </Box>
 
+          {location.pathname === "/the-grind/origins" ? (
+            <Flex
+              margin="-4rem 2rem 2rem 2rem"
+              flexDir="column"
+              alignItems="center"
+              width="100%"
+            >
+              <Image src={NextGenLogo} width="300px" />
+              <Text variant="p" textAlign="center">
+                To cap off this fantastic campaign, MultiChoice Origins and Duma
+                Collective won a Bronze for Effective Content Marketing at 2023
+                New Generation Awards.
+              </Text>
+            </Flex>
+          ) : null}
+
           {location.pathname === "/the-grind/nba-africa" ? (
             <Box sx={socialContainer}>
               <Flex justifyContent="center">
@@ -265,8 +301,8 @@ const CaseStudyBody = () => {
                   height="100%"
                 >
                   <Text>
-                    he content pieces shared by our co-curators during the event
-                    served as a pipeline for excitement, amplifying
+                    The content pieces shared by our co-curators during the
+                    event served as a pipeline for excitement, amplifying
                     conversations surrounding the NBA All-Star Weekend,
                     especially within the African audience. With their expertise
                     and distinctive voices, they left an indelible mark on the
@@ -274,7 +310,7 @@ const CaseStudyBody = () => {
                     wide.
                     <br />
                     <br />
-                    On the Nigerian front, the renowned rapper, Ladipoe and the
+                    On the Nigerian front, the renowned rapper, Ladipoe, and the
                     charismatic actor, Tobi Bakre, brought a contagious energy
                     that reverberated throughout the All-Star Weekend.
                   </Text>
@@ -301,22 +337,7 @@ const CaseStudyBody = () => {
                 </GridItem>
               </Grid>
             </Box>
-          ) : // <Flex width="100%" className="video-container">
-          //   <ReactPlayer
-          //     className="video-player"
-          //     url="https://vimeo.com/873650411?share=copy"
-          //     playing={true}
-          //     loop={true}
-          //     muted={true}
-          //     width="1280px"
-          //     height="100%"
-          //     options={{
-          //       width: "1280px",
-          //       height: "100%",
-          //     }}
-          //   />
-          // </Flex>
-          null}
+          ) : null}
         </Box>
       )}
     </>

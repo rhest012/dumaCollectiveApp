@@ -42,7 +42,7 @@ const SquadList = () => {
       y: 0,
       transition: {
         duration: 1,
-        delay: 1.5,
+        delay: 1,
         when: "beforeChildren",
         staggerChildren: 0.4,
       },
@@ -62,8 +62,8 @@ const SquadList = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 1.5,
-        duration: 1,
+        delay: 0.5,
+        duration: 0.5,
         when: "beforeChildren",
         staggerChildren: 0.4,
       },
@@ -83,7 +83,7 @@ const SquadList = () => {
       opacity: 1,
       y: 0,
       duration: 1,
-      delay: 2,
+      delay: 1,
     },
     hover: {
       scale: 1.05,
@@ -91,10 +91,7 @@ const SquadList = () => {
     },
   };
 
-  // Fetch Data
-  // const data = useFetch("http://localhost:8000/staff");
   const data = useFetchFirebase("staff");
-  // console.log(newData);
 
   return (
     <>
@@ -142,7 +139,10 @@ const SquadList = () => {
                     sx={staffHeadingStyle}
                     variants={subHeadingVariants}
                     initial="hidden"
-                    animate="visible"
+                    whileInView="visible"
+                    viewport={{
+                      once: true,
+                    }}
                     variant="h3"
                     paddingBottom="0"
                   >
@@ -155,7 +155,10 @@ const SquadList = () => {
                     sx={staffHeadingStyle}
                     variants={subHeadingVariants}
                     initial="hidden"
-                    animate="visible"
+                    whileInView="visible"
+                    viewport={{
+                      once: true,
+                    }}
                   >
                     {staff.department}{" "}
                   </MotionText>
@@ -186,7 +189,10 @@ const SquadList = () => {
                             className="image-container"
                             variants={imageContainerVariants}
                             initial="hidden"
-                            animate="visible"
+                            whileInView="visible"
+                            viewport={{
+                              once: true,
+                            }}
                           >
                             <MotionImage
                               className="staff__image"
@@ -199,7 +205,10 @@ const SquadList = () => {
                               transition="all  0.7s ease"
                               variants={imageChildVariants}
                               initial="hidden"
-                              animate="visible"
+                              whileInView="visible"
+                              viewport={{
+                                once: true,
+                              }}
                               exit="exit"
                               whileHover="hover"
                               _hover={{
