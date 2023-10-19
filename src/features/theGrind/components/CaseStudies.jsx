@@ -173,8 +173,8 @@ const CaseStudies = () => {
                   src={require(`../../../assets/theGrind/caseStudies/${caseStudy.image}`)}
                   height={{
                     base: "300px",
+                    sm: "400px",
 
-                    md: "400px",
                     lg: "400px",
                   }}
                   marginBottom="0.5rem"
