@@ -207,7 +207,7 @@ const CaseStudyBody = () => {
                     <ReactPlayer
                       className="video-player"
                       controls
-                      url="https://www.youtube.com/watch?v=NEQ5-4Xjm9E&ab_channel=ChivasRegal"
+                      url="https://youtu.be/YFB5MXjw3AY"
                       muted
                       width="775px"
                       height="422px"

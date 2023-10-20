@@ -45,34 +45,6 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
           />
         </MotionText>
       </Box>
-
-      {activeCaseStudy?.videos ? (
-        <Grid
-          className="video-container"
-          gridTemplateColumns="1fr 1fr"
-          gap="1rem"
-          marginY="2rem"
-        >
-          {activeCaseStudy?.videos?.map((video, index) => (
-            <GridItem key={index}>
-              <ReactPlayer
-                className="video-player"
-                controls
-                url={video}
-                // muted
-                width="600"
-                height="338px"
-                loop={true}
-                config={{
-                  youtube: {
-                    width: "100px",
-                  },
-                }}
-              />
-            </GridItem>
-          ))}
-        </Grid>
-      ) : null}
     </>
   );
 };

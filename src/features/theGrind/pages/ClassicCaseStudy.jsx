@@ -18,10 +18,8 @@ const ClassicCaseStudy = () => {
       description:
         "Launching a brand new phone in South Africa is tough - but with a wealth of content creators in our country we knew who we were speaking to. The HONOR 90 is exactly that, a device expertly crafted for the content creator. In order to speak to the correct audience we knew we had to emphasize the main aspect of creating quality content - manipulating light. <br/> <br/> Duma Collective set out to launch a content driven influencer campaign with up and coming influencers that highlights the beauty of the device, the main key selling points and it's tremendous technological capabilities. Welcome to the new dawn of Creating Content, introducing the HONOR 90 5G.",
 
-      videos: [
-        "https://www.youtube.com/watch?v=5DM_U8WbYes&ab_channel=HONORSouthAfrica",
+      video:
         "https://www.youtube.com/watch?v=h6ueLd-bH_k&ab_channel=HONORSouthAfrica",
-      ],
     },
     {
       name: "Heineken 0.0",
@@ -38,15 +36,13 @@ const ClassicCaseStudy = () => {
     {
       name: "Chivas",
       id: "chivas",
-      images: ["Chivas.jpg"],
+      images: ["Chivas.jpg", "Chivas 2.jpg", "Chivas 3.jpg"],
       url: "/the-grind/chivas",
       imageId: "case-study-image-4",
       description:
         "Chivas Venture 2021 partnered with Zaid Osman, founder, and CEO of Sneaker Exchange and Grade Africa. This partnership will give a once-in-a-lifetime opportunity to four apprentices from South Africa to become the next big creative entrepreneurs. Duma Collective provided the brand with Event Management and Public Relations Services for the Media Launch of the initiative. We organised the venue and catering for the event. As well as handling the general event logistics. We also arranged for media and influencers to attend the launch to guarantee coverage. Media PR Packs were arranged as tokens of gratitude. The tokens of gratitude, however, also had more information on the campaign, being a Press Release, Hype Video, and Images captured from the event.",
-      videos: [
-        "https://www.youtube.com/watch?v=rhPR18kQ-Qo&ab_channel=ChivasRegal",
+      video:
         "https://www.youtube.com/watch?v=NEQ5-4Xjm9E&ab_channel=ChivasRegal",
-      ],
     },
   ];
 

@@ -3,6 +3,7 @@ import PlaceHolderImage from "../../../assets/theGrind/boity/Boity Case Study 1.
 import { easeIn, motion } from "framer-motion";
 import React from "react";
 import Typewriter from "typewriter-effect";
+import ReactPlayer from "react-player";
 
 const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
   // Framer Motion
@@ -70,9 +71,34 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
             }}
           />
         </Heading>
+        <>
+          {activeCaseStudy?.video ? (
+            <Flex
+              justifyContent="center"
+              margin="2rem 2rem 4rem 2rem"
+              // width="700px" height="500px"
+            >
+              <ReactPlayer
+                className="video-player"
+                controls
+                url={activeCaseStudy?.video}
+                // muted
+                width="1100px"
+                height="620px"
+                loop={true}
+                playing={true}
+                muted={true}
+                // config={{
+                //   youtube: {
+                //     width: "100px",
+                //   },
+                // }}
+              />
+            </Flex>
+          ) : null}
+        </>
         <Flex
-          marginTop="1rem"
-          marginBottom="2rem"
+          marginY="2rem"
           //   minHeight="92vh"
           justifyContent="space-between"
           flexWrap="wrap"
