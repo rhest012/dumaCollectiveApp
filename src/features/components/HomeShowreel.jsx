@@ -149,14 +149,24 @@ const HomeShowreel = () => {
         animate="visible"
         exit="exit"
       >
-        <ReactPlayer
-          url="https://vimeo.com/870557050?share=copy"
-          playing={true}
-          loop={true}
-          muted={true}
-          width="100%"
-          height="100%"
-        />
+        <Box>
+          <ReactPlayer
+            url="https://youtu.be/wioUsVwgSZU"
+            playing={true}
+            loop={true}
+            muted={true}
+            width="770px"
+            height="433px"
+            controls
+
+            // config={{
+            //   youtube: {
+            //     width: "900px",
+            //     height: "506px",
+            //   },
+            // }}
+          />
+        </Box>
       </MotionGridItem>
     </Grid>
   );
