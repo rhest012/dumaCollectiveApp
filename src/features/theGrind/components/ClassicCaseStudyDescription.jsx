@@ -34,7 +34,7 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
           variant="p"
           variants={captionChildVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
           exit="exit"
         >
           <div

@@ -10,17 +10,17 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
 
   const MotionImage = motion(Image);
   const MotionBox = motion(Box);
+  const MotionFlex = motion(Flex);
 
   const imageContainerVariants = {
     hidden: {
       opacity: 0,
       y: -20,
-      scale: 1, // Initial scale
     },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1, // Initial scale
+
       transition: {
         duration: 1,
         when: "beforeChildren",
@@ -38,6 +38,21 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
     hidden: {
       opacity: 0,
     },
+
+    visible: {
+      opacity: 0,
+      y: -200,
+      transition: {
+        duration: 1,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      duration: 1,
+    },
+  };
+
+  const videoVariants = {
     visible: {
       opacity: 1,
       y: 0,
@@ -73,13 +88,17 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
         </Heading>
         <>
           {activeCaseStudy?.video ? (
-            <Flex
+            <MotionFlex
               style={{ aspectRatio: "16/9" }}
               justifyContent="center"
               margin={{
                 base: "2rem 0rem 4rem 0rem",
                 lg: "2rem 4rem 4rem 4rem",
               }}
+              variants={videoVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
             >
               <ReactPlayer
                 className="video-player"
@@ -91,13 +110,13 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
                 loop={true}
                 playing={true}
                 muted={true}
-                // config={{
-                //   youtube: {
-                //     width: "100px",
-                //   },
-                // }}
+                config={{
+                  youtube: {
+                    playerVars: { showinfo: 0, modestbranding: 1 },
+                  },
+                }}
               />
-            </Flex>
+            </MotionFlex>
           ) : null}
         </>
         <Flex
@@ -125,7 +144,7 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
               overflow="hidden"
               variants={imageContainerVariants}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
               exit="exit"
               whileHover="hover"
               marginBottom={{ base: "2rem", lg: "0" }}
@@ -134,7 +153,7 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
                 key={index}
                 variants={imageChildVariants}
                 initial="hidden"
-                animate="visible"
+                whileInView="visible"
                 exit="exit"
                 whileHover="hover"
                 // layoutId={caseStudy.id}
