@@ -61,12 +61,12 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
                   lg: "600px",
                   xl: "640px",
                 }}
-                height={{
-                  base: "200px",
-                  md: "500px",
-                  lg: "600px",
-                  xl: "640px",
-                }}
+                // height={{
+                //   base: "200px",
+                //   md: "500px",
+                //   lg: "600px",
+                //   xl: "640px",
+                // }}
                 key={index}
                 display="flex"
                 justifyContent="center"
