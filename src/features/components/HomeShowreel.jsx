@@ -5,6 +5,7 @@ import {
   GridItem,
   Heading,
   Image,
+  Flex,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
@@ -149,24 +150,21 @@ const HomeShowreel = () => {
         animate="visible"
         exit="exit"
       >
-        <Box>
+        <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
           <ReactPlayer
+            className="video-player"
             url="https://youtu.be/wioUsVwgSZU"
-            playing={true}
+            style={{ width: "100%", height: "100%" }}
             loop={true}
+            playing={true}
             muted={true}
-            width="770px"
-            height="433px"
-            controls
-
-            // config={{
-            //   youtube: {
-            //     width: "900px",
-            //     height: "506px",
-            //   },
-            // }}
+            config={{
+              youtube: {
+                playerVars: { showinfo: 0, modestbranding: 1 },
+              },
+            }}
           />
-        </Box>
+        </Flex>
       </MotionGridItem>
     </Grid>
   );

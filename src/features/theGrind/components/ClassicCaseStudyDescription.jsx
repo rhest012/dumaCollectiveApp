@@ -27,11 +27,6 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
     },
   };
 
-  // Page Location
-  const location = useLocation();
-
-  console.log(activeCaseStudy);
-
   return (
     <>
       <Box className="case-study-description" margin="2rem 0">
