@@ -18,8 +18,10 @@ const ClassicCaseStudy = () => {
       description:
         "Launching a brand new phone in South Africa is tough - but with a wealth of content creators in our country we knew who we were speaking to. The HONOR 90 is exactly that, a device expertly crafted for the content creator. In order to speak to the correct audience we knew we had to emphasize the main aspect of creating quality content - manipulating light. <br/> <br/> Duma Collective set out to launch a content driven influencer campaign with up and coming influencers that highlights the beauty of the device, the main key selling points and it's tremendous technological capabilities. Welcome to the new dawn of Creating Content, introducing the HONOR 90 5G.",
 
-      video:
+      videos: [
+        "https://www.youtube.com/watch?v=5DM_U8WbYes&ab_channel=HONORSouthAfrica",
         "https://www.youtube.com/watch?v=h6ueLd-bH_k&ab_channel=HONORSouthAfrica",
+      ],
     },
     {
       name: "Heineken 0.0",

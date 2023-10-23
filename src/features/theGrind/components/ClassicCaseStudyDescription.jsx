@@ -30,6 +30,8 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
   // Page Location
   const location = useLocation();
 
+  console.log(activeCaseStudy);
+
   return (
     <>
       <Box className="case-study-description" margin="2rem 0">
@@ -45,6 +47,49 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
           />
         </MotionText>
       </Box>
+      <Grid
+        gridTemplateColumns={{ base: "1fr", lg: "50% 50%" }}
+        marginY="2rem"
+        gap="2rem"
+      >
+        {activeCaseStudy?.videos
+          ? activeCaseStudy.videos.map((caseStudy, index) => (
+              <GridItem
+                width={{
+                  base: "300px",
+                  md: "400px",
+                  lg: "600px",
+                  xl: "640px",
+                }}
+                height={{
+                  base: "200px",
+                  md: "500px",
+                  lg: "600px",
+                  xl: "640px",
+                }}
+                key={index}
+                display="flex"
+                justifyContent="center"
+              >
+                <ReactPlayer
+                  className="video-player"
+                  // controls={true}
+                  url={caseStudy}
+                  // width={{
+                  //   base: "300px",
+                  //   md: "400px",
+                  //   lg: "600px",
+                  //   xl: "640px",
+                  // }}
+                  // height="620px"
+                  loop={true}
+                  playing={true}
+                  muted={true}
+                />
+              </GridItem>
+            ))
+          : null}
+      </Grid>
     </>
   );
 };
