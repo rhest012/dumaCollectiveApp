@@ -74,17 +74,20 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
         <>
           {activeCaseStudy?.video ? (
             <Flex
+              style={{ aspectRatio: "16/9" }}
               justifyContent="center"
-              margin="2rem 2rem 4rem 2rem"
-              // width="700px" height="500px"
+              margin={{
+                base: "2rem 0rem 4rem 0rem",
+                lg: "2rem 4rem 4rem 4rem",
+              }}
             >
               <ReactPlayer
                 className="video-player"
                 controls
                 url={activeCaseStudy?.video}
                 // muted
-                width="1100px"
-                height="620px"
+                width="100%"
+                height="100%"
                 loop={true}
                 playing={true}
                 muted={true}
