@@ -99,8 +99,8 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
         </>
         <Flex
           marginY="2rem"
-          //   minHeight="92vh"
-          justifyContent="space-between"
+          gap="2rem"
+          justifyContent={{ base: "center", lg: "space-between" }}
           flexWrap="wrap"
         >
           {activeCaseStudy?.images.map((caseStudyImage, index) => (
