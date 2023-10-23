@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 import ReactPlayer from "react-player";
@@ -48,44 +48,34 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
         </MotionText>
       </Box>
       <Grid
-        gridTemplateColumns={{ base: "1fr", lg: "50% 50%" }}
+        gridTemplateColumns={{ base: "1fr", lg: "1f", xl: "50% 50%" }}
         marginY="2rem"
         gap="2rem"
       >
         {activeCaseStudy?.videos
           ? activeCaseStudy.videos.map((caseStudy, index) => (
               <GridItem
-                width={{
-                  base: "300px",
-                  md: "400px",
-                  lg: "600px",
-                  xl: "640px",
-                }}
-                // height={{
-                //   base: "200px",
-                //   md: "500px",
-                //   lg: "600px",
-                //   xl: "640px",
-                // }}
                 key={index}
                 display="flex"
                 justifyContent="center"
+                alignItems="center"
+                maxWidth={{ base: "87vw", lg: "600px", xl: "640px" }}
               >
-                <ReactPlayer
-                  className="video-player"
-                  // controls={true}
-                  url={caseStudy}
-                  // width={{
-                  //   base: "300px",
-                  //   md: "400px",
-                  //   lg: "600px",
-                  //   xl: "640px",
-                  // }}
-                  // height="620px"
-                  loop={true}
-                  playing={true}
-                  muted={true}
-                />
+                <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
+                  <ReactPlayer
+                    className="video-player"
+                    url={caseStudy}
+                    style={{ width: "100%", height: "100%" }}
+                    loop={true}
+                    playing={true}
+                    muted={true}
+                    config={{
+                      youtube: {
+                        playerVars: { showinfo: 0, modestbranding: 1 },
+                      },
+                    }}
+                  />
+                </Flex>
               </GridItem>
             ))
           : null}
