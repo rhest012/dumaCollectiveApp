@@ -126,7 +126,7 @@ const SquadList = () => {
             <SecondaryPageHeader />
           </Flex>
           <Box>
-            {data !== null &&
+            {data &&
               data.map((staff, index) => (
                 <Box
                   key={index}
@@ -168,6 +168,7 @@ const SquadList = () => {
                     width="100%"
                     flexWrap="wrap"
                     gap="1.5rem"
+                    justifyContent={{ base: "center", lg: "flex-start" }}
                   >
                     {staff.staffMembers.map((staffMember, index) => (
                       <Box key={index} className="staff-container">
