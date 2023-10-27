@@ -17,7 +17,7 @@ const SecondaryPageHeader = () => {
       name: "The Grind",
       heading: "Our Work Never Stops...",
       description:
-        "To redefine creative communications, we approach our work to achieve long-term objectives - to create sustainable brand communications that last.",
+        "We approach our work to achieve long-term objectives - to create sustainable brand communications that last.",
       url: "/the-grind",
     },
     {

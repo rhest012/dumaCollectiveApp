@@ -40,8 +40,8 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
     },
 
     visible: {
-      opacity: 0,
-      y: -200,
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 1,
       },
@@ -125,39 +125,10 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
           justifyContent={{ base: "center", lg: "space-between" }}
           flexWrap="wrap"
         >
-          {activeCaseStudy?.images.map((caseStudyImage, index) => (
-            <MotionBox
-              height={{
-                base: "400px",
-                sm: "400px",
-                md: "400px",
-                lg: "350px",
-                xl: "400px",
-              }}
-              width={{
-                base: "400px",
-                sm: "400px",
-                md: "400px",
-                lg: "350px",
-                xl: "400px",
-              }}
-              overflow="hidden"
-              variants={imageContainerVariants}
-              initial="hidden"
-              whileInView="visible"
-              exit="exit"
-              whileHover="hover"
-              marginBottom={{ base: "2rem", lg: "0" }}
-            >
-              <MotionImage
+          {activeCaseStudy &&
+            activeCaseStudy?.images.map((caseStudyImage, index) => (
+              <MotionBox
                 key={index}
-                variants={imageChildVariants}
-                initial="hidden"
-                whileInView="visible"
-                exit="exit"
-                whileHover="hover"
-                // layoutId={caseStudy.id}
-                src={require(`../../../assets/theGrind/${activeCaseStudy.id}/${caseStudyImage}`)}
                 height={{
                   base: "400px",
                   sm: "400px",
@@ -165,12 +136,43 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
                   lg: "350px",
                   xl: "400px",
                 }}
-                marginBottom="0.5rem"
-                layoutId={activeCaseStudy.imageId}
-                transition={{ ease: easeIn, duration: 0.8 }}
-              />
-            </MotionBox>
-          ))}
+                width={{
+                  base: "400px",
+                  sm: "400px",
+                  md: "400px",
+                  lg: "350px",
+                  xl: "400px",
+                }}
+                overflow="hidden"
+                variants={imageContainerVariants}
+                initial="hidden"
+                whileInView="visible"
+                exit="exit"
+                whileHover="hover"
+                marginBottom={{ base: "2rem", lg: "0" }}
+              >
+                <MotionImage
+                  variants={imageChildVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  exit="exit"
+                  whileHover="hover"
+                  // layoutId={caseStudy.id}
+                  // src={PlaceHolderImage}
+                  src={require(`../../../assets/theGrind/${activeCaseStudy?.id}/${caseStudyImage}`)}
+                  height={{
+                    base: "400px",
+                    sm: "400px",
+                    md: "400px",
+                    lg: "350px",
+                    xl: "400px",
+                  }}
+                  marginBottom="0.5rem"
+                  // layoutId={activeCaseStudy.imageId}
+                  transition={{ ease: easeIn, duration: 0.8 }}
+                />
+              </MotionBox>
+            ))}
         </Flex>
       </Box>
     </Box>
