@@ -35,22 +35,22 @@ const NewsRoom = () => {
 
   const theBuzz = [
     {
-      id: "110",
-      title:
-        "Tbose Chats to “The Fixer” herself, Sibu Mabena The Founder of Duma Collective",
-      date: "25 August 2023",
-      caption:
-        "August is all about celebrating and who better than “The Fixer” herself, Sibu Mabena? T-Bose spoke to her about how and what inspired her to start her marketing agency Duma Collective, working on some of the biggest events in SA, and finally moving Duma Collective into their own building.",
-      image: "SibuMabena 2.png",
-      url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
-    },
-    {
       id: "109",
       title: "Sibu Mabena unveils newly renovated office space",
-      date: "7 August 2023",
+      date: "01 September 2023",
       caption:
         "This #WomensMonth, Heineken South Africa has partnered with Bizcommunity to showcase the phenomenal work and impact of women entrepreneurs such as Mabena...",
       image: "Duma Office.jpg",
+      url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
+    },
+    {
+      id: "110",
+      title:
+        "Tbose Chats to “The Fixer” herself, Sibu Mabena The Founder of Duma Collective",
+      date: "09 2023",
+      caption:
+        "August is all about celebrating and who better than “The Fixer” herself, Sibu Mabena? T-Bose spoke to her about how and what inspired her to start her marketing agency Duma Collective, working on some of the biggest events in SA, and finally moving Duma Collective into their own building.",
+      image: "SibuMabena 2.png",
       url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
     },
     {
@@ -88,29 +88,31 @@ const NewsRoom = () => {
       image: "DumaLogo.jpg",
       url: "https://www.kaya959.co.za/entertainment/duma-collective-dissolves-its-talent-management-division/",
     },
+
+    {
+      id: "103",
+      title: "Duma Collective, M&N brands in share deal",
+      date: "10 March 2022",
+      caption:
+        "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
+      image: "M&N.png",
+      url: "https://www.bizcommunity.com/Article/196/12/225854.html",
+    },
+
     {
       id: "102",
       title: "MultiChoice group appoints Duma Collective",
-      date: "9 March 2022",
+      date: "28 June 2021",
       caption:
         "The MultiChoice Group has announced appointment of Duma Collective as its lead creative communications agency. Duma Collective will oversee Public Relations and Social Media for DStv, general entertainment channels, and the group's Corporate Brand.",
       image: "MCG Duma.jpg",
       url: "https://www.multichoice.com/media/news/multichoice-group-appoints-duma-collective-as-lead-creative-communications-agency",
     },
     {
-      id: "103",
-      title: "Duma Collective, M&N brands in share deal",
-      date: "9 March 2022",
-      caption:
-        "The most significant effect of the deal on Duma will be the agency-wide mentorship project",
-      image: "M&N.png",
-      url: "https://www.bizcommunity.com/Article/196/12/225854.html",
-    },
-    {
       id: "102",
       title:
         "Heineken South Africa Women's Month entrepreneur - Sibu Mabena, founder of Duma Collective",
-      date: "9 March 2022",
+      date: "27 August 2020",
       caption:
         "This #WomensMonth, Heineken South Africa has partnered with Bizcommunity to showcase the phenomenal work and impact of women entrepreneurs such as Mabena...",
       image: "Sibu Heineken.jpeg",
