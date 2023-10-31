@@ -62,11 +62,13 @@ const JffInstaCard = () => {
     fontFamily: "Roc Grotesk Wide",
     textAlign: "center",
     textTransform: "uppercase",
+    paddingBottom: { base: "1rem", lg: "1rem" },
+    marginLeft: { base: "0", lg: "1rem" },
     transform: {
       base: "none",
       base: "sm",
       md: "none",
-      lg: "rotate(-90deg)",
+      lg: "none",
       xl: "rotate(-90deg)",
     },
   };
@@ -139,6 +141,66 @@ const JffInstaCard = () => {
             gridTemplateColumns={{
               base: "1fr",
               sm: "1fr",
+              md: "30%: 70%",
+              lg: "30%: 70%",
+              xl: "30% 70%",
+            }}
+            m="4rem"
+          >
+            <GridItem mx="auto">
+              <Flex sx={statContainerFlex}>
+                <Text
+                  sx={verticalHeading}
+                  marginLeft={{ base: "0", lg: "-5.6rem" }}
+                >
+                  Before
+                </Text>
+              </Flex>
+            </GridItem>
+            <GridItem
+              display="flex"
+              flexDirection={{ base: "column", lg: "row" }}
+              gap={{ base: "1rem", lg: "0" }}
+              justifyContent="space-between"
+            >
+              <Flex sx={statContainerFlex}>
+                <Heading sx={statStyle}>
+                  <FaUsers fontSize="2.5rem" />
+                  <HStack>
+                    <Countdown n={6} />
+                    <>&nbsp;K</>
+                  </HStack>
+                </Heading>
+                <Text sx={statDescriptionStyle}>Followers</Text>
+              </Flex>
+
+              {/* <Flex sx={statContainerFlex}> 
+                <Heading sx={statStyle}>
+                  <ImStatsBars2 fontSize="2.5rem" />
+                  <HStack>
+                    <Countdown n={4.2} />
+                    <>&nbsp;M</>
+                  </HStack>
+                </Heading>
+                <Text sx={statDescriptionStyle}>Impressions</Text>
+              </Flex>
+
+              <Flex sx={statContainerFlex}>
+                <Heading sx={statStyle}>
+                  <FaHandshake fontSize="2.5rem" />
+                  <HStack>
+                    <Countdown n={3} />
+                    <>&nbsp;M</>
+                  </HStack>
+                </Heading>
+                <Text sx={statDescriptionStyle}>Reach</Text>
+              </Flex> */}
+            </GridItem>
+          </Grid>
+          {/* <Grid
+            gridTemplateColumns={{
+              base: "1fr",
+              sm: "1fr",
               md: "1fr",
               lg: "repeat(4, 1fr)",
               xl: "repeat(4, 1fr)",
@@ -152,7 +214,7 @@ const JffInstaCard = () => {
               </Flex>
             </GridItem>
             <GridItem></GridItem>
-            <GridItem mx="auto">
+            <GridItem>
               <Flex sx={statContainerFlex}>
                 <Heading sx={statStyle}>
                   <FaUsers fontSize="2.5rem" />
@@ -165,7 +227,7 @@ const JffInstaCard = () => {
               </Flex>
             </GridItem>
             <GridItem mx="auto"></GridItem>
-          </Grid>
+          </Grid> */}
           <Grid
             gridTemplateColumns={{
               base: "1fr",
