@@ -47,11 +47,11 @@ const NewsRoom = () => {
       id: "110",
       title:
         "Tbose Chats to “The Fixer” herself, Sibu Mabena The Founder of Duma Collective",
-      date: "09 2023",
+      date: "09 August 2023",
       caption:
         "August is all about celebrating and who better than “The Fixer” herself, Sibu Mabena? T-Bose spoke to her about how and what inspired her to start her marketing agency Duma Collective, working on some of the biggest events in SA, and finally moving Duma Collective into their own building.",
       image: "SibuMabena 2.png",
-      url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
+      url: "https://www.kaya959.co.za/lineup/best-t-in-the-city-lineup/sibu-mabenas-inspirational-story-behind-her-agency-duma-collective/",
     },
     {
       id: "105",
