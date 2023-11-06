@@ -174,8 +174,8 @@ const ServiceList = () => {
               <AccordionButton
                 className="accordion-button"
                 display="flex"
-                flexWrap="wrap"
-                alignContent="center"
+                // flexWrap="wrap"
+                alignContent="space-between"
                 alignItems="space-between"
                 justifyContent="space-between"
                 height="100%"

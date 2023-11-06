@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import React from "react";
 import { useFetchFirebase } from "../../actions/useFetchFirebase";
 import { motion } from "framer-motion";
@@ -8,6 +8,7 @@ const ClientList = () => {
 
   // Framer Motion
   const MotionImage = motion(Image);
+  const MotionFlex = motion(Flex);
   const MotionGridItem = motion(GridItem);
   const MotionBox = motion(Box);
 
@@ -60,45 +61,54 @@ const ClientList = () => {
             xl: "repeat(5,1fr)",
           }}
           marginBottom="4rem"
+          className="client-grid"
+          marginX="auto"
         >
           {data.map((item, index) => (
             <MotionGridItem
               key={index}
-              width={{
-                base: "130px",
-                sm: "130px",
-                md: "150px",
-                lg: "200px",
-                xl: "200px",
-              }}
-              height={{
-                base: "130px",
-                sm: "130px",
-                md: "150px",
-                lg: "200px",
-                xl: "200px",
-              }}
-              className="image-container"
               display="flex"
               justifyContent="center"
               alignItems="center"
               marginY="1rem"
-              variants={imageContainerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              whileHover="hover"
             >
-              <MotionImage
-                variants={imageChildVariants}
+              <MotionFlex
+                justifyContent="center"
+                alignContent="center"
+                alignItems="center"
+                variants={imageContainerVariants}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
                 whileHover="hover"
-                src={require(`../../assets/theGrind/clientLogos/${item.clientLogo}`)}
-                width="200px"
-                layoutId= "case-study-image"
-              />
+                className="image-container"
+                width={{
+                  base: "130px",
+                  sm: "130px",
+                  md: "150px",
+                  lg: "200px",
+                  xl: "200px",
+                }}
+                height={{
+                  base: "130px",
+                  sm: "130px",
+                  md: "150px",
+                  lg: "200px",
+                  xl: "200px",
+                }}
+              >
+                <MotionImage
+                  className="client-logo-image"
+                  variants={imageChildVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  whileHover="hover"
+                  src={require(`../../assets/theGrind/clientLogos/${item.clientLogo}`)}
+                  width="200px"
+                  layoutId="case-study-image"
+                />
+              </MotionFlex>
             </MotionGridItem>
           ))}
         </Grid>
