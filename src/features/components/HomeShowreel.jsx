@@ -153,6 +153,7 @@ const HomeShowreel = () => {
         <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
           <ReactPlayer
             className="video-player"
+            playsinline
             url="https://youtu.be/wioUsVwgSZU"
             style={{ width: "100%", height: "100%" }}
             loop={true}

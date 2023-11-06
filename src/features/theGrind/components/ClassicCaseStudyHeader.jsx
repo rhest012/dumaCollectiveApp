@@ -130,14 +130,14 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
               <MotionBox
                 key={index}
                 height={{
-                  base: "400px",
+                  base: "350px",
                   sm: "400px",
                   md: "400px",
                   lg: "350px",
                   xl: "400px",
                 }}
                 width={{
-                  base: "400px",
+                  base: "350px",
                   sm: "400px",
                   md: "400px",
                   lg: "350px",
@@ -161,7 +161,7 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
                   // src={PlaceHolderImage}
                   src={require(`../../../assets/theGrind/${activeCaseStudy?.id}/${caseStudyImage}`)}
                   height={{
-                    base: "400px",
+                    base: "350px",
                     sm: "400px",
                     md: "400px",
                     lg: "350px",
