@@ -158,7 +158,7 @@ const HomeShowreel = () => {
             style={{ width: "100%", height: "100%" }}
             loop={true}
             playing={true}
-            muted={true}
+            // muted={true}
             config={{
               youtube: {
                 playerVars: { showinfo: 0, modestbranding: 1 },
@@ -166,6 +166,36 @@ const HomeShowreel = () => {
             }}
           />
         </Flex>
+
+        {/* <Flex
+          style={{ aspectRatio: "16/9" }}
+          justifyContent="center"
+          margin={{
+            base: "2rem 0rem 4rem 0rem",
+            lg: "2rem 4rem 4rem 4rem",
+          }}
+          // variants={videoVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
+          <ReactPlayer
+            className="video-player"
+            controls
+            url="https://youtu.be/wioUsVwgSZU"
+            // muted
+            width="100%"
+            height="100%"
+            loop={true}
+            playing={true}
+            muted={true}
+            config={{
+              youtube: {
+                playerVars: { showinfo: 0, modestbranding: 1 },
+              },
+            }}
+          />
+        </Flex> */}
       </MotionGridItem>
     </Grid>
   );
