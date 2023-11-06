@@ -171,6 +171,7 @@ const HomeAbout = () => {
           playing={true}
           loop={true}
           muted={true}
+          playsinline
         />
       </MotionGridItem>
     </Grid>
