@@ -174,6 +174,7 @@ const HomeShowreel = () => {
             base: "2rem 0rem 4rem 0rem",
             lg: "2rem",
           }}
+
           // variants={videoVariants}
           // initial="hidden"
           // animate="visible"

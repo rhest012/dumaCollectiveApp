@@ -39,7 +39,7 @@ const NewsRoom = () => {
       title: "Sibu Mabena unveils newly renovated office space",
       date: "01 September 2023",
       caption:
-        "This #WomensMonth, Heineken South Africa has partnered with Bizcommunity to showcase the phenomenal work and impact of women entrepreneurs such as Mabena...",
+        "Mabena conveyed her heartfelt appreciation to the dedicated team responsible for the remarkable transformation of their workspace, turning it into a vibrant and inspiring creative haven.",
       image: "Duma Office.jpg",
       url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
     },

@@ -157,6 +157,9 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
                   whileInView="visible"
                   exit="exit"
                   whileHover="hover"
+                  viewport={{
+                    once: true,
+                  }}
                   // layoutId={caseStudy.id}
                   // src={PlaceHolderImage}
                   src={require(`../../../assets/theGrind/${activeCaseStudy?.id}/${caseStudyImage}`)}
