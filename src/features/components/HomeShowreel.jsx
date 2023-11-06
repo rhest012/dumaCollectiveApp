@@ -150,7 +150,7 @@ const HomeShowreel = () => {
         animate="visible"
         exit="exit"
       >
-        <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
+        {/* <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
           <ReactPlayer
             className="video-player"
             playsinline
@@ -165,19 +165,19 @@ const HomeShowreel = () => {
               },
             }}
           />
-        </Flex>
+        </Flex> */}
 
-        {/* <Flex
+        <Flex
           style={{ aspectRatio: "16/9" }}
           justifyContent="center"
           margin={{
             base: "2rem 0rem 4rem 0rem",
-            lg: "2rem 4rem 4rem 4rem",
+            lg: "2rem",
           }}
           // variants={videoVariants}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
+          // initial="hidden"
+          // animate="visible"
+          // exit="exit"
         >
           <ReactPlayer
             className="video-player"
@@ -195,7 +195,7 @@ const HomeShowreel = () => {
               },
             }}
           />
-        </Flex> */}
+        </Flex>
       </MotionGridItem>
     </Grid>
   );
