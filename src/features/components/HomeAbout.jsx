@@ -1,4 +1,12 @@
-import { Button, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import Video from "../../assets/videos/homeVideo.mp4";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
@@ -114,6 +122,7 @@ const HomeAbout = () => {
         flexDir="column"
         justifyContent="center"
         alignContent="center"
+        maxWidth="80vw"
       >
         <Heading variant="h2" minHeight="140px">
           <Typewriter
@@ -163,16 +172,21 @@ const HomeAbout = () => {
         animate="visible"
         exit="exit"
       >
-        <ReactPlayer
-          width="400px"
-          height="711px"
-          paddingY="4rem"
-          url={Video}
-          playing={true}
-          loop={true}
-          muted={true}
-          playsinline
-        />
+        <Box
+          width={{ base: "350px", lg: "400px" }}
+          height={{ base: "533px", lg: "711px" }}
+        >
+          <ReactPlayer
+            paddingY="4rem"
+            url={Video}
+            playing={true}
+            loop={true}
+            muted={true}
+            playsinline
+            width={{ base: "350px", lg: "400px" }}
+            height={{ base: "533px", lg: "711px" }}
+          />
+        </Box>
       </MotionGridItem>
     </Grid>
   );
