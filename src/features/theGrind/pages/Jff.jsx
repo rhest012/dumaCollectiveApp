@@ -1,14 +1,14 @@
 import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { CiTwitter } from "react-icons/ci";
-import { SlSocialFacebook } from "react-icons/sl";
+
 import React, { useEffect, useState } from "react";
 import JffBackground from "../../../assets/theGrind/jff/jff-background.jpg";
 import JffInstaCard from "../components/JffInstaCard";
 import JFFSwiper from "../components/JFFSwiper";
 import JffHeader from "../../../assets/theGrind/jff/JFF_Header.jpg";
 import JffTwitterCard from "../components/JffTwitterCard";
-import JffFbCard from "../components/JFFFbCard";
+
 import { motion, easeIn } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
@@ -27,12 +27,6 @@ const Jff = () => {
     textTransform: "uppercase",
     color: "#fff",
     fontWeight: "300",
-  };
-
-  const statDescriptionStyle = {
-    fontFamily: "Fira Sans Condensed",
-    textAlign: "center",
-    textTransform: "uppercase",
   };
 
   // Framer Motion
@@ -70,7 +64,7 @@ const Jff = () => {
         backgroundImage={JffHeader}
         height="92vh"
         backgroundSize="cover"
-        backgroundPosition="center"
+        backgroundPosition="left bottom"
         layoutId="case-study-image-2"
         transition={{ ease: easeIn, duration: 0.8 }}
       />
@@ -119,17 +113,6 @@ const Jff = () => {
               <br /> Report
             </Heading>
             <CiTwitter color="#FFFFFF" fontSize="4rem" />
-          </Flex>
-        </Box>
-        <Box backgroundImage={JffBackground} sx={singleAnnualSocialStyle}>
-          <Flex justifyContent="space-between" alignItems="center">
-            <Heading sx={AnnualSocialStyle}>
-              Facebook
-              <br />
-              Yearly
-              <br /> Report
-            </Heading>
-            <SlSocialFacebook color="#FFFFFF" fontSize="4rem" />
           </Flex>
         </Box>
       </Flex>
