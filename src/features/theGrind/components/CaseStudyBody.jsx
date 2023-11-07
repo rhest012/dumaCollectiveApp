@@ -56,7 +56,7 @@ const CaseStudyBody = () => {
   // Styling
   const socialContainer = {
     border: "1px solid #1E174B",
-    margin: "6rem 2rem",
+    margin: { base: "6rem 1.5rem", md: "2rem" },
   };
 
   const socialContainerHeading = {
@@ -132,7 +132,7 @@ const CaseStudyBody = () => {
               fontWeight="500"
               textTransform="uppercase"
             >
-              &nbsp;&nbsp;4.8 M People Reached&nbsp;&nbsp;
+              &nbsp;4.8 M People Reached&nbsp;
             </Heading>
           ) : null}
 
@@ -152,7 +152,7 @@ const CaseStudyBody = () => {
             </Flex>
             <Grid sx={caseStudyContainerRightImage}>
               <GridItem
-                margin="2rem"
+                margin="1rem"
                 display="flex"
                 alignItems="center"
                 height="100%"
@@ -193,7 +193,7 @@ const CaseStudyBody = () => {
               </Heading>
             </Flex>
             <Grid sx={caseStudyContainerLeftImage}>
-              <GridItem padding="2rem">
+              <GridItem padding="1rem">
                 {location.pathname === "/the-grind/origins" ? (
                   // <ReactPlayer
                   //   className="video-player"
@@ -263,7 +263,7 @@ const CaseStudyBody = () => {
               </GridItem>
 
               <GridItem
-                padding="2rem"
+                padding="1rem"
                 display="flex"
                 flexDir="column"
                 // alignItems="center"
