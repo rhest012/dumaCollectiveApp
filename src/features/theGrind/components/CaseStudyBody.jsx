@@ -194,33 +194,62 @@ const CaseStudyBody = () => {
             </Flex>
             <Grid sx={caseStudyContainerLeftImage}>
               <GridItem padding="2rem">
-                <MotionBox
-                  overflow="hidden"
-                  className="image-container"
-                  variants={imageContainerVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  whileHover="hover"
-                >
-                  {location.pathname === "/the-grind/origins" ? (
+                {location.pathname === "/the-grind/origins" ? (
+                  // <ReactPlayer
+                  //   className="video-player"
+                  //   controls
+                  //   url="https://youtu.be/YFB5MXjw3AY"
+                  //   muted
+                  //   width="775px"
+                  //   height="422px"
+                  //   loop={true}
+                  //   config={{
+                  //     vimeo: {
+                  //       youtube: {
+                  //         width: "100px",
+                  //       },
+                  //     },
+                  //   }}
+                  // />
+                  <Flex
+                    style={{ aspectRatio: "16/9" }}
+                    justifyContent="center"
+                    // margin={{
+                    //   base: "2rem 0rem 2rem 0rem",
+                    // }}
+                    width="100%"
+                    // variants={videoVariants}
+                    // initial="hidden"
+                    // animate="visible"
+                    // exit="exit"
+                  >
                     <ReactPlayer
                       className="video-player"
                       controls
                       url="https://youtu.be/YFB5MXjw3AY"
-                      muted
-                      width="775px"
-                      height="422px"
+                      // muted
+                      width="100%"
+                      height="100%"
                       loop={true}
+                      playing={true}
+                      muted={true}
                       config={{
-                        vimeo: {
-                          youtube: {
-                            width: "100px",
-                          },
+                        youtube: {
+                          playerVars: { showinfo: 0, modestbranding: 1 },
                         },
                       }}
                     />
-                  ) : (
+                  </Flex>
+                ) : (
+                  <MotionBox
+                    overflow="hidden"
+                    className="image-container"
+                    variants={imageContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    whileHover="hover"
+                  >
                     <MotionImage
                       variants={imageChildVariants}
                       initial="hidden"
@@ -229,8 +258,8 @@ const CaseStudyBody = () => {
                       whileHover="hover"
                       src={require(`../../../assets/theGrind/${activeCaseStudy.id}/${activeCaseStudy.image}`)}
                     />
-                  )}
-                </MotionBox>
+                  </MotionBox>
+                )}
               </GridItem>
 
               <GridItem
@@ -275,7 +304,6 @@ const CaseStudyBody = () => {
               margin="-4rem 2rem 2rem 2rem"
               flexDir="column"
               alignItems="center"
-              width="100%"
             >
               <Image src={NextGenLogo} width="300px" />
               <Text variant="p" textAlign="center">
