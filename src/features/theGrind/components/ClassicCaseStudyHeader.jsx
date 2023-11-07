@@ -147,6 +147,9 @@ const ClassicCaseStudyHeader = ({ activeCaseStudy }) => {
                 variants={imageContainerVariants}
                 initial="hidden"
                 whileInView="visible"
+                viewport={{
+                  once: true,
+                }}
                 exit="exit"
                 whileHover="hover"
                 marginBottom={{ base: "2rem", lg: "0" }}

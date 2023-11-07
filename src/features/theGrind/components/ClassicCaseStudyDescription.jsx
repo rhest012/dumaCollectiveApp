@@ -36,6 +36,9 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
           initial="hidden"
           whileInView="visible"
           exit="exit"
+          viewport={{
+            once: true,
+          }}
         >
           <div
             dangerouslySetInnerHTML={{ __html: activeCaseStudy.description }}
@@ -45,7 +48,7 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
       <Grid
         gridTemplateColumns={{ base: "1fr", lg: "1f", xl: "50% 50%" }}
         marginY="2rem"
-        gap="2rem"
+        gap="1rem"
       >
         {activeCaseStudy?.videos
           ? activeCaseStudy.videos.map((caseStudy, index) => (
@@ -54,13 +57,45 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                maxWidth={{ base: "87vw", lg: "600px", xl: "640px" }}
+                // maxWidth={{ base: "87vw", lg: "600px", xl: "640px" }}
+                // marginY="1rem"
               >
-                <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
+                {/* <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
                   <ReactPlayer
                     className="video-player"
                     url={caseStudy}
                     style={{ width: "100%", height: "100%" }}
+                    loop={true}
+                    playing={true}
+                    muted={true}
+                    config={{
+                      youtube: {
+                        playerVars: { showinfo: 0, modestbranding: 1 },
+                      },
+                    }}
+                  />
+                </Flex> */}
+
+                <Flex
+                  style={{ aspectRatio: "16/9" }}
+                  justifyContent="center"
+                  margin={{
+                    base: "2rem 0rem 4rem 0rem",
+                    lg: "2rem 4rem 4rem 4rem",
+                  }}
+                  width="100%"
+                  // variants={videoVariants}
+                  // initial="hidden"
+                  // animate="visible"
+                  // exit="exit"
+                >
+                  <ReactPlayer
+                    className="video-player"
+                    controls
+                    url={caseStudy}
+                    // muted
+                    width="100%"
+                    height="100%"
                     loop={true}
                     playing={true}
                     muted={true}
