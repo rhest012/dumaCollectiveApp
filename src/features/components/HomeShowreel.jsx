@@ -150,7 +150,7 @@ const HomeShowreel = () => {
         animate="visible"
         exit="exit"
       >
-        <Flex aspectRatio="16/9" maxWidth="90vw">
+        <Flex aspectRatio="16/9" maxWidth="85vw">
           <ReactPlayer
             className="video-player"
             playsinline
