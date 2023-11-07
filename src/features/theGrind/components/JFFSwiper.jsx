@@ -62,8 +62,8 @@ const JFFSwiper = () => {
             >
               <Image
                 src={require(`../../../assets/theGrind/jff/${item}`)}
-                height="550px"
-                width="363px"
+                height={{ base: "500px", md: "550px" }}
+                width={{ base: "330px", md: "354px" }}
               />
             </Flex>
           </SwiperSlide>

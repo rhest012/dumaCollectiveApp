@@ -43,6 +43,7 @@ const JffInstaCard = () => {
     flexDir: "column",
     justifyContent: "center",
     alignItems: "center",
+    marginY: "0.5rem",
   };
 
   const statStyle = {
@@ -75,7 +76,7 @@ const JffInstaCard = () => {
 
   const socialStatsContainer = {
     marginY: "2rem",
-    marginX: "4rem",
+    marginX: "2rem",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -105,9 +106,11 @@ const JffInstaCard = () => {
 
   return (
     <Box sx={socialContainer}>
-      <Heading sx={socialContainerHeading}>
-        &nbsp;&nbsp;Instagram&nbsp;&nbsp;
-      </Heading>
+      <Flex justifyContent="center">
+        <Heading sx={socialContainerHeading}>
+          &nbsp;&nbsp;Instagram&nbsp;&nbsp;
+        </Heading>
+      </Flex>
 
       <Grid
         gridTemplateColumns={{
@@ -145,7 +148,7 @@ const JffInstaCard = () => {
               lg: "30%: 70%",
               xl: "30% 70%",
             }}
-            m="4rem"
+            m={{ base: "2rem", lg: "4rem" }}
           >
             <GridItem mx="auto">
               <Flex sx={statContainerFlex}>
@@ -236,7 +239,7 @@ const JffInstaCard = () => {
               lg: "30%: 70%",
               xl: "30% 70%",
             }}
-            m="4rem"
+            m={{ base: "2rem", lg: "4rem" }}
           >
             <GridItem mx="auto">
               <Flex sx={statContainerFlex}>

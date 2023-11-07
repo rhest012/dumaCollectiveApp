@@ -85,7 +85,7 @@ const JffTwitterCard = () => {
 
   const socialStatsContainer = {
     marginY: "2rem",
-    marginX: "4rem",
+    marginX: "2rem",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
