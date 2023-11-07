@@ -150,24 +150,24 @@ const HomeShowreel = () => {
         animate="visible"
         exit="exit"
       >
-        {/* <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
+        <Flex aspectRatio="16/9" maxWidth="90vw">
           <ReactPlayer
             className="video-player"
             playsinline
             url="https://youtu.be/wioUsVwgSZU"
-            style={{ width: "100%", height: "100%" }}
+            // style={{ width: "100%", height: "100%" }}
             loop={true}
             playing={true}
-            // muted={true}
+            muted={true}
             config={{
               youtube: {
                 playerVars: { showinfo: 0, modestbranding: 1 },
               },
             }}
           />
-        </Flex> */}
+        </Flex>
 
-        <Flex
+        {/* <Flex
           style={{ aspectRatio: "16/9" }}
           justifyContent="center"
           margin={{
@@ -196,7 +196,7 @@ const HomeShowreel = () => {
               },
             }}
           />
-        </Flex>
+        </Flex> */}
       </MotionGridItem>
     </Grid>
   );
