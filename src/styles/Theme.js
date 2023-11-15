@@ -3,7 +3,7 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme ({
     colors: {
       brand: {
-        900: "#1d1749"
+        900: "#1E174B"
       }
     },
     fonts : {
@@ -32,6 +32,7 @@ const theme = extendTheme ({
             fontSize: "1.95rem",
             letterSpacing: "1.5px",
             color: "#1E174B",
+            marginBottom: "1rem"
        
           },
           h4: {

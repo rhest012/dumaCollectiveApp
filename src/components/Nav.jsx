@@ -42,6 +42,10 @@ const Nav = () => {
       url: "/the-buzz",
     },
     {
+      name: "Influencers",
+      url: "/influencers",
+    },
+    {
       name: "Get In Touch",
       url: "/get-in-touch",
     },
@@ -59,7 +63,7 @@ const Nav = () => {
     <Flex
       height="80px"
       justifyContent="space-between"
-      alignItems="center"
+      alignItems="flex-end"
       padding="1rem 2rem"
     >
       <Box>
@@ -84,7 +88,7 @@ const Nav = () => {
                 location.pathname === menuItem.url ? "active" : ""
               }`}
               variant="h3"
-              fontSize="0.9rem"
+              fontSize="0.75rem"
               textTransform="uppercase"
             >
               {menuItem.name}
@@ -111,11 +115,10 @@ const Nav = () => {
           // overflow="hidden"
         >
           {menuItems.map((menuItem, index) => (
-            <NavLink to={menuItem.url}>
+            <NavLink key={index} to={menuItem.url}>
               <MenuItem
                 className="menu-item-container"
                 position="relative"
-                key={index}
                 width="100%"
                 display="flex"
                 flexDirection="row"

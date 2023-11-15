@@ -34,6 +34,13 @@ const SecondaryPageHeader = () => {
         "The people that make epic sh*t happen, the people redefining creative communications.",
       url: "/the-buzz",
     },
+    {
+      name: "Influencer Portal",
+      heading: "Our people, our heart...",
+      description:
+        "The people that make epic sh*t happen, the people redefining creative communications.",
+      url: "/influencers",
+    },
   ];
 
   // Page Location

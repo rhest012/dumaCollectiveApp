@@ -23,6 +23,7 @@ import Multichoice from "../theGrind/pages/Multichoice";
 import NbaAfrica from "../theGrind/pages/NbaAfrica";
 import ClassicCaseStudy from "../theGrind/pages/ClassicCaseStudy";
 import Origins from "../theGrind/pages/Origins";
+import InfluencerSubmission from "../dashboard/pages/InfluencerSubmission";
 
 const AnimatedRoutes = () => {
   const [loading, setLoading] = useState(true);
@@ -51,6 +52,7 @@ const AnimatedRoutes = () => {
               <Route path="/the-grind/multichoice" element={<Multichoice />} />
               <Route path="/the-grind/nba-africa" element={<NbaAfrica />} />
               <Route path="/the-grind/:id" element={<ClassicCaseStudy />} />
+              <Route path="/influencers" element={<InfluencerSubmission />} />
               <Route path="/the-buzz" element={<NewsRoom />} />
               <Route path="/get-in-touch" element={<Contact />} />
             </Routes>
