@@ -261,14 +261,12 @@ const InfluencerRegistrationForm = () => {
     }
   }, [isRegistrationSuccess]);
 
-  console.log("error message", newInfluencer);
-  console.log("isSuccess", isRegistrationSuccess);
-
   return (
     <Box>
       <Grid
         gridTemplateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
         gap="2rem"
+        marginX="2rem"
       >
         <GridItem display="flex" flexDir="column" justifyContent="center">
           <Heading textAlign="center" variant="h2">

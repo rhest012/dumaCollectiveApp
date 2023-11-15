@@ -36,6 +36,16 @@ const NewsRoom = () => {
   const theBuzz = [
     {
       id: "109",
+      title:
+        "MultiChoice Origins and Duma Collective wins a Bronze for Effective Content Marketing.",
+      date: "29 September 2023",
+      caption:
+        "Four hundred of SA's top industry leaders from the corporate and agency sectors gathered at the 11th annual New Generation Awards' prestigious gala awards.",
+      image: "Origins.png",
+      url: "https://modernmarketing.co.za/the-2023-new-generation-awards-winners-have-been-announced/",
+    },
+    {
+      id: "109",
       title: "Sibu Mabena unveils newly renovated office space",
       date: "01 September 2023",
       caption:
