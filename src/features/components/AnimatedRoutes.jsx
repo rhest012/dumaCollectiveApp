@@ -12,13 +12,10 @@ import Contact from "../pages/Contact";
 
 // Components
 import Nav from "../../components/Nav";
-import CustomCursor from "../../components/CustomCursor";
-import Footer from "../../components/Footer";
 
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollToTop from "./ScrollToTop";
 import { Box } from "@chakra-ui/react";
-import NewsRoomArticle from "../theNewsRoom/pages/NewsRoomArticle";
 import Multichoice from "../theGrind/pages/Multichoice";
 import NbaAfrica from "../theGrind/pages/NbaAfrica";
 import ClassicCaseStudy from "../theGrind/pages/ClassicCaseStudy";
@@ -41,7 +38,7 @@ const AnimatedRoutes = () => {
         <>
           <Box>
             <Nav />
-            <CustomCursor />
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/what-we-do" element={<WhatWeDo />} />
