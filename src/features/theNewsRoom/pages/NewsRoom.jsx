@@ -59,7 +59,7 @@ const NewsRoom = () => {
         "Tbose Chats to “The Fixer” herself, Sibu Mabena The Founder of Duma Collective",
       date: "09 August 2023",
       caption:
-        "August is all about celebrating. Ibose sat down with Sibu Mabena to chat more about what inspired her to start her business, how it felt to work on some of SA's biggest events, and what it feels like to finally have a permanent home Duma Collective.",
+        "August is all about celebrating. Tbose sat down with Sibu Mabena to chat more about what inspired her to start her business, how it felt to work on some of SA's biggest events, and what it feels like to finally have a permanent home Duma Collective.",
       image: "SibuMabena 2.png",
       url: "https://www.kaya959.co.za/lineup/best-t-in-the-city-lineup/sibu-mabenas-inspirational-story-behind-her-agency-duma-collective/",
     },

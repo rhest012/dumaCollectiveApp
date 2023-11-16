@@ -25,7 +25,7 @@ const CaseStudyBody = () => {
       challenge:
         "NBA Africa was looking to convert existing brand fans, and capture potential NBA enthusiasts, by offering an irresistible lifestyle and entertainment experience that goes beyond the game. <br /> <br /> The challenge? Finding the right tools and strategy to help NBA Africa drive engagement and awareness beyond the confines of the court.",
       solve:
-        "To address the challenge, our comprehensive strategy centered around leveraging the identified channels of social media and influencers. By utilising a diverse range of social media tools and influencer platforms from South Africa and Nigeria, we aimed to achieve our set goal. This approach was designed to generate the essential traffic required to propel the NBA Africa brand to new heights.",
+        "We compiled a comprehensive strategy that centred around leveraging identified channels of social media and influencers. Through the use of diverse social media tools and influencers from South Africa and Nigeria, our approach was designed to generate essential traffic required to propel NBA Africa to new heights.",
       url: "/the-grind/nba-africa",
       id: "Nba_Africa",
       image: "NBA-Africa-Image.jpg",
