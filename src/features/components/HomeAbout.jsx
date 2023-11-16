@@ -128,7 +128,7 @@ const HomeAbout = () => {
           <Typewriter
             options={{
               strings:
-                "Redefining creative communications from Africa to the world.",
+                "Redefining creative communications from Africa to the world",
               autoStart: typewriterStarted,
               delay: 25,
               pauseFor: 2000000,

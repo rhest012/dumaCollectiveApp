@@ -85,7 +85,6 @@ const InfluencerRegistrationForm = () => {
     });
 
     setDateOfBirth(date);
-    console.log(formattedDate); // Log the formatted date without time
   };
 
   // Handle checkbox
@@ -171,7 +170,11 @@ const InfluencerRegistrationForm = () => {
     setNewInfluencer({
       name: inputData.firstName,
       surname: inputData.surname,
-      dateOfBirth: dateOfBirth,
+      dateOfBirth: dateOfBirth?.toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+      }),
       contactNumber: inputData.contactNumber,
       email: inputData.email,
       province: inputData.province,

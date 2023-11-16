@@ -106,7 +106,7 @@ const HomeShowreel = () => {
         <Heading variant="h2" minHeight="150px">
           <Typewriter
             options={{
-              strings: "An oasis for African creativity to flourish.",
+              strings: "An oasis for African creativity to flourish",
               autoStart: true,
               delay: 25,
               pauseFor: 2000000,
@@ -122,8 +122,8 @@ const HomeShowreel = () => {
           exit="exit"
           marginTop="1rem"
         >
-          Step into our collaborative work environment, where creativity is at
-          the heart of everything we do.
+          We deliver greatness. Because creativity is at the heart of everything
+          we do.
         </MotionText>
         <Link to="/the-grind">
           <MotionButton
@@ -150,23 +150,6 @@ const HomeShowreel = () => {
         animate="visible"
         exit="exit"
       >
-        {/* <Flex aspectRatio="16/9" maxWidth="85vw">
-          <ReactPlayer
-            className="video-player"
-            playsinline
-            url="https://youtu.be/wioUsVwgSZU"
-            // style={{ width: "100%", height: "100%" }}
-            loop={true}
-            playing={true}
-            muted={true}
-            config={{
-              youtube: {
-                playerVars: { showinfo: 0, modestbranding: 1 },
-              },
-            }}
-          />
-        </Flex> */}
-
         <Flex
           style={{ aspectRatio: "16/9" }}
           justifyContent="center"
@@ -175,16 +158,11 @@ const HomeShowreel = () => {
             lg: "2rem 4rem 4rem 4rem",
           }}
           width="100%"
-          // variants={videoVariants}
-          // initial="hidden"
-          // animate="visible"
-          // exit="exit"
         >
           <ReactPlayer
             className="video-player"
             controls
             url="https://youtu.be/wioUsVwgSZU"
-            // muted
             width="100%"
             height="100%"
             loop={true}

@@ -17,14 +17,14 @@ const SecondaryPageHeader = () => {
       name: "The Grind",
       heading: "Our Work Never Stops...",
       description:
-        "We approach our work to achieve long-term objectives - to create sustainable brand communications that last.",
+        "The hustle never ends, but it's all in a day's work to ensure your brands impact lasts a lifetime.",
       url: "/the-grind",
     },
     {
       name: "The Squad",
       heading: "Our people, our heart...",
       description:
-        "The people that make epic sh*t happen, the people redefining creative communications.",
+        "Dumarians who are doing epic sh*t to redefine creative communications in Africa.",
       url: "/the-squad",
     },
     {

@@ -37,10 +37,10 @@ const NewsRoom = () => {
     {
       id: "109",
       title:
-        "MultiChoice Origins and Duma Collective wins a Bronze for Effective Content Marketing.",
+        "MultiChoice and Duma Collective win Bronze for Effective Content Marketing.",
       date: "29 September 2023",
       caption:
-        "Four hundred of SA's top industry leaders from the corporate and agency sectors gathered at the 11th annual New Generation Awards' prestigious gala awards.",
+        "Four hundred of SA's Top industry leaders from the corporate and agency sectors gathered at the 11th annual New Generation Awards Gala.",
       image: "Origins.png",
       url: "https://modernmarketing.co.za/the-2023-new-generation-awards-winners-have-been-announced/",
     },
@@ -49,7 +49,7 @@ const NewsRoom = () => {
       title: "Sibu Mabena unveils newly renovated office space",
       date: "01 September 2023",
       caption:
-        "Mabena conveyed her heartfelt appreciation to the dedicated team responsible for the remarkable transformation of their workspace, turning it into a vibrant and inspiring creative haven.",
+        "Sibu Mabena, the founder of Duma Collective, recently unveiled the agency s newly renovated office space in Randburg. The remarkable workspace serves as the new creative haven for the Dumarians.",
       image: "Duma Office.jpg",
       url: "https://www.kaya959.co.za/lifestyle/sibu-mabena-unveils-newly-renovated-office-space/",
     },
@@ -59,7 +59,7 @@ const NewsRoom = () => {
         "Tbose Chats to “The Fixer” herself, Sibu Mabena The Founder of Duma Collective",
       date: "09 August 2023",
       caption:
-        "August is all about celebrating and who better than “The Fixer” herself, Sibu Mabena? T-Bose spoke to her about how and what inspired her to start her marketing agency Duma Collective, working on some of the biggest events in SA, and finally moving Duma Collective into their own building.",
+        "August is all about celebrating. Ibose sat down with Sibu Mabena to chat more about what inspired her to start her business, how it felt to work on some of SA's biggest events, and what it feels like to finally have a permanent home Duma Collective.",
       image: "SibuMabena 2.png",
       url: "https://www.kaya959.co.za/lineup/best-t-in-the-city-lineup/sibu-mabenas-inspirational-story-behind-her-agency-duma-collective/",
     },
@@ -68,7 +68,7 @@ const NewsRoom = () => {
       title: "#Newsmaker: Lindiwe Maduna, MD of Duma Collective",
       date: "26 July 2023",
       caption:
-        "With no formal qualifications in communications, she developed her skills and knowledge through sheer hard work.",
+        "Lindiwe Maduna has been appointed as the Managing Director of Duma Collective. With no formal qualifications in communications, Maduna developed her skills and knowledge through sheer hard work and determination.",
       image: "Lindi.jpg",
       url: "https://www.bizcommunity.com/Article/196/18/240473.html",
     },
@@ -77,7 +77,7 @@ const NewsRoom = () => {
       title: "Mabena rides wave of creativity",
       date: "06 March 2023",
       caption:
-        "Young and versatile entrepreneur, Sibu Mabena is a shining example that when you live towards fulfilling your dreams, all is possible as you can go beyond to reach for the stars.",
+        "Sibu Mabena, a young and versatile entrepreneur, is a shining example of what it means to live towards fulfilling your dreams. She explains the importance of going above and beyond to achieve your career goals.",
       image: "Sibu Creativity.jpg",
       url: "https://sundayworld.co.za/news/business/hustlers-avenue/mabena-rides-wave-of-creativity-2/",
     },
@@ -94,7 +94,8 @@ const NewsRoom = () => {
       id: "101",
       title: "Duma Collective dissolves it's talent management division",
       date: "7 November 2022",
-      caption: "Every new beginning comes from some other beginning's end",
+      caption:
+        "Every new beginning comes from another beginning's end. Duma Collective has taken the decision to dissolve its talent management sector for several reasons.",
       image: "DumaLogo.jpg",
       url: "https://www.kaya959.co.za/entertainment/duma-collective-dissolves-its-talent-management-division/",
     },

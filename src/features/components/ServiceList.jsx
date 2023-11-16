@@ -34,7 +34,7 @@ const ServiceList = () => {
     {
       name: "Social Media",
       description:
-        "We turn thumb-scrolling into jaw dropping, making your online presence the life of the digital party. We help you connect with your audience in all the right places, at the right times, with the right budget.",
+        "We stop thumb-scrolling in its tracks and help you to connect with your audience in the right place, at the right time.",
     },
     {
       name: "Public Relations",
@@ -49,12 +49,12 @@ const ServiceList = () => {
     {
       name: "Events & Production",
       description:
-        "We're the Spielberg of experiences, transforming your events into blockbuster memories that stick with you. Consider us The Event Surgeon, prescribing your brand a dose of A-list treatment.",
+        "We're the Spielberg of experiences, transforming your events into blockbuster memories. Just call us The Event Surgeons, prescribing your brand with a dose of A-list treatment.",
     },
     {
       name: "Talent Procurement",
       description:
-        "We're matchmakers for the stars, finding the perfect talent to gush over your brand. Picture this: your brand and the people's champions. We're talking a match made in heaven",
+        "As professional matchmakers, we find the perfect talent to gush over your brand. Your brand paired with the people's champions? A match made in heaven.",
     },
   ];
 
