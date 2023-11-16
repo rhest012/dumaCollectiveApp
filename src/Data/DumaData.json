@@ -130,11 +130,6 @@
           "name": "Cyan",
           "image": "Cyan.jpg",
           "aka": "The Jack"
-        },
-        {
-          "name": "Cezanne",
-          "image": "Cezanne.jpg",
-          "aka": "The Tailor"
         }
       ]
     },
@@ -168,16 +163,7 @@
           "image": "Mojabeng.jpg",
           "aka": "All Star"
         },
-        {
-          "name": "Nosipho",
-          "image": "Nosipho.jpg",
-          "aka": "Head Girl"
-        },
-        {
-          "name": "Kele",
-          "image": "Kele.jpg",
-          "aka": "G.O.A.T"
-        },
+
         {
           "name": "Asande",
           "image": "Asande.jpg",
@@ -199,11 +185,6 @@
           "name": "Kashifa",
           "image": "Kashifa.jpg",
           "aka": " The Kreative"
-        },
-        {
-          "name": "Kgothatso",
-          "image": "Kgothatso.jpg",
-          "aka": "President of Vibe"
         }
       ]
     },
