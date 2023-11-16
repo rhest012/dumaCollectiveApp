@@ -210,6 +210,24 @@ const Contact = () => {
               animate="visible"
               exit="exit"
             >
+              Address
+            </MotionHeading>
+            <MotionText
+              sx={contactDetailStyling}
+              variant="p"
+              variants={bodyTextDescriptionVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              Duma Collective HQ, Bordeaux, Johannesburg, 2194
+            </MotionText>
+            <MotionHeading
+              variant="h4"
+              variants={bodyHeadingVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+            >
               Email Address
             </MotionHeading>
             <MotionText
