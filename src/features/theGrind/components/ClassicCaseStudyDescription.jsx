@@ -60,22 +60,6 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
                 // maxWidth={{ base: "87vw", lg: "600px", xl: "640px" }}
                 // marginY="1rem"
               >
-                {/* <Flex style={{ aspectRatio: "16/9", maxWidth: "90vw" }}>
-                  <ReactPlayer
-                    className="video-player"
-                    url={caseStudy}
-                    style={{ width: "100%", height: "100%" }}
-                    loop={true}
-                    playing={true}
-                    muted={true}
-                    config={{
-                      youtube: {
-                        playerVars: { showinfo: 0, modestbranding: 1 },
-                      },
-                    }}
-                  />
-                </Flex> */}
-
                 <Flex
                   style={{ aspectRatio: "16/9" }}
                   justifyContent="center"
@@ -84,10 +68,6 @@ const ClassicCaseStudyDescription = ({ activeCaseStudy }) => {
                     lg: "2rem 4rem 4rem 4rem",
                   }}
                   width="100%"
-                  // variants={videoVariants}
-                  // initial="hidden"
-                  // animate="visible"
-                  // exit="exit"
                 >
                   <ReactPlayer
                     className="video-player"

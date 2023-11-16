@@ -137,8 +137,9 @@ const JffInstaCard = () => {
         </GridItem>
         <GridItem>
           <Text textAlign="center" paddingX="2rem">
-            For the past five months, the Instagram profile has seen an immense
-            increase in followership, reach and impressions and website taps.
+            Over a period of five months, JFF's Instagram profile witnessed a
+            significant increase in followers, reach, impressions and website
+            taps.
           </Text>
           <Grid
             gridTemplateColumns={{

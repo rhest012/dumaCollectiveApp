@@ -23,7 +23,7 @@ const CaseStudyBody = () => {
   const caseStudies = [
     {
       challenge:
-        "NBA Africa faced a significant challenge: how to convert existing brand fans and captivate potential NBA enthusiasts by offering an irresistible lifestyle and entertainment experience beyond the game.<br /> <br /> What tools could be used to help NBA Africa drive engagement and awareness that goes beyond the confines of traditional gameplay?",
+        "NBA Africa was looking to convert existing brand fans, and capture potential NBA enthusiasts, by offering an irresistible lifestyle and entertainment experience that goes beyond the game. <br /> <br /> The challenge? Finding the right tools and strategy to help NBA Africa drive engagement and awareness beyond the confines of the court.",
       solve:
         "To address the challenge, our comprehensive strategy centered around leveraging the identified channels of social media and influencers. By utilising a diverse range of social media tools and influencer platforms from South Africa and Nigeria, we aimed to achieve our set goal. This approach was designed to generate the essential traffic required to propel the NBA Africa brand to new heights.",
       url: "/the-grind/nba-africa",
@@ -34,7 +34,7 @@ const CaseStudyBody = () => {
       challenge:
         "MultiChoice has been known as Africa's most loved storyteller, but with new and aggressive competitors in the market, there was a need to reinforce and showcase this positioning to our target audiences. <br /> <br /> Duma Collective was tasked with creatively reinforcing and amplifying MultiChoice Group's messaging as Africa's most loved storyteller by highlighting the importance of storytelling Africa and importantly MultiChoice's role as the continents pre-eminent platform for showcasing stories.",
       solve:
-        "Using ATL + BTL advertising, Social Media and PR approaches, we crafted a narrative of MCG as Africa's most loved storyteller through the Origins campaign.<br/> <br/> The campaign was about the elevation and illustration of emerging storytellers and their journeys; their inspirations, motivations, and insights. We identified and partnered with 5 unique storytellers who wielded different artistic mediums on the cusp of their breakthroughs into the mainstream. We wanted to position MultiChoice as the go to platform for African stories, the chosen storytellers were not talents with the biggest numbers but carried impactful stories that normal Africans can resonate with and find inspiration.",
+        "We compiled a comprehensive strategy that centred around leveraging identified channels of social media and influencers. Through the use of diverse social media tools and influencers from South Africa and Nigeria, our approach was designed to generate essential traffic required to propel NBA Africa to new heights.",
       url: "/the-grind/origins",
       id: "origins",
       image: "origins-header.jpg",
@@ -300,16 +300,11 @@ const CaseStudyBody = () => {
           </Box>
 
           {location.pathname === "/the-grind/origins" ? (
-            <Flex
-              margin="-4rem 2rem 2rem 2rem"
-              flexDir="column"
-              alignItems="center"
-            >
+            <Flex margin="2rem" flexDir="column" alignItems="center">
               <Image src={NextGenLogo} width="300px" />
               <Text variant="p" textAlign="center">
-                To cap off this fantastic campaign, MultiChoice Origins and Duma
-                Collective won a Bronze for Effective Content Marketing at 2023
-                New Generation Awards.
+                To cap off this fantastic campaign, Duma Collective received A
+                2023 New Generation Award for Effective Content Marketing.
               </Text>
             </Flex>
           ) : null}

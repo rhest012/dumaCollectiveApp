@@ -16,7 +16,7 @@ const ClassicCaseStudy = () => {
       id: "honor",
       url: "/the-grind/honor",
       description:
-        "Launching a brand new phone in South Africa is tough - but with a wealth of content creators in our country we knew who we were speaking to. The HONOR 90 is exactly that, a device expertly crafted for the content creator. In order to speak to the correct audience we knew we had to emphasize the main aspect of creating quality content - manipulating light. <br/> <br/> Duma Collective set out to launch a content driven influencer campaign with up and coming influencers that highlights the beauty of the device, the main key selling points and it's tremendous technological capabilities. Welcome to the new dawn of Creating Content, introducing the HONOR 90 5G.",
+        "Launching a brand-new phone in South Africa is tough. How do we position a new mobile device as a must have-have product. By launching it as the content creator's dream. The HONOR 90 is expertly crafted with the content creator, and to connect with the right audience, we emphasis the main aspect of creating quality content - light manipulation. <br/> <br/> Duma Collective launched a content-driven influencer campaign with new creators and well-known names to highlight the main features of the device that rival its competitors. <br/> <br/> Welcome to the dawn of Content Creation, introducing the HONOR 90 5G.",
 
       videos: [
         "https://www.youtube.com/watch?v=5DM_U8WbYes&ab_channel=HONORSouthAfrica",
@@ -33,7 +33,7 @@ const ClassicCaseStudy = () => {
       ],
       url: "/the-grind/heineken",
       description:
-        "Heineken presents its latest innovation, Heineken 0.0, an alcohol-free lager brewed with a unique recipe for a distinct balanced taste. Heineken's beer created the new alcohol-free beer using only natural ingredients, resulting in a beer brewed for the beer lover by beer lovers. On the 14thof March, Heineken 0.0 official began its activation launch at Melrose Arch. The activation ran for three weeks, on Thursdays and Sundays, from 14:00 to 20:00. The integrated launch campaign included a TV commercial, digital marketing, OOH, and experimental activations plus on and off-trade promotions. Duma Collective provided the beer brand with Social Media & Influencer services. Influencers were brought in to create conversation leading up to the launch, to create public awareness, and to give the product a visual representation on social media platforms.",
+        "Heineken introduced Heineken 0.0, a non-alcoholic lager crafted with a distinctive recipe to deliver a balanced and unique taste. The official launch event, held at Melrose Arch and spanning three weeks, marked the introduction of this product. <br/> <br/> Duma Collective devised a comprehensive strategy encompassing Social Media and Influencer services for the beer brand. This strategic approach generated heightened awareness and anticipation in the weeks leading up to the launch. Additionally, it effectively established a strong visual presence for the product across various social media platforms, contributing to increased public recognition.",
     },
     {
       name: "Chivas",
@@ -42,7 +42,7 @@ const ClassicCaseStudy = () => {
       url: "/the-grind/chivas",
       imageId: "case-study-image-4",
       description:
-        "Chivas Venture 2021 partnered with Zaid Osman, founder, and CEO of Sneaker Exchange and Grade Africa. This partnership will give a once-in-a-lifetime opportunity to four apprentices from South Africa to become the next big creative entrepreneurs. Duma Collective provided the brand with Event Management and Public Relations Services for the Media Launch of the initiative. We organised the venue and catering for the event. As well as handling the general event logistics. We also arranged for media and influencers to attend the launch to guarantee coverage. Media PR Packs were arranged as tokens of gratitude. The tokens of gratitude, however, also had more information on the campaign, being a Press Release, Hype Video, and Images captured from the event.",
+        "Chivas Venture 2021 partnered with the founder and CEO of Sneaker Exchange and Grade Africa, Zaid Osman. <br/> This partnership provided a once-in-a-lifetime opportunity to four apprentices from SA to become the next big creative entrepreneurs. Duma Collective provided the brand with Event Management and Public Relations Services for the Media Launch of the initiative. <br/><br/>Duma Collective organised the venue and event catering, as well as handling the general event logistics. We also arranged for media and influencers to attend the launch, which guaranteed coverage. Media PR Packs were arranged as tokens of gratitude, which contained more information on the campaign, a Press Release, Hype Video and professional images captured at the event.",
       video:
         "https://www.youtube.com/watch?v=NEQ5-4Xjm9E&ab_channel=ChivasRegal",
     },
