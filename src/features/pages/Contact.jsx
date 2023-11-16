@@ -219,7 +219,7 @@ const Contact = () => {
               initial="hidden"
               animate="visible"
             >
-              Duma Collective HQ, Bordeaux, Johannesburg, 2194
+              Duma Collective, Bordeaux, Johannesburg, 2194
             </MotionText>
             <MotionHeading
               variant="h4"
