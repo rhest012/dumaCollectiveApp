@@ -20,9 +20,6 @@ const RegistrationSuccessDrawer = ({ isOpen }) => {
 
   //   Handle Consent
   const handleConsent = () => {
-    // Add logic or API calls related to the consent if needed
-    // ...
-
     // Refresh the page
     window.location.reload();
   };

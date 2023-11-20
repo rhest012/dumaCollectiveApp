@@ -91,7 +91,16 @@ const InfluencerRegistrationForm = () => {
   const { getCheckboxProps } = useCheckboxGroup({});
 
   // Handle Interest Input Options
-  const interests = ["sports", "food", "fashion", "music", "alcohol", "comedy"];
+  const interests = [
+    "fashion and beauty",
+    "food and bev",
+    "family vibes",
+    "kids and teens",
+    "entertainment",
+    "travel and lifestyle",
+    "sports",
+    "business and education",
+  ];
 
   const [selectedInterests, setSelectedInterests] = useState([]);
 
