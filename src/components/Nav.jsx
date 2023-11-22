@@ -109,9 +109,11 @@ const Nav = () => {
           marginTop="10px"
           display="flex"
           flexDir="column"
-          alignContent="space-between"
+          // alignContent="space-between"
           justifyContent="space-between"
           background="#fff"
+          borderTop="1px solid #1E174B"
+          borderRadius="0"
           // overflow="hidden"
         >
           {menuItems.map((menuItem, index) => (
@@ -125,7 +127,7 @@ const Nav = () => {
                 justifyContent="space-between"
                 alignContent="center"
                 _hover={{
-                  background: "none",
+                  backgroundColor: "transparent",
                 }}
               >
                 <Heading
