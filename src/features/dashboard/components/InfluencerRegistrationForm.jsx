@@ -92,14 +92,14 @@ const InfluencerRegistrationForm = () => {
 
   // Handle Interest Input Options
   const interests = [
-    "fashion and beauty",
-    "food and bev",
-    "family vibes",
-    "kids and teens",
-    "entertainment",
-    "travel and lifestyle",
-    "sports",
-    "business and education",
+    "Fashion and beauty",
+    "Business and education",
+    "Travel and lifestyle",
+    "Food and bev",
+    "Family vibes",
+    "Kids and teens",
+    "Entertainment",
+    "Sports",
   ];
 
   const [selectedInterests, setSelectedInterests] = useState([]);
@@ -285,10 +285,10 @@ const InfluencerRegistrationForm = () => {
             Influencer Registration
           </Heading>
           <Text textAlign="center" variant="p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-            maiores quod qui quisquam. Eligendi nam corrupti possimus illo!
-            Obcaecati, nulla! Quibusdam unde officiis quae aliquid, aliquam
-            animi? Excepturi, molestiae quae?
+            Our mission is to bridge the gap between influencers and brands,
+            providing a seamless way to collaborate and create memorable
+            campaigns in collaboration with a diverse network of talented
+            influencers.
           </Text>
         </GridItem>
 

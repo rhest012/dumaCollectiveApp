@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from './styles/Theme'
+import { HelmetProvider } from 'react-helmet-async';
 
 
 
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode >
     <ChakraProvider theme={theme}>
-      <App /> 
+      <HelmetProvider>
+        <App /> 
+      </HelmetProvider>
     </ChakraProvider>
   </React.StrictMode>
 );

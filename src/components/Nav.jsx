@@ -47,7 +47,7 @@ const Nav = () => {
     },
     {
       name: "Get In Touch",
-      url: "/get-in-touch",
+      url: "/git",
     },
   ];
 

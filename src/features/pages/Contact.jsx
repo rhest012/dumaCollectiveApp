@@ -8,6 +8,7 @@ import Typewriter from "typewriter-effect";
 import SocialIconsHorizontal from "../components/SocialIconsHorizontal";
 import transition from "../components/transition";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const inputStyling = {
@@ -133,6 +134,14 @@ const Contact = () => {
   };
   return (
     <>
+      <Helmet>
+        <title> Get In Touch</title>
+        <meta
+          name="description"
+          content="Ready to make things happen? Whether you have a burning question, a brilliant idea, or a desire to collaborate, we're here to listen."
+        />
+        <link rel="canonical" href="/git" />
+      </Helmet>
       <Grid
         // marginY="4rem"
         margin="2rem"

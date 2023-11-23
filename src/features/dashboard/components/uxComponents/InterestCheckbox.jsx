@@ -5,7 +5,7 @@ const InterestCheckbox = (props) => {
   // Styling
   const customCheckboxStyling = {
     borderColor: "brand.900",
-    width: "6.5rem",
+    width: "7rem",
     transition: "all 0.5s ease",
     _hover: {
       color: "#fff",
