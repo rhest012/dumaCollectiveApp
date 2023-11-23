@@ -19,7 +19,7 @@ const Squad = () => {
           content="Our people, our heart...
           Dumarians who are doing epic sh*t to redefine creative communications in Africa."
         />
-        <link rel="canonical" href="/git" />
+        <link rel="canonical" href="/the-squad" />
       </Helmet>
       <SquadList />
     </Box>

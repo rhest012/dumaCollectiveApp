@@ -3,13 +3,23 @@ import { Box } from "@chakra-ui/react";
 import SecondaryPageHeader from "../../components/SecondaryPageHeader";
 import InfluencerRegistrationForm from "../components/InfluencerRegistrationForm";
 import transition from "../../components/transition";
+import { Helmet } from "react-helmet-async";
 
 const InfluencerSubmission = () => {
   return (
-    <Box margin="4rem 2rem">
-      {/* <SecondaryPageHeader /> */}
-      <InfluencerRegistrationForm />
-    </Box>
+    <>
+      <Helmet>
+        <title>Influencer Portal</title>
+        <meta
+          name="description"
+          content="Our mission is to bridge the gap between influencers and brands, providing a seamless way to collaborate and create memorable campaigns"
+        />
+        <link rel="canonical" href="/influencers" />
+      </Helmet>
+      <Box margin="4rem 2rem">
+        <InfluencerRegistrationForm />
+      </Box>
+    </>
   );
 };
 

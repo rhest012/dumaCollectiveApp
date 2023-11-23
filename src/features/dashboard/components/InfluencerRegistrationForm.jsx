@@ -282,7 +282,7 @@ const InfluencerRegistrationForm = () => {
       >
         <GridItem display="flex" flexDir="column" justifyContent="center">
           <Heading textAlign="center" variant="h2">
-            Influencer Registration
+            Influencer Portal
           </Heading>
           <Text textAlign="center" variant="p">
             Our mission is to bridge the gap between influencers and brands,
