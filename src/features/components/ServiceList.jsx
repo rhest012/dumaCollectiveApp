@@ -24,37 +24,37 @@ const ServiceList = () => {
     {
       name: "Brand Strategy",
       description:
-        "We're the storytellers for your brand, creating chapters that will leave your competitors on the edge of their seats. Through real-life insights, we're able to craft the perfect strategy to get your brand noticed.",
+        "Whether it's an entire business repositioning strategy that will inform the next five years or a highly targeted media campaign required to get a specific message across within a set period, our team will become an integral part of your success. ",
     },
     {
-      name: "360 Creative Solutions",
+      name: "Creative Solutions",
       description:
-        "We're the Swiss Army knife of creativity, slicing through your brand problems with style and the WOW-factor. With our expert team of creatives, we'll turn your brand's puzzles into creative masterpieces so epic you'll hang it up on your bedroom wall.",
+        "Our Creative studio dives deep to extract the true essence of your brand. From visual elements that communicate your brand to campaigns that reach your audience, our design team conceptualises and enhances your creative presence, consistently striving for innovative communication and design executions.",
     },
     {
       name: "Social Media",
       description:
-        "We stop thumb-scrolling in its tracks and help you to connect with your audience in the right place, at the right time.",
+        "There's more to social media, than just a few posts on a preferred platform. We are highly adept at understanding your brand and what its audience needs and will respond to, as well as which channels are relevant. Armed with a strong digital media buying arm and a well-rounded research, content development, and analytics team, we understand the global and local landscape.",
     },
     {
       name: "Public Relations",
       description:
-        "We spin stories so captivating, even your neighbour's cat will want to attend your next press conference. With a team that always exceeds the AVE expectations of our clients - just know your brand is in good hands. ",
+        "We have extensive positive media and press relationships, spanning top business publications and television news shows to community radio stations and newspapers, giving us the flexibility and ability to gain targeted press coverage for any project. </br></br> We use Social PR (paid, earned, shared, and owned) as part of our strategy to determine the best platforms to land your brand's key messaging.",
     },
     {
       name: "Influencer Marketing",
       description:
-        "We make influencers, and their followers, fall in love with your brand faster than you can say “double tap”. With an impressive list of macro, micro and nano influencers under our belt, your brand will be basking in the limelight for months.",
+        "Known to bring the party to life, our dynamic team of Influencer Specialists will never say no to the challenge of finding a fit-for-purpose Key Opinion Leader for your project or campaign. We're the proud innovators of “Twitter Army” and have a large pool for our clients to choose from. Across a range of industries or sectors. We manage the end-to-end process of finding the right people who elevate your brand.",
     },
     {
       name: "Events & Production",
       description:
-        "We're the Spielberg of experiences, transforming your events into blockbuster memories. Just call us The Event Surgeons, prescribing your brand with a dose of A-list treatment.",
+        "We are known for our ability to produce impactful & unforgettable events. </br> </br> From concept all the way through to implementation. With a team of consummate professionals, we have access to some of the country's most sought-after talent, with a database that focuses on a variety of industries. We ensure your event has the right talent, is memorable, and above all, successful.",
     },
     {
       name: "Talent Procurement",
       description:
-        "As professional matchmakers, we find the perfect talent to gush over your brand. Your brand paired with the people's champions? A match made in heaven.",
+        "Through our extensive experience managing talent, our relationships are still strong to give your brand access to the country's best talent.",
     },
   ];
 
@@ -195,9 +195,10 @@ const ServiceList = () => {
 
                 <AccordionIcon />
               </AccordionButton>
-              <AccordionPanel className="accordion-body">
-                {service.description}
-              </AccordionPanel>
+              <AccordionPanel
+                className="accordion-body"
+                dangerouslySetInnerHTML={{ __html: service.description }}
+              />
             </AccordionItem>
           ))}
         </Accordion>
