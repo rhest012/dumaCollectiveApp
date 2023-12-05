@@ -162,12 +162,12 @@ const HomeShowreel = () => {
           <ReactPlayer
             className="video-player"
             controls
-            url="https://youtu.be/wioUsVwgSZU"
+            url="https://youtu.be/5UqVIJheWa0"
             width="100%"
             height="100%"
             loop={true}
             playing={true}
-            muted={true}
+            // muted={true}
             config={{
               youtube: {
                 playerVars: { showinfo: 0, modestbranding: 1 },
