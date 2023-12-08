@@ -21,6 +21,7 @@ import NbaAfrica from "../theGrind/pages/NbaAfrica";
 import ClassicCaseStudy from "../theGrind/pages/ClassicCaseStudy";
 import Origins from "../theGrind/pages/Origins";
 import InfluencerSubmission from "../dashboard/pages/InfluencerSubmission";
+import PerformanceReview from "../dashboard/pages/PerformanceReview";
 
 const AnimatedRoutes = () => {
   const [loading, setLoading] = useState(true);
@@ -38,7 +39,6 @@ const AnimatedRoutes = () => {
         <>
           <Box>
             <Nav />
-
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/what-we-do" element={<WhatWeDo />} />
@@ -52,6 +52,10 @@ const AnimatedRoutes = () => {
               <Route path="/influencers" element={<InfluencerSubmission />} />
               <Route path="/the-buzz" element={<NewsRoom />} />
               <Route path="/git" element={<Contact />} />
+              <Route
+                path="/performance-review"
+                element={<PerformanceReview />}
+              />
             </Routes>
             {/* <Footer /> */}
           </Box>

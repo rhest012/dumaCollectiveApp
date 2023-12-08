@@ -12,9 +12,12 @@ import {
   useDisclosure,
   Heading,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const RegistrationSuccessDrawer = ({ isOpen }) => {
+const SuccessDrawer = ({ isOpen }) => {
+  // Handle Drawer location
+  const location = useLocation();
+
   const { onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -23,6 +26,7 @@ const RegistrationSuccessDrawer = ({ isOpen }) => {
     // Refresh the page
     window.location.reload();
   };
+
   return (
     <Drawer
       isOpen={isOpen}
@@ -32,23 +36,25 @@ const RegistrationSuccessDrawer = ({ isOpen }) => {
     >
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerCloseButton />
         <DrawerHeader>
-          <Heading variant="h3">Thank you</Heading>
+          <Heading variant="h4">
+            {location.pathname == "/performance-review"
+              ? "Performance Review Successful"
+              : "Thank you"}
+          </Heading>
         </DrawerHeader>
 
         <DrawerBody>
           <Text>
-            A Duma Collective staff member will be in touch in due course, by
-            submitting your application you consent to Duma Collective sharing
-            your personal information with clients and third party campaign
-            partners.
+            {location.pathname == "/performance-review"
+              ? "Thank you for taking the time to fill in the performance review."
+              : "  A Duma Collective staff member will be in touch in due course, by submitting your application you consent to Duma Collective sharing your personal information with clients and third party campaign partners."}
           </Text>
         </DrawerBody>
 
         <DrawerFooter>
           <Button width="100%" variant="standardButton" onClick={handleConsent}>
-            Consent
+            {location.pathname == "/performance-review" ? "Close" : "Consent"}
           </Button>
         </DrawerFooter>
       </DrawerContent>
@@ -56,4 +62,4 @@ const RegistrationSuccessDrawer = ({ isOpen }) => {
   );
 };
 
-export default RegistrationSuccessDrawer;
+export default SuccessDrawer;

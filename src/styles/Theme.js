@@ -81,7 +81,9 @@ const theme = extendTheme ({
             width:"8rem", 
             paddingY:"1.5rem",
             color:"#fff", 
-            borderRadius:"0.5rem",
+            fontFamily: "'Avenir Next', Arial, sans-serif",
+            fontWeight: 600,
+            fontSize: "1.25rem",
             border: "1px solid #1E174B",
             _hover : {
               color:"#1E174B",

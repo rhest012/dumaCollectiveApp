@@ -17,7 +17,7 @@ import useFetchFirebase from "../../../actions/useFetchFirebase";
 import firebase from "firebase/compat/app";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import RegistrationSuccessDrawer from "./uxComponents/RegistrationSuccessDrawer";
+import SuccessDrawer from "./uxComponents/SuccessDrawer";
 
 const InfluencerRegistrationForm = () => {
   // Styling
@@ -463,7 +463,7 @@ const InfluencerRegistrationForm = () => {
           </Box>
         </GridItem>
       </Grid>
-      <RegistrationSuccessDrawer isOpen={isDrawerOpen} />
+      <SuccessDrawer isOpen={isDrawerOpen} />
     </Box>
   );
 };
