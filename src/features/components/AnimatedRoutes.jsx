@@ -22,8 +22,41 @@ import ClassicCaseStudy from "../theGrind/pages/ClassicCaseStudy";
 import Origins from "../theGrind/pages/Origins";
 import InfluencerSubmission from "../dashboard/pages/InfluencerSubmission";
 import PerformanceReview from "../dashboard/pages/PerformanceReview";
+import EmployeeReviewDashboard from "../dashboard/pages/EmployeeReviewDashboard";
+import DashboardNav from "../dashboard/components/DashboardNav";
 
-const AnimatedRoutes = () => {
+export const DashboardRouter = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loading
+      ? document.querySelector("body").classList.add("loading")
+      : document.querySelector("body").classList.remove("loading");
+  }, [loading]);
+
+  return (
+    <>
+      <AnimatePresence mode="wait">
+        <ScrollToTop />
+        <>
+          <Box>
+            <DashboardNav />
+            <Routes>
+              <Route
+                path="/performance-review"
+                element={<PerformanceReview />}
+              />
+              <Route path="/employees" element={<EmployeeReviewDashboard />} />
+            </Routes>
+            {/* <Footer /> */}
+          </Box>
+        </>
+        {/* )} */}
+      </AnimatePresence>
+    </>
+  );
+};
+export const FrontEndRouter = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -52,10 +85,12 @@ const AnimatedRoutes = () => {
               <Route path="/influencers" element={<InfluencerSubmission />} />
               <Route path="/the-buzz" element={<NewsRoom />} />
               <Route path="/git" element={<Contact />} />
+
               <Route
                 path="/performance-review"
                 element={<PerformanceReview />}
               />
+              <Route path="/employees" element={<EmployeeReviewDashboard />} />
             </Routes>
             {/* <Footer /> */}
           </Box>
@@ -65,5 +100,3 @@ const AnimatedRoutes = () => {
     </>
   );
 };
-
-export default AnimatedRoutes;

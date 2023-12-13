@@ -45,6 +45,11 @@ h5 {
   font-size: 1.25rem;
 }
 
+.body-container {
+  margin: 4rem 2rem;
+}
+
+
 
 .swiper-button-next,
 .swiper-button-prev {

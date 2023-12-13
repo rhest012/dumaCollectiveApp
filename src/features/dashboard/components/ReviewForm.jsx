@@ -202,21 +202,46 @@ const ReviewForm = () => {
 
     try {
       const database = firebase.database();
-
       const databaseRef = database.ref(
         `employees/2023/performanceReviewResponses/${inputData.reviewee}`
       );
 
-      databaseRef.set(newReview, (error) => {
-        if (error) {
-          setErrorMessage("Could not complete registration, please try again.");
-          console.error(error);
-        } else {
-          setIsReviewPending(false);
-          setIsReviewSuccess(true);
-          console.log("submission success");
-        }
-      });
+      // Check if the data already exists
+      const existingData = await databaseRef.once("value");
+      const existingDataVal = existingData.val();
+
+      if (existingDataVal) {
+        // If data already exists, add a new entry with a specific key
+        const newEntryKey = `${inputData.reviewer} review`;
+        const newEntryRef = databaseRef.child(newEntryKey);
+        newEntryRef.set(newReview, (error) => {
+          if (error) {
+            setErrorMessage(
+              "Could not complete registration, please try again."
+            );
+            console.error(error);
+          } else {
+            setIsReviewPending(false);
+            setIsReviewSuccess(true);
+            console.log("submission success");
+          }
+        });
+      } else {
+        // If data doesn't exist, set the new data with a specific key
+        const newEntryKey = `${inputData.reviewer} review`;
+        databaseRef.child(newEntryKey).set(newReview, (error) => {
+          if (error) {
+            setErrorMessage(
+              "Could not complete registration, please try again."
+            );
+            console.error(error);
+          } else {
+            setIsReviewPending(false);
+            setIsReviewSuccess(true);
+            console.log("submission success");
+          }
+        });
+      }
     } catch (error) {
       console.error("Error during submission:", error);
     }

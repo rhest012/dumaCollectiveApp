@@ -48,6 +48,13 @@ const SecondaryPageHeader = () => {
         "The people that make epic sh*t happen, the people redefining creative communications...",
       url: "/performance-review",
     },
+    {
+      name: "Employee Dashboard",
+      heading: "Employee Dashboard",
+      description:
+        "The people that make epic sh*t happen, the people redefining creative communications...",
+      url: "/employees",
+    },
   ];
 
   // Page Location
