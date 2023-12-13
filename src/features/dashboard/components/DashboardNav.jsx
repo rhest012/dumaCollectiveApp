@@ -25,6 +25,10 @@ const DashboardNav = () => {
       name: "Employees",
       url: "/employees",
     },
+    {
+      name: "Performance Review",
+      url: "/performance-review",
+    },
   ];
 
   // Style Active Location
