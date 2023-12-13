@@ -14,11 +14,15 @@ import { useFetchFirebase } from "../../../actions/useFetchFirebase";
 
 const PerformanceReviewAccordion = () => {
   const subHeadingStyling = {
-    fontSize: "1rem",
+    fontSize: "0.85rem",
   };
 
   const singleInputContainerStyling = {
     width: "100%",
+  };
+
+  const singleHeadingContainer = {
+    display: { base: "none", md: "block" },
   };
 
   const data = useFetchFirebase("employees");
@@ -60,13 +64,13 @@ const PerformanceReviewAccordion = () => {
 
         const possibleScore =
           numberOfReviews === 1
-            ? 80
+            ? 110
             : numberOfReviews === 2
-            ? 160
+            ? 220
             : numberOfReviews === 3
-            ? 240
+            ? 330
             : numberOfReviews === 4
-            ? 320
+            ? 440
             : 0;
 
         const percentageScore = (totalScore / possibleScore) * 100;
@@ -91,6 +95,7 @@ const PerformanceReviewAccordion = () => {
 
             const numberOfReviews = review.length;
 
+            // Possible Score Per Question
             const possibleScore =
               numberOfReviews === 1
                 ? 10
@@ -117,6 +122,7 @@ const PerformanceReviewAccordion = () => {
 
         const formattedReview = {
           reviewee: reviewDetails?.[0].reviewee,
+          revieweeRole: reviewDetails?.[0].revieweeRole,
           reviews: numberOfReviews,
           totalScore: totalScore,
           possibleScore: possibleScore,
@@ -130,9 +136,6 @@ const PerformanceReviewAccordion = () => {
       setFormattedEmployeeData(employeeReviews);
     }
   }, [employeeData]);
-
-  console.log("formatted employee data", formattedEmployeeData);
-  console.log(employeeData);
 
   return (
     <>
@@ -166,16 +169,19 @@ const PerformanceReviewAccordion = () => {
                       height="100%"
                       width="100%"
                     >
-                      <Box className="heading-container">
+                      <Box className="heading-container" width="15.5rem">
                         <Heading variant="h6" as="h6">
                           {review.reviewee}
                         </Heading>
                         <Heading variant="h6" sx={subHeadingStyling}>
-                          Account Director
+                          {review.revieweeRole}
                         </Heading>
                       </Box>
 
-                      <Box className="heading-container">
+                      <Box
+                        className="heading-container"
+                        sx={singleHeadingContainer}
+                      >
                         <Heading variant="h6" as="h5">
                           Employee Reviews
                         </Heading>
@@ -184,7 +190,10 @@ const PerformanceReviewAccordion = () => {
                         </Heading>
                       </Box>
 
-                      <Box className="heading-container">
+                      <Box
+                        className="heading-container"
+                        sx={singleHeadingContainer}
+                      >
                         <Heading variant="h6" as="h5">
                           Score
                         </Heading>

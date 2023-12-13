@@ -60,12 +60,30 @@ const ReviewForm = () => {
   }, [data]);
 
   // Select Input Data
+
+  const [revieweeInputData, setRevieweeInputData] = useState({
+    reviewee: { name: "", role: "" },
+  });
+
+  const handleRevieweeInputData = (e) => {
+    const { name, value } = e.target;
+    const [employeeName, employeePosition] = value.split(" - ");
+
+    setRevieweeInputData((prevData) => ({
+      ...prevData,
+      reviewee: {
+        name: employeeName,
+        role: employeePosition,
+      },
+    }));
+
+    e.target.value = "";
+  };
   const [inputData, setInputData] = useState({
     reviewer: "",
-    reviewee: "",
-    5: "",
-    10: "",
-    11: "",
+    12: "",
+    13: "",
+    14: "",
   });
 
   const handleInputChange = (e) => {
@@ -82,14 +100,10 @@ const ReviewForm = () => {
   // Handle Slider Input Data
   const [sliderInputData, setSliderInputData] = useState(() => {
     const initialSliderData = {};
-    const numberOfQuestions = 9;
-    const excludedNumber = 5;
+    const numberOfQuestions = 11;
 
     for (let i = 1; i <= numberOfQuestions; i++) {
-      // Exclude Question 6
-      if (i !== excludedNumber) {
-        initialSliderData[i] = 5;
-      }
+      initialSliderData[`question${i}`] = 5; // Set the initial value for each question to 5
     }
 
     return initialSliderData;
@@ -107,18 +121,19 @@ const ReviewForm = () => {
   const [newReview, setNewReview] = useState(undefined);
 
   useEffect(() => {
-    if (inputData[5] && inputData[11] !== "") {
-      const sliderValues = Object.values(sliderInputData).slice(1, 11);
+    if (inputData[12] && inputData[13] && inputData[14] !== "") {
+      const sliderValues = Object.values(sliderInputData).slice(0, 11);
       const sumOfSliderValues = sliderValues.reduce(
         (acc, value) => acc + value,
         0
       );
 
-      const totalScore = 80;
+      const totalScore = 110;
 
       setNewReview({
         reviewer: inputData.reviewer,
-        reviewee: inputData.reviewee,
+        reviewee: revieweeInputData.reviewee.name,
+        revieweeRole: revieweeInputData.reviewee.role,
         revieweeTotal: sumOfSliderValues,
         percentage: (sumOfSliderValues / totalScore) * 100,
 
@@ -126,66 +141,84 @@ const ReviewForm = () => {
           {
             number: "1",
             question:
-              "How effectively do your believe the team member's work has contributed to redefining creative communications from Africa to the world?",
+              "On a scale from 1 to 10, how effectively does the employee's work contribute to redefining creative communications from Africa to the world?",
             answer: sliderInputData[1],
           },
           {
             number: "2",
             question:
-              "How impactful the team member believes their creative solutions have been in their role?",
+              "Please rate, on a scale from 1 to 10, the impact of the employee's creative solutions in achieving the company's mission of delivering impactful creative solutions.",
             answer: sliderInputData[2],
           },
           {
             number: "3",
             question:
-              "How would the team member rate their contribution to creating an oasis for African creativity to flourish, in alignment with the company vision?",
+              "How would you rate, on a scale from 1 to 10, the employee's contribution to creating an oasis for African creativity to flourish, in alignment with the company's vision?",
             answer: sliderInputData[3],
           },
           {
             number: "4",
             question:
-              "How would the team member rate their contribution to creating an oasis for African creativity to flourish, in alignment with the company vision?",
+              "Rate, on a scale from 1 to 10 the employee's leadership skills",
             answer: sliderInputData[4],
           },
           {
             number: "5",
-            question: "Please provide examples",
-            answer: inputData[5],
+            question:
+              "On a scale from 1 to 10, how consistently does the employee show respect for colleagues, clients, and partners in their interactions and collaborations?",
+            answer: sliderInputData[5],
           },
+
           {
             number: "6",
             question:
-              "How consistently has the team member shown respect for colleagues, clients, and partners in their interactions and collaborations?",
+              "Can you rate, on a scale from 1 to 10, how well the employee takes accountability for mistakes or issues and how they resolve them?",
             answer: sliderInputData[6],
           },
           {
             number: "7",
             question:
-              "How well have they have taken accountability for mistakes or issues and how they have resolved them?",
+              "Rate, on a scale from 1 to 10, how effectively the employee communicates with their team, clients, and stakeholders to ensure the success of a project or initiative.",
             answer: sliderInputData[7],
           },
           {
             number: "8",
             question:
-              "In what ways has the team member demonstrated an entrepreneurial mindset in their work, and how has it benefited the company or their team?",
+              "In what ways does the employee demonstrate an entrepreneurial mindset in their work, and how does it benefit the company or their team? ",
             answer: sliderInputData[8],
           },
           {
             number: "9",
             question:
-              "How has the team member strived to do the basic right in their role, and what impact do they feel this has had on their work?",
-            answer: sliderInputData[8],
+              "On a scale from 1 to 10, how does the employee strive to do the basic right in their role, and what impact does this have on their work and the company as a whole?",
+            answer: sliderInputData[9],
           },
           {
             number: "10",
             question:
-              "How has the team member strived to do the basic right in their role, and what impact do they feel this has had on their work?",
-            answer: sliderInputData[9],
+              "Rate, on a scale from 1 to 10, how consistently the employee upholds honesty and integrity in their interactions and decision-making throughout the year.",
+            answer: sliderInputData[10],
           },
           {
             number: "11",
-            question: "Give overall feedback to your fellow Dumarian",
-            answer: inputData[11],
+            question:
+              "Reflecting on the company's purpose, mission, and vision, how would you rate, on a scale from 1 to 10, the employee's personal contribution to advancing these goals in their role?",
+            answer: sliderInputData[11],
+          },
+          {
+            number: "12",
+            question: "What should the employee continue to do",
+            answer: inputData[12],
+          },
+          {
+            number: "13",
+            question: "What should the employee start doing",
+            answer: inputData[13],
+          },
+          {
+            number: "14",
+            question: "What should the employee stop doing",
+            answer: inputData[14],
           },
         ],
       });
@@ -203,7 +236,7 @@ const ReviewForm = () => {
     try {
       const database = firebase.database();
       const databaseRef = database.ref(
-        `employees/2023/performanceReviewResponses/${inputData.reviewee}`
+        `employees/2023/performanceReviewResponses/${revieweeInputData.reviewee.name}`
       );
 
       // Check if the data already exists
@@ -275,7 +308,7 @@ const ReviewForm = () => {
                 width="100%"
               >
                 {sortedEmployees
-                  ? sortedEmployees?.map((employee, index) => (
+                  ? sortedEmployees.map((employee, index) => (
                       <option key={index} value={employee?.name}>
                         {employee?.name}
                       </option>
@@ -289,12 +322,19 @@ const ReviewForm = () => {
                 variant="unstyled"
                 sx={inputStyling}
                 name="reviewee"
-                value={inputData.reviewee}
-                onChange={handleInputChange}
+                value={
+                  revieweeInputData.reviewee.name
+                    ? `${revieweeInputData.reviewee.name} - ${revieweeInputData.reviewee.role}`
+                    : ""
+                }
+                onChange={handleRevieweeInputData}
               >
                 {sortedEmployees
                   ? sortedEmployees?.map((employee, index) => (
-                      <option key={index} value={employee?.name}>
+                      <option
+                        key={index}
+                        value={`${employee?.name} - ${employee?.role}`}
+                      >
                         {employee?.name}
                       </option>
                     ))
