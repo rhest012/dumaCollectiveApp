@@ -24,6 +24,7 @@ import InfluencerSubmission from "../dashboard/pages/InfluencerSubmission";
 import PerformanceReview from "../dashboard/pages/PerformanceReview";
 import EmployeeReviewDashboard from "../dashboard/pages/EmployeeReviewDashboard";
 import DashboardNav from "../dashboard/components/DashboardNav";
+import Account from "../dashboard/pages/Account";
 
 export const DashboardRouter = () => {
   const [loading, setLoading] = useState(true);
@@ -42,6 +43,7 @@ export const DashboardRouter = () => {
           <Box>
             <DashboardNav />
             <Routes>
+              <Route path="/account" element={<Account />} />
               <Route
                 path="/performance-review"
                 element={<PerformanceReview />}

@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useFetchFirebase } from "../../../actions/useFetchFirebase";
+import { motion } from "framer-motion";
 
 const PerformanceReviewAccordion = () => {
   const subHeadingStyling = {
@@ -23,6 +24,31 @@ const PerformanceReviewAccordion = () => {
 
   const singleHeadingContainer = {
     display: { base: "none", md: "block" },
+  };
+
+  // Framer Motion Animation
+  const MotionBox = motion(Box);
+
+  const accordionContainerVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        delay: 1.5,
+        duration: 1,
+        when: "beforeChildren",
+        staggerChildren: 0.4,
+      },
+    },
+    exit: {
+      y: -20,
+      opacity: 0,
+    },
   };
 
   const data = useFetchFirebase("employees");
@@ -140,7 +166,12 @@ const PerformanceReviewAccordion = () => {
   return (
     <>
       {data && (
-        <Box>
+        <MotionBox
+          variants={accordionContainerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+        >
           <Accordion allowToggle className="accordion-container">
             {formattedEmployeeData
               ? formattedEmployeeData?.map((review, index) => (
@@ -219,7 +250,7 @@ const PerformanceReviewAccordion = () => {
                         sx={singleInputContainerStyling}
                       >
                         {review?.questions?.map((question) => (
-                          <Box marginBottom="0.25rem">
+                          <Box marginBottom="0.25rem" key={question?.number}>
                             <Heading variant="h6" sx={subHeadingStyling}>
                               {question?.number}.
                             </Heading>
@@ -230,48 +261,72 @@ const PerformanceReviewAccordion = () => {
                               paddingBottom="1rem"
                               justifyContent="space-between"
                               borderBottom="1px solid #000"
+                              flexDir={
+                                question.percentageScore &&
+                                question.percentageScore != NaN
+                                  ? "row"
+                                  : "column"
+                              }
                             >
                               {question?.review.map((singleReview, index) => (
-                                <Box>
+                                <Box key={index}>
                                   <Heading
                                     variant="h6"
                                     sx={subHeadingStyling}
-                                    textAlign="center"
+                                    textAlign={
+                                      question.percentageScore &&
+                                      question.percentageScore != NaN
+                                        ? "center"
+                                        : "column"
+                                    }
                                   >
                                     {singleReview.answer}
                                   </Heading>
-                                  <Text varina="p" textAlign="center">
+                                  <Text
+                                    variant="p"
+                                    textAlign={
+                                      question.percentageScore &&
+                                      question.percentageScore != NaN
+                                        ? "center"
+                                        : "left"
+                                    }
+                                  >
                                     {singleReview.author}
                                   </Text>
                                 </Box>
                               ))}
 
-                              <Box>
-                                <Heading
-                                  variant="h6"
-                                  sx={subHeadingStyling}
-                                  textAlign="center"
-                                >
-                                  {question.totalScore} /{" "}
-                                  {question.possibleScore}
-                                </Heading>
-                                <Text varina="p" textAlign="center">
-                                  Score
-                                </Text>
-                              </Box>
+                              {question.percentageScore &&
+                              question.percentageScore != NaN ? (
+                                <>
+                                  <Box>
+                                    <Heading
+                                      variant="h6"
+                                      sx={subHeadingStyling}
+                                      textAlign="center"
+                                    >
+                                      {question.totalScore} /{" "}
+                                      {question.possibleScore}
+                                    </Heading>
+                                    <Text variant="p" textAlign="center">
+                                      Score
+                                    </Text>
+                                  </Box>
 
-                              <Box>
-                                <Heading
-                                  variant="h6"
-                                  sx={subHeadingStyling}
-                                  textAlign="center"
-                                >
-                                  {question.percentageScore}%
-                                </Heading>
-                                <Text varina="p" textAlign="center">
-                                  Percentage
-                                </Text>
-                              </Box>
+                                  <Box>
+                                    <Heading
+                                      variant="h6"
+                                      sx={subHeadingStyling}
+                                      textAlign="center"
+                                    >
+                                      {question.percentageScore}%
+                                    </Heading>
+                                    <Text variant="p" textAlign="center">
+                                      Percentage
+                                    </Text>
+                                  </Box>
+                                </>
+                              ) : null}
                             </Flex>
                           </Box>
                         ))}
@@ -281,7 +336,7 @@ const PerformanceReviewAccordion = () => {
                 ))
               : null}
           </Accordion>
-        </Box>
+        </MotionBox>
       )}
     </>
   );

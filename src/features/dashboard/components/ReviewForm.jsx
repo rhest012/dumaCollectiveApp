@@ -17,6 +17,7 @@ import { useFetchFirebase } from "../../../actions/useFetchFirebase";
 import firebase from "firebase/compat/app";
 import { SortAlphabeticallyHelper } from "../../../helpers/SortAlphabeticallyHelper";
 import SuccessDrawer from "./uxComponents/SuccessDrawer";
+import { motion } from "framer-motion";
 
 const ReviewForm = () => {
   const inputStyling = {
@@ -47,6 +48,31 @@ const ReviewForm = () => {
     mt: "2",
     ml: "-2.5",
     fontSize: "0.85rem",
+  };
+
+  // Framer Motion
+  const MotionBox = motion(Box);
+
+  const inputContainerVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        delay: 1.5,
+        duration: 1,
+        when: "beforeChildren",
+        staggerChildren: 0.4,
+      },
+    },
+    exit: {
+      y: -20,
+      opacity: 0,
+    },
   };
 
   // Fetch Employee Data
@@ -292,9 +318,13 @@ const ReviewForm = () => {
   return (
     <>
       {data && (
-        <Box
+        <MotionBox
           width="100%"
           paddingX={{ base: "2rem", md: "6rem", lg: "8rem", xl: "12rem" }}
+          variants={inputContainerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
         >
           <Flex gap="2rem" className="staff-name-container" sx={inputRow}>
             <Box single-staff-container sx={singleInputContainer}>
@@ -437,7 +467,7 @@ const ReviewForm = () => {
             Submit
           </Button>
           <SuccessDrawer isOpen={isDrawerOpen} />
-        </Box>
+        </MotionBox>
       )}
     </>
   );

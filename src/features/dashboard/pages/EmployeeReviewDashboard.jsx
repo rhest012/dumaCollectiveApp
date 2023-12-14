@@ -3,6 +3,7 @@ import React from "react";
 import SecondaryPageHeader from "../../components/SecondaryPageHeader";
 import PerformanceReviewAccordion from "../components/PerformanceReviewAccordion";
 import { Helmet } from "react-helmet-async";
+import transition from "../../components/transition";
 
 const EmployeeReviewDashboard = () => {
   return (
@@ -21,4 +22,4 @@ const EmployeeReviewDashboard = () => {
   );
 };
 
-export default EmployeeReviewDashboard;
+export default transition(EmployeeReviewDashboard);

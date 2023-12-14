@@ -16,7 +16,7 @@ const InfluencerSubmission = () => {
         />
         <link rel="canonical" href="/influencers" />
       </Helmet>
-      <Box margin="4rem 2rem">
+      <Box className="body-container">
         <InfluencerRegistrationForm />
       </Box>
     </>
