@@ -39,7 +39,7 @@ const SignOut = () => {
         color: "#000000",
       }}
     >
-      Lougout
+      Logout
     </Button>
   );
 };
