@@ -18,7 +18,9 @@ const SignOut = () => {
       setUser(currentUser);
     });
 
-    return () => activeUser();
+    return () => {
+      activeUser();
+    };
   }, []);
 
   return (

@@ -76,18 +76,9 @@ const SignInForm = () => {
     }
   };
 
-  const [user, setUser] = useState(undefined);
-
-  useEffect(() => {
-    const activeUser = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-
-    return () => activeUser();
-  }, []);
-
   // Handle Navigate after successful sign up
   useEffect(() => {
+    console.log("useEffect triggered");
     if (isSignInSuccess) {
       navigate("/performance-review");
     }
