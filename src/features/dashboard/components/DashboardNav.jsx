@@ -1,3 +1,11 @@
+import React from "react";
+import {
+  Link,
+  NavLink,
+  Link as ReachLink,
+  useLocation,
+} from "react-router-dom";
+// UX
 import {
   Box,
   Flex,
@@ -9,17 +17,16 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 import Logo from "../../../assets/Duma-Collective-Logo.svg";
-import React from "react";
-
-import {
-  Link,
-  NavLink,
-  Link as ReachLink,
-  useLocation,
-} from "react-router-dom";
+// Framer Motion
 import { motion } from "framer-motion";
+// User Context
+import useUserContext from "../../../actions/useUserContext";
+import SignOut from "./uxComponents/SignOutButton";
 
 const DashboardNav = () => {
+  // Manage Active User
+  const { activeUser } = useUserContext();
+
   const menuItems = [
     {
       name: "Employees",
@@ -68,11 +75,19 @@ const DashboardNav = () => {
               variant="h3"
               fontSize="0.75rem"
               textTransform="uppercase"
+              display={
+                activeUser &&
+                (menuItem.name === "Employees" &&
+                activeUser.department !== "Exco"
+                  ? "none"
+                  : "block")
+              }
             >
               {menuItem.name}
             </Heading>
           </Link>
         ))}
+        <SignOut />
       </Flex>
       <Menu closeOnSelect colorScheme="none" className="mobile-menu">
         <MenuButton

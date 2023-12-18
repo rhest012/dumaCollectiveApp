@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import SignUpForm from "./SignUpForm";
+import SignInForm from "./SignInForm";
 
 const AccountTab = () => {
   return (
@@ -30,7 +31,9 @@ const AccountTab = () => {
           <TabPanel>
             <SignUpForm />
           </TabPanel>
-          <TabPanel>hello</TabPanel>
+          <TabPanel>
+            <SignInForm />
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>

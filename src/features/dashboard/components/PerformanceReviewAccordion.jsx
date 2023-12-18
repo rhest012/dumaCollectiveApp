@@ -186,8 +186,6 @@ const PerformanceReviewAccordion = () => {
                     }}
                     _hover={{
                       background: "#FCFFFC",
-                      // color: "#fff",
-                      // borderY: "1px solid #1d1749",
                     }}
                   >
                     <AccordionButton
@@ -244,13 +242,21 @@ const PerformanceReviewAccordion = () => {
 
                       <AccordionIcon />
                     </AccordionButton>
-                    <AccordionPanel className="accordion-body">
+                    <AccordionPanel
+                      className="accordion-body"
+                      _last={{
+                        paddingBottom: 0,
+                      }}
+                    >
                       <Box
                         className="slider-container"
                         sx={singleInputContainerStyling}
                       >
                         {review?.questions?.map((question) => (
-                          <Box marginBottom="0.25rem" key={question?.number}>
+                          <Box
+                            margin="1.25rem 0 0.25rem 0"
+                            key={question?.number}
+                          >
                             <Heading variant="h6" sx={subHeadingStyling}>
                               {question?.number}.
                             </Heading>
@@ -258,9 +264,12 @@ const PerformanceReviewAccordion = () => {
 
                             <Flex
                               marginY="2rem"
-                              paddingBottom="1rem"
-                              justifyContent="space-between"
+                              paddingY="1rem"
                               borderBottom="1px solid #000"
+                              _last={{
+                                marginBottom: 0,
+                              }}
+                              justifyContent="space-between"
                               flexDir={
                                 question.percentageScore &&
                                 question.percentageScore != NaN

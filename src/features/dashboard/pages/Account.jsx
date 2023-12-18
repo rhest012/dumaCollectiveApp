@@ -15,7 +15,13 @@ const Account = () => {
         <link rel="canonical" href="/account" />
         <meta name="robots" content="noindex" />
       </Helmet>
-      <Box className="body-container">
+      <Box
+        className="body-container"
+        minHeight="74vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
         <AccountTab />
       </Box>
     </>

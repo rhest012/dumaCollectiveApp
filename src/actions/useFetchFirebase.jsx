@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getAuth } from "firebase/auth";
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 
@@ -15,6 +16,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
+export const auth = getAuth();
 
 export const useFetchFirebase = (collectionName) => {
   const [data, setData] = useState([]);

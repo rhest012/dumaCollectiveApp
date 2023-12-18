@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, useLocation, Router } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useLocation,
+  Router,
+  useNavigate,
+} from "react-router-dom";
 
 // Pages
 import Home from "../pages/Home";
@@ -25,9 +31,16 @@ import PerformanceReview from "../dashboard/pages/PerformanceReview";
 import EmployeeReviewDashboard from "../dashboard/pages/EmployeeReviewDashboard";
 import DashboardNav from "../dashboard/components/DashboardNav";
 import Account from "../dashboard/pages/Account";
+import { UserProvider } from "../../actions/UserContext";
+
+// Auth
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../actions/useFetchFirebase";
+import ConditionalMenuItems from "../dashboard/components/ConditionalMenuItems";
 
 export const DashboardRouter = () => {
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     loading
@@ -35,26 +48,59 @@ export const DashboardRouter = () => {
       : document.querySelector("body").classList.remove("loading");
   }, [loading]);
 
+  // Check If User is Logged in
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+  }, []);
+
+  // Handle Redirect if not logged in
+  const [originalRoute, setOriginalRoute] = useState(null);
+
+  useEffect(() => {
+    if (!user) {
+      // Save the original route before redirecting to login
+      setOriginalRoute(window.location.pathname);
+      navigate("/account");
+    } else if (originalRoute) {
+      // If the user is logged in and an original route exists, redirect to it
+      navigate(originalRoute);
+      setOriginalRoute(null);
+    }
+  }, [user]);
+
+  console.log("user", user);
+
   return (
     <>
-      <AnimatePresence mode="wait">
-        <ScrollToTop />
-        <>
-          <Box>
-            <DashboardNav />
-            <Routes>
-              <Route path="/account" element={<Account />} />
-              <Route
-                path="/performance-review"
-                element={<PerformanceReview />}
-              />
-              <Route path="/employees" element={<EmployeeReviewDashboard />} />
-            </Routes>
-            {/* <Footer /> */}
-          </Box>
-        </>
-        {/* )} */}
-      </AnimatePresence>
+      <UserProvider>
+        <AnimatePresence mode="wait">
+          <ScrollToTop />
+          <>
+            <Box>
+              <ConditionalMenuItems>
+                <DashboardNav />
+              </ConditionalMenuItems>
+
+              <Routes>
+                <Route path="/account" element={<Account />} />
+                <Route
+                  path="/performance-review"
+                  element={<PerformanceReview />}
+                />
+                <Route
+                  path="/employees"
+                  element={<EmployeeReviewDashboard />}
+                />
+              </Routes>
+              {/* <Footer /> */}
+            </Box>
+          </>
+        </AnimatePresence>
+      </UserProvider>
     </>
   );
 };
