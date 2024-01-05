@@ -210,13 +210,13 @@ const ReviewForm = () => {
           {
             number: "8",
             question:
-              "In what ways does the employee demonstrate an entrepreneurial mindset in their work, and how does it benefit the company or their team? ",
+              "On a scale of 1 - 10, how frequently does the employee apply their entrepreneurial spirit and abilities?",
             answer: sliderInputData[8],
           },
           {
             number: "9",
             question:
-              "On a scale from 1 to 10, how does the employee strive to do the basic right in their role, and what impact does this have on their work and the company as a whole?",
+              "On a scale of 1 - 10: How well does the employee strive to get the basics right in their role?",
             answer: sliderInputData[9],
           },
           {
@@ -318,156 +318,176 @@ const ReviewForm = () => {
   return (
     <>
       {data && (
-        <MotionBox
+        <Box
           width="100%"
-          paddingX={{ base: "2rem", md: "6rem", lg: "8rem", xl: "12rem" }}
           variants={inputContainerVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
-          <Flex gap="2rem" className="staff-name-container" sx={inputRow}>
-            <Box single-staff-container sx={singleInputContainer}>
-              <Select
-                placeholder="Your Name"
-                name="reviewer"
-                value={inputData.reviewer}
-                onChange={handleInputChange}
-                variant="unstyled"
-                sx={inputStyling}
-                width="100%"
-              >
-                {sortedEmployees
-                  ? sortedEmployees.map((employee, index) => (
-                      <option key={index} value={employee?.name}>
-                        {employee?.name}
-                      </option>
-                    ))
-                  : "Employee List Loading"}
-              </Select>
-            </Box>
-            <Box single-staff-container width="100%">
-              <Select
-                placeholder="Employee reviewing"
-                variant="unstyled"
-                sx={inputStyling}
-                name="reviewee"
-                value={
-                  revieweeInputData.reviewee.name
-                    ? `${revieweeInputData.reviewee.name} - ${revieweeInputData.reviewee.role}`
-                    : ""
-                }
-                onChange={handleRevieweeInputData}
-              >
-                {sortedEmployees
-                  ? sortedEmployees?.map((employee, index) => (
-                      <option
-                        key={index}
-                        value={`${employee?.name} - ${employee?.role}`}
-                      >
-                        {employee?.name}
-                      </option>
-                    ))
-                  : "Employee List Loading"}
-              </Select>
-            </Box>
-          </Flex>
-          {data?.[2023]?.performanceReview?.map((survey, index) => (
-            <>
-              <Box
-                key={index}
-                className="section-container"
-                margin="3rem 0 1rem 0"
-              >
-                <Heading variant="h5" marginBottom="1rem">
-                  {survey.section}
-                </Heading>
-
-                {survey?.questions?.map((question, index) =>
-                  question.type === "scale" ? (
-                    <Box
-                      key={index}
-                      className="slider-container"
-                      sx={singleInputContainer}
-                    >
-                      <Heading variant="h5">{question.id}.</Heading>
-                      <Text>{question.question}</Text>
-
-                      <Slider
-                        aria-label={`slider-${question.id}`}
-                        defaultValue={5}
-                        min={0}
-                        max={10}
-                        step={1}
-                        margin="2.5rem 0"
-                        value={sliderInputData[question.id]}
-                        onChange={(val) =>
-                          handleSliderInputChange(`${question.id}`, val)
-                        }
-                      >
-                        <SliderMark value={0} {...labelStyle}>
-                          0
-                        </SliderMark>
-                        <SliderMark value={2} {...labelStyle}>
-                          2
-                        </SliderMark>
-                        <SliderMark value={4} {...labelStyle}>
-                          4
-                        </SliderMark>
-                        <SliderMark value={6} {...labelStyle}>
-                          6
-                        </SliderMark>
-                        <SliderMark value={8} {...labelStyle}>
-                          8
-                        </SliderMark>
-                        <SliderMark value={10} {...labelStyle}>
-                          10
-                        </SliderMark>
-                        <SliderMark
-                          value={sliderInputData[question.id]}
-                          textAlign="center"
-                          bg="#1E174B"
-                          color="white"
-                          mt="-10"
-                          ml="-5"
-                          w="12"
-                        >
-                          {sliderInputData[question.id]}
-                        </SliderMark>
-                        <SliderTrack>
-                          <SliderFilledTrack background="#1E174B" />
-                        </SliderTrack>
-                        <SliderThumb />
-                      </Slider>
-                    </Box>
-                  ) : (
-                    <Box
-                      className="text-area-container"
-                      sx={singleInputContainer}
-                      key={index}
-                    >
-                      <Heading variant="h5">{question.id}.</Heading>
-                      <Text>{question.question}</Text>
-                      <Textarea
-                        variant="unstyled"
-                        borderBottom="1px solid #1E174B"
-                        size="sm"
-                        marginBottom="2rem"
-                        value={inputData[question.id]}
-                        name={question.id}
-                        onChange={handleInputChange}
-                      />
-                    </Box>
-                  )
-                )}
+          <Box className="question-description" marginTop="-1rem">
+            <Text>
+              1: Poor - Requires substantial improvement. <br />
+              2-3: Below Average - Needs noticeable enhancement. <br />
+              4-5: Average - Meets basic expectations. <br />
+              6-7: Above Average - Demonstrates proficiency. 8: Very Good -
+              High-quality performance. <br />
+              9: Outstanding - Consistently surpasses expectations. <br />
+              10: Exceptional - Sets an exemplary standard. <br />
+            </Text>
+          </Box>
+          <Box
+            className="survey-container"
+            paddingX={{ base: "2rem", md: "6rem", lg: "8rem", xl: "12rem" }}
+          >
+            <Flex gap="2rem" className="staff-name-container" sx={inputRow}>
+              <Box single-staff-container sx={singleInputContainer}>
+                <Select
+                  placeholder="Your Name"
+                  name="reviewer"
+                  value={inputData.reviewer}
+                  onChange={handleInputChange}
+                  variant="unstyled"
+                  sx={inputStyling}
+                  width="100%"
+                >
+                  {sortedEmployees
+                    ? sortedEmployees.map((employee, index) => (
+                        <option key={index} value={employee?.name}>
+                          {employee?.name}
+                        </option>
+                      ))
+                    : "Employee List Loading"}
+                </Select>
               </Box>
-            </>
-          ))}
-          <Button width="100%" variant="standardButton" onClick={handleSubmit}>
-            Submit
-          </Button>
-          <SuccessDrawer isOpen={isDrawerOpen} />
-        </MotionBox>
+              <Box single-staff-container width="100%">
+                <Select
+                  placeholder="Employee reviewing"
+                  variant="unstyled"
+                  sx={inputStyling}
+                  name="reviewee"
+                  value={
+                    revieweeInputData.reviewee.name
+                      ? `${revieweeInputData.reviewee.name} - ${revieweeInputData.reviewee.role}`
+                      : ""
+                  }
+                  onChange={handleRevieweeInputData}
+                >
+                  {sortedEmployees
+                    ? sortedEmployees?.map((employee, index) => (
+                        <option
+                          key={index}
+                          value={`${employee?.name} - ${employee?.role}`}
+                        >
+                          {employee?.name}
+                        </option>
+                      ))
+                    : "Employee List Loading"}
+                </Select>
+              </Box>
+            </Flex>
+
+            {data?.[2023]?.performanceReview?.map((survey, index) => (
+              <>
+                <Box
+                  key={index}
+                  className="section-container"
+                  margin="3rem 0 1rem 0"
+                >
+                  <Heading variant="h5" marginBottom="1rem">
+                    {survey.section}
+                  </Heading>
+
+                  {survey?.questions?.map((question, index) =>
+                    question.type === "scale" ? (
+                      <Box
+                        key={index}
+                        className="slider-container"
+                        sx={singleInputContainer}
+                      >
+                        <Heading variant="h5">{question.id}.</Heading>
+                        <Text>{question.question}</Text>
+
+                        <Slider
+                          aria-label={`slider-${question.id}`}
+                          defaultValue={5}
+                          min={0}
+                          max={10}
+                          step={1}
+                          margin="2.5rem 0"
+                          value={sliderInputData[question.id]}
+                          onChange={(val) =>
+                            handleSliderInputChange(`${question.id}`, val)
+                          }
+                        >
+                          <SliderMark value={0} {...labelStyle}>
+                            0
+                          </SliderMark>
+                          <SliderMark value={2} {...labelStyle}>
+                            2
+                          </SliderMark>
+                          <SliderMark value={4} {...labelStyle}>
+                            4
+                          </SliderMark>
+                          <SliderMark value={6} {...labelStyle}>
+                            6
+                          </SliderMark>
+                          <SliderMark value={8} {...labelStyle}>
+                            8
+                          </SliderMark>
+                          <SliderMark value={10} {...labelStyle}>
+                            10
+                          </SliderMark>
+                          <SliderMark
+                            value={sliderInputData[question.id]}
+                            textAlign="center"
+                            bg="#1E174B"
+                            color="white"
+                            mt="-10"
+                            ml="-5"
+                            w="12"
+                          >
+                            {sliderInputData[question.id]}
+                          </SliderMark>
+                          <SliderTrack>
+                            <SliderFilledTrack background="#1E174B" />
+                          </SliderTrack>
+                          <SliderThumb />
+                        </Slider>
+                      </Box>
+                    ) : (
+                      <Box
+                        className="text-area-container"
+                        sx={singleInputContainer}
+                        key={index}
+                      >
+                        <Heading variant="h5">{question.id}.</Heading>
+                        <Text>{question.question}</Text>
+                        <Textarea
+                          variant="unstyled"
+                          borderBottom="1px solid #1E174B"
+                          size="sm"
+                          marginBottom="2rem"
+                          value={inputData[question.id]}
+                          name={question.id}
+                          onChange={handleInputChange}
+                        />
+                      </Box>
+                    )
+                  )}
+                </Box>
+              </>
+            ))}
+            <Button
+              width="100%"
+              variant="standardButton"
+              onClick={handleSubmit}
+            >
+              Submit
+            </Button>
+            <SuccessDrawer isOpen={isDrawerOpen} />
+          </Box>
+        </Box>
       )}
     </>
   );

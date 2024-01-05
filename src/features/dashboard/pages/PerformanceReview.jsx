@@ -22,4 +22,4 @@ const PerformanceReview = () => {
   );
 };
 
-export default transition(PerformanceReview);
+export default PerformanceReview;

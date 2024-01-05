@@ -45,7 +45,7 @@ const SecondaryPageHeader = () => {
       name: "Employee Peer Review",
       heading: "Employee Performance Review",
       description:
-        "At Duma Collective, our mission is to redefine creative communications from Africa to the world. We strive to deliver impactful creative solutions and create an oasis for African creativity to flourish. As a reviewer, your role is to assess and provide feedback on the employee's performance in relation to our company's purpose, mission, vision, and values. Your input is essential in recognising and developing talent, ensuring alignment with our organisational goals, and fostering a culture of continuous improvement. This appraisal process aims to encourage open dialogue, recognise achievements, and identify opportunities for growth and development.",
+        "Duma Collective, our mission is to redefine creative communications from Africa to the world. As a reviewer, your job is vital in evaluating performance, aligning with our values, and fostering a culture of improvement. Your input is key to recognising talent and pinpointing growth opportunities among your fellow Dumarians.",
       url: "/performance-review",
     },
     {
