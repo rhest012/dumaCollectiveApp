@@ -142,112 +142,116 @@ const ReviewForm = () => {
   };
 
   // Set Review Object
-
-  const [newReview, setNewReview] = useState(undefined);
+  const [newReview, setNewReview] = useState({
+    reviewer: "",
+    reviewee: "",
+    revieweeRole: "",
+    revieweeTotal: "",
+    percentage: "",
+    questions: [],
+  });
 
   useEffect(() => {
-    if (inputData[12] && inputData[13] && inputData[14] !== "") {
-      const sliderValues = Object.values(sliderInputData).slice(0, 11);
-      const sumOfSliderValues = sliderValues.reduce(
-        (acc, value) => acc + value,
-        0
-      );
+    const sliderValues = Object.values(sliderInputData).slice(0, 11);
+    const sumOfSliderValues = sliderValues.reduce(
+      (acc, value) => acc + value,
+      0
+    );
 
-      const totalScore = 110;
+    const totalScore = 110;
 
-      setNewReview({
-        reviewer: inputData.reviewer,
-        reviewee: revieweeInputData.reviewee.name,
-        revieweeRole: revieweeInputData.reviewee.role,
-        revieweeTotal: sumOfSliderValues,
-        percentage: (sumOfSliderValues / totalScore) * 100,
+    setNewReview({
+      reviewer: inputData.reviewer,
+      reviewee: revieweeInputData.reviewee.name,
+      revieweeRole: revieweeInputData.reviewee.role,
+      revieweeTotal: sumOfSliderValues,
+      percentage: (sumOfSliderValues / totalScore) * 100,
 
-        questions: [
-          {
-            number: "1",
-            question:
-              "On a scale from 1 to 10, how effectively does the employee's work contribute to redefining creative communications from Africa to the world?",
-            answer: sliderInputData[1],
-          },
-          {
-            number: "2",
-            question:
-              "Please rate, on a scale from 1 to 10, the impact of the employee's creative solutions in achieving the company's mission of delivering impactful creative solutions.",
-            answer: sliderInputData[2],
-          },
-          {
-            number: "3",
-            question:
-              "How would you rate, on a scale from 1 to 10, the employee's contribution to creating an oasis for African creativity to flourish, in alignment with the company's vision?",
-            answer: sliderInputData[3],
-          },
-          {
-            number: "4",
-            question:
-              "Rate, on a scale from 1 to 10 the employee's leadership skills",
-            answer: sliderInputData[4],
-          },
-          {
-            number: "5",
-            question:
-              "On a scale from 1 to 10, how consistently does the employee show respect for colleagues, clients, and partners in their interactions and collaborations?",
-            answer: sliderInputData[5],
-          },
+      questions: [
+        {
+          number: "1",
+          question:
+            "On a scale from 1 to 10, how effectively does the employee's work contribute to redefining creative communications from Africa to the world?",
+          answer: sliderInputData[1],
+        },
+        {
+          number: "2",
+          question:
+            "Please rate, on a scale from 1 to 10, the impact of the employee's creative solutions in achieving the company's mission of delivering impactful creative solutions.",
+          answer: sliderInputData[2],
+        },
+        {
+          number: "3",
+          question:
+            "How would you rate, on a scale from 1 to 10, the employee's contribution to creating an oasis for African creativity to flourish, in alignment with the company's vision?",
+          answer: sliderInputData[3],
+        },
+        {
+          number: "4",
+          question:
+            "Rate, on a scale from 1 to 10 the employee's leadership skills",
+          answer: sliderInputData[4],
+        },
+        {
+          number: "5",
+          question:
+            "On a scale from 1 to 10, how consistently does the employee show respect for colleagues, clients, and partners in their interactions and collaborations?",
+          answer: sliderInputData[5],
+        },
 
-          {
-            number: "6",
-            question:
-              "Can you rate, on a scale from 1 to 10, how well the employee takes accountability for mistakes or issues and how they resolve them?",
-            answer: sliderInputData[6],
-          },
-          {
-            number: "7",
-            question:
-              "Rate, on a scale from 1 to 10, how effectively the employee communicates with their team, clients, and stakeholders to ensure the success of a project or initiative.",
-            answer: sliderInputData[7],
-          },
-          {
-            number: "8",
-            question:
-              "On a scale of 1 - 10, how frequently does the employee apply their entrepreneurial spirit and abilities?",
-            answer: sliderInputData[8],
-          },
-          {
-            number: "9",
-            question:
-              "On a scale of 1 - 10: How well does the employee strive to get the basics right in their role?",
-            answer: sliderInputData[9],
-          },
-          {
-            number: "10",
-            question:
-              "Rate, on a scale from 1 to 10, how consistently the employee upholds honesty and integrity in their interactions and decision-making throughout the year.",
-            answer: sliderInputData[10],
-          },
-          {
-            number: "11",
-            question:
-              "Reflecting on the company's purpose, mission, and vision, how would you rate, on a scale from 1 to 10, the employee's personal contribution to advancing these goals in their role?",
-            answer: sliderInputData[11],
-          },
-          {
-            number: "12",
-            question: "What should the employee continue to do",
-            answer: inputData[12],
-          },
-          {
-            number: "13",
-            question: "What should the employee start doing",
-            answer: inputData[13],
-          },
-          {
-            number: "14",
-            question: "What should the employee stop doing",
-            answer: inputData[14],
-          },
-        ],
-      });
-    }
+        {
+          number: "6",
+          question:
+            "Can you rate, on a scale from 1 to 10, how well the employee takes accountability for mistakes or issues and how they resolve them?",
+          answer: sliderInputData[6],
+        },
+        {
+          number: "7",
+          question:
+            "Rate, on a scale from 1 to 10, how effectively the employee communicates with their team, clients, and stakeholders to ensure the success of a project or initiative.",
+          answer: sliderInputData[7],
+        },
+        {
+          number: "8",
+          question:
+            "On a scale of 1 - 10, how frequently does the employee apply their entrepreneurial spirit and abilities?",
+          answer: sliderInputData[8],
+        },
+        {
+          number: "9",
+          question:
+            "On a scale of 1 - 10: How well does the employee strive to get the basics right in their role?",
+          answer: sliderInputData[9],
+        },
+        {
+          number: "10",
+          question:
+            "Rate, on a scale from 1 to 10, how consistently the employee upholds honesty and integrity in their interactions and decision-making throughout the year.",
+          answer: sliderInputData[10],
+        },
+        {
+          number: "11",
+          question:
+            "Reflecting on the company's purpose, mission, and vision, how would you rate, on a scale from 1 to 10, the employee's personal contribution to advancing these goals in their role?",
+          answer: sliderInputData[11],
+        },
+        {
+          number: "12",
+          question: "What should the employee continue to do",
+          answer: inputData[12],
+        },
+        {
+          number: "13",
+          question: "What should the employee start doing",
+          answer: inputData[13],
+        },
+        {
+          number: "14",
+          question: "What should the employee stop doing",
+          answer: inputData[14],
+        },
+      ],
+    });
   }, [inputData, sliderInputData]);
 
   // Handle Submission
@@ -280,7 +284,6 @@ const ReviewForm = () => {
           } else {
             setIsReviewPending(false);
             setIsReviewSuccess(true);
-            console.log("submission success");
           }
         });
       } else {
@@ -295,12 +298,28 @@ const ReviewForm = () => {
           } else {
             setIsReviewPending(false);
             setIsReviewSuccess(true);
-            console.log("submission success");
           }
         });
       }
     } catch (error) {
       console.error("Error during submission:", error);
+
+      // Check if any answer is 0
+      const incompleteQuestionIndex = newReview.questions.findIndex(
+        (question) => question.answer == undefined || question.answer === ""
+      );
+
+      if (incompleteQuestionIndex !== -1) {
+        // Set an error message indicating which question needs completion
+        setErrorMessage(
+          `Please complete question ${incompleteQuestionIndex + 1}`
+        );
+      } else {
+        // Handle other types of errors as needed
+        setErrorMessage(
+          "An error occurred during submission. Please try again."
+        );
+      }
     }
   };
 
@@ -476,6 +495,14 @@ const ReviewForm = () => {
                 </Box>
               </>
             ))}
+
+            {errorMessage ? (
+              <Box className="error-message-container">
+                <Text variant="p" color="red">
+                  {errorMessage}
+                </Text>
+              </Box>
+            ) : null}
             <Button
               width="100%"
               variant="standardButton"

@@ -72,8 +72,6 @@ export const DashboardRouter = () => {
     }
   }, [user]);
 
-  console.log("user", user);
-
   return (
     <>
       <UserProvider>
