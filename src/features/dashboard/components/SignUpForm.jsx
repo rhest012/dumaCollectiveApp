@@ -57,7 +57,6 @@ const SignUpForm = () => {
     "Account Management",
     "Creative",
     "Culture and Partnerships",
-    "Exco",
     "Production",
     "Public Relations",
     "Social",
