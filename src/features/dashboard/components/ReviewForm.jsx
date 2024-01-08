@@ -86,7 +86,6 @@ const ReviewForm = () => {
   }, [data]);
 
   // Select Input Data
-
   const [revieweeInputData, setRevieweeInputData] = useState({
     reviewee: { name: "", role: "" },
   });
@@ -129,7 +128,7 @@ const ReviewForm = () => {
     const numberOfQuestions = 11;
 
     for (let i = 1; i <= numberOfQuestions; i++) {
-      initialSliderData[`question${i}`] = 5; // Set the initial value for each question to 5
+      initialSliderData[`question${i}`] = 0; // Set the initial value for each question to 5
     }
 
     return initialSliderData;
@@ -258,7 +257,6 @@ const ReviewForm = () => {
 
   const handleSubmit = async () => {
     setIsReviewPending(true);
-
     try {
       const database = firebase.database();
       const databaseRef = database.ref(
