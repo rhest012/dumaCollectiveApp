@@ -7,7 +7,7 @@ const ConditionalMenuItems = ({ children }) => {
   const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
-    if (location.pathname === "/account") {
+    if (location.pathname === "/account" || location.pathname === "/reset") {
       setShowNavbar(false);
     } else {
       setShowNavbar(true);

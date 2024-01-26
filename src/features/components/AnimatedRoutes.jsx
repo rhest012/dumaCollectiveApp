@@ -31,6 +31,9 @@ import PerformanceReview from "../dashboard/pages/PerformanceReview";
 import EmployeeReviewDashboard from "../dashboard/pages/EmployeeReviewDashboard";
 import DashboardNav from "../dashboard/components/DashboardNav";
 import Account from "../dashboard/pages/Account";
+import ForgotPassword from "../dashboard/pages/ForgotPassword";
+
+// Providers
 import { UserProvider } from "../../actions/UserContext";
 
 // Auth
@@ -41,6 +44,7 @@ import ConditionalMenuItems from "../dashboard/components/ConditionalMenuItems";
 export const DashboardRouter = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     loading
@@ -62,13 +66,15 @@ export const DashboardRouter = () => {
 
   useEffect(() => {
     if (!user) {
-      // Save the original route before redirecting to login
-      setOriginalRoute(window.location.pathname);
-      navigate("/account");
-    } else if (originalRoute) {
-      // If the user is logged in and an original route exists, redirect to it
-      navigate(originalRoute);
-      setOriginalRoute(null);
+      if (location.pathname != "/reset") {
+        // Save the original route before redirecting to login
+        setOriginalRoute(window.location.pathname);
+        navigate("/account");
+      } else if (originalRoute) {
+        // If the user is logged in and an original route exists, redirect to it
+        navigate(originalRoute);
+        setOriginalRoute(null);
+      }
     }
   }, [user]);
 
@@ -85,6 +91,7 @@ export const DashboardRouter = () => {
 
               <Routes>
                 <Route path="/account" element={<Account />} />
+                <Route path="/reset" element={<ForgotPassword />} />
                 <Route
                   path="/performance-review"
                   element={<PerformanceReview />}

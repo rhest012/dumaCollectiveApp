@@ -76,9 +76,13 @@ const SignInForm = () => {
     }
   };
 
+  // Handle Forgot Password
+  const handleReset = () => {
+    navigate("/reset");
+  };
+
   // Handle Navigate after successful sign up
   useEffect(() => {
-    console.log("useEffect triggered");
     if (isSignInSuccess) {
       navigate("/performance-review");
     }
@@ -131,6 +135,14 @@ const SignInForm = () => {
           </Box>
         </Flex>
 
+        <Button
+          variant="standardButton"
+          width="100%"
+          onClick={handleReset}
+          marginBottom="-1rem"
+        >
+          Forgot Password
+        </Button>
         <Button
           isLoading={isAuthDataPending ? true : false}
           loadingText="Logging In"
