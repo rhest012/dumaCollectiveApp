@@ -12,10 +12,10 @@ import {
 
 import { useFetchFirebase } from "../../../actions/useFetchFirebase";
 
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import transition from "../../components/transition";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const NewsRoom = () => {
   const buttonStyle = {
@@ -35,7 +35,17 @@ const NewsRoom = () => {
 
   const theBuzz = [
     {
-      id: "109",
+      id: "111",
+      title:
+        "Duma Collectives 'Breaking Bread' Celebrates Success And Future Ventures",
+      date: "24 January 2024",
+      caption:
+        "Sibu Mabena is taking her company, Duma Collective to higher heights and we’re excited to see what the company has in store for the new year. Duma Collective, recently hosted a lavish event themed ‘Breaking Bread’, bringing together celebrities, creatives and industry professionals to celebrate their successes and se the tone for an exciting year ahead.",
+      image: "Duma Kickstart.jpg",
+      url: "https://sacreative.co.za/duma-collective-celebrates-sucess-and-future-ventures/",
+    },
+    {
+      id: "110",
       title:
         "MultiChoice and Duma Collective win Bronze for Effective Content Marketing.",
       date: "29 September 2023",
