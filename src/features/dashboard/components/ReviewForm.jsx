@@ -510,7 +510,10 @@ const ReviewForm = () => {
             >
               Submit
             </Button>
-            <SuccessDrawer isOpen={isDrawerOpen} />
+            <SuccessDrawer
+              isOpen={isDrawerOpen}
+              setIsDrawerOpen={setIsDrawerOpen}
+            />
           </Box>
         </Box>
       )}

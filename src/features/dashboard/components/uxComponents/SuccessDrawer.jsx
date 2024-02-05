@@ -14,17 +14,21 @@ import {
 } from "@chakra-ui/react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const SuccessDrawer = ({ isOpen }) => {
+const SuccessDrawer = ({ isOpen, setIsDrawerOpen }) => {
   // Handle Drawer location
   const location = useLocation();
+  const navigate = useNavigate();
 
   const { onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
-  //   Handle Consent
+  // Handle Consent
   const handleConsent = () => {
-    // Refresh the page
-    window.location.reload();
+    // Navigate to "/performance-review"
+    navigate("/performance-review");
+
+    // Close the drawer
+    setIsDrawerOpen(false);
   };
 
   return (
