@@ -26,6 +26,7 @@ const InterestCheckbox = (props) => {
           border: "1px solid #1E174B",
           background: state.isChecked ? "brand.900" : "#fff",
           color: state.isChecked ? "#fff" : "brand.900",
+          borderRadius: "0.5rem",
         }}
         className="artwork-name-container"
         {...getCheckboxProps({})}

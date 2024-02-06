@@ -25,8 +25,9 @@ const SuccessDrawer = ({ isOpen, setIsDrawerOpen }) => {
   // Handle Consent
   const handleConsent = () => {
     // Navigate to "/performance-review"
-    navigate("/performance-review");
-
+    location.pathname == "/performance-review"
+      ? navigate("/performance-review")
+      : navigate("/influencers");
     // Close the drawer
     setIsDrawerOpen(false);
   };

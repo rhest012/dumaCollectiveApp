@@ -248,7 +248,7 @@ const InfluencerRegistrationForm = () => {
   };
 
   // Handle Submission UI
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
 
   useEffect(() => {
     if (isRegistrationSuccess) {
@@ -463,7 +463,7 @@ const InfluencerRegistrationForm = () => {
           </Box>
         </GridItem>
       </Grid>
-      <SuccessDrawer isOpen={isDrawerOpen} />
+      <SuccessDrawer isOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
     </Box>
   );
 };
