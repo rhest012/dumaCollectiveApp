@@ -33,8 +33,8 @@ const DashboardNav = () => {
       url: "/employees",
     },
     {
-      name: "Performance Review",
-      url: "/performance-review",
+      name: "Entertainment Committee",
+      url: "/entertainment-committee",
     },
   ];
 

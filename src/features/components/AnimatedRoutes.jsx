@@ -15,6 +15,7 @@ import TheGrind from "../theGrind/pages/TheGrind";
 import Jff from "../theGrind/pages/Jff";
 import NewsRoom from "../theNewsRoom/pages/NewsRoom";
 import Contact from "../pages/Contact";
+import EntertainmentCommittee from "../dashboard/pages/EntertainmentCommittee";
 
 // Components
 import Nav from "../../components/Nav";
@@ -92,9 +93,13 @@ export const DashboardRouter = () => {
               <Routes>
                 <Route path="/account" element={<Account />} />
                 <Route path="/reset" element={<ForgotPassword />} />
-                <Route
+                {/* <Route
                   path="/performance-review"
                   element={<PerformanceReview />}
+                /> */}
+                <Route
+                  path="/entertainment-committee"
+                  element={<EntertainmentCommittee />}
                 />
                 <Route
                   path="/employees"

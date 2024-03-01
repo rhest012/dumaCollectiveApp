@@ -49,6 +49,13 @@ const SecondaryPageHeader = () => {
       url: "/performance-review",
     },
     {
+      name: "Entertainment Committee",
+      heading: "Entertainment Committee",
+      description:
+        "The Duma Collective is stirring up some entertainment excitement! Let's add some flavor by voting for our awesome Entertainment Committee to represent all the Dumarians!",
+      url: "/entertainment-committee",
+    },
+    {
       name: "Employee Dashboard",
       heading: "Employee Review Dashboard",
       description:
