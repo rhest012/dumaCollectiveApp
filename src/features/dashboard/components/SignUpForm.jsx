@@ -113,7 +113,7 @@ const SignUpForm = () => {
       });
 
       setIsSignUpSuccess(true);
-      navigate("/performance-review");
+      navigate("/entertainment-committee");
     } catch (error) {
       console.log(error);
       if (inputData.firstName === "") {

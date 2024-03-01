@@ -84,7 +84,7 @@ const SignInForm = () => {
   // Handle Navigate after successful sign up
   useEffect(() => {
     if (isSignInSuccess) {
-      navigate("/performance-review");
+      navigate("/entertainment-committee");
     }
   }, [isSignInSuccess, navigate]);
 
