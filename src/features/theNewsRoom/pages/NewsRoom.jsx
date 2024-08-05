@@ -35,6 +35,26 @@ const NewsRoom = () => {
 
   const theBuzz = [
     {
+      id: "112",
+      title:
+        "Duma Collective forges new path, reports remarkable growth and strategic transition",
+      date: "24 May 2024",
+      caption:
+        "Duma Collective, a leading creative communications agency, today announced a significant evolution in its journey, signifying its forward momentum. Following a strategic transition from its collaboration with Mkhwanazi and Ngubane (M+N), Duma Collective will forge a new path, bringing with it indispensable insights from its partnership with M+N",
+      image: "M&N.png",
+      url: "https://www.bizcommunity.com/PressOffice/PressRelease.aspx?i=660837&ai=248677",
+    },
+    {
+      id: "112",
+      title:
+        "Duma Collective's Sibu Mabena joins Dubai Lynx's Entertainment Jury",
+      date: "26 January 2024",
+      caption:
+        "Dubai Lynx, MENA's leading platform for creative excellence and effectiveness has announced its jury line-up for 2024 today. A notable addition to the Entertainment Jury is Sibu Mabena, CEO and chief creative officer of Duma Collective. Mabena will join 61 other industry experts from 33 global markets representing leading international talent from a diverse range of disciplines.",
+      image: "Duma Office.jpg",
+      url: "https://www.bizcommunity.com/PressOffice/PressRelease.aspx?i=660837&ai=245473",
+    },
+    {
       id: "111",
       title:
         "Duma Collectives 'Breaking Bread' Celebrates Success And Future Ventures",
