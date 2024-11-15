@@ -9,7 +9,7 @@ const SecondaryPageHeader = () => {
   const headings = [
     {
       name: "What We Do",
-      heading: "We do epic sh*t, for epic brands...",
+      heading: "Brands We've Had the Opportunity to Partner with...",
       description: "To redefine creative communications.",
       url: "/what-we-do",
     },
